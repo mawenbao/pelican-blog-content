@@ -35,6 +35,7 @@ crontab设置如下，每天凌晨3点30分自动更新缓存，每周末凌晨�
     30 03 * * 7 /root/bin/update-wp-cache.sh purgeAll
 update-wp-cache.sh脚本如下。
 
+    :::bash
     #!/bin/sh
 
     # update wordpress page cache for w3tc with ocp
@@ -74,7 +75,6 @@ update-wp-cache.sh脚本如下。
 
 获取post的最后修改时间post_modified_gmt后应当加上gmt_offset才是实际时间，或者直接使用post_modified函数。
 
-	
 	$post->post_modified_gmt + get_option('gmt_offset') * 3600
 
 ## 注意事项

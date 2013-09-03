@@ -15,7 +15,7 @@ Tags: dokuwiki, config, seo
 
 在配置管理界面，定位到''反垃圾邮件/评论设置''，将indexdelay项修改为0即可禁用index delay。默认会自动在wiki页面上加入以下标签。
 
-	`<meta name="robots" content="noindex,nofollow" />` 
+	<meta name="robots" content="noindex,nofollow" /> 
 
 ### 外部链接
 
