@@ -1,0 +1,22 @@
+Title: dokuwiki good plugins 
+Date: 2013-08-25 12:14
+Tags: dokuwiki, plugin
+
+# Dokuwiki插件收集
+
+收集好用的dokuwiki插件。
+
+## 插件列表
+
+*  [captcha](doku>plugin/captcha) 验证码插件，[这里](/codes/snippets/dokuwiki_captcha_modify)是我修改后的版本(为登录表单添加captcha支持)
+*  [disqus](doku>plugin/disqus) Diqus社会化评论
+*  [keywords](doku>plugin/keywords) SEO优化，自定义关键词
+*  [mathpublish](doku>plugin/mathpublish) 在dokuwiki里方便的输入数学公式
+*  [nstoc](doku>plugin/nstoc) 以书本目录的形式展示wiki文章列表
+*  [orphanswanted](doku>plugin/orphanswanted) 检查dokuwiki里的deadlink
+*  [wrap](doku>plugin/wrap) 功能强大的语法插件，集合许多插件的功能于一身，有点allinone的感觉。
+*  [yalist](doku>plugin/yalist) 列表语法插件，支持definition list，列表元素可为多个段落。
+## 参考资料
+
+*  [doku>plugin](doku>plugin)
+

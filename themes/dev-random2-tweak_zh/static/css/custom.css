@@ -1,0 +1,70 @@
+/*
+ * custom css for google cse
+ */
+
+#gse-box {
+    width: 70%;
+}
+
+.gsib_b, .gsc-search-button {
+    display: none !important;
+}
+
+.gstl_50, .gsib_a, .gsc-input-box, .gsc-search-box, .gsc-control-wrapper-cse {
+    margin: 0 !important;
+    padding: 0 !important;
+    border: none !important;
+}
+
+.gsc-input {
+    border: none !important;
+}
+
+input.gsc-input {
+    margin: 0 !important;
+    padding: 0 2px !important;
+    border: 1px solid #444 !important;
+}
+
+.gsc-control-cse {
+    background-color: inherit !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: none !important;
+}
+
+.gsc-table-result {
+    margin-top: 2px !important;
+}
+
+.gsc-results-wrapper-overlay table,
+.gsc-results-wrapper-overlay td {
+    border: none !important;
+}
+
+.gsc-results-wrapper-overlay {
+    top: 8% !important;
+    left: 27% !important;
+    width: 50% !important;
+}
+
+.gs-snippet {
+    margin-left: 8px !important;
+}
+
+/*
+ * theme related
+ */
+a {
+    outline-style: none !important;
+}
+
+
+ul, ol {
+    margin: 0.5em 0 !important;
+}
+
+li {
+    line-height: 1.5em !important;
+}
+

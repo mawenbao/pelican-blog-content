@@ -1,0 +1,6 @@
+[submodule "plugins/extract_headings"]
+	path = plugins/extract_headings
+	url = https://github.com/wilbur-ma/extract_headings
+[submodule "themes/niu-x2"]
+	path = themes/niu-x2
+	url = https://github.com/wilbur-ma/niu-x2

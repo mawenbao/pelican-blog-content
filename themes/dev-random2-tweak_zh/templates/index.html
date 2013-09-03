@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+
+{%- block content %}
+         {% for article in articles_page.object_list %}        
+        <header class="post-header">
+          <h2>
+            <a rel="bookmark"
+               href="/{{ article.url }}"
+               title="时间 {{ article.date }} 分类 {{ CATEGORY_MAP[article.category] }}">
+               {{ article.html_h1 }}
+            </a>
+          </h2>
+        </header>
+        {% set article = False %}
+        {% endfor %}
+
+      {%- if articles_page %}
+      <nav id="pagination">
+        {%- if articles_page.has_previous() %}
+        <a id="first_page" href="/{{ page_name }}.html">&#60;&#60;</a>
+        <a id="prev_page" href="/{{ page_name }}{{ articles_page.previous_page_number() if articles_page.previous_page_number() != 1 else "" }}.html">&#60;</a>
+        {% else %}
+        {% endif -%}
+
+        {%- for i in range(1,articles_paginator.num_pages+1) %}
+          {%- if articles_page.number - 5 < i < articles_page.number + 5 %}
+            {%- if i == articles_page.number %}
+        <span class="a active">{{loop.index}}</span>
+            {% else %}
+        <a href="/{{ page_name }}{{ ( i if i != 1 else "" ) }}.html">{{loop.index}}</a>
+            {% endif -%} 
+          {% endif -%}
+        {% endfor -%}
+
+        {%- if articles_page.has_next() %}
+        <a id="next_page" href="/{{ page_name }}{{ articles_page.next_page_number() }}.html">&#62;</a>
+        <a id="last_page" href="/{{ page_name }}{{ articles_paginator.num_pages }}.html">&#62;&#62;</a>
+        {% else %}
+        {% endif -%}
+      </nav>
+      {%- endif%}
+{% endblock content -%}

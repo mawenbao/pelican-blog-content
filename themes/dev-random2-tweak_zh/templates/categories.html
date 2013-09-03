@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block title %}{{ super() }} — 文章分类{% endblock title %}
+
+{%- block content %}
+    <section class="content">
+      <h1>分类</h1>
+      <ul id="category-list">
+      {% for category, n in categories %}
+      <li><a href="/{{ category.url }}">{{ CATEGORY_MAP[category] }}</a> ({{ n|count }})</li>
+      {% endfor %}
+      </ul>
+    </section>
+{% endblock content -%}

@@ -1,0 +1,71 @@
+
+          <!-- begin includes/sidebar.html -->
+          <nav>
+            <h3>搜索</h3>
+            <div id="gse-box">
+                <script>
+                    (function() {
+                        var cx = '016368690064160370938:4bfvampnwa8';
+                        var gcse = document.createElement('script');
+                        gcse.type = 'text/javascript';
+                        gcse.async = true;
+                        gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+                        '//www.google.com/cse/cse.js?cx=' + cx;
+                        var s = document.getElementsByTagName('script')[0];
+                        s.parentNode.insertBefore(gcse, s);
+                    })();
+                </script>
+                <gcse:search></gcse:search>
+            </div>
+            <h3>页面</h3>
+            <ul>
+              <li><a href="/categories.html">分类</a></li>
+              <li><a href="/archives.html">存档</a></li>
+              <li><a href="/{{ TAGS_SAVE_AS }}">标签</a></li>
+            {% if MENUITEMS %}
+              {% for name, uri in MENUITEMS %}
+              <li><a href="{{ uri|format(SITEURL)}}">{{ name }}</a></li>
+              {% endfor %}
+            {% endif %}
+            {% if DISPLAY_PAGES_ON_MENU %}
+              {% for p in PAGES %}
+              <li><a href="/{{ p.url }}"{% if p == page %} class="active"{% endif %}>{{ p.html_h1}}</a></li>
+              {% endfor %}
+            {% endif %}
+              <li><a href="/{{ FEED_ALL_RSS }}">订阅地址</a></li>
+            </ul>
+          </nav>
+
+          {% if categories %}
+          <nav>
+            <h3>分类</h3>
+            <ul>
+            {% for cat, null in categories %}
+              <li{%- if cat == category %} class="active"{% endif -%}><a href="/{{ cat.url }}">{{ CATEGORY_MAP[cat] }}</a></li>
+            {% endfor %}
+            </ul>
+          </nav>
+          {% endif %}
+
+          <nav>
+            <h3>链接</h3>
+            <ul>
+            {% if FEED_ATOM %}
+              <li><a href="{{ FEED_DOMAIN }}/{{ FEED_ATOM }}">Flux ATOM</a></li>
+            {% endif %}
+            {% if FEED_RSS %}
+              <li><a href="{{ FEED_DOMAIN }}/{{ FEED_RSS }}">Flux RSS</a></li>
+            {% endif %}
+            {% if SOCIAL %}
+              {% for name, url in SOCIAL %}
+              <li><a href="{{ url }}">{{ name }}</a></li>
+              {% endfor %}
+            {% endif %}
+            {% if LINKS %}
+              {% for name, url in LINKS %}
+              <li><a href="{{ url }}">{{ name }}</a></li>
+              {% endfor %}
+            {% endif %}
+            </ul>
+          </nav>
+          <!-- end includes/sidebar.html -->
