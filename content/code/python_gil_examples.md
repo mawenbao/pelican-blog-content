@@ -50,6 +50,7 @@ Require:
 
 生成图像的主程序文件，读取lan.txt并将每行的数据使用arrial.ttf字体生成一张png图片。
 
+    :::python
 	#!/usr/bin/env python
 	 
 	import Image, ImageFont, ImageDraw

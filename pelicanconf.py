@@ -39,10 +39,10 @@ def my_slugify(value, sep):
     return m.digest().encode('hex')
 MY_SLUGIFY_FUNC = my_slugify
 MY_TOC_CLASS = 'dropdown-menu'
-from markdown.extensions import headerid
+from markdown.extensions import headerid, codehilite
 MD_EXTENSIONS = ([
     'extra',
-    'codehilite(guess_lang=False)',
+    codehilite.CodeHiliteExtension(configs=[('linenums', False), ('guess_lang', False)]),
     headerid.HeaderIdExtension(configs=[('slugify', my_slugify)]),
     ])
 
