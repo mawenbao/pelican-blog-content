@@ -119,7 +119,7 @@ NIUX2_CATEGORY_MAP = {
 NIUX2_HEADER_SECTIONS = [
         ('关于', 'about', '/about.html', 'icon-anchor'),
         ('使用协议', 'agreement', '/agreement.html', 'icon-info-sign'),
-        ('我的公钥', 'my gnupg', '/my-gnupg.html', 'icon-key'),
+        ('我的公钥', 'my gnupg', '/my_gnupg.html', 'icon-key'),
         ('存档', 'archives', '/archives.html', 'icon-archive'),
         ('标签', 'tags', '/tag/', 'icon-tag'),
         ]
