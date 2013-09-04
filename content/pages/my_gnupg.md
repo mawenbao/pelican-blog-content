@@ -25,6 +25,7 @@ Date: 2012-12-14 20:36:23
 ## 使用我的公钥进行加密或验证
 加密文件，即便其他人获取了加密后的文件，也无法查看它加密之前的内容。执行如下命令把plain.txt加密为cipher-message.txt，然后把cipher-message.txt发送给我即可。
 
+    :::sh
     gpg -r wenbao.ma@hotmail.com -a -o cipher-message.txt -e plain.txt
 
 验证文件是否来自我本人。收到我签名的文件reply.txt后，执行以下命令。
