@@ -50,6 +50,10 @@ THEME = './themes/niu-x2'
 PLUGIN_PATH = './plugins'
 PLUGINS = ['gzip_cache', 'extract_headings', 'sitemap']
 
+TEMPLATE_PAGES = {
+        "404.html": "404.html",
+        }
+
 # plugin config
 SITEMAP = {
         'format': 'xml',
@@ -94,6 +98,8 @@ TAG_SAVE_AS = TAG_URL
 TAGS_SAVE_AS = 'tag/index.html'
 
 # niu-x2 theme custom variables
+NIUX2_404_TITLE_TRANSL = '404错误 页面未找到!'
+NIUX2_404_INFO_TRANSL = '请求页面未找到!'
 NIUX2_TAG_TRANSL = '标签'
 NIUX2_ARCHIVE_TRANSL = '存档'
 NIUX2_CATEGORY_TRANSL = '分类'
