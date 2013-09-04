@@ -14,6 +14,7 @@ Git 基础
 *  [The "Pro Git" Book](http://git-scm.com/book/zh/)
 *  [The "Git Magic" Book](http://www-cs-students.stanford.edu/~blynn/gitmagic/intl/zh_cn/index.html)
 *  [Git Tip of the Week](http://alblue.bandlem.com/Tag/gtotw/)
+
 Github
 
 *  [Github flow](http://scottchacon.com/2011/08/31/github-flow.html)

@@ -12,7 +12,6 @@ Tags: nginx, install, tutorial
 
 我使用如下的configure参数，按照提示安装缺少的库。这里使用的第三方库有nginx-accesskey-2.0.3，如果需要请修改nginx-accsskey的实际路径。
 
-	
 	./configure --prefix=/etc/nginx/ --sbin-path=/usr/sbin/nginx \
 	            --conf-path=/etc/nginx/nginx.conf \
 	            --error-log-path=/var/log/nginx/error.log \
@@ -41,8 +40,10 @@ Tags: nginx, install, tutorial
 
 ### client_temp failed
 编译安装后，启动nginx时报错:
+
     nginx: [emerg] mkdir() "/var/cache/nginx/client_temp" failed (2: No such file or directory)
-手动创建''/var/cache/nginx''即可。
+
+手动创建`/var/cache/nginx`即可。
 
 ## 参考资料
 

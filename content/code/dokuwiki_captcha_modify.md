@@ -15,7 +15,7 @@ Tags: php, dokuwiki, captcha
 ###  global $ID"" =====
 原因未知，尚待解决
 
-在''AUTH_LOGIN_CHECK''的handler里使用''global $ID''后，''$ID''实际为空字符串，原因暂且未知，改用''getID()''函数后即可解决这一问题。
+在`AUTH_LOGIN_CHECK`的handler里使用`global $ID`后，`$ID`实际为空字符串，原因暂且未知，改用`getID()`函数后即可解决这一问题。
 ## 参考资料
 
 *  [Dokuwiki Event System](doku>devel/events)

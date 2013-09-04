@@ -19,28 +19,27 @@ Windows系统下为Emacs配置golang开发环境。
 2. 为emacs和go配置好环境变量。
 3. 安装gocode，运行之。
 
-    gocode set propose-builtins true
-    gocode set lib-path %GO_HOME%\pkg\windows_386
-    gocode -s
+        gocode set propose-builtins true
+        gocode set lib-path %GO_HOME%\pkg\windows_386
+        gocode -s
+
 最后将emacs/go-autocomplete.el拷贝到emacs的加载目录中。
 
 4. 安装auto-complete，配置
 
-	
-	(when **auto-complete
-	  (require 'auto-complete-config)
-	  (add-to-list 'ac-dictionary-directories "~/.emacs.d/site-lisp/auto
-	-complete/ac-dict")
-	  (ac-config-default)
-	  )
+        :::scheme
+        (when **auto-complete
+	    (require 'auto-complete-config)
+	    (add-to-list 'ac-dictionary-directories "~/.emacs.d/site-lisp/auto-complete/ac-dict")
+	    (ac-config-default)
+	    )
 
 5. 为emacs配置go
 
-	
+    :::scheme	
 	(when **go-lang
 	  (require 'go-mode-load)
 	  (require 'go-autocomplete)
 	  (require 'auto-complete-config)
 	  )
-
 

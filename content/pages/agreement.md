@@ -1,7 +1,7 @@
 Title: agreement
 Date: 2013-01-22 15:20:00
 
-[3]: /about.html#toc_2e8954957754dabdb3d4477bc68ce195 "about me"
+[3]: /about.html#2e8954957754dabdb3d4477bc68ce195 "about me"
 [4]: http://www.google.com/analytics/ "Google 分析"
 [5]: http://tongji.baidu.com "百度统计"
 [6]: http://atime.me "wilbur的网站"

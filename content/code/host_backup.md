@@ -33,28 +33,28 @@ Tags: python, backup
 *  aes.py aes加密和解密，取自[slowaes工程](http://code.google.com/p/slowaes/)
 ### 注意事项
 
- 1.  在debian上，备份/etc/mysql时必须同时备份mysql数据库中的mysql，否则恢复后会有''Stopping MySQL database server: mysqld failed''错误，解决方法可以参考[这里](tools/mysql/errors#stopping_mysql_database_servermysqld_failed错误)。
- 2.  如果用exim4发送邮件时因为附件太大而发送失败，可以在/etc/exim4/update-exim4.conf.conf添加如下一行''MESSAGE_SIZE_LIMIT=1000m''，将1000m改为你需要的大小限制即可。
+ 1.  在debian上，备份/etc/mysql时必须同时备份mysql数据库中的mysql，否则恢复后会有`Stopping MySQL database server: mysqld failed`错误，解决方法可以参考[这里](tools/mysql/errors#stopping_mysql_database_servermysqld_failed错误)。
+ 2.  如果用exim4发送邮件时因为附件太大而发送失败，可以在/etc/exim4/update-exim4.conf.conf添加如下一行`MESSAGE_SIZE_LIMIT=1000m`，将1000m改为你需要的大小限制即可。
 ### 使用说明
 
  1.  安装依赖的软件。
- 2.  为脚本添加执行权限''chmod +x host-admin.py''。
+ 2.  为脚本添加执行权限`chmod +x host-admin.py`。
  3.  根据需要修改配置文件。
  4.  进行备份或恢复: 
 
-    * ''./host-admin.py -c daily-backup.ini -b'' 使用daily-backup.ini中的配置进行备份，备份时会连同配置文件一起打包。
-    * ''./host-admin.py -c daily-backup.ini -f host-backup.tar -r''使用daily-backup.ini中的配置和host-backup.tar中的数据进行恢复。可以直接使用host-backup.tar中的配置文件daily-backup.ini。
+    * `./host-admin.py -c daily-backup.ini -b` 使用daily-backup.ini中的配置进行备份，备份时会连同配置文件一起打包。
+    * `./host-admin.py -c daily-backup.ini -f host-backup.tar -r`使用daily-backup.ini中的配置和host-backup.tar中的数据进行恢复。可以直接使用host-backup.tar中的配置文件daily-backup.ini。
 ## 配置文件说明
 
 ### backup-config.ini
 
  1.  第一次使用需要按提示设置mysql密码，加密后存于配置文件中。
  2.  如果想使用新的Mysql用户或密码，只需将DB.Mysql里的User和Passwor的值设为0。
- 3.  FileList里的路径必须为绝对路径，多个路径必须使用分号'':''隔开。
- 4.  OwnerList使用chown修改FileList中对应项的用户归属，其中项的名称必须和FileList中的名称一致。按照下面的配置文件恢复文件后，将FileList中Dokuwiki_Data项所包含的所有路径的归属用户和归属组改为www-data，即''chown www-data:www-data %path%''。
+ 3.  FileList里的路径必须为绝对路径，多个路径必须使用分号`:`隔开。
+ 4.  OwnerList使用chown修改FileList中对应项的用户归属，其中项的名称必须和FileList中的名称一致。按照下面的配置文件恢复文件后，将FileList中Dokuwiki_Data项所包含的所有路径的归属用户和归属组改为www-data，即`chown www-data:www-data %path%`。
  5.  将Mail_List设为0可禁用邮件发送功能。多个邮件地址可用分号":"隔开。
- 6.  Exclude_VCS使用gnu tar的''--exclude-vcs''选项实现。
- 7.  Exclude_Pattern使用gnu tar的''--exclude''选项实现，多个pattern使用分号":"隔开，例如剔除后缀为tmp的文件，/var/blog/tmp目录，名为conf.d的目录和所有隐藏文件(文件夹)，可以使用如下pattern: ''*.tmp:/var/blog/tmp:conf.d:\.*''，单个Pattern的详细说明请参考[GNU Tar文档](http://www.gnu.org/software/tar/manual/html_node/exclude.html)。
+ 6.  Exclude_VCS使用gnu tar的`--exclude-vcs`选项实现。
+ 7.  Exclude_Pattern使用gnu tar的`--exclude`选项实现，多个pattern使用分号":"隔开，例如剔除后缀为tmp的文件，/var/blog/tmp目录，名为conf.d的目录和所有隐藏文件(文件夹)，可以使用如下pattern: `*.tmp:/var/blog/tmp:conf.d:\.*`，单个Pattern的详细说明请参考[GNU Tar文档](http://www.gnu.org/software/tar/manual/html_node/exclude.html)。
 
 <code>
 

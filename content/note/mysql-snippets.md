@@ -9,7 +9,7 @@ Tags: mysql, snippet
 ## 数据定义语言 DDL
 
 ### 批量删除表
-批量删除有相同前缀的表，使用下面的sql语句会构造相应的drop语句，删除wordpress3数据库中前缀为''wp_''的表。
+批量删除有相同前缀的表，使用下面的sql语句会构造相应的drop语句，删除wordpress3数据库中前缀为`wp_`的表。
 
 	SELECT CONCAT( 'DROP TABLE IF EXISTS wordpress3.', TABLE_NAME, ';' )
 	FROM information_schema.tables

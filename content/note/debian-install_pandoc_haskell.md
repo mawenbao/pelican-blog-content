@@ -30,8 +30,8 @@ debian6 squeeze上在安装haskell和pandoc
 
 ## Cabal常用命令
 
-*  ''cabal list''
-*  ''cabal install''
+*  `cabal list`
+*  `cabal install`
 ## 安装pandoc
 
 	cabal install pandoc

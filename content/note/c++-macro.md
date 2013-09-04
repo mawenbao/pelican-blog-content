@@ -41,7 +41,7 @@ Tags: c++, compiler, gcc, note
 
 ## GCC4
 
-查看gcc4内建宏的方法，''gcc -dM -E - < /dev/null''，详细的宏介绍可参考[该页面](http://gcc.gnu.org/onlinedocs/cpp/Predefined-Macros.html)。
+查看gcc4内建宏的方法，`gcc -dM -E - < /dev/null`，详细的宏介绍可参考[该页面](http://gcc.gnu.org/onlinedocs/cpp/Predefined-Macros.html)。
 
 gcc版本
 

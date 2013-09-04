@@ -6,6 +6,7 @@ Tags: c++, doxygen, note
 
 Here is the same piece of code as shown above, this time documented using the JavaDoc style and JAVADOC_AUTOBRIEF set to YES:
 
+    :::cpp
 	/**
 
 	 *  A test class. A more elaborate class description.

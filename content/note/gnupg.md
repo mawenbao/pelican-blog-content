@@ -8,7 +8,7 @@ Tags: gnupg, tutorial
 
 ## GnuPG常用命令
 
-假设生成公钥/密钥时使用的UID为''wilbur ma''，并以此为例。 
+假设生成公钥/密钥时使用的UID为`wilbur ma`，并以此为例。 
 ### 生成新的钥匙
 
 生成一对新的钥匙((钥匙指公钥和密钥)):
@@ -17,7 +17,7 @@ Tags: gnupg, tutorial
 
 ### 发送公钥
 
-将UID为''wilbur ma''的公钥发送到GnuPG服务器，这样其他人可以直接使用[查找命令](#查找公钥)获取该公钥。
+将UID为`wilbur ma`的公钥发送到GnuPG服务器，这样其他人可以直接使用[查找命令](#查找公钥)获取该公钥。
 
 首先需要获取公钥的ID，使用如下命令查看:
 
@@ -29,7 +29,7 @@ Tags: gnupg, tutorial
     uid                  Wilbur Ma `<wilbur.ma@hotmail.com>`
     sub   2048R/F40188FA 2012-12-12  
 
-则公钥的ID为''A8FC260E''，使用该ID发送公钥至'hkp://keys.gnupg.net'服务器:
+则公钥的ID为`A8FC260E`，使用该ID发送公钥至'hkp://keys.gnupg.net'服务器:
 
     gpg --keyserver hkp://keys.gnupg.net --send-keys A8FC260E
 
@@ -41,7 +41,7 @@ Tags: gnupg, tutorial
 
 ### 导出公钥
 
-使用ASCII形式导出公钥。其中，''wilbur ma''为生成密钥时使用的名字:
+使用ASCII形式导出公钥。其中，`wilbur ma`为生成密钥时使用的名字:
 
     gpg -a -o "pubkey.txt" --export 'wilbur ma'   
 
@@ -51,7 +51,7 @@ Tags: gnupg, tutorial
 
     gpg --import pubkey.txt
 
-导入公钥后需要首先对公钥进行签名，假设导入公钥的邮件地址为''wilbur.ma@hotmail.com'':
+导入公钥后需要首先对公钥进行签名，假设导入公钥的邮件地址为`wilbur.ma@hotmail.com`:
 
     gpg --edit-key wilbur.ma@hotmail.com
     trust
@@ -76,7 +76,7 @@ Tags: gnupg, tutorial
 
 ###  加密与解密 
 
-使用UID为''wilbur ma''的公钥加密一段话，比如''hello world'':
+使用UID为`wilbur ma`的公钥加密一段话，比如`hello world`:
 
     echo 'hello world' | gpg -a -r 'wilbur ma' -e > cipher.txt
 
@@ -97,17 +97,17 @@ Tags: gnupg, tutorial
 
     -----END PGP MESSAGE-----
 
-使用UID为''wilbur ma''的公钥加密文件plain.txt，生成cipher.txt:
+使用UID为`wilbur ma`的公钥加密文件plain.txt，生成cipher.txt:
 
     gpg -r 'wilbur ma' -a -o cipher.txt -e plain.txt 
 
-使用UID为''wilbur ma''的密钥解密上面生成的文件cipher.txt，需要输入该密钥的指纹(密码):
+使用UID为`wilbur ma`的密钥解密上面生成的文件cipher.txt，需要输入该密钥的指纹(密码):
     
     gpg -r 'wilbur ma' -d cipher.txt
 
 ### 签名与验证
 
-如果希望签名信息与文件内容同时存在于签名后的文件中，则可以执行如下命令。该命令使用UID为''wilbur ma''的密钥对文件plain.txt进行签名，输出为plain.sign.txt(包含原文件内容和签名信息):
+如果希望签名信息与文件内容同时存在于签名后的文件中，则可以执行如下命令。该命令使用UID为`wilbur ma`的密钥对文件plain.txt进行签名，输出为plain.sign.txt(包含原文件内容和签名信息):
 
     gpg -r 'wilbur ma' -o 'plain.sign.txt' --clearsign plain.txt
 
@@ -115,7 +115,7 @@ Tags: gnupg, tutorial
 
     gpg --verify plain.sign.txt
 
-若输出''Good signature from...''之类的信息则表示验证成功，文件签名有效; 倘若输出''BAD signature from...''之类的信息，则说明文件验证失败，此时不应当信任被签名文件。
+若输出`Good signature from...`之类的信息则表示验证成功，文件签名有效; 倘若输出`BAD signature from...`之类的信息，则说明文件验证失败，此时不应当信任被签名文件。
 
 同时进行加密和签名操作:
 
@@ -125,7 +125,7 @@ Tags: gnupg, tutorial
 
     gpg -o new.txt -d sign.txt
 
-如果希望签名信息存放于单独的文件中，则执行如下命令。该命令使用UID为''wilbur ma''的密钥对文件plain.txt进行签名，签名信息保存在plain.sig文件中，原文件不变:
+如果希望签名信息存放于单独的文件中，则执行如下命令。该命令使用UID为`wilbur ma`的密钥对文件plain.txt进行签名，签名信息保存在plain.sig文件中，原文件不变:
 
     gpg -r 'wilbur ma' -a -o plain.sig -b plain.txt    
 
@@ -143,15 +143,15 @@ Tags: gnupg, tutorial
 
     gpg --list-secret-keys
 
-编辑UID为''wilbur ma''的公钥，可以修改公钥的过期时间、指纹，以及对公钥进行签名(是否信任)，使用''help''查看所有可用操作。
+编辑UID为`wilbur ma`的公钥，可以修改公钥的过期时间、指纹，以及对公钥进行签名(是否信任)，使用`help`查看所有可用操作。
 
     gpg --edit-key 'wilbur ma'
 
-删除UID为''wilbur ma''的公钥:
+删除UID为`wilbur ma`的公钥:
 
     gpg --delete-key 'wilbur ma'
 
-删除UID为''wilbur ma''的密钥:
+删除UID为`wilbur ma`的密钥:
 
     gpg --delete-secret-key 'wilbur ma'
 
@@ -161,7 +161,7 @@ Tags: gnupg, tutorial
 
 ### 多对subkey
 
-简单的解决办法是使用不同的subkey进行Encrypt和Sign操作，具体操作方法可参考Debian wiki上的[这篇文章](http://wiki.debian.org/subkeys)。为Encrypt和Sign分别创建单独的subkey后，使用''--edit-key''选项时，列出的钥匙应当类似于下面的样式:
+简单的解决办法是使用不同的subkey进行Encrypt和Sign操作，具体操作方法可参考Debian wiki上的[这篇文章](http://wiki.debian.org/subkeys)。为Encrypt和Sign分别创建单独的subkey后，使用`--edit-key`选项时，列出的钥匙应当类似于下面的样式:
 
     pub  2048R/950A754E  created: 2012-12-17  expires: never       usage: SC  
                        trust: ultimate      validity: ultimate

@@ -11,7 +11,7 @@ Tags: git, problem
 收集整理常见的git错误。
 ### fatal: cannot exec .. Permission denied
 
-使用git alias命令''git st''(参考[这里的配置](./config#全局配置))时提示如下错误:
+使用git alias命令`git st`(参考[这里的配置](./config#全局配置))时提示如下错误:
 
 	
 	fatal: cannot exec git st: Permission denied
@@ -23,7 +23,7 @@ Tags: git, problem
 	
 	apt-get install strace
 
-2. 使用strace执行''git st''
+2. 使用strace执行`git st`
 
 	
 	strace -f -e execve git st

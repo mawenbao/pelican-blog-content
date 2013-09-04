@@ -8,7 +8,7 @@ Tags: vim, plugin, shortcut
 
 ## 小技巧
 
-*  `<leader>`键默认为''\''
+*  `<leader>`键默认为`\`
 ## 错误及解决办法
 
 使用exvim过程中遇到的错误。

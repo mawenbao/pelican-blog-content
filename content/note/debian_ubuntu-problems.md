@@ -9,7 +9,7 @@ Tags: debian, ubuntu, problem
 ## 网络问题
 
 ### ping: connect: network is unreachable
-使用''service networking restart''后无法联网，运行''ifconfig''后发现没有eth0，这时需要手动配置eth0接口，注意将$IP_ADDRESS, $MASK和$GATE_WAY改为你的IP地址、子网掩码和网关地址:
+使用`service networking restart`后无法联网，运行`ifconfig`后发现没有eth0，这时需要手动配置eth0接口，注意将$IP_ADDRESS, $MASK和$GATE_WAY改为你的IP地址、子网掩码和网关地址:
     
     ifconfig eth0 $IP_ADDRESS netmask $MASK
     route add default gw $GATE_WAY

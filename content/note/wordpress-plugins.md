@@ -27,7 +27,7 @@ Tags: wordpress, plugin
 *  Disqus Comment System - Disqus评论服务  
 *  **Google XML Sitemaps** - sitemap相关
 *  **Live Blogging** - 本地微博客，支持推送到Twitter
-*  **Markdown on Save Improved** - 使用markdown语法撰写博客, markdown格式的文章内容存于''wp_posts.post_content_filtered''列.
+*  **Markdown on Save Improved** - 使用markdown语法撰写博客, markdown格式的文章内容存于`wp_posts.post_content_filtered`列.
 *  Quick Cache - 缓存相关
 *  Related Posts via Taxonomies - 相关文章，根据分类和标签计算相关度
 *  **Revision Control** - 控制wordpress文章的revision的数目

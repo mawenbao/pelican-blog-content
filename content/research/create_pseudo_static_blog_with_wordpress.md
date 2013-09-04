@@ -43,28 +43,27 @@ Tags: php, golang, wordpress, static_blog
 
 通常情况下(不考虑删除文章)，可以使用如下脚本update-wp-cache.sh来自动更新。
 
-<pre>
-purgeAllArg='purgeAll'
-localCacheDir=/var/www/wordpress3/wp-content/w3tc/pgcache
-sitemapPath=/var/www/wordpress3/sitemap.xml
-ocpPath=/root/bin/ocp 
-archiveDir=$localCacheDir/archives   # 使用插件的short code生成的archives页面必须手动删除，否则不会更新
-sitemapDir=$localCacheDir/sitemap    # 使用插件生成的sitemap页面必须手动删除，否则不会更新
-
-# remove archive page and sitemap page manually
-if [ $# -ge 1 ] && [ $1 = $purgeAllArg ]
-then 
-    echo "Remove all the page cache..."
-    rm -Rf $localCacheDir/*
-else
-    echo "Remove archive page and sitemap page..."
-    rm -Rf $archiveDir $sitemapDir
-fi
-# update cache with ocp
-echo "Update page cache with ocp..."
-$ocpPath -u -rl "_index.html,_index.html_gzip,page" -v -l $localCacheDir -ls _index.html $sitemapPath
-</pre>
-
+    :::sh
+    purgeAllArg='purgeAll'
+    localCacheDir=/var/www/wordpress3/wp-content/w3tc/pgcache
+    sitemapPath=/var/www/wordpress3/sitemap.xml
+    ocpPath=/root/bin/ocp 
+    archiveDir=$localCacheDir/archives   # 使用插件的short code生成的archives页面必须手动删除，否则不会更新
+    sitemapDir=$localCacheDir/sitemap    # 使用插件生成的sitemap页面必须手动删除，否则不会更新
+    
+    # remove archive page and sitemap page manually
+    if [ $# -ge 1 ] && [ $1 = $purgeAllArg ]
+    then 
+        echo "Remove all the page cache..."
+        rm -Rf $localCacheDir/*
+    else
+        echo "Remove archive page and sitemap page..."
+        rm -Rf $archiveDir $sitemapDir
+    fi
+    # update cache with ocp
+    echo "Update page cache with ocp..."
+    $ocpPath -u -rl "_index.html,_index.html_gzip,page" -v -l $localCacheDir -ls _index.html $sitemapPath
+    
 最后配置crontab，使ocp自动进行爬取，cron job的周期可以根据博客更新的频率设定。在w3tc的page cache配置页面，将Garbage collection interval设置的尽量大一些，至少要大于cron job执行的周期。通常我几天才会写一篇文章，所以用cron每天更新一次页面缓存足够了。
 
 下面是我的crontab设置，每天凌晨3点30分自动运行update-wp-cache.sh脚本，每周末凌晨3点30分清空所有页面缓存并更新。

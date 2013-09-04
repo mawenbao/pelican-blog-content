@@ -10,37 +10,43 @@ pptpd存在安全隐患，详情可参考[这里](http://pptpclient.sourceforge.
 ## 安装并配置pptpd
 
 安装pptpd
+
     apt-get install pptpd
-修改pptpd的配置文件''/etc/pptpd.conf''，将以下两行的注释符''#''去掉:
+
+修改pptpd的配置文件`/etc/pptpd.conf`，将以下两行的注释符`#`去掉:
+
     localip 192.168.0.1
     remoteip 192.168.0.234-238,192.168.0.245
+
 ## 修改PPPD DNS配置
 
-如果需要，可以在''/etc/ppp/options''添加Google的Public DNS:
+如果需要，可以在`/etc/ppp/options`添加Google的Public DNS:
+
     ms-dns 8.8.8.8
     ms-dns 8.8.4.4
-可以使用''man pppd''查看pppd及其配置文件的用户手册。
+
+可以使用`man pppd`查看pppd及其配置文件的用户手册。
 ## 设置VPN用户名和密码
 
-假设用户名为''xiaoming''，密码为''123''(不要设置过于简单的密码)，则在''/etc/ppp/chap-secrets''添加如下一行:
+假设用户名为`xiaoming`，密码为`123`(不要设置过于简单的密码)，则在`/etc/ppp/chap-secrets`添加如下一行:
+
     xiaoming pptpd 123 *
-上面的''*''表示任何ip均可访问你的vpn，也可以改为自己的一些ip，ip之间用逗号或空格隔开。
+
+上面的`*`表示任何ip均可访问你的vpn，也可以改为自己的一些ip，ip之间用逗号或空格隔开。
+
 ## 设置iptables规则
 
 首先配置nat表的翻译规则, 将目标IP为192.168.0.0/24的包转向eth0接口. 在[iptables配置文件](/tips/server_security#iptables)的nat表中添加如下规则:
-
 	
 	-A POSTROUTING -s 192.168.0.0/24 -o eth0 -j MASQUERADE
 
 若配置文件中还没有nat表的配置, 添加如下规则:
 
-	
-
 	*nat
 	-A POSTROUTING -s 192.168.0.0/24 -o eth0 -j MASQUERADE
 	COMMIT
 
-然后配置filter表的规则, 在合适的位置((比如在''-A INPUT -j DROP''这种规则的前面))添加如下内容:
+然后配置filter表的规则, 在合适的位置((比如在`-A INPUT -j DROP`这种规则的前面))添加如下内容:
 
 	
 	-A FORWARD -s 192.168.0.0/24 -j ACCEPT
@@ -52,26 +58,32 @@ pptpd存在安全隐患，详情可参考[这里](http://pptpclient.sourceforge.
 	-A INPUT -p tcp --dport 1723 -m state --state NEW -j ACCEPT
 
 上面的规则允许使用tcp协议建立到1723端口的连接。pptpd默认监听1723端口，可以使用如下命令查看:
+
     sudo netstat -nap | grep pptpd
 
 ## 修改sysctl.conf
 
-修改''/etc/sysctl.conf''，去掉下面一句前面的注释符''#'':
+修改`/etc/sysctl.conf`，去掉下面一句前面的注释符`#`:
+
     net.ipv4.ip_forward=1
+
 重新加载sysctl.conf:
+
     sysctl -p
+
 ## 重启pptpd服务
 
     service pptpd restart
     service pppd-dns restart
+
 ## 遇到问题?
 
 ### 无法连接或连接后无法解析DNS
-经过以上设置后，如果依然无法成功连接到VPN服务器，或者连接成后却无法正常访问网络。出现类似''DNS 查找失败''的错误，首先检查你的iptables规则，如果没有问题可以先停掉pptpd服务:
+经过以上设置后，如果依然无法成功连接到VPN服务器，或者连接成后却无法正常访问网络。出现类似`DNS 查找失败`的错误，首先检查你的iptables规则，如果没有问题可以先停掉pptpd服务:
     service stop pptpd
-然后运行''pptpd -f''，这时候再从客户端连接，根据''pptpd -f''的输出信息解决问题。
+然后运行`pptpd -f`，这时候再从客户端连接，根据`pptpd -f`的输出信息解决问题。
 
-也可查看pppd的日志，默认情况下，pptpd将日志记录于系统日志''/var/log/syslog.*''。
+也可查看pppd的日志，默认情况下，pptpd将日志记录于系统日志`/var/log/syslog.*`。
 
 ### ppp0: compressor dropped pkt
 
@@ -87,6 +99,7 @@ pptpd存在安全隐患，详情可参考[这里](http://pptpclient.sourceforge.
 
 解决方法是给pppd源码打patch:
 
+    :::diff
 	--- sources/p/pppd/pppd/ccp.c	2004/01/16 09:47:28	1.1.1.1
 	+++ sources/p/pppd/pppd/ccp.c	2004/10/15 15:08:50	1.1.1.1.4.1
 	@@ -1191,7 +1191,12 @@

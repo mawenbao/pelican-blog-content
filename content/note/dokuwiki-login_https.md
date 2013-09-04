@@ -10,7 +10,7 @@ Tags: dokuwiki, ssl, nginx, config, note
     openssl req -new -x509 -days 365 -nodes -out /etc/ssl/localcerts/wiki.atime.me.pem -keyout /etc/ssl/localcerts/wiki.atime.me.key
 ## 禁用securecookie
 
-首先需要禁用dokuwiki的securecookie，修改''$dokuwiki/conf/dokuwiki.conf''文件，将
+首先需要禁用dokuwiki的securecookie，修改`$dokuwiki/conf/dokuwiki.conf`文件，将
     `$conf['securecookie'] = 1;`
 改为
     `$conf['securecookie'] = 0;`
@@ -19,12 +19,12 @@ Tags: dokuwiki, ssl, nginx, config, note
 
 将dokuwiki的配置分为两个文件:
 
-*  ''/etc/nginx/sites-available/dokuwiki.conf'' 定义dokuwiki的通用重写规则
-*  ''/etc/nginx/sites-available/dokuwiki_https.conf'' 定义http和https协议的服务器设置
+*  `/etc/nginx/sites-available/dokuwiki.conf` 定义dokuwiki的通用重写规则
+*  `/etc/nginx/sites-available/dokuwiki_https.conf` 定义http和https协议的服务器设置
 
 ### fastcgi设置
 
-在''/etc/nginx/nginx.conf''文件的http上下文中使用map指令创建一个''php_https''变量:
+在`/etc/nginx/nginx.conf`文件的http上下文中使用map指令创建一个`php_https`变量:
 
     :::nginx
     http {
@@ -33,11 +33,11 @@ Tags: dokuwiki, ssl, nginx, config, note
       ...
     }
 
-在''/etc/nginx/fastcgi_params''中加入以下一行:
+在`/etc/nginx/fastcgi_params`中加入以下一行:
     fastcgi_param  HTTPS  $php_https;
 ### http和https重写规则
 
-1. ''/etc/nginx/sites-available/dokuwiki.conf''
+1. `/etc/nginx/sites-available/dokuwiki.conf`
 
         :::nginx
         access_log  /var/log/nginx/wiki.access.log  main;
@@ -87,7 +87,7 @@ Tags: dokuwiki, ssl, nginx, config, note
             deny all;
         }
 
-2. ''/etc/nginx/sites-available/dokuwiki_https.conf''
+2. `/etc/nginx/sites-available/dokuwiki_https.conf`
     
         :::nginx
         server {

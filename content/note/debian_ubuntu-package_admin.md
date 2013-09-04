@@ -9,35 +9,35 @@ Tags: debian, ubuntu, apt, dpkg
 
 ### apt-get
 
-*  ''apt-get install'' 安装软件
-*  ''apt-get -f install'' 修复依赖关系
-*  ''apt-get -u install'' 升级软件  
-*  ''apt-get remove %pkg%'' 删除软件
-*  ''apt-get purge %pkg%'' 删除软件及其配置文件
-*  ''apt-get -u upgrade'' 升级所有已安装的软件
-*  ''apt-get dist-upgrade'' 升级操作系统到下一个版本
-*  ''apt-get build-dep %pkg%'' 安装依赖的软件
+*  `apt-get install` 安装软件
+*  `apt-get -f install` 修复依赖关系
+*  `apt-get -u install` 升级软件  
+*  `apt-get remove %pkg%` 删除软件
+*  `apt-get purge %pkg%` 删除软件及其配置文件
+*  `apt-get -u upgrade` 升级所有已安装的软件
+*  `apt-get dist-upgrade` 升级操作系统到下一个版本
+*  `apt-get build-dep %pkg%` 安装依赖的软件
 ### apt-cache
 
-*  ''apt-cache search'' 根据软件名或软件介绍查找软件
-*  ''apt-cache show'' 显示软件的基本信息
-*  ''apt-cache showpkg'' 显示软件的详细信息，包括详细的依赖信息等
-*  ''apt-cache depends'' 显示软件的依赖信息
+*  `apt-cache search` 根据软件名或软件介绍查找软件
+*  `apt-cache show` 显示软件的基本信息
+*  `apt-cache showpkg` 显示软件的详细信息，包括详细的依赖信息等
+*  `apt-cache depends` 显示软件的依赖信息
 ### apt-file
 
-*  ''apt-file list'' 列出软件包含的所有文件
-*  ''apt-file show'' 同''apt-file list''
-*  ''apt-file find'' 根据软件包含的文件的名称来搜索软件，使用''-x''或--regexp选项可支持perl正则表达式查询。
-*  ''apt-file search'' 同''apt-file search'' 
+*  `apt-file list` 列出软件包含的所有文件
+*  `apt-file show` 同`apt-file list`
+*  `apt-file find` 根据软件包含的文件的名称来搜索软件，使用`-x`或--regexp选项可支持perl正则表达式查询。
+*  `apt-file search` 同`apt-file search` 
 
 ## dpkg
 
 ### dpkg
 
-*  ''dpkg -l'' 列出所有已安装的软件
-*  ''dpkg -i `<.deb>` 安装本地deb软件包
-*  ''dpkg -L'' 列出已安装的软件所包含的文件
-*  ''dpkg -r'' 删除软件包
+*  `dpkg -l` 列出所有已安装的软件
+*  `dpkg -i `<.deb>` 安装本地deb软件包
+*  `dpkg -L` 列出已安装的软件所包含的文件
+*  `dpkg -r` 删除软件包
 *  dpkg --force-all -r 强制删除软件包
 *  dpkg --force-all -P 强制删除软件包及其配置文件（若删除失败可先尝试强制安装该软件包）
 ### dpkg-reconfigure

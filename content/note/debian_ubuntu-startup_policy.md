@@ -6,7 +6,7 @@ Tags: debian, ubuntu, startup, note
 总结Debian/Ubuntu的启动方法.
 
 ## XDG AutoStart
-将程序的快捷方式置于''/etc/xdg/autostart''即可随XDG自启动.下面是fcitx输入法的快捷方式.
+将程序的快捷方式置于`/etc/xdg/autostart`即可随XDG自启动.下面是fcitx输入法的快捷方式.
 
     [Desktop Entry]
     Name=Fcitx

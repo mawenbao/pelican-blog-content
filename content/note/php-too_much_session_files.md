@@ -8,7 +8,7 @@ php session文件太多的解决办法.
 
 ## 设置session存储目录
 
-使用php5-fpm的话, 修改''/etc/php5/fpm/php.ini'', 修改或添加下面一行:
+使用php5-fpm的话, 修改`/etc/php5/fpm/php.ini`, 修改或添加下面一行:
 
 	session.save_path = "path to your session dir"
 

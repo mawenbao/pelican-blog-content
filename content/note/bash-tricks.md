@@ -12,7 +12,7 @@ bash里一些特殊的符号的作用。
 
 ### 两个连字符
 
-'--': 仅有两个横杠(即连字符''-'')(two hyphens)，即后面没有任何长选项名的时候，表示重置命令的位置参数，'--'后的参数均从第一个参数开始算起。
+'--': 仅有两个横杠(即连字符`-`)(two hyphens)，即后面没有任何长选项名的时候，表示重置命令的位置参数，'--'后的参数均从第一个参数开始算起。
 ## 变量
 
 包括自定义变量和特殊变量。
@@ -39,6 +39,7 @@ bash里一些特殊的符号的作用。
 
 设置bash选项和位置参数，常用的选项有:
 
+    :::sh
 	set -o         # 查看当前所有选项的状态
 	set -o history # 开启bash历史记录
 	set +o history # 关闭bash历史记录
@@ -55,7 +56,7 @@ bash里一些特殊的符号的作用。
 
 ## 模式匹配
 
-详细文档参考[pattern maching](http://www.gnu.org/software/bash/manual/bash.html#Pattern-Matching)。使用[shopt](#shopt)开启extglob后，除了''? * []''等常用的匹配符，bash还能支持以下模式，其中pattern-list是一个或多个用''|''符号分隔的模式。
+详细文档参考[pattern maching](http://www.gnu.org/software/bash/manual/bash.html#Pattern-Matching)。使用[shopt](#shopt)开启extglob后，除了`? * []`等常用的匹配符，bash还能支持以下模式，其中pattern-list是一个或多个用`|`符号分隔的模式。
 
 	
 	?(pattern-list)  Matches zero or one occurrence of the given patterns.
@@ -71,7 +72,7 @@ bash里一些特殊的符号的作用。
 	    aaa.log
 	    bbb.txt
 
-使用命令''ls !(a*).txt''将输出:
+使用命令`ls !(a*).txt`将输出:
     bbb.txt
 
 

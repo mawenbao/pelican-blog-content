@@ -36,13 +36,13 @@ Tags: linux_server, tutorial, install
 	
 	apt-get install debian-archive-keyring
 
-最后，运行''apt-get update''更新列表。
+最后，运行`apt-get update`更新列表。
 ### 升级到debian6
 
 debian支持无缝升级，因此从debian5升级到debian6很方便。按照[这里](http://leven.co/blog/view/133)的教程执行相关的步骤即可。
 #### 1. 修改本机的hostname
 
-hostname保存于''/etc/hostname''，修改后运行''hostname -F /etc/hostname''设置域名。
+hostname保存于`/etc/hostname`，修改后运行`hostname -F /etc/hostname`设置域名。
 #### 2. 更新软件源
 
 将软件源列表修改为debian6的软件源，可参考下面的sources.list文件。
@@ -64,11 +64,11 @@ hostname保存于''/etc/hostname''，修改后运行''hostname -F /etc/hostname'
 
     # deb http://repo.varnish-cache.org/debian/ squeeze varnish-3.0
 
-修改sources.list后记得运行''apt-get update''更新软件列表。
+修改sources.list后记得运行`apt-get update`更新软件列表。
 #### 3. 开始升级
 
 到这里，升级前的准备工作基本都已完成。如果是通过ssh远程连接到服务器进行升级的话，为了防止网络异常等问题导致升级失败，可以使用screen辅助升级，screen可以保证在ssh断开的情况下继续在服务器上运行升级程序，针对screen的详细介绍可参考[这里](http://www.9usb.net/201002/linux-screen-mingling.html)。
-首先使用''apt-get install screen''安装screen程序，然后运行''screen -S debian-upgrade''开启一个名为''debian-upgrade''的screen会话。之后即可运行''apt-get dist-upgrade''升级系统。升级期间ssh如果断开，则重新连接后运行''screen -r debian-upgrade''便可恢复到之前的screen会话。
+首先使用`apt-get install screen`安装screen程序，然后运行`screen -S debian-upgrade`开启一个名为`debian-upgrade`的screen会话。之后即可运行`apt-get dist-upgrade`升级系统。升级期间ssh如果断开，则重新连接后运行`screen -r debian-upgrade`便可恢复到之前的screen会话。
 ## debian6 squeeze
 
 ### 常用软件
@@ -83,7 +83,7 @@ hostname保存于''/etc/hostname''，修改后运行''hostname -F /etc/hostname'
 	
 	dpkg-reconfigure exim4-config
 
-第一个页面选择''internet site''，之后的默认即可。
+第一个页面选择`internet site`，之后的默认即可。
 重启exim4
 
 	
@@ -94,7 +94,7 @@ hostname保存于''/etc/hostname''，修改后运行''hostname -F /etc/hostname'
 	
 	MESSAGE_SIZE_LIMIT=1000m
 
-然后运行''update-exim4.conf''更新配置文件即可。
+然后运行`update-exim4.conf`更新配置文件即可。
 #### mutt安装和使用
 
 安装mutt
@@ -125,7 +125,7 @@ PHP-FPM (FastCGI Process Manager)是一种常用的fastcgi的实现方式。使�
 ## 安装和配置nginx
 
 ### 安装nginx
-为了安装最新的nginx，在软件源''/etc/apt/sources.list''中添加以下两条记录
+为了安装最新的nginx，在软件源`/etc/apt/sources.list`中添加以下两条记录
 
 	
 	deb http://nginx.org/packages/debian/ squeeze nginx
@@ -142,16 +142,16 @@ PHP-FPM (FastCGI Process Manager)是一种常用的fastcgi的实现方式。使�
 
 已测试nginx版本: 1.2.4, 1.2.5
 
-为了让dokuwiki支持类似''domain.com/wiki/syntax''的简洁url，需要分两步进行设置。
+为了让dokuwiki支持类似`domain.com/wiki/syntax`的简洁url，需要分两步进行设置。
 ### 1. dokuwiki设置
 
-进入dokuwiki配置界面，并定位到''高级设置''。将userewrite修改为''.htaccess''。
+进入dokuwiki配置界面，并定位到`高级设置`。将userewrite修改为`.htaccess`。
 ### 2. 服务器rewrite设置
 
-如果经过以下设置后重写依然失败，可以尝试清空浏览器缓存和dokuwiki的缓存''rm -Rf %dokuwiki_home%/data/cache/*''后再重试。
+如果经过以下设置后重写依然失败，可以尝试清空浏览器缓存和dokuwiki的缓存`rm -Rf %dokuwiki_home%/data/cache/*`后再重试。
 #### 2.1 nginx1.2.4设置
 
-参考[doku>rewrite](doku>rewrite)，为nginx添加重写规则，这里修改的文件是/etc/nginx/conf.d/default.conf。我的dokuwiki主目录位于/var/www/kb，使用''atime.me/wiki/''访问wiki, 相关设置如下所示。
+参考[doku>rewrite](doku>rewrite)，为nginx添加重写规则，这里修改的文件是/etc/nginx/conf.d/default.conf。我的dokuwiki主目录位于/var/www/kb，使用`atime.me/wiki/`访问wiki, 相关设置如下所示。
 
     root /var/www;
     # dokuwiki
@@ -172,11 +172,11 @@ PHP-FPM (FastCGI Process Manager)是一种常用的fastcgi的实现方式。使�
         deny all;
     }
 
-设置完成后运行''service nginx restart''重启nginx服务器即可。
+设置完成后运行`service nginx restart`重启nginx服务器即可。
 
-该重写规则完全参考了[doku>rewrite](doku>rewrite)中的''For NGINX 0.7.65 or later''版本，只是根据dokuwiki的实际所在位置，在规则前添加/kb目录前缀。如果出现''no input files specialfied''错误，则表明php-fastcgi无法找到文件，尝试修改规则的目录前缀。如果设置无效，请尝试清空浏览器缓存和dokuwiki的缓存后再重试。
+该重写规则完全参考了[doku>rewrite](doku>rewrite)中的`For NGINX 0.7.65 or later`版本，只是根据dokuwiki的实际所在位置，在规则前添加/kb目录前缀。如果出现`no input files specialfied`错误，则表明php-fastcgi无法找到文件，尝试修改规则的目录前缀。如果设置无效，请尝试清空浏览器缓存和dokuwiki的缓存后再重试。
 
-倘若使用''wiki.atime.me''访问dokuwiki, 应当使用以下重写规则:
+倘若使用`wiki.atime.me`访问dokuwiki, 应当使用以下重写规则:
 
 	
 	location / {
@@ -197,15 +197,15 @@ PHP-FPM (FastCGI Process Manager)是一种常用的fastcgi的实现方式。使�
 
 #### 2.2 apache2.2.16设置
 
-首先运行''a2enmod rewrite''启用rewrite模块。为了允许使用.htaccess文件，修改''/etc/apache2/sites-enabled/000default''中相关Directory的AllowOverride属性为''AllowOverride All''。如下即可。
+首先运行`a2enmod rewrite`启用rewrite模块。为了允许使用.htaccess文件，修改`/etc/apache2/sites-enabled/000default`中相关Directory的AllowOverride属性为`AllowOverride All`。如下即可。
 
     DocumentRoot /var/www
     `<Directory /var/www/>`
         AllowOverride All
         ...
 
-设置好后运行''service apache2 restart''重启apache服务器。
-之后进入dokuwiki的主目录，将.htaccess.dist拷贝为.htaccess文件，并去掉以下各行前的注释符''#''。
+设置好后运行`service apache2 restart`重启apache服务器。
+之后进入dokuwiki的主目录，将.htaccess.dist拷贝为.htaccess文件，并去掉以下各行前的注释符`#`。
 
     RewriteEngine on
     RewriteRule ^_media/(.*)              lib/exe/fetch.php?media=$1  [QSA,L]
@@ -222,7 +222,7 @@ PHP-FPM (FastCGI Process Manager)是一种常用的fastcgi的实现方式。使�
 ## phpmyadmin
 
 ### Sohusin问题
-当使用apache2服务器并安装了Suhosin模块时，使用phpmyadmin时可能会在页面下方看到类似''链接表的额外特性尚未激活。要查出原因，请点击此处。''或''Server running with Suhosin. Please refer to documentation for possible issues''的错误提示。
+当使用apache2服务器并安装了Suhosin模块时，使用phpmyadmin时可能会在页面下方看到类似`链接表的额外特性尚未激活。要查出原因，请点击此处。`或`Server running with Suhosin. Please refer to documentation for possible issues`的错误提示。
 参考[这里](http://www.webhostingtalk.com/archive/index.php/t-1144204.html)，我的解决方案分为如下两步。
 #### 1. 为phpmyadmin禁用Suhosin
 
@@ -234,7 +234,7 @@ PHP-FPM (FastCGI Process Manager)是一种常用的fastcgi的实现方式。使�
 
 #### 2. 关闭Suhosin警告
 
-修改''/etc/phpmyadmin/config.inc.php''，添加如下项。
+修改`/etc/phpmyadmin/config.inc.php`，添加如下项。
 
 	
 	$cfg['SuhosinDisableWarning']='true';
@@ -255,7 +255,7 @@ PHP-FPM (FastCGI Process Manager)是一种常用的fastcgi的实现方式。使�
 	
 	00 01 * * * /root/bin/host-admin/host-admin.py -c /root/bin/host-admin/daily-backup.ini -b
 
-需要注意的是，如果使用''/etc/cron.*''来放置任务脚本，脚本名(或软链接名)中不能包含点号''.''，否则任务将无法执行且没有任何提示信息，详细信息可参考[Ubuntu CronHowto wiki](https///help.ubuntu.com/community/CronHowto)。
+需要注意的是，如果使用`/etc/cron.*`来放置任务脚本，脚本名(或软链接名)中不能包含点号`.`，否则任务将无法执行且没有任何提示信息，详细信息可参考[Ubuntu CronHowto wiki](https///help.ubuntu.com/community/CronHowto)。
 
 ## 参考资料
 

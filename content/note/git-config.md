@@ -55,7 +55,7 @@ git config ...命令默认修改此配置文件，如果想使用另外的路径
 
 ### 我的~/.gitgnore
 
-用于忽略部分文件，用户级别的ignore文件位于~/.gitignore，仓库级别的ignore文件位于$repo/.gitignore。详情请参考''man 5 gitignore''。
+用于忽略部分文件，用户级别的ignore文件位于~/.gitignore，仓库级别的ignore文件位于$repo/.gitignore。详情请参考`man 5 gitignore`。
 
 	
 	# Backup files
