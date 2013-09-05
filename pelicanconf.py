@@ -5,7 +5,7 @@ import datetime
 
 AUTHOR = u'Ma Wenbao'
 SITENAME = u'baozi-x'
-SITEURL = ''
+SITEURL = 'http://atime.me'
 
 TIMEZONE = 'Asia/Shanghai'
 DATE_FORMATS = {
@@ -46,7 +46,7 @@ MD_EXTENSIONS = ([
     headerid.HeaderIdExtension(configs=[('slugify', my_slugify)]),
     ])
 
-THEME = '../niu-x2'
+THEME = './themes/niu-x2'
 PLUGIN_PATH = './plugins'
 PLUGINS = ['gzip_cache', 'extract_headings', 'sitemap']
 
