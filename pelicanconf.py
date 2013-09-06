@@ -117,11 +117,12 @@ NIUX2_GOOGLE_CSE_ID = '010036094435699263509:otu5mqpvchs'
 NIUX2_DISPLAY_TITLE = False
 
 NIUX2_CATEGORY_MAP = {
-        'code': ('代码', 'icon-code'),
-        'life': ('日常', 'icon-coffee'),
         'research': ('研究', 'icon-beaker'),
+        'code': ('代码', 'icon-code'),
         'thought': ('思考', 'icon-question-sign'),
         'note': ('笔记', 'icon-book'),
+        'life': ('日常', 'icon-coffee'),
+        'collection': ('搜藏', 'icon-briefcase'),
         }
 NIUX2_HEADER_SECTIONS = [
         ('关于', 'about', '/about.html', 'icon-anchor'),
