@@ -24,7 +24,7 @@ atime.me这个域名属于灵光闪现(也可理解为大脑短路)的产物，�
 
 ## About me
 
-80后程序猿一只，懒人,资深宅，轻度完美主义者，信奉简单即是美。目前从事于C++和网络方面的工作，懂一点前端开发。喜欢Debian/Ubuntu和Python。喜欢Nightwish, The Cranberries和周杰伦，也常听ACG。很少用QQ和MSN，如有需要最好用邮件联系我。
+80后程序猿一只，懒人，资深宅，轻度完美主义者，信奉简单即是美。目前从事于C++和网络方面的工作，懂一点前端开发。喜欢Debian/Ubuntu和Python。喜欢Nightwish, The Cranberries和周杰伦，也常听ACG。很少用QQ和MSN，如有需要最好用邮件联系我。
 
 ## Contact me
 

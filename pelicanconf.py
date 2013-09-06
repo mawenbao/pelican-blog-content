@@ -17,7 +17,7 @@ LOCALE = ('zh_CN.utf8',)
 DEFAULT_LANG = u'zh_CN'
 DEFAULT_PAGINATION = 10
 FILENAME_METADATA = '(?P<slug>.*)'
-DISQUS_SITENAME = 'atime-me'
+#DISQUS_SITENAME = 'atime-me'
 GOOGLE_ANALYTICS = 'UA-43647857-1'
 # feed config
 FEED_DOMAIN = SITEURL
@@ -109,6 +109,7 @@ NIUX2_HEADER_TOC_TRANSL = '目录'
 NIUX2_SEARCH_TRANSL = '搜索'
 NIUX2_SEARCH_PLACEHOLDER_TRANSL = '按回车开始搜索 ...'
 
+NIUX2_DUOSHUO_SHORTNAME = 'atime-me'
 NIUX2_PYGMENTS_THEME = 'github'
 NIUX2_PAGINATOR_LENGTH = 11
 NIUX2_FAVICON_URL = '/favicon.ico'
@@ -116,11 +117,12 @@ NIUX2_GOOGLE_CSE_ID = '010036094435699263509:otu5mqpvchs'
 NIUX2_DISPLAY_TITLE = False
 
 NIUX2_CATEGORY_MAP = {
-        'code': ('代码', 'icon-code'),
-        'life': ('日常', 'icon-coffee'),
         'research': ('研究', 'icon-beaker'),
+        'code': ('代码', 'icon-code'),
         'thought': ('思考', 'icon-question-sign'),
         'note': ('笔记', 'icon-book'),
+        'life': ('日常', 'icon-coffee'),
+        'collection': ('搜藏', 'icon-briefcase'),
         }
 NIUX2_HEADER_SECTIONS = [
         ('关于', 'about', '/about.html', 'icon-anchor'),
