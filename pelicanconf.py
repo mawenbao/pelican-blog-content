@@ -118,6 +118,7 @@ NIUX2_CATEGORY_MAP = {
         'note': ('笔记', 'icon-book'),
         'life': ('日常', 'icon-coffee'),
         'collection': ('搜藏', 'icon-briefcase'),
+        'art': ('涂鸦', 'icon-picture'),
         }
 NIUX2_HEADER_SECTIONS = [
         ('关于', 'about', '/about.html', 'icon-anchor'),
