@@ -9,6 +9,7 @@ Ubuntu 9.04的硬盘安装和基本配置。
 
 ### vmlinuz initrd.gz 获得
 将安装盘debian-XX.iso 与 vmlinuz, initrd.gz 置于同一驱动器根目录下
+
     http://http.us.debian.org/debian/dists/lenny/main/installer-i386/current/images/hd-media/
     ftp://ftp.sjtu.edu.cn/debian/dists/lenny/main/installer-i386/current/images/hd-media/
 

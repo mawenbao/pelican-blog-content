@@ -47,14 +47,14 @@ Tags: pelican, setup, summary, static_blog
 官方主题仓库见[这里][2]，另外github上还有许多没有加入官方主题仓库的优秀pelican主题，请善用github的搜索功能。
 
 ### Elegant
-![Elegant screenshoot][5]
-
 [Elegant][6]是我见过的pelican主题里最优雅漂亮的一个了，功能也超齐全，[这里][7]有一篇作者写的介绍和配置文章。
 
-### Niu-X2
-![Niu-X2 screenshoot][8]
+![Elegant screenshoot][5]
 
+### Niu-X2
 接下来是毛遂自荐，Niu-X2是本人业余时间用bootstrap3创作的一个主题，本站目前正在用，功能比较齐全，不算漂亮但很对我自己的口味，代码和配置方法都在[这里][9]。官方主题仓库里的那个niu-x2版本比较老了，如果感兴趣请直接从我的仓库里拉取。
+
+![niu-x2 screenshoot][8]
 
 ## 优秀插件推荐
 使用插件会延长pelican的编译时间，不过这不是什么问题。这里仅推荐我认为必备的插件，另外官方插件仓库见[这里][3]。

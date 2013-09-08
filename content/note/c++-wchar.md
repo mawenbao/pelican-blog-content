@@ -35,14 +35,14 @@ Tags: c++, wchar
     // ...
 
     void fun(string _flname) {
-    wifstream wif(_flname.c_str());
-    wif.imbue(locale("chs"));
-    wstring wsline(L""); // L必需
+        wifstream wif(_flname.c_str());
+        wif.imbue(locale("chs"));
+        wstring wsline(L""); // L必需
 
-    while (getline(wif, wsline)) // wif 与 wsline 的字符类型应相同，同为 char 或同为 wchar_t 。
-    // ...
+        while (getline(wif, wsline)) // wif 与 wsline 的字符类型应相同，同为 char 或同为 wchar_t 。
+        // ...
 
-    wif.close();
+        wif.close();
     }
     // ...
     
