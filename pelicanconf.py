@@ -69,15 +69,6 @@ SITEMAP = {
             }
         }
 
-# Blogroll
-LINKS = ()
-
-# Social widget
-#SOCIAL = (('You can add links in your config file', '#'),)
-
-# Uncomment following line if you want document-relative URLs when developing
-#RELATIVE_URLS = True
-
 FILES_TO_COPY = (
         ('extra/CNAME', 'CNAME'),
         ('extra/.nojekyll', '.nojekyll'),
