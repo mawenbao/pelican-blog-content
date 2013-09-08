@@ -42,7 +42,24 @@ cygwin下用git向远程https仓库推送数据时遇到以下问题:
 
 参考[这里](http://tech.idv2.com/2012/09/14/cygwin-git-error/)，解决办法是在cygwin上安装ca-certificates。
 
+### recursion detected in die handler 
+使用`git push`的时候遇到如下问题:
+
+    fatal: recursion detected in die handler
+
+参考[这里](http://stackoverflow.com/questions/12651749/git-push-fails-rpc-failed-result-22-http-code-411)的问题，问题原因是http.postBuffer默认上限为1M所致。在git的配置里将http.postBuffer变量改大一些即可，比如将上限设为5M：
+
+    git config http.postBuffer 5242880
+
+问题的原解决答案为：
+> If you attempt to push a large set of changes to a Git repository with HTTP or HTTPS, you may get an error message such as error: RPC failed; result=22, HTTP code = 411. This is caused by a Git configuration default which limits certain HTTP operations to 1 megabyte.
+>
+> To change this limit run within your local repository
+>
+> git config http.postBuffer *bytes*
+> where bytes is the maximum number of bytes permitted.
+
 ## 参考资料
 
 *  [git aliases causing permission denied error](http://stackoverflow.com/questions/7997700/git-aliases-causing-permission-denied-error)
-
+*  [git push fails: RPC failed; result=22, HTTP code = 411](http://stackoverflow.com/questions/12651749/git-push-fails-rpc-failed-result-22-http-code-411)
