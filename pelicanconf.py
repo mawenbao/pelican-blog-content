@@ -31,44 +31,6 @@ USE_FOLDER_AS_CATEGORY = True
 DELETE_OUTPUT_DIRECTORY = True
 DEFAULT_CATEGORY = 'uncategorized'
 
-# extrac_headings plugin configuration
-import md5
-def my_slugify(value, sep):
-    m = md5.new()
-    m.update(value)
-    return m.digest().encode('hex')
-MY_SLUGIFY_FUNC = my_slugify
-MY_TOC_CLASS = 'dropdown-menu'
-from markdown.extensions import headerid, codehilite
-MD_EXTENSIONS = ([
-    'extra',
-    codehilite.CodeHiliteExtension(configs=[('linenums', False), ('guess_lang', False)]),
-    headerid.HeaderIdExtension(configs=[('slugify', my_slugify)]),
-    ])
-
-THEME = './themes/niu-x2'
-PLUGIN_PATH = './plugins'
-PLUGINS = ['gzip_cache', 'extract_headings', 'sitemap']
-
-TEMPLATE_PAGES = {
-        "404.html": "404.html",
-        }
-
-# plugin config
-SITEMAP = {
-        'format': 'xml',
-        'priorities': {
-            'articles': 0.5,
-            'indexes': 0.5,
-            'pages': 0.5
-            },
-        'changefreqs': {
-            'articles': 'weekly',
-            'indexes': 'daily',
-            'pages': 'monthly'
-            }
-        }
-
 FILES_TO_COPY = (
         ('extra/CNAME', 'CNAME'),
         ('extra/.nojekyll', '.nojekyll'),
@@ -88,7 +50,49 @@ TAG_URL = 'tag/{slug}.html'
 TAG_SAVE_AS = TAG_URL
 TAGS_SAVE_AS = 'tag/index.html'
 
-# niu-x2 theme custom variables
+TEMPLATE_PAGES = {
+        "404.html": "404.html",
+        }
+STATIC_PATHS = ['images',]
+
+# plugin config
+PLUGIN_PATH = './plugins'
+PLUGINS = ['gzip_cache', 'extract_headings', 'sitemap']
+
+# extrac_headings plugin config
+import md5
+def my_slugify(value, sep):
+    m = md5.new()
+    m.update(value)
+    return m.digest().encode('hex')
+MY_SLUGIFY_FUNC = my_slugify
+MY_TOC_CLASS = 'dropdown-menu'
+from markdown.extensions import headerid, codehilite
+MD_EXTENSIONS = ([
+    'extra',
+    codehilite.CodeHiliteExtension(configs=[('linenums', False), ('guess_lang', False)]),
+    headerid.HeaderIdExtension(configs=[('slugify', my_slugify)]),
+    ])
+
+# sitemap plugin config
+SITEMAP = {
+        'format': 'xml',
+        'priorities': {
+            'articles': 0.5,
+            'indexes': 0.5,
+            'pages': 0.5
+            },
+        'changefreqs': {
+            'articles': 'weekly',
+            'indexes': 'daily',
+            'pages': 'monthly'
+            }
+        }
+
+# theme config
+THEME = './themes/niu-x2'
+
+# niu-x2 theme config
 NIUX2_404_TITLE_TRANSL = '404错误 页面未找到!'
 NIUX2_404_INFO_TRANSL = '请求页面未找到!'
 NIUX2_TAG_TRANSL = '标签'

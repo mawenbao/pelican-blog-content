@@ -80,7 +80,7 @@ Tags: pelican, setup, summary, static_blog
 [gzip_cache][11]可以将所有的页面压缩为gz格式，有效加快页面的加载速度。
 
 ## 我的配置文件
-下面贴一下我的配置文件，使用[Niu-X2][9]主题，sitemap，gzip_cache和[extract_headings][14]插件。（因为某些原因，我屏蔽了google analytics id等敏感数据）
+下面贴一下我的配置文件，使用[Niu-X2][9]主题，sitemap，gzip_cache和[extract_headings][14]插件。（因为某些原因，我屏蔽了google analytics id等敏感数据，请替换所有的`你看不见我` :D）
 
     :::python
     #!/usr/bin/env python
@@ -115,44 +115,6 @@ Tags: pelican, setup, summary, static_blog
     DELETE_OUTPUT_DIRECTORY = True
     DEFAULT_CATEGORY = 'uncategorized'
 
-    # extrac_headings plugin configuration
-    import md5
-    def my_slugify(value, sep):
-        m = md5.new()
-        m.update(value)
-        return m.digest().encode('hex')
-    MY_SLUGIFY_FUNC = my_slugify
-    MY_TOC_CLASS = 'dropdown-menu'
-    from markdown.extensions import headerid, codehilite
-    MD_EXTENSIONS = ([
-        'extra',
-        codehilite.CodeHiliteExtension(configs=[('linenums', False), ('guess_lang', False)]),
-        headerid.HeaderIdExtension(configs=[('slugify', my_slugify)]),
-        ])
-
-    THEME = './themes/niu-x2'
-    PLUGIN_PATH = './plugins'
-    PLUGINS = ['gzip_cache', 'extract_headings', 'sitemap']
-
-    TEMPLATE_PAGES = {
-            "404.html": "404.html",
-            }
-
-    # plugin config
-    SITEMAP = {
-            'format': 'xml',
-            'priorities': {
-                'articles': 0.5,
-                'indexes': 0.5,
-                'pages': 0.5
-                },
-            'changefreqs': {
-                'articles': 'weekly',
-                'indexes': 'daily',
-                'pages': 'monthly'
-                }
-            }
-
     FILES_TO_COPY = (
             ('extra/CNAME', 'CNAME'),
             ('extra/.nojekyll', '.nojekyll'),
@@ -172,7 +134,49 @@ Tags: pelican, setup, summary, static_blog
     TAG_SAVE_AS = TAG_URL
     TAGS_SAVE_AS = 'tag/index.html'
 
-    # niu-x2 theme custom variables
+    TEMPLATE_PAGES = {
+            "404.html": "404.html",
+            }
+    STATIC_PATHS = ['images',]
+
+    # plugin config
+    PLUGIN_PATH = './plugins'
+    PLUGINS = ['gzip_cache', 'extract_headings', 'sitemap']
+
+    # extrac_headings plugin config
+    import md5
+    def my_slugify(value, sep):
+        m = md5.new()
+        m.update(value)
+        return m.digest().encode('hex')
+    MY_SLUGIFY_FUNC = my_slugify
+    MY_TOC_CLASS = 'dropdown-menu'
+    from markdown.extensions import headerid, codehilite
+    MD_EXTENSIONS = ([
+        'extra',
+        codehilite.CodeHiliteExtension(configs=[('linenums', False), ('guess_lang', False)]),
+        headerid.HeaderIdExtension(configs=[('slugify', my_slugify)]),
+        ])
+
+    # sitemap plugin config
+    SITEMAP = {
+            'format': 'xml',
+            'priorities': {
+                'articles': 0.5,
+                'indexes': 0.5,
+                'pages': 0.5
+                },
+            'changefreqs': {
+                'articles': 'weekly',
+                'indexes': 'daily',
+                'pages': 'monthly'
+                }
+            }
+
+    # theme config
+    THEME = './themes/niu-x2'
+
+    # niu-x2 theme config
     NIUX2_404_TITLE_TRANSL = '404错误 页面未找到!'
     NIUX2_404_INFO_TRANSL = '请求页面未找到!'
     NIUX2_TAG_TRANSL = '标签'
@@ -227,10 +231,10 @@ Tags: pelican, setup, summary, static_blog
 [2]: https://github.com/getpelican/pelican-themes "pelican官方主题仓库"
 [3]: https://github.com/getpelican/pelican-plugins "pelican官方插件仓库"
 [4]: http://docs.python.org/2/library/datetime.html#strftime-and-strptime-behavior "python strftime 格式"
-[5]: https://raw.github.com/talha131/pelican-elegant/master/home-page-screenshot.png "pelian-elegant theme screenshoot"
+[5]: /static/images/pelican/pelican-elegant-home-page-screenshot.png "pelian-elegant theme screenshoot"
 [6]: https://github.com/talha131/pelican-elegant "pelican-elegant主题"
 [7]: http://oncrashreboot.com/pelican-elegant "pelican-elegant介绍和配置说明"
-[8]: https://raw.github.com/wilbur-ma/niu-x2/master/screenshot.png "pelican niu-x2 theme screenshoot"
+[8]: /static/images/pelican/pelican-niu-x2-screenshot.png "pelican niu-x2 theme screenshoot"
 [9]: https://github.com/wilbur-ma/niu-x2 "niu-x2主题"
 [10]: https://github.com/getpelican/pelican-plugins/tree/master/sitemap "pelican sitemap插件"
 [11]: https://github.com/getpelican/pelican-plugins/tree/master/gzip_cache "pelican gzip_cache插件"
