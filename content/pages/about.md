@@ -1,11 +1,13 @@
 Title: 关于
 Date: 2013-08-25 12:14
+Comment: off
 
 [1]: http://docs.getpelican.com/ "pelican documentation"
 [2]: https://github.com/wilbur-ma/pelican-blog-content "my pelican blog repository"
 [3]: https://github.com/wilbur-ma/niu-x2 "my pelican theme"
 [5]: https://github.com/wilbur-ma "my github homepage"
 [6]: http://www.douban.com/people/wishome/ "my douban homepage"
+[7]: /my_gnupg.html "my gnu publick key"
 [10]: http://www.hawkhost.com/ "http://www.hawkhost.com/"
 [11]: http://www.linode.com/ "http://www.linode.com/"
 [12]: http://wordpress.org/extend/themes/responsive "http://wordpress.org/extend/themes/responsive"
@@ -16,10 +18,6 @@ Date: 2013-08-25 12:14
 
 本博客使用[pelican][1]创建，暂时托管在Github Pages上，文章(markdown格式)和pelican配置文件放在[这里][2]。博客的主题niu-x2乃闲暇时所作，源码放在[这里][3]。我通常会在这里做一些技术方面的笔记，偶尔也会写点想法和日常琐事。
 
-## Why atime.me
-
-atime.me这个域名属于灵光闪现(也可理解为大脑短路)的产物，纯粹是为了简单易记，没什么特别的含意。
-
 ## About me
 
 80后程序猿一只，懒人，资深宅，轻度完美主义者，信奉简单即是美。目前从事于C++和网络方面的工作，懂一点前端开发。喜欢Debian/Ubuntu和Python。喜欢Nightwish, The Cranberries和周杰伦，也常听ACG。很少用QQ和MSN，如有需要最好用邮件联系我。
@@ -29,6 +27,7 @@ atime.me这个域名属于灵光闪现(也可理解为大脑短路)的产物，�
 *   Email: wilbur.ma AT foxmail DOT com 
 *   Github: [@wilbur-ma][5]
 *   豆瓣: [@wishome][6]
+*   我的公钥: 见[这里][7]
 
 ## Many thanks
 

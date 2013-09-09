@@ -1,4 +1,4 @@
-Title: 我的Kindle Paperwhite
+Title: 记第一次海淘
 Date: 2013-01-25 21:01:11
 Tags: 海淘, kindle_paperwhite
 

@@ -30,6 +30,7 @@ TRANSLATION_FEED_ATOM = None
 USE_FOLDER_AS_CATEGORY = True
 DELETE_OUTPUT_DIRECTORY = True
 DEFAULT_CATEGORY = 'uncategorized'
+SUMMARY_MAX_LENGTH = 1
 
 FILES_TO_COPY = (
         ('extra/CNAME', 'CNAME'),
@@ -54,6 +55,7 @@ TEMPLATE_PAGES = {
         "404.html": "404.html",
         }
 STATIC_PATHS = ['images',]
+JINJA_EXTENSIONS = ['jinja2.ext.ExprStmtExtension',]
 
 # plugin config
 PLUGIN_PATH = './plugins'
@@ -109,7 +111,7 @@ NIUX2_PYGMENTS_THEME = 'github'
 NIUX2_PAGINATOR_LENGTH = 11
 NIUX2_FAVICON_URL = '/favicon.ico'
 NIUX2_GOOGLE_CSE_ID = '010036094435699263509:otu5mqpvchs'
-NIUX2_DISPLAY_TITLE = False
+NIUX2_DISPLAY_TITLE = True
 
 NIUX2_CATEGORY_MAP = {
         'research': ('研究', 'icon-beaker'),
@@ -122,8 +124,8 @@ NIUX2_CATEGORY_MAP = {
         }
 NIUX2_HEADER_SECTIONS = [
         ('关于', 'about', '/about.html', 'icon-anchor'),
+        ('留言簿', 'guestbook', '/guestbook.html', 'icon-edit'),
         ('使用协议', 'agreement', '/agreement.html', 'icon-info-sign'),
-        ('我的公钥', 'my gnupg', '/my_gnupg.html', 'icon-key'),
         ('存档', 'archives', '/archives.html', 'icon-archive'),
         ('标签', 'tags', '/tag/', 'icon-tag'),
         ]
@@ -134,9 +136,9 @@ NIUX2_FOOTER_LINKS = [
         ]
 
 NIUX2_FOOTER_ICONS = [
+        ('icon-key', 'my public key', '/my_gnupg.html'),
         ('icon-envelope-alt', 'my email address', 'mailto: wilbur.ma@foxmail.com'),
         ('icon-github-alt', 'my github page', 'http://github.com/wilbur-ma'),
-        ('icon-sitemap', 'sitemap.xml', '/sitemap.xml'),
         ('icon-rss', 'subscribe my blog via rss2', '/feed.xml'),
         ]
 
