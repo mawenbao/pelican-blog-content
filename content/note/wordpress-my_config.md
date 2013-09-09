@@ -2,7 +2,6 @@ Title: 我的wordpress设置
 Date: 2013-08-25 12:14
 Tags: wordpress, config
 
-
 记录对wordpress和某些插件的设置或改进。
 ## wordpress设置
 
@@ -138,7 +137,6 @@ W3 Total Cache的Minify手动模式已经支持Non Blocking加载js代码，不�
 	$CONTENT
 	</div>
 
-
 ### Google Sitemaps V3 for qtranslate
 
 配合ocp和cron实现自动更新w3tc的页面缓存，具体修改思路在[将wordpress打造成一个伪静态博客](http://blog.atime.me/2012/12/make-wordpress-a-pseudo-static-blog/)里描述，代码相关的介绍记录在[:codes:snippets:wordpress_tweak_ocp_sitemap](/codes/snippets/wordpress_tweak_ocp_sitemap)。
@@ -148,7 +146,6 @@ W3 Total Cache的Minify手动模式已经支持Non Blocking加载js代码，不�
 添加如下功能:点击h1以下级别的标题时，平滑滚动到目录列表的对应列表项。
 
 设置方面，将TOC+的高级设置里的"顶部偏移"设为0px。php代码方面，修改toc.php。修改后的代码放在[这里](https///github.com/wilbur-ma/wordpress-tweak/tree/master/table-of-contents-plus)，1211版本的patch放在[这里](https///github.com/wilbur-ma/wordpress-tweak/blob/master/patch/table-of-contents-plus-1211.patch)。
-
 
 ## 针对主题的修改
 

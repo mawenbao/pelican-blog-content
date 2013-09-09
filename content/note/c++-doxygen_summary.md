@@ -2,7 +2,6 @@ Title:  Doxygen使用总结
 Date: 2013-08-25 12:14
 Tags: c++, doxygen, note
 
-
 Here is the same piece of code as shown above, this time documented using the JavaDoc style and JAVADOC_AUTOBRIEF set to YES:
 
     :::cpp

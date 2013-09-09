@@ -2,7 +2,6 @@ Title: 从源码安装nginx
 Date: 2013-08-25 12:14
 Tags: nginx, install, tutorial
 
-
 ## 准备工作
 
 安装必须的工具和库。

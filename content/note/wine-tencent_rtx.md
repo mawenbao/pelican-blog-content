@@ -2,7 +2,6 @@ Title: ubuntu12.04 安装rtx
 Date: 2013-08-25 12:14
 Tags: wine, ubuntu, rtx
 
-
 在ubuntu12.04上使用wine1.4安装rtx。
 
 ## 准备工作
@@ -32,7 +31,6 @@ Tags: wine, ubuntu, rtx
 
 	
 	The native implementation of OLEAUT32.DLL cannot be used with Wine's RPCRT4.DLL. Remove OLEAUT32.DLL and try again.
-
 
 ## 参考资料
 

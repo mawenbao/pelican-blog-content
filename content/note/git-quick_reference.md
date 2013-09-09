@@ -2,7 +2,6 @@ Title: Git快速使用指南
 Date: 2013-08-25 12:14
 Tags: git, tutorial
 
-
 阅读“[Pro Git](http://git-scm.com/book)“后写的笔记，当做速查手册(quick git reference)来用，以供日常查阅。常见的git错误和解决方案可参考[git问题整理](/tools/git/errors)。
 
 ## 特殊符号
@@ -355,7 +354,6 @@ git的代码仓库里有针对shell和bash等unix shell的命令行补全脚本�
 
 *  double dot ..
 *  triple dot ...
-
 
 ## Git进阶教程
 

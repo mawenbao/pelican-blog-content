@@ -2,7 +2,6 @@ Title: debian6上为Vim添加GDB调试功能
 Date: 2013-08-25 12:14
 Tags: vim, plugin, gdb
 
-
 在debian6上为vim添加gdb调试功能。
 
 ## 准备工作

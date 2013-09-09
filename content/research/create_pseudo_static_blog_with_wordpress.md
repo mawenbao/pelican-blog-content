@@ -18,7 +18,6 @@ Tags: php, golang, wordpress, static_blog
 [14]: http://wordpress.org/extend/plugins/duoshuo/ "多说社会化评论插件"
 [15]: http://wordpress.org/extend/plugins/denglu/ "灯鹭社会化评论插件"
 
-
 前一段时间折腾了一会[Pelican][2]和[Ruhoh][3]这些静态博客引擎，不过因为舍不得wordpress的众多优秀主题和插件，最终没有迁移到静态博客引擎上，我果然是一个懒人。使用过静态博客引擎的人肯定对其闪电般的页面加载速度(nginx+静态文件)印象深刻，相较之下wordpress这类动态博客便差强人意。好在wordpress有众多的缓存插件，适当的配置之后页面加载速度会有很大的提高。不过这还不够，我想要的效果是，既有动态博客的便利也要有静态博客的速度。所以，免不了又要折腾一翻。
 
 要让wordpress成为一个“伪静态博客“，至少要实现如下的几个功能:

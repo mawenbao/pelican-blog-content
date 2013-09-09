@@ -2,7 +2,6 @@ Title: SQL Snippets
 Date: 2013-08-25 12:14
 Tags: mysql, snippet
 
-
 收集一些常用的sql语句。
 
 ## 数据定义语言 DDL

@@ -2,7 +2,6 @@ Title: Search Engine Optimization
 Date: 2013-08-25 12:14
 Tags: dokuwiki, config, seo
 
-
 针对SEO对dokuwiki进行优化。
 ## 优化
 
@@ -31,7 +30,6 @@ Tags: dokuwiki, config, seo
 ### 简介
 
 使用dokuwiki的[description](doku>plugin/description)插件，为wiki页面天剑简要介绍。
-
 
 ## 参考资料
 

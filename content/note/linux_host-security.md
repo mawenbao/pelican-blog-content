@@ -2,7 +2,6 @@ Title: Linux服务器安全策略
 Date: 2013-08-08 12:14
 Tags: linux_server, security
 
-
 记录网站安全策略, 主要参考[Linode的文档](http://library.linode.com/securing-your-server)写成。
 ## 添加sudo用户
 

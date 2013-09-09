@@ -2,7 +2,6 @@ Title: Wordpress修改之使用ocp自动更新页面缓存
 Date: 2013-08-08 12:14
 Tags: php, golang, wordpress, ocp
 
-
 记录[将wordpress打造成一个伪静态博客](http://blog.atime.me/2012/12/make-wordpress-a-pseudo-static-blog/)的编码过程，包括用到的资源和遇到的问题等。
 
 ## 用到的工具

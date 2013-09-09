@@ -2,7 +2,6 @@ Title: Linux网站搭建手册
 Date: 2013-08-08 12:14
 Tags: linux_server, tutorial, install
 
-
 本手册的内容主要包括需要安装的软件及其配置，和常见问题及其解决方案。
 
 *  OS    : debian6 squeeze
@@ -110,8 +109,6 @@ hostname保存于`/etc/hostname`，修改后运行`hostname -F /etc/hostname`设
 
 	
 	update-alternatives --config editor
-
-
 
 ## 安装和配置php
 
@@ -237,7 +234,6 @@ PHP-FPM (FastCGI Process Manager)是一种常用的fastcgi的实现方式。使�
 
 	
 	$cfg['SuhosinDisableWarning']='true';
-
 
 ## 备份设置
 

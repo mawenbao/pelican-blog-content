@@ -2,7 +2,6 @@ Title: Bash小技巧合集
 Date: 2013-08-25 12:14
 Tags: bash, trick
 
-
 收集一些bash下的技巧。
 
 ## 符号
@@ -43,7 +42,6 @@ bash里一些特殊的符号的作用。
 	set -o history # 开启bash历史记录
 	set +o history # 关闭bash历史记录
 
-
 ### shopt
 
 修改额外的bash选项，常用的选项有:
@@ -51,7 +49,6 @@ bash里一些特殊的符号的作用。
 	shopt             # 查看所有选项的状态
 	shopt -s extglob  # 启用扩展的glob匹配
 	shopt -u extglob  # 禁用扩展的glob匹配
-
 
 ## 模式匹配
 
@@ -73,7 +70,6 @@ bash里一些特殊的符号的作用。
 
 使用命令`ls !(a*).txt`将输出:
     bbb.txt
-
 
 ## 参考资料
 

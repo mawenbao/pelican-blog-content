@@ -2,7 +2,6 @@ Title: Mysql小技巧
 Date: 2013-08-25 12:14
 Tags: mysql, trick
 
-
 收集关于Mysql的技巧。
 
 ##  禁用Innodb引擎 

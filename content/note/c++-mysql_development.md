@@ -2,7 +2,6 @@ Title: 使用C++进行Mysql开发
 Date: 2013-08-25 12:14
 Tags: c++, mysql, dev, note
 
-
 介绍用C++语言进行Mysql开发的东东。
 
 ## 准备工作

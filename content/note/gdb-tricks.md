@@ -2,7 +2,6 @@ Title: GDB技巧整理
 Date: 2013-08-25 12:14
 Tags: gdb, trick, gnu
 
-
 整理常用的gdb技巧。
 
 ## 设置字符编码
@@ -12,7 +11,6 @@ gdb默认使用utf-8编码，可以使用如下命令修改编码。
     set charset GBK
     
 也可直接在~/.gdbinit里设置。
-
 
 ## 常用调试命令
 

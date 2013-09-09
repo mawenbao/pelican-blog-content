@@ -2,7 +2,6 @@ Title: Linux服务器常见错误
 Date: 2013-08-08 12:14
 Tags: linux_server, problem
 
-
 记录Linux服务器上常见的错误和解决方案，安装和配置参考[这里](/tips/build_linux_host)。
 ## 系统管理相关
 

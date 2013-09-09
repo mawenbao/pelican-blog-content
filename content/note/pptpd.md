@@ -2,7 +2,6 @@ Title: 使用pptpd搭建VPN
 Date: 2013-08-25 12:14
 Tags: pptpd, vpn
 
-
 pptpd存在安全隐患，详情可参考[这里](http://pptpclient.sourceforge.net/protocol-security.phtml)。
 
 介绍在debian squeeze上使用pptpd搭建vpn的方法。

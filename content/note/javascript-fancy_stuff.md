@@ -2,7 +2,6 @@ Title: Javascript Fancy Stuff
 Date: 2013-08-25 12:14
 Tags: javascript, note
 
-
 收集一些华丽的Javascript工具或代码。
 
 ## 侧边栏自动滚动

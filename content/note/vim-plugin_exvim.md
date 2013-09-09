@@ -2,7 +2,6 @@ Title: ExVim
 Date: 2013-08-25 12:14
 Tags: vim, plugin, shortcut
 
-
 一直懒于折腾vim，平常也就用它的快捷键。前几天在豆瓣的Vim小组上看到[ExVim](http://www.ex-dev.com/exvim/)的广告，在windows上安装后用了下发现挺顺手，这里简要介绍下。
 
 ## 小技巧
@@ -24,5 +23,4 @@ Tags: vim, plugin, shortcut
 	E482: Can't create file .vimfiles.test/quick_gen_project_post_custom.bat
 
 应该是.vimfiles.test文件夹不存在的缘故，手动创建该文件夹再访问vimentry文件即正常。
-
 

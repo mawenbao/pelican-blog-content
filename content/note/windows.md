@@ -2,7 +2,6 @@ Title: Tips on windows
 Date: 2013-08-08 12:14
 Tags: windows, tip
 
-
 收录一些windows下的技巧。
 
 ## DOS & Powershell

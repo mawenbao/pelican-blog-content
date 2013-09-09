@@ -2,7 +2,6 @@ Title: Host Backup 网站备份脚本
 Date: 2013-08-08 12:14
 Tags: python, backup
 
-
 使用python脚本进行网站备份和恢复，可以通过配置文件自定义备份选项。仅支持linux系统和mysql数据库，在debian6上测试和使用。
 
 *  当前版本: 0.0.3

@@ -2,7 +2,6 @@ Title: Memcached
 Date: 2013-08-25 12:14
 Tags: memcached, cache, distributed
 
-
 ## php memcached
 
 ## 参考资料

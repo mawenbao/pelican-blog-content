@@ -2,7 +2,6 @@ Title: Gitlab安装、配置及错误解决
 Date: 2013-08-25 12:14
 Tags: gitlab, git
 
-
 使用Gitlab在VPS上搭建私人Git仓库。
 ## 安装
 

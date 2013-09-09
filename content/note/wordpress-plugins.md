@@ -2,7 +2,6 @@ Title: Wordpress3 Plugins
 Date: 2013-08-25 12:14
 Tags: wordpress, plugin
 
-
 记录我用过和正在用(用粗体加重)的wordpress插件，针对部分插件的修改记录在[:tools:wordpress:config](/tools/wordpress/config)上。
 
 *  Wordpress: 3.4.2

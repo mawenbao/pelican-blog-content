@@ -2,7 +2,6 @@ Title: restructuredText
 Date: 2013-08-25 12:14
 Tags: restructuredText, markup_language
 
-
 restructuredText相关的东东.
 ## eclipse plugin
 

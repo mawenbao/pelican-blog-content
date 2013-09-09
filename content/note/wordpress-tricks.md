@@ -2,7 +2,6 @@ Title: Wordpress小技巧
 Date: 2013-08-25 12:14
 Tags: wordpress, trick
 
-
 收集wordpress的使用技巧。
 ## 在文章内容里插入Short Code
 

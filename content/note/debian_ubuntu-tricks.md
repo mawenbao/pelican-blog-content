@@ -2,7 +2,6 @@ Title: Debian/Ubuntu系统小技巧收集
 Date: 2013-08-25 12:14
 Tags: debian, ubuntu, trick
 
-
 整理一些Debian/Ubuntu上的小技巧，包括系统管理、系统美化和娱乐等方面。
 
 ## 系统管理
@@ -38,7 +37,6 @@ Linux系统运行等级简介:
 *  4 保留
 *  5 多人 图形界面
 *  6 重启
-
 
 ### 管理多个ssh key文件
 

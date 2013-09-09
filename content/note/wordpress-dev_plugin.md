@@ -2,7 +2,6 @@ Title: Wordpress插件开发
 Date: 2013-08-25 12:14
 Tags: dev, wordpress, plugin
 
-
 介绍开发wordpress插件的一些资源。
 
 ## 准备工作

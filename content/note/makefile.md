@@ -2,7 +2,6 @@ Title: Makefile
 Date: 2013-08-25 12:14
 Tags: makefile, tutorial
 
-
 使用GNU Make 3.8的语法。
 
 ## 规则

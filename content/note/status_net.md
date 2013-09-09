@@ -2,7 +2,6 @@ Title: status.net
 Date: 2013-08-25 12:14
 Tags: cms, status.net
 
-
 status.net是一个开源微博工具，前身是laconica。
 
 ## status.net fancy url 配置

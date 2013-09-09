@@ -2,7 +2,6 @@ Title: Wordpress 文章收集
 Date: 2013-08-25 12:14
 Tags: wordpress, resource
 
-
 ## API
 
 *  [Short Code](http://codex.wordpress.org/Shortcode_API)

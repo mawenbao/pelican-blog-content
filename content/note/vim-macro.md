@@ -2,7 +2,6 @@ Title: Vim Macro
 Date: 2013-08-25 12:14
 Tags: vim, tutorial
 
-
 介绍Vim宏的用法
 ## 初步使用
 

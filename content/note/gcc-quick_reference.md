@@ -2,7 +2,6 @@ Title: GCC/G++快速使用指南
 Date: 2013-08-25 12:14
 Tags: gcc, tutorial
 
-
 `<wrap center round important 100%>`
 尚未完成
 `</wrap>`
@@ -70,7 +69,6 @@ Tags: gcc, tutorial
 使用-WL选项可以设置使用静态或动态库，可参考[这篇文章](http://stackoverflow.com/questions/3698321/g-linker-force-static-linking-if-static-library-exists)。
     g++ -Wl,-Bstatic -lz -lfoo -Wl,-Bdynamic -lbar -Wl,--as-needed
 上面的命令将zlib和libfoo链接为静态库，将libbar链接为动态库。 -Wl选项将后面的用逗号隔开的参数列表传给链接器ld。
-
 
 ## 参考资料
 

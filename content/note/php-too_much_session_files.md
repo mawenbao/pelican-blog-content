@@ -2,7 +2,6 @@ Title: Php Session文件过多
 Date: 2013-08-25 12:14
 Tags: php, problem
 
-
 php session文件太多的解决办法.
 
 ## 设置session存储目录

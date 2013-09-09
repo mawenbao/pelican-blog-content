@@ -2,7 +2,6 @@ Title: C/C++资源收集
 Date: 2013-08-25 12:14
 Tags: c++, resource
 
-
 收集有用的C/C++资源。
 
 ## C资源列表
@@ -17,13 +16,9 @@ Tags: c++, resource
 
 *  [Doxygen注释](http://www.doxygen.nl/docblocks.html) - [总结](/tools/cpp/doxygen_summary)
 
-
-
-
 ### 指针
 
 *  [Smart Pointers - What, Why, Which?](http://ootips.org/yonat/4dev/smart-pointers.html)
 *  [Why is it wrong to use std::auto_ptr`<>` with standard containers?](http://stackoverflow.com/questions/111478/why-is-it-wrong-to-use-stdauto-ptr-with-standard-containers)
 *  [std::auto_ptr to std::unique_ptr](http://stackoverflow.com/questions/3451099/stdauto-ptr-to-stdunique-ptr)
-
 

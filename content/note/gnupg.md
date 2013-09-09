@@ -2,7 +2,6 @@ Title: GnuPG快速使用指南
 Date: 2013-08-25 12:14
 Tags: gnupg, tutorial
 
-
 简单的GnuPG教程，重点介绍GnuPG的常用命令，更详细的使用说明请参考[GnuPG](http://www.gnupg.org/)的官方文档。
 
 ## GnuPG常用命令

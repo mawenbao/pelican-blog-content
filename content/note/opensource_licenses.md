@@ -2,7 +2,6 @@ Title: 常见的自由许可协议简介
 Date: 2013-08-08 12:14
 Tags: license, note
 
-
 ## Apache License 2.0
 
 *  修改源码需包含原代码中的协议

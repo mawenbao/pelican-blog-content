@@ -2,7 +2,6 @@ Title: Google Reader技巧
 Date: 2013-08-08 12:14
 Tags: google, google_reader, shortcut
 
-
 介绍Google Reader的技巧。
 
 ## 快捷键

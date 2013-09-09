@@ -2,7 +2,6 @@ Title: Nginx错误收集和解决
 Date: 2013-08-25 12:14
 Tags: nginx, problem
 
-
 记录使用nginx时遇见的错误及其解决方法。
 
 ## 配置错误

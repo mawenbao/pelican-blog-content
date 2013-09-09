@@ -2,7 +2,6 @@ Title: Python笔记
 Date: 2013-08-25 12:14
 Tags: python, note
 
-
 记录一些零散的Python笔记。
 
 ## Paramiko

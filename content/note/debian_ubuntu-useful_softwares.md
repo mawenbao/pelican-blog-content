@@ -2,7 +2,6 @@ Title: Debian/Ubuntu 常用软件
 Date: 2013-08-25 12:14
 Tags: debian, ubuntu, package, resource
 
-
 介绍常用Debian/Ubuntu平台上的软件和部分软件的使用方法。可在[Linux Packages Search](http://pkgs.org/)查找需要的软件包。
 
 ## 软件列表
@@ -99,7 +98,6 @@ display information from object files，常用于查看目标文件的架构。
 	architecture: i386:x86-64, flags 0x00000150:
 	HAS_SYMS, DYNAMIC, D_PAGED
 	start address 0x0000003141a01900
-
 
 ### pkill
 
