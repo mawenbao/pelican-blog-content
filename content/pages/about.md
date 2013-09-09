@@ -6,7 +6,6 @@ Date: 2013-08-25 12:14
 [3]: https://github.com/wilbur-ma/niu-x2 "my pelican theme"
 [5]: https://github.com/wilbur-ma "my github homepage"
 [6]: http://www.douban.com/people/wishome/ "my douban homepage"
-[7]: http://weibo.com/baozi2x "my weibo homepage"
 [10]: http://www.hawkhost.com/ "http://www.hawkhost.com/"
 [11]: http://www.linode.com/ "http://www.linode.com/"
 [12]: http://wordpress.org/extend/themes/responsive "http://wordpress.org/extend/themes/responsive"
@@ -31,7 +30,6 @@ atime.me这个域名属于灵光闪现(也可理解为大脑短路)的产物，�
 *   Email: wilbur.ma AT foxmail DOT com 
 *   Github: [@wilbur-ma][5]
 *   豆瓣: [@wishome][6]
-*   新浪微博: [@baozi-x][7] 
 
 ## Many thanks
 

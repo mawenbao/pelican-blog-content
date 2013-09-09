@@ -135,8 +135,8 @@ NIUX2_FOOTER_LINKS = [
 
 NIUX2_FOOTER_ICONS = [
         ('icon-envelope-alt', 'my email address', 'mailto: wilbur.ma@foxmail.com'),
-        ('icon-weibo', 'my sina weibo page', 'http://weibo.com/baozi2x'),
         ('icon-github-alt', 'my github page', 'http://github.com/wilbur-ma'),
-        ('icon-rss', 'subscribe my blog via rss2', 'http://atime.me/feed.xml'),
+        ('icon-sitemap', 'sitemap.xml', '/sitemap.xml'),
+        ('icon-rss', 'subscribe my blog via rss2', '/feed.xml'),
         ]
 
