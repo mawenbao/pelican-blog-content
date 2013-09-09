@@ -1,8 +1,7 @@
-Title: pelican setup summary
+Title: Pelican静态博客搭建总结
 Date: 2013-09-08 15:04
 Tags: pelican, setup, summary, static_blog
 
-# Pelican静态博客搭建总结
 介绍Pelican并总结在搭建Pelican博客过程中需要注意的问题等。
 
 ## Pelican介绍

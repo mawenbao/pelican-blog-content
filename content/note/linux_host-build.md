@@ -1,8 +1,7 @@
-Title: build linux host
+Title: Linux网站搭建手册
 Date: 2013-08-08 12:14
 Tags: linux_server, tutorial, install
 
-# Linux网站搭建手册
 
 本手册的内容主要包括需要安装的软件及其配置，和常见问题及其解决方案。
 

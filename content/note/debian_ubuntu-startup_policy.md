@@ -1,8 +1,7 @@
-Title: debian ubuntu startup policy
+Title: Debian/Ubuntu自启动方法总结
 Date: 2013-08-25 12:14
 Tags: debian, ubuntu, startup, note
 
-# Debian/Ubuntu自启动方法总结
 总结Debian/Ubuntu的启动方法.
 
 ## XDG AutoStart

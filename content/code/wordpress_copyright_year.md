@@ -1,8 +1,7 @@
-Title: add copyright year for wordpress
+Title: 为wordpress添加版权信息
 Date: 2013-08-08 12:14
 Tags: php, wordpress, copyright
 
-# 为wordpress添加版权信息
 
 许多wordpress主题不支持在页脚显示动态年限的版权信息，可以通过修改主题的footer.php来实现这一功能。
 ## 简单的动态年限代码

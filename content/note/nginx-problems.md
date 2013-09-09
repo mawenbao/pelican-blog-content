@@ -1,8 +1,7 @@
-Title: nginx problems
+Title: Nginx错误收集和解决
 Date: 2013-08-25 12:14
 Tags: nginx, problem
 
-# Nginx错误收集和解决
 
 记录使用nginx时遇见的错误及其解决方法。
 

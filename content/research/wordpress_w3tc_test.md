@@ -1,4 +1,4 @@
-Title: wordpress plugin w3tc test
+Title: Wordpress Cache Plugin W3TC Test
 Date: 2012-12-11 14:00:29
 Tags: test, wordpress, plugin, w3_total_cache
 
@@ -9,7 +9,6 @@ Tags: test, wordpress, plugin, w3_total_cache
 [7]: http://cd34.com/blog/scalability/wordpress-cache-plugin-benchmarks/
 [8]: http://developer.yahoo.com/performance/rules.html
 
-# Wordpress Cache Plugin W3TC Test
 使用Wordpress一段时间后，开始关注其性能问题，自然就要用到缓存插件。Wordpress的缓存插件挺多的，我只用过WP Super Cache和W3 Total Cache(以下简称w3tc)，最终选择了w3tc，原因基于两点: 用apache bench简单测试过后发现w3tc略胜一筹; 另一点是w3tc集合了多种cache和minify功能，并且可配置性较高。
 
 需要说明的是，本文重在展示w3tc的效果和分享使用经验，并不是一篇严肃和科学的测评，详细和专业的测评请移步[WordPress Cache Plugin Benchmarks][7]。之前在网上看到很多老外吐槽w3tc，说它配置麻烦且效果极差，甚至有人反映使用w3tc后网站性能比不用缓存插件还要差(-_-!)，如果你对这些吐槽感兴趣，不妨参观下这里的评论: [Use WP Super Cache for WordPress speed, not W3 Total Cache][1]。这说明，缓存插件的效果极可能因使用环境而异，因此找到最适合自己的插件才是最重要的。

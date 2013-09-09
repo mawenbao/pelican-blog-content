@@ -1,8 +1,7 @@
-Title: python package markdown
+Title: Python markdown模块
 Date: 2013-08-25 12:14
 Tags: python, package
 
-# Python markdown模块
 
 介绍python markdown的命令行使用方法。
 

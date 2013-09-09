@@ -1,8 +1,7 @@
-Title: vim ExVim
+Title: ExVim
 Date: 2013-08-25 12:14
 Tags: vim, plugin, shortcut
 
-# ExVim
 
 一直懒于折腾vim，平常也就用它的快捷键。前几天在豆瓣的Vim小组上看到[ExVim](http://www.ex-dev.com/exvim/)的广告，在windows上安装后用了下发现挺顺手，这里简要介绍下。
 

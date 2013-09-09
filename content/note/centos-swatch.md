@@ -1,8 +1,7 @@
-Title: centos swatch 
+Title: 在CentOS上安装和配置Swatch
 Date: 2013-08-25 12:14
 Tags: centos, install, config, swatch, security
 
-# 在CentOS上安装和配置Swatch
 
 Swatch是一个日志监控工具，以下介绍在CentOS上的安装和配置方法。
 

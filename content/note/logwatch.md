@@ -1,8 +1,7 @@
-Title: logwatch
+Title: Logwatch简单配置教程
 Date: 2013-08-25 12:14
 Tags: logwatch, security, debian, tutorial
 
-# Logwatch简单配置教程
 
 简要介绍Debian/Ubuntu和CentOS上logwatch的配置方法和常见错误，详细的配置教程见[参考资料](#参考资料)。
 ## 配置文件说明

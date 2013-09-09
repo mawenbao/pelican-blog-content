@@ -1,8 +1,7 @@
-Title: wordpress login through https
+Title: 使用https协议登录并管理wordpress
 Date: 2013-08-25 12:14
 Tags: wordpress, ssl
 
-# 使用https协议登录并管理wordpress
 
 介绍使用https协议登录并管理wordpress的配置方法，服务器为nginx1.2.5。
 ## 修改wp-config.php

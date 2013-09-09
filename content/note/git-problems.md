@@ -1,8 +1,7 @@
-Title: git problems
+Title: Git问题整理
 Date: 2013-08-25 12:14
 Tags: git, problem
 
-# Git问题整理
 
 整理git使用过程中遇见的错误及其解决方案。
 

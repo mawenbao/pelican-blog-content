@@ -1,8 +1,7 @@
-Title: gcc environment
+Title: GCC相关的环境变量
 Date: 2013-08-25 12:14
 Tags: gcc, config
 
-# GCC相关的环境变量
 
 介绍GCC在编译阶段和程序运行阶段用到的环境变量。
 

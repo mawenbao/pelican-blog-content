@@ -1,8 +1,7 @@
-Title: python pil examples
+Title: Python PIL 例子
 Date: 2013-08-08 12:14
 Tags: python, PIL
 
-# Python PIL 例子
 
 PIL(Python Imaging Library)是Python的标准图像库，下面是一个生成文本图像的简单例子。
 ## 开发环境

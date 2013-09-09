@@ -1,8 +1,7 @@
-Title: emacs golang environment
+Title: Emacs Golang 配置(windows)
 Date: 2013-08-25 12:14
 Tags: emacs, config, golang
 
-# Emacs Golang 配置(windows)
 
 Windows系统下为Emacs配置golang开发环境。
 

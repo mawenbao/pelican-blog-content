@@ -1,8 +1,7 @@
-Title: dokuwiki seo
+Title: Search Engine Optimization
 Date: 2013-08-25 12:14
 Tags: dokuwiki, config, seo
 
-# Search Engine Optimization
 
 针对SEO对dokuwiki进行优化。
 ## 优化

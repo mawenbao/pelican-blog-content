@@ -1,8 +1,7 @@
-Title: python useful packages
+Title: Python Useful Packages
 Date: 2013-08-25 12:14
 Tags: python, package
 
-# Python Useful Packages
 
 收集Python模块和使用技巧等。
 

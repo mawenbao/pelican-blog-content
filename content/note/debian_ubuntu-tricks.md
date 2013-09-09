@@ -1,8 +1,7 @@
-Title: debian ubuntu tricks
+Title: Debian/Ubuntu系统小技巧收集
 Date: 2013-08-25 12:14
 Tags: debian, ubuntu, trick
 
-# Debian/Ubuntu系统小技巧收集
 
 整理一些Debian/Ubuntu上的小技巧，包括系统管理、系统美化和娱乐等方面。
 

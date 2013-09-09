@@ -1,8 +1,7 @@
-Title: nginx tricks
+Title: Nginx小技巧
 Date: 2013-08-25 12:14
 Tags: nginx, trick
 
-# Nginx小技巧
 
 收集使用nginx过程中发现的小技巧。
 

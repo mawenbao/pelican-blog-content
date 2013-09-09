@@ -1,8 +1,7 @@
-Title: vim useful plugins
+Title: Vim Scripts收集
 Date: 2013-08-25 12:14
 Tags: vim, plugin
 
-# Vim Scripts收集
 
 ## 常用Vim脚本列表
 

@@ -1,8 +1,7 @@
-Title: Ubuntu 9.04 Instal and Configuration
+Title: Ubuntu 9.04硬盘安装和基本配置
 Date: 2009-09-06 10:42:14
 Tags: ubuntu, install, config
 
-# Ubuntu 9.04硬盘安装和基本配置
 Ubuntu 9.04的硬盘安装和基本配置。
 
 ## 硬盘安装

@@ -1,8 +1,7 @@
-Title: debian ubuntu problems
+Title: Debian/Ubuntu常见问题及解决方法整理
 Date: 2013-08-25 12:14
 Tags: debian, ubuntu, problem
 
-# Debian/Ubuntu常见问题及解决方法整理
 
 记录使用Debian/Ubuntu时遇到的问题及其解决方法。
 

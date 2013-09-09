@@ -1,8 +1,7 @@
-Title: debian ubuntu useful softwares
+Title: Debian/Ubuntu 常用软件
 Date: 2013-08-25 12:14
 Tags: debian, ubuntu, package, resource
 
-# Debian/Ubuntu 常用软件
 
 介绍常用Debian/Ubuntu平台上的软件和部分软件的使用方法。可在[Linux Packages Search](http://pkgs.org/)查找需要的软件包。
 

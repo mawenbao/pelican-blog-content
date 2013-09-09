@@ -1,7 +1,6 @@
-Title: stop and think
+Title: 偶尔停下来
 Date: 2013-08-08 12:14
 
-# 偶尔停下来
 
 想想写些什么。。。
 

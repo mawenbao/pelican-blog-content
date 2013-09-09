@@ -1,8 +1,7 @@
-Title: php solution of too much session files
+Title: Php Session文件过多
 Date: 2013-08-25 12:14
 Tags: php, problem
 
-# Php Session文件过多
 
 php session文件太多的解决办法.
 

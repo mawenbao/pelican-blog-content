@@ -1,8 +1,7 @@
-Title: bash tricks
+Title: Bash小技巧合集
 Date: 2013-08-25 12:14
 Tags: bash, trick
 
-# Bash小技巧合集
 
 收集一些bash下的技巧。
 

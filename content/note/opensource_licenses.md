@@ -1,8 +1,7 @@
-Title: introduction to open licences 
+Title: 常见的自由许可协议简介
 Date: 2013-08-08 12:14
 Tags: license, note
 
-# 常见的自由许可协议简介
 
 ## Apache License 2.0
 

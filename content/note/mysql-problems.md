@@ -1,8 +1,7 @@
-Title: mysql problems
+Title: Mysql错误收集
 Date: 2013-08-25 12:14
 Tags: mysql, database, problem
 
-# Mysql错误收集
 
 收集使用Mysql时遇到的错误和解决方法。
 

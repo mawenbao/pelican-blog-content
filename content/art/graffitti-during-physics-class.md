@@ -1,8 +1,7 @@
-Title: 物理课涂鸦
+Title: 催眠曲引发的副作用
 Date: 2009-05-13 12:18
 Tags: graffitti, art, 涂鸦
 
-# 催眠曲引发的副作用
 物理课涂鸦
 
 ![涂鸦1](/static/images/graffitti/2009-during-physics-class-01.jpg)

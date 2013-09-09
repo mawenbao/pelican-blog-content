@@ -1,8 +1,7 @@
-Title: wordpress resource collections
+Title: Wordpress 文章收集
 Date: 2013-08-25 12:14
 Tags: wordpress, resource
 
-# Wordpress 文章收集
 
 ## API
 

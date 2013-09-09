@@ -1,8 +1,7 @@
-Title: varnish
+Title: Varnish
 Date: 2013-08-25 12:14
 Tags: varnish
 
-# Varnish
 
 网页加速器Varnish。
 

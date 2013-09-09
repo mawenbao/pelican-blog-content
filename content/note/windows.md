@@ -1,8 +1,7 @@
-Title: windows tips
+Title: Tips on windows
 Date: 2013-08-08 12:14
 Tags: windows, tip
 
-# Tips on windows
 
 收录一些windows下的技巧。
 

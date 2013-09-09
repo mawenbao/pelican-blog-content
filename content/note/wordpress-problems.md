@@ -1,8 +1,7 @@
-Title: wordpress problems
+Title: Wordpress3问题和解决方法收集
 Date: 2013-08-25 12:14
 Tags: wordpress, problem
 
-# Wordpress3问题和解决方法收集
 
 收集在使用wordpress的过程中遇到的问题及其解决方法。
 

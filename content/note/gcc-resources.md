@@ -1,8 +1,7 @@
-Title: gcc resource collections
+Title: GCC资源收集
 Date: 2013-08-25 12:14
 Tags: gcc, resource
 
-# GCC资源收集
 
 收集有用的在线GCC资源。
 

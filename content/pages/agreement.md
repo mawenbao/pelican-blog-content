@@ -1,4 +1,4 @@
-Title: agreement
+Title: 使用协议
 Date: 2013-01-22 15:20:00
 
 [3]: /about.html#2e8954957754dabdb3d4477bc68ce195 "about me"
@@ -13,7 +13,6 @@ Date: 2013-01-22 15:20:00
 [13]: http://creativecommons.org/licenses/by/3.0/cn/ "CC BY 3.0"
 [14]: http://creativecommons.org/licenses/by-sa/3.0/deed.zh "CC BY-SA 3.0"
 
-# 使用协议
 在访问本网站的内容之前，请务必仔细阅读本协议，若您继续访问本网站，则意味着您已**仔细阅读并同意**本协议。
 当前使用协议自**2013年1月22日**起效，本协议包括[许可](#License)、[免责声明](#Disclaimer)和[隐私政策](#Privacy_Policy)三部分内容，在[适用范围](#Scope)内有效。
 本网站保留随时更改和替换本协议的权利，最新版本的使用协议请参考本页面，恕不另行通知。如果您有任何疑问，请[联系我][3]。

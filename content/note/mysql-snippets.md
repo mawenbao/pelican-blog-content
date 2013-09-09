@@ -1,8 +1,7 @@
-Title: mysql sql snippets
+Title: SQL Snippets
 Date: 2013-08-25 12:14
 Tags: mysql, snippet
 
-# SQL Snippets
 
 收集一些常用的sql语句。
 

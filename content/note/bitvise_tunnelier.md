@@ -1,8 +1,7 @@
-Title: bitvise tunnelier
+Title: Bitvise Tunnelier
 Date: 2013-08-25 12:14
 Tags: proxy
 
-# Bitvise Tunnelier
 
 有关Bitvise Tunnelier的东东。
 

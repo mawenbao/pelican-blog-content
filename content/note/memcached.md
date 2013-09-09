@@ -1,8 +1,7 @@
-Title: memcached
+Title: Memcached
 Date: 2013-08-25 12:14
 Tags: memcached, cache, distributed
 
-# Memcached
 
 ## php memcached
 

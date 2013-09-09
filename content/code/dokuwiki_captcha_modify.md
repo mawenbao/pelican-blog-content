@@ -1,8 +1,7 @@
-Title: modify dokuwiki capcha plugin
+Title: 修改dokuwiki的captcha插件
 Date: 2013-08-08 12:14
 Tags: php, dokuwiki, captcha
 
-# 修改dokuwiki的captcha插件
 
 修改dokuwiki的captcha插件，为登录表单也添加验证码(captcha)支持，可以在配置页面开启或关闭登录表单的验证码框。
 

@@ -1,8 +1,7 @@
-Title: pptpd vpn
+Title: 使用pptpd搭建VPN
 Date: 2013-08-25 12:14
 Tags: pptpd, vpn
 
-# 使用pptpd搭建VPN
 
 pptpd存在安全隐患，详情可参考[这里](http://pptpclient.sourceforge.net/protocol-security.phtml)。
 

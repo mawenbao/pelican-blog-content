@@ -1,8 +1,7 @@
-Title: wordpress weibo live-blogging
+Title: 为wordpress添加本地微博
 Date: 2013-08-25 12:14
 Tags: wordpress, plugin
 
-# 为wordpress添加本地微博
 
 使用[Live Blogging插件](http://wordpress.org/extend/plugins/live-blogging/)为wordpress3添加微博功能。
 ## twitter同步支持

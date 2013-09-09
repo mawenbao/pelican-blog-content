@@ -1,8 +1,7 @@
-Title: nginx compile from source codes
+Title: 从源码安装nginx
 Date: 2013-08-25 12:14
 Tags: nginx, install, tutorial
 
-# 从源码安装nginx
 
 ## 准备工作
 

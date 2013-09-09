@@ -1,8 +1,7 @@
-Title: wordpress config 
+Title: 我的wordpress设置
 Date: 2013-08-25 12:14
 Tags: wordpress, config
 
-# 我的wordpress设置
 
 记录对wordpress和某些插件的设置或改进。
 ## wordpress设置

@@ -1,10 +1,9 @@
-Title: reviews of a 3-year work summary
+Title: 读某三年工作总结有感
 Date: 2013-01-13 13:53:42
 Tags: sumarry, work
 
 [1]: http://www.blogjava.net/jianggouben/archive/2013/01/03/iamjohnli.html
 
-# 读某三年工作总结有感
 
 研究插件的架构时，瞥到“和风赛跑”的一篇文章[在某个小创业公司的三年工作总结][1]，读后回想自己的IT之路，颇有感触。
 

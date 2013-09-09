@@ -1,8 +1,7 @@
-Title: ubuntu restore grub
+Title: 使用Grub Rescue恢复Ubuntu引导
 Date: 2013-08-25 12:14
 Tags: ubuntu, grub, boot_loader
 
-# 使用Grub Rescue恢复Ubuntu引导
 
 装了Ubuntu和Window双系统的电脑，通常会使用Ubuntu的Grub2进行引导。Grub2会在MBR写入引导记录，并将引导文件放在/boot/grub，破坏任意一项都会导致系统无法正常启动。当系统因引导失败而无法正常启动时，可以使用Windows的安装光盘或Grub Rescue恢复引导。
 

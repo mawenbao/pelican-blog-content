@@ -1,8 +1,7 @@
-Title: debian install haskell and pandoc
+Title: Debian6上安装haskell pandoc
 Date: 2013-08-25 12:14
 Tags: debian, install, haskell, pandoc
 
-# Debian6上安装haskell pandoc
 
 debian6 squeeze上在安装haskell和pandoc
 ## 安装haskell platform和cabal

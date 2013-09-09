@@ -1,8 +1,7 @@
-Title: git config
+Title: Git配置文件介绍和举例
 Date: 2013-08-25 12:14
 Tags: git, config
 
-# Git配置文件介绍和举例
 
 收集常用的Git配置。
 

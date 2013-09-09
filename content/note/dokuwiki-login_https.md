@@ -1,8 +1,7 @@
-Title: dokuwiki login through https
+Title: 使用https协议登录dokuwiki
 Date: 2013-08-25 12:14
 Tags: dokuwiki, ssl, nginx, config, note
 
-# 使用https协议登录dokuwiki
 
 介绍使用https协议登录dokuwiki的配置方法，服务器为nginx1.2.5。
 ## 生成ssl证书

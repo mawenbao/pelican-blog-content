@@ -1,8 +1,7 @@
-Title: mysql resource collections
+Title: MySQL资源收集
 Date: 2013-08-25 12:14
 Tags: mysql, database, resource
 
-# MySQL资源收集
 
 收集有用的mysql资料。
 

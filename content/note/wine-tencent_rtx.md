@@ -1,8 +1,7 @@
-Title: wine tencent rtx
+Title: ubuntu12.04 安装rtx
 Date: 2013-08-25 12:14
 Tags: wine, ubuntu, rtx
 
-# ubuntu12.04 安装rtx
 
 在ubuntu12.04上使用wine1.4安装rtx。
 

@@ -1,8 +1,7 @@
-Title: git resource collections
+Title: Git资源
 Date: 2013-08-25 12:14
 Tags: git, resource
 
-# Git资源
 
 收集好的Git资源。
 ## 资源列表

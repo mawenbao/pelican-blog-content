@@ -1,8 +1,7 @@
-Title: gdb tricks
+Title: GDB技巧整理
 Date: 2013-08-25 12:14
 Tags: gdb, trick, gnu
 
-# GDB技巧整理
 
 整理常用的gdb技巧。
 

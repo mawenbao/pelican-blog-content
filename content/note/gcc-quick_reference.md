@@ -1,8 +1,7 @@
-Title: gcc quick reference
+Title: GCC/G++快速使用指南
 Date: 2013-08-25 12:14
 Tags: gcc, tutorial
 
-# GCC/G++快速使用指南
 
 `<wrap center round important 100%>`
 尚未完成

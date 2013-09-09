@@ -1,8 +1,7 @@
-Title: markdown
+Title: Markdown标记语言
 Date: 2013-08-25 12:14
 Tags: markdown, markup_language, note
 
-# Markdown标记语言
 
 一切有关Markdown的东东.
 

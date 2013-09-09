@@ -1,8 +1,7 @@
-Title: debian ubuntu package admin tools
+Title: Debian软件管理常用命令
 Date: 2013-08-25 12:14
 Tags: debian, ubuntu, apt, dpkg
 
-# Debian软件管理常用命令
 
 参考了[这篇文章](http://www.thegeekstuff.com/2009/10/debian-ubuntu-install-upgrade-remove-packages-using-apt-get-apt-cache-apt-file-dpkg/)，在这里记录debian系统上管理软件经常用到的命令，以方便以后查询。
 ## apt

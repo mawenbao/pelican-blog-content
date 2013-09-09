@@ -1,8 +1,7 @@
-Title: javascript fancy stuff
+Title: Javascript Fancy Stuff
 Date: 2013-08-25 12:14
 Tags: javascript, note
 
-# Javascript Fancy Stuff
 
 收集一些华丽的Javascript工具或代码。
 

@@ -1,8 +1,7 @@
-Title: google reader tricks
+Title: Google Reader技巧
 Date: 2013-08-08 12:14
 Tags: google, google_reader, shortcut
 
-# Google Reader技巧
 
 介绍Google Reader的技巧。
 

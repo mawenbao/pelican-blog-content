@@ -1,8 +1,7 @@
-Title: python open() filemode
+Title: Python内置函数open()打开模式总结
 Date: 2013-08-29 15:12:00
 Tags: python, note
 
-# Python内置函数open()打开模式总结
 总结python2.7中open函数的打开模式。
 
 ## open()

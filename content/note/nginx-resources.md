@@ -1,8 +1,7 @@
-Title: nginx resource collections
+Title: Nginx资源
 Date: 2013-08-25 12:14
 Tags: nginx, resource
 
-# Nginx资源
 
 收集nginx资源。
 

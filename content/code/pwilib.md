@@ -2,7 +2,6 @@ Title: pwilib
 Date: 2011-02-13 10:43
 Tags: python, plugin
 
-# pwilib
 
 寒假练习Python写的小程序，方便管理eclipse工程的源码，用了一个简单的插件模块。
 

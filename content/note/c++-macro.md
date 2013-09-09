@@ -1,8 +1,7 @@
-Title: c++ predefined macros
+Title: 编译器内建宏
 Date: 2013-08-25 12:14
 Tags: c++, compiler, gcc, note
 
-# 编译器内建宏
 
 介绍msvc和gcc4的内建宏(predefined macros)。
 

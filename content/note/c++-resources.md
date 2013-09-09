@@ -1,8 +1,7 @@
-Title: c++ resource collections
+Title: C/C++资源收集
 Date: 2013-08-25 12:14
 Tags: c++, resource
 
-# C/C++资源收集
 
 收集有用的C/C++资源。
 

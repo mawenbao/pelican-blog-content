@@ -1,4 +1,4 @@
-Title: about
+Title: 关于
 Date: 2013-08-25 12:14
 
 [1]: http://docs.getpelican.com/ "pelican documentation"
@@ -12,7 +12,6 @@ Date: 2013-08-25 12:14
 [13]: /tech/create-a-pseudo-static-blog-with-wordpress.html "create a pseudo static blog with wordpress"
 [14]: /agreement.html "使用协议"
 
-# 关于
 ## What
 
 本博客使用[pelican][1]创建，暂时托管在Github Pages上，文章(markdown格式)和pelican配置文件放在[这里][2]。博客的主题niu-x2乃闲暇时所作，源码放在[这里][3]。我通常会在这里做一些技术方面的笔记，偶尔也会写点想法和日常琐事。
