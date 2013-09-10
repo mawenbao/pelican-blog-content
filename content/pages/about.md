@@ -7,7 +7,7 @@ Comment: off
 [3]: https://github.com/wilbur-ma/niu-x2 "my pelican theme"
 [5]: https://github.com/wilbur-ma "my github homepage"
 [6]: http://www.douban.com/people/wishome/ "my douban homepage"
-[7]: /my_gnupg.html "my gnu publick key"
+[7]: /my_gnupg.html "my gnu public key"
 [10]: http://www.hawkhost.com/ "http://www.hawkhost.com/"
 [11]: http://www.linode.com/ "http://www.linode.com/"
 [12]: http://wordpress.org/extend/themes/responsive "http://wordpress.org/extend/themes/responsive"
@@ -24,10 +24,10 @@ Comment: off
 
 ## Contact me
 
+*   我的公钥: [<i class="icon-lock"></i>][7]
 *   Email: wilbur.ma AT foxmail DOT com 
 *   Github: [@wilbur-ma][5]
 *   豆瓣: [@wishome][6]
-*   我的公钥: 见[这里][7]
 
 ## Many thanks
 

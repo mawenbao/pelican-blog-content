@@ -30,7 +30,7 @@ TRANSLATION_FEED_ATOM = None
 USE_FOLDER_AS_CATEGORY = True
 DELETE_OUTPUT_DIRECTORY = True
 DEFAULT_CATEGORY = 'uncategorized'
-SUMMARY_MAX_LENGTH = 1
+DEFAULT_PAGINATION = 6
 
 FILES_TO_COPY = (
         ('extra/CNAME', 'CNAME'),
@@ -59,7 +59,7 @@ JINJA_EXTENSIONS = ['jinja2.ext.ExprStmtExtension',]
 
 # plugin config
 PLUGIN_PATH = './plugins'
-PLUGINS = ['gzip_cache', 'extract_headings', 'sitemap']
+PLUGINS = ['gzip_cache', 'extract_headings', 'sitemap', 'summary']
 
 # extrac_headings plugin config
 import md5
@@ -68,7 +68,6 @@ def my_slugify(value, sep):
     m.update(value)
     return m.digest().encode('hex')
 MY_SLUGIFY_FUNC = my_slugify
-MY_TOC_CLASS = 'dropdown-menu'
 from markdown.extensions import headerid, codehilite
 MD_EXTENSIONS = ([
     'extra',
