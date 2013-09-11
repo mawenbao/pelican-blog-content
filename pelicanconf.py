@@ -59,7 +59,12 @@ JINJA_EXTENSIONS = ['jinja2.ext.ExprStmtExtension',]
 
 # plugin config
 PLUGIN_PATH = './plugins'
-PLUGINS = ['gzip_cache', 'extract_headings', 'sitemap', 'summary']
+PLUGINS = [
+    #'gzip_cache',
+    'extract_headings',
+    'sitemap',
+    'summary'
+    ]
 
 # extrac_headings plugin config
 import md5
