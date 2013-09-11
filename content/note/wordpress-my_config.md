@@ -168,23 +168,23 @@ W3 Total Cache的Minify手动模式已经支持Non Blocking加载js代码，不�
 
 1. 在`</body>`标签前添加自定义的js脚本
 
-    :::html
-	<script type="text/javascript" src="http://static.atime.me/js/wordpress3_custom.js"></script>
+        :::html
+	    <script type="text/javascript" src="http://static.atime.me/js/wordpress3_custom.js"></script>
 
 2. 修改版权年限，效果为`2012-`，添加cc许可协议80*15图片。
 
-    :::php
-	<div class="grid col-300 copyright">
-	    <?php esc_attr_e('&copy;', 'responsive'); ?> 
-	    2012-<?php _e(date('Y')); ?>
-	    <a href="<?php echo home_url('/') ?>" title="<?php echo esc_attr(get_bloginfo('name', 'display')); ?>">
-	        <?php bloginfo('name'); ?>
-	    </a> / 
-	    <a href="http://blog.atime.me/about/#License_Disclaimer">许可协议和免责声明</a> / 
-	    <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/3.0/cn/">
-	        <img alt="知识共享许可协议" src="http://i.creativecommons.org/l/by-nc-nd/3.0/cn/80x15.png" width="80px" height="15px" />
-	    </a>
-	</div>`<!-- end of .copyright -->
+        :::php
+	    <div class="grid col-300 copyright">
+	        <?php esc_attr_e('&copy;', 'responsive'); ?> 
+	        2012-<?php _e(date('Y')); ?>
+	        <a href="<?php echo home_url('/') ?>" title="<?php echo esc_attr(get_bloginfo('name', 'display')); ?>">
+	            <?php bloginfo('name'); ?>
+	        </a> / 
+	        <a href="http://blog.atime.me/about/#License_Disclaimer">许可协议和免责声明</a> / 
+	        <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/3.0/cn/">
+	            <img alt="知识共享许可协议" src="http://i.creativecommons.org/l/by-nc-nd/3.0/cn/80x15.png" width="80px" height="15px" />
+	        </a>
+	    </div><!-- end of .copyright -->
 
 #### header.php
 
