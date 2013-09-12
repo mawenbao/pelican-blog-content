@@ -52,7 +52,7 @@ $(OUTPUTDIR)/%.html:
 
 github: html
 	ghp-import -m $(GITHUB_PAGES_UPDATE_MSG) $(OUTPUTDIR)
-	git push -f $(GITHUB_PAGES_REPO) gh-pages:$(GITHUB_PAGES_BRANCH)
+	git push $(GITHUB_PAGES_REPO) gh-pages:$(GITHUB_PAGES_BRANCH)
 	
 clean:
 	[ ! -d $(OUTPUTDIR) ] || find $(OUTPUTDIR) -mindepth 1 -delete
