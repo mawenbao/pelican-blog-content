@@ -15,27 +15,28 @@ Tags: gitlab, git
 ### 子域
 
 在DNS管理界面为gitlab加一条A记录，指向服务器的IP即可。
+
 ## 迁移数据库到Mysql
 
 1. 导出现有数据。
 
-	bundle exec rake db:data:dump RAILS_ENV=production
+	    bundle exec rake db:data:dump RAILS_ENV=production
 
 2. 修改数据库配置文件config/database.yml。
 
-	# backup old database settings first
-	cp config/database.yml config/database.yml.old
-	cp config/database.yml.mysql config/database.yml
+	    # backup old database settings first
+	    cp config/database.yml config/database.yml.old
+	    cp config/database.yml.mysql config/database.yml
 
 修改database.yml中mysql数据库的用户名和密码。
 
 3. 创建数据库。
 
-	bundle exec rake db:setup RAILS_ENV=production
+	    bundle exec rake db:setup RAILS_ENV=production
 
 4. 导入数据。
 
-	bundle exec rake db:data:load RAILS_ENV=production
+	    bundle exec rake db:data:load RAILS_ENV=production
 
 ## 问题
 

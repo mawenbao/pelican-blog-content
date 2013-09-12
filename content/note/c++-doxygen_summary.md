@@ -13,7 +13,6 @@ Here is a piece of code documented using the JavaDoc style and JAVADOC_AUTOBRIEF
 	{
 	  public:
 	    /** 
-
 	     * An enum.
 	     * More detailed enum description.
 	     */
@@ -27,20 +26,17 @@ Here is a piece of code documented using the JavaDoc style and JAVADOC_AUTOBRIEF
 	       enumVar;  /**< enum variable. Details. */
 	       
 	      /**
-
 	       * A constructor.
 	       * A more elaborate description of the constructor.
 	       */
 	      Test();
 	      /**
-
 	       * A destructor.
 	       * A more elaborate description of the destructor.
 	       */
 	     ~Test();
 	    
 	      /**
-
 	       * a normal member taking two arguments and returning an integer value.
 	       * @param a an integer argument.
 	       * @param s a constant character pointer.
@@ -53,7 +49,6 @@ Here is a piece of code documented using the JavaDoc style and JAVADOC_AUTOBRIEF
 	       int testMe(int a,const char *s);
 	       
 	      /**
-
 	       * A pure virtual member.
 	       * @see testMe()
 	       * @param c1 the first argument.
@@ -62,14 +57,12 @@ Here is a piece of code documented using the JavaDoc style and JAVADOC_AUTOBRIEF
 	       virtual void testMeToo(char c1,char c2) = 0;
 	   
 	      /** 
-
 	       * a public variable.
 	       * Details.
 	       */
 	       int publicVar;
 	       
 	      /**
-
 	       * a function variable.
 	       * Details.
 	       */

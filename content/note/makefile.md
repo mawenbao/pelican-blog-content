@@ -8,12 +8,25 @@ Tags: makefile, tutorial
 
 ### order-only依赖
 
-	
 	a: b | c
 	    command
 
 上面的例子中，a是目标，b是常规依赖，c是order-only依赖。当a存在时，即便c的修改时间晚于a，该规则也不会更新a。
 
 order-only依赖定义域规则的右侧，与常规依赖用`|`隔开。当目标存在时，不管其是否因order-only依赖而过期，均不更新目标。
+
+## 其它
+### 传递变量
+可以在命令行里设置Makefile的变量值，对如下的makefile
+
+    TARGET=test
+    create:
+        make -p ${TARGET}
+
+可以通过如下的命令修改TARGET的值:
+
+    make create TARGET=another
+ 
 ## 参考资料
 
+*  [Passing additional variables from command line to make](http://stackoverflow.com/questions/2826029/passing-additional-variables-from-command-line-to-make)
