@@ -14,20 +14,17 @@ Tags: wordpress, ssl
 
 ### 生成ssl证书
 
-	
 	openssl req -new -x509 -days 365 -nodes -out /etc/ssl/localcerts/blog.atime.me.pem -keyout /etc/ssl/localcerts/blog.atime.me.key
 
 ### 添加重写规则
 
 在80端口的server端添加如下代码，所有登录和管理操作将自动跳转到对应的https页面。
 
-	
 	location ~ /wp-(admin|login) {
 	    rewrite ^ https://$host$request_uri redirect;
 	}
 
 添加443端口的server，非登陆和管理页面自动跳转到对应的http页面。代码如下:
-
 	
 	server {
 	    listen 443 ssl;
@@ -53,9 +50,9 @@ Tags: wordpress, ssl
 	        rewrite ^ http://$host$request_uri redirect; 
 	    }
 	}
-	
 
 完整的配置文件如下所示(包含w3 total cache的配置):
+
     server {
         listen 80;
         server_name  blog.atime.me;
