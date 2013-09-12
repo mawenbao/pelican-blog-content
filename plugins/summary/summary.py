@@ -39,7 +39,7 @@ def content_object_init(instance):
         endPosA = firstP.data.find(endCharA)
         endPosB = firstP.data.find(endCharB)
         endPos = endPosA if endPosA > endPosB else endPosB
-        instance._summary = firstP.data[:endPos + 1 if endPos > 0 else -1]
+        instance._summary = firstP.data[:endPos + 1 if endPos > 0 else None]
 
 def register():
     signals.content_object_init.connect(content_object_init)
