@@ -21,5 +21,5 @@ if __name__ == "__main__":
         for inputStr in args:
             print(slugify(inputStr.strip()))
     else:
-        print(slugify(sys.stdin.read().strip()))
+        print(slugify(inputStr.strip))
 
