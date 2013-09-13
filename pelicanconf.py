@@ -4,7 +4,7 @@ from __future__ import unicode_literals
 import datetime
 
 AUTHOR = u'Ma Wenbao'
-SITENAME = u'baozi-x'
+SITENAME = u'baozi'
 SITEURL = 'http://atime.me'
 
 TIMEZONE = 'Asia/Shanghai'
