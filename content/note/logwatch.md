@@ -6,7 +6,6 @@ Tags: logwatch, security, debian, tutorial
 ## 配置文件说明
 
 Debian/Ubuntu上logwatch配置目录的结构如下:
-
 	
 	/etc/logwatch/
 	    conf/             # 配置目录
@@ -21,7 +20,7 @@ Debian/Ubuntu上logwatch配置目录的结构如下:
 CentOS的logwatch.conf位于/etc/logwatch/conf目录下。
 ## 例解logwatch配置步骤
 
-用一个简单的例子说明添加logwatch监控的步骤，详细的配置教程见[参考资料](#参考资料)。
+用一个简单的例子说明添加logwatch监控的步骤，详细的配置教程见[参考资料](#35808e79fa5f367a06c83a78b857519c)。
 ### 创建logwatch日志文件组
 
 用一个简单的例子介绍logwatch的配置方法。首先创建logwatch日志文件组配置文件`/etc/logwatch/conf/logfiles/test.conf`:
@@ -45,11 +44,13 @@ CentOS的logwatch.conf位于/etc/logwatch/conf目录下。
     grep -i ERROR
 
 上面的脚本会从日志文件里过滤出包含`ERROR`的行。最后，为新建的脚本添加执行权限:
+
     chmod +x /etc/logwatch/scripts/services/test
 
 ## 主配置文件logwatch.conf
 
 在logwatch.conf里添加或修改如下选项可以将监控报告以html的格式发送到你的邮箱里。
+
     Output = html                # 生成html格式的报告
     MailTo = your_email_address  # 定义你的邮箱地址
 ## 常见错误解决
@@ -60,7 +61,6 @@ CentOS的logwatch.conf位于/etc/logwatch/conf目录下。
 CentOS5.4上使用sendmail发送邮件。正常运行一段时间后，突然不再发送邮件。检查后发现，配置一切正常，可以手动发邮件，使用logwatch的`--print`选项输出正常。
 
 最后在`logwatch --print`的输出里发现如下信息:
-
 	
 	Large Mailbox threshold: 40MB (41943040 bytes)
 	  Warning: Large mailbox: root (257959878)
