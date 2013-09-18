@@ -16,7 +16,7 @@ Tags: c++, mysql, dev, note
 	yum install mysql-devel
 
 ###  编译参数
-参考[:tools:gcc:gcc-quick-ref#makefile|这里的Makefile]]，添加-L和-l两个选项即可。
+参考[#b67911656ef5d18c4ae36cb6741b7965](/note/gcc-quick_reference.html#b67911656ef5d18c4ae36cb6741b7965)，添加-L和-l两个选项即可。
 
 	  g++ -L /usr/lib/mysql -l mysqlclient mysql-test.cpp
 	

@@ -190,7 +190,8 @@ Tags: git, tutorial
 
 bundle命令可以对git仓库进行打包，如下所示。
 
-    git bundle create hello-world.bundle --all hello-world.git
+    cd hello-world.git
+    git bundle create hello-world.bundle --all
 
 验证打包文件
 
