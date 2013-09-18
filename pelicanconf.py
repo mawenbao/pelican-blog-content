@@ -5,7 +5,7 @@ import datetime
 
 AUTHOR = u'Ma Wenbao'
 SITENAME = u'baozi'
-SITEURL = 'http://atime.me'
+SITEURL = 'http://notes.atime.me'
 
 TIMEZONE = 'Asia/Shanghai'
 DATE_FORMATS = {
@@ -117,6 +117,11 @@ NIUX2_PAGINATOR_LENGTH = 11
 NIUX2_FAVICON_URL = '/favicon.ico'
 NIUX2_GOOGLE_CSE_ID = '010036094435699263509:otu5mqpvchs'
 NIUX2_DISPLAY_TITLE = True
+
+NIUX2_LIB_THEME = 'http://atime-me.qiniudn.com/niu-x2'
+NIUX2_LIB_BOOTSTRAP_JS = 'http://atime-me.qiniudn.com/niu-x2/js/bootstrap.min.js'
+NIUX2_LIB_FONTAWESOME = 'http://atime-me.qiniudn.com/niu-x2/css/font-awesome/css/font-awesome.min.css'
+NIUX2_LIB_JQUERY = 'http://atime-me.qiniudn.com/niu-x2/js/jquery-1.10.2.min.js'
 
 NIUX2_CATEGORY_MAP = {
         'research': ('研究', 'icon-beaker'),
