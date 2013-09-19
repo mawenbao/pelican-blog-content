@@ -15,7 +15,6 @@ DEFAULT_DATE_FORMAT = '%Y-%m-%d %H:%M:%S'
 DEFAULT_DATE = 'fs'  # use filesystem's mtime
 LOCALE = ('zh_CN.utf8',)
 DEFAULT_LANG = u'zh_CN'
-DEFAULT_PAGINATION = 10
 FILENAME_METADATA = '(?P<slug>.*)'
 #DISQUS_SITENAME = 'atime-me'
 GOOGLE_ANALYTICS = 'UA-44127773-1'
@@ -30,7 +29,7 @@ TRANSLATION_FEED_ATOM = None
 USE_FOLDER_AS_CATEGORY = True
 DELETE_OUTPUT_DIRECTORY = True
 DEFAULT_CATEGORY = 'uncategorized'
-DEFAULT_PAGINATION = 6
+DEFAULT_PAGINATION = 5
 
 FILES_TO_COPY = (
         ('extra/CNAME', 'CNAME'),
@@ -128,13 +127,12 @@ NIUX2_CATEGORY_MAP = {
         'code': ('代码', 'icon-code'),
         'thought': ('思考', 'icon-question-sign'),
         'note': ('笔记', 'icon-book'),
-        'life': ('日常', 'icon-coffee'),
         'collection': ('搜藏', 'icon-briefcase'),
-        'art': ('涂鸦', 'icon-picture'),
         }
 NIUX2_HEADER_SECTIONS = [
         ('关于', 'about', '/about.html', 'icon-anchor'),
         ('使用协议', 'agreement', '/agreement.html', 'icon-info-sign'),
+        ('随笔', 'essay', 'http://essay.atime.me', 'icon-leaf'),
         ('存档', 'archives', '/archives.html', 'icon-archive'),
         ('标签', 'tags', '/tag/', 'icon-tag'),
         ]
