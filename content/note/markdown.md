@@ -6,12 +6,13 @@ Tags: markdown, markup_language, note
 
 ## 需要注意的地方
 
-* * 列表项里的代码(code)需要缩进8个空格(列表项4个，代码4个)后再写，如下所示:
+* 列表项里的代码(code)需要缩进8个空格(列表项4个，代码4个)后再写，如下所示:
 
-	     * list item 1
-	             codes for list item 1(8 spaces indent)
+    * list item 1
 
-	     * list item 2     
+        codes for list item 1(8 spaces indent)
+
+    * list item 2     
 
 ## 语法
 

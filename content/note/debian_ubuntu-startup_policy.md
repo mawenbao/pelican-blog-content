@@ -26,6 +26,13 @@ Tags: debian, ubuntu, startup, note
     X-KDE-autostart-after=panel
     X-KDE-StartupNotify=false
 
+## ~/.config/autostart
+在以下环境里测试成功
+
+* kde4
+
+在`~/.config/autostart`文件夹下保存的desktop文件都会在用户登录后自动启动。也可直接在kde的启动配置里添加。
+
 ## /etc/rc.d
 
 ### rc.local
