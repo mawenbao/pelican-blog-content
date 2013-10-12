@@ -32,14 +32,18 @@ DELETE_OUTPUT_DIRECTORY = True
 DEFAULT_CATEGORY = 'uncategorized'
 DEFAULT_PAGINATION = 7
 
-FILES_TO_COPY = (
-        ('extra/CNAME', 'CNAME'),
-        ('extra/.nojekyll', '.nojekyll'),
-        ('extra/README', 'README.md'),
-        ('extra/favicon.ico', 'favicon.ico'),
-        ('extra/CODE_LICENSE.txt', 'CODE_LICENSE.txt'),
-        ('extra/robots.txt', 'robots.txt'),
-)
+STATIC_PATHS = [
+        'images',
+        'extra',
+]
+EXTRA_PATH_METADATA = {
+        'extra/CNAME': { 'path': 'CNAME' },
+        'extra/.nojekyll': { 'path': '.nojekyll' },
+        'extra/README': { 'path': 'README.md' },
+        'extra/favicon.ico': { 'path': 'favicon.ico' },
+        'extra/CODE_LICENSE.txt': { 'path': 'CODE_LICENSE.txt' },
+        'extra/robots.txt': { 'path': 'robots.txt' },
+}
 
 ARTICLE_URL = '{category}/{slug}.html'
 ARTICLE_SAVE_AS = ARTICLE_URL
@@ -54,7 +58,6 @@ TAGS_SAVE_AS = 'tag/index.html'
 TEMPLATE_PAGES = {
         "404.html": "404.html",
         }
-STATIC_PATHS = ['images',]
 JINJA_EXTENSIONS = ['jinja2.ext.ExprStmtExtension',]
 
 # plugin config
