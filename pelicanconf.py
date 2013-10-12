@@ -5,7 +5,8 @@ import datetime
 
 AUTHOR = u'Ma Wenbao'
 SITENAME = u'baozi'
-SITEURL = 'http://notes.atime.me'
+SITEURL = 'http://blog.atime.me'
+#SITEURL = 'http://localhost:8000'
 
 TIMEZONE = 'Asia/Shanghai'
 DATE_FORMATS = {
@@ -29,7 +30,7 @@ TRANSLATION_FEED_ATOM = None
 USE_FOLDER_AS_CATEGORY = True
 DELETE_OUTPUT_DIRECTORY = True
 DEFAULT_CATEGORY = 'uncategorized'
-DEFAULT_PAGINATION = 5
+DEFAULT_PAGINATION = 7
 
 FILES_TO_COPY = (
         ('extra/CNAME', 'CNAME'),
@@ -60,6 +61,7 @@ JINJA_EXTENSIONS = ['jinja2.ext.ExprStmtExtension',]
 PLUGIN_PATH = './plugins'
 PLUGINS = [
     #'gzip_cache',
+    'update_date',
     'extract_headings',
     'sitemap',
     'summary'
@@ -114,7 +116,7 @@ NIUX2_DUOSHUO_SHORTNAME = 'atime-me'
 NIUX2_PYGMENTS_THEME = 'github'
 NIUX2_PAGINATOR_LENGTH = 11
 NIUX2_FAVICON_URL = '/favicon.ico'
-NIUX2_GOOGLE_CSE_ID = '016368690064160370938:4bfvampnwa8'
+NIUX2_GOOGLE_CSE_ID = '016368690064160370938:8u3wwjza9c4'
 NIUX2_DISPLAY_TITLE = True
 
 NIUX2_LIB_THEME = 'http://atime-me.qiniudn.com/niu-x2'
@@ -123,16 +125,17 @@ NIUX2_LIB_FONTAWESOME = 'http://atime-me.qiniudn.com/niu-x2/css/font-awesome/css
 NIUX2_LIB_JQUERY = 'http://atime-me.qiniudn.com/niu-x2/js/jquery-1.10.2.min.js'
 
 NIUX2_CATEGORY_MAP = {
-        'research': ('研究', 'icon-beaker'),
+        'art': ('涂鸦', 'icon-picture'),
         'code': ('代码', 'icon-code'),
-        'thought': ('思考', 'icon-question-sign'),
-        'note': ('笔记', 'icon-book'),
         'collection': ('搜藏', 'icon-briefcase'),
+        'essay': ('随笔', 'icon-leaf'),
+        'life': ('日常', 'icon-coffee'),
+        'note': ('笔记', 'icon-book'),
+        'research': ('研究', 'icon-beaker'),
         }
 NIUX2_HEADER_SECTIONS = [
         ('关于', 'about', '/about.html', 'icon-anchor'),
         ('使用协议', 'agreement', '/agreement.html', 'icon-info-sign'),
-        ('随笔', 'essay', 'http://essay.atime.me', 'icon-leaf'),
         ('存档', 'archives', '/archives.html', 'icon-archive'),
         ('标签', 'tags', '/tag/', 'icon-tag'),
         ]

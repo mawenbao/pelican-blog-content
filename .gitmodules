@@ -4,3 +4,6 @@
 [submodule "themes/niu-x2"]
 	path = themes/niu-x2
 	url = https://github.com/wilbur-ma/niu-x2
+[submodule "plugins/update_date"]
+	path = plugins/update_date
+	url = https://github.com/wilbur-ma/pelican-update-date

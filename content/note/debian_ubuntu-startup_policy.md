@@ -35,7 +35,7 @@ Tags: debian, ubuntu, startup, note
 
 ## /etc/rc.d
 
-### rc.local
+## rc.local
 
 ## 参考资料
 
