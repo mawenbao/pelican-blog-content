@@ -33,7 +33,7 @@ DEFAULT_CATEGORY = 'uncategorized'
 DEFAULT_PAGINATION = 7
 
 STATIC_PATHS = [
-        'images',
+        'static',
         'extra',
 ]
 EXTRA_PATH_METADATA = {
