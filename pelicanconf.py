@@ -101,6 +101,7 @@ SITEMAP = {
 
 # theme config
 THEME = './themes/niu-x2'
+#THEME = '../niu-x2'
 
 # niu-x2 theme config
 NIUX2_404_TITLE_TRANSL = '404错误 页面未找到!'
@@ -114,6 +115,7 @@ NIUX2_HEADER_TOC_TRANSL = '目录'
 NIUX2_SEARCH_TRANSL = '搜索'
 NIUX2_SEARCH_PLACEHOLDER_TRANSL = '按回车开始搜索 ...'
 NIUX2_COMMENTS_TRANSL = '评论'
+NIUX2_LASTMOD_TRANSL = '最后修改于:'
 
 NIUX2_DUOSHUO_SHORTNAME = 'atime-me'
 NIUX2_PYGMENTS_THEME = 'github'
