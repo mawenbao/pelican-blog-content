@@ -69,6 +69,7 @@ PLUGINS = [
     'sitemap',
     'summary'
     ]
+UPDATEDATE_MODE = 'metadata'
 
 # extrac_headings plugin config
 import md5
