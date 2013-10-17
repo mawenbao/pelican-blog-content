@@ -81,6 +81,7 @@ MY_SLUGIFY_FUNC = my_slugify
 from markdown.extensions import headerid, codehilite
 MD_EXTENSIONS = ([
     'extra',
+    'footnotes',
     codehilite.CodeHiliteExtension(configs=[('linenums', False), ('guess_lang', False)]),
     headerid.HeaderIdExtension(configs=[('slugify', my_slugify)]),
     ])
