@@ -1,6 +1,7 @@
 Title: Win7系统下使用Grub4dos引导Ubuntu
 Date: 2013-10-16 15:06:00
 Tags: win7, ubuntu, grub4dos, grub2
+Update: 2013-10-17 09:36
 
 [1]: https://gna.org/projects/grub4dos "grub4dos project page"
 [2]: http://download.gna.org/grub4dos/grub4dos-0.4.4-2009-06-20.zip "grub4dos download"
@@ -15,7 +16,7 @@ Grub4dos的项目地址在[这里][1]，不过似乎很久没有更新了，[gru
 
 ## 修改win7的boot.ini
 
-win7系统里已经不再使用boot.ini来配置启动项，不过C盘根目录下的boot.ini文件里的启动项依然有效。
+win7系统里已经不再使用boot.ini来配置启动项，不过`C:\boot.ini`文件里的启动项依然有效。
 
 在boot.ini文件里添加如下内容:
 <pre>
@@ -36,7 +37,7 @@ c:\grldr.mbr="Grub4dos"
 
 	find /grub/core.img
 
-如果依然找不到，则ubuntu的安装可能有问题。记住查找命令的输出，这里假设为(hd0,7)且grub core img位于/grub/core.img。
+如果依然找不到，则ubuntu的安装可能有问题。记住查找命令的输出，这里假设为(hd0,7)且grub core image位于/grub/core.img。
 
 重启回win7系统，修改C:\menu.list文件，为grub4dos加入如下的引导项。
 

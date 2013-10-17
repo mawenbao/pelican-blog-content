@@ -77,6 +77,13 @@ Debian上cron的日志默认和其他系统日志记录在一起，查看起来�
 	
 	service rsyslog restart
 
+### 自动挂载windows分区
+
+对于ntfs分区，安装如下的软件包，并运行`ntfs-config`配置挂载点。
+
+	sudo apt-get install ntfs-config ntfs-3g
+
+对于fat32分区，可参考[Mounting Windows Partitions](https://help.ubuntu.com/community/MountingWindowsPartitions#FAT32)。
 ### 修改系统的时区
 
 	tzselect
@@ -150,4 +157,5 @@ easytag
 *  [Multiple public keys for one user](http://serverfault.com/questions/221760/multiple-public-keys-for-one-user)
 *  [Enabling and disabling services during start up in GNU/Linux](http://www.aboutlinux.info/2006/04/enabling-and-disabling-services-during_01.html)
 *  [触摸板](http://wiki.ubuntu.org.cn/%E8%A7%A6%E6%91%B8%E6%9D%BF) from ubuntu wiki cn
+*  [Mounting Windows Partitions](https://help.ubuntu.com/community/MountingWindowsPartitions)
 
