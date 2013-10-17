@@ -23,12 +23,11 @@ Update: 2013-10-17 10:52
     #GSSAPIAuthentication yes
     #GSSAPIDelegateCredentials no
 
-关于GSSAPI Authentication，可参考Using GSSAPI authentication at SLAC[^1]。
+关于GSSAPI Authentication，可参考[Using GSSAPI authentication at SLAC](http://www.slac.stanford.edu/comp/unix/sshGSSAPI.html)。
 
 ## 参考资料
 
 *  [connect: network is unreachable的解决](http://blog.csdn.net/xuyaqun/article/details/6283829)
 *  [fcitx在konsole和kate等程序中无法使用的解决办法](http://magic282.me/2012/09/fix-the-problem-that-fcitx-cannot-input-the-qt-programs-such-as-konsole-and-kate/)
 
-[^1]: [Using GSSAPI authentication at SLAC](http://www.slac.stanford.edu/comp/unix/sshGSSAPI.html)
 
