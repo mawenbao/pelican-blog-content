@@ -134,7 +134,7 @@ class SitemapGenerator(object):
         if not os.path.exists(page_path):
             return
 
-        lastmod = format_date(getattr(page, 'date', self.now))
+        lastmod = format_date(getattr(page, 'updatedate', getattr(page, 'date', self.now)))
 
         if isinstance(page, contents.Article):
             pri = self.priorities['articles']
