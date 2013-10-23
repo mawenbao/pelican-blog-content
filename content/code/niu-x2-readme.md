@@ -2,7 +2,7 @@ Title: Niu-X2 pelican主题说明文档
 Date: 2013-10-23 10:23
 Tags: pelican, theme, python, jinja2
 
-Niu-X2 is a responsive theme for pelican, built with bootstrap3 and font-awesome.  As I am pretty new to bootstrap and jinja2, the codes look messy and may be buggy. If you find any bugs, please let me know.
+[Niu-X2](https://github.com/wilbur-ma/niu-x2) is a responsive theme for pelican, built with bootstrap3 and font-awesome.  As I am pretty new to bootstrap and jinja2, the codes look messy and may be buggy. If you find any bugs, please let me know.
 
 ## License
 
