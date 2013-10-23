@@ -13,6 +13,7 @@ Comment: off
 [12]: http://wordpress.org/extend/themes/responsive "http://wordpress.org/extend/themes/responsive"
 [13]: /tech/create-a-pseudo-static-blog-with-wordpress.html "create a pseudo static blog with wordpress"
 [14]: /agreement.html "使用协议"
+[15]: /my_projects.html "我的开源项目"
 
 ## What
 
@@ -29,14 +30,9 @@ Comment: off
 *   Github: [@wilbur-ma][5]
 *   豆瓣: [@wishome][6]
 
-## Many thanks
+## My projects
 
-感谢鄙人的父母，以及所有支持和帮助过鄙人的朋友们。另外，在搭建和维护本博客的时候使用了如下技术/程序/服务，谨在此向其开发和维护人员表示感谢(排名不分先后)。
-
-*  Markdown 易读易写的轻量级标记语言
-*  Python 简单友好的脚本语言，with battery included
-*  Pelican 基于Python的静态博客引擎
-*  Github 优秀的代码托管网站
+你可以在[我的项目][15]页面查看我的部分开源项目。
 
 ## History
 *  2013.09.02 使用自己创作的pelican主题[niu-x2][3]。

@@ -141,10 +141,11 @@ NIUX2_CATEGORY_MAP = {
         'research': ('研究', 'icon-beaker'),
         }
 NIUX2_HEADER_SECTIONS = [
-        ('关于', 'about', '/about.html', 'icon-anchor'),
+        ('关于', 'about me', '/about.html', 'icon-anchor'),
         ('使用协议', 'agreement', '/agreement.html', 'icon-info-sign'),
-        ('存档', 'archives', '/archives.html', 'icon-archive'),
-        ('标签', 'tags', '/tag/', 'icon-tag'),
+        ('项目', 'my projects', '/my_projects.html', 'icon-rocket'),
+        ('存档', 'blog archives', '/archives.html', 'icon-archive'),
+        ('标签', 'blog tags', '/tag/', 'icon-tag'),
         ]
 NIUX2_HEADER_DROPDOWN_SECTIONS = {}
 NIUX2_FOOTER_LINKS = [
