@@ -29,6 +29,7 @@ Protobuf全称Google Protocol Buffer
     message UserInfo { 
         required int64 id = 1;
         optional string name = 2;
+        repeated bytes nick_name = 3;
     }
 
 编译.proto，生成解析器代码
