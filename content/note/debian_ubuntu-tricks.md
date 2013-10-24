@@ -1,11 +1,15 @@
 Title: Debian/Ubuntu系统小技巧收集
 Date: 2013-08-25 12:14
 Tags: debian, ubuntu, trick
-Update: 2013-10-22 09:25
+Update: 2013-10-24 10:24
 
 整理一些Debian/Ubuntu上的小技巧，包括系统管理、系统美化和娱乐等方面。
 
 ## 系统管理
+
+### 同步系统时间
+
+    ntpdate time.nist.gov
 
 ### crontab默认编辑器
 在Debian/Ubuntu上，运行`crontab -e`命令默认使用nano编辑器，如果想使用vim，可在`~/.bashrc`里加入如下一行:
