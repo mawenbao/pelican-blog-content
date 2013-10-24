@@ -82,6 +82,7 @@ from markdown.extensions import headerid, codehilite
 MD_EXTENSIONS = ([
     'extra',
     'footnotes',
+    'tables',
     codehilite.CodeHiliteExtension(configs=[('linenums', False), ('guess_lang', False)]),
     headerid.HeaderIdExtension(configs=[('slugify', my_slugify)]),
     ])
