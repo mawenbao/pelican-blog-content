@@ -1,5 +1,6 @@
 Title: Google Protocol Buffer介绍和总结
 Date: 2013-10-24 16:13
+Update: 2013-10-24 17:26
 Tags: google, protobuf, library, summary, tutorial
 
 [1]: https://developers.google.com/protocol-buffers/docs/techniques#large-data "https://developers.google.com/protocol-buffers/docs/techniques#large-data"
@@ -84,7 +85,7 @@ optional string name = `2`;
 
 ## Protobuf劣势
 
-1. 不支持List, Set, Map等容器类型。
+1. 没有内置的Set, Map等容器类型。
 2. 不适合处理单个Message超过1M的情景，详见[Large Data Sets][1]。
 
 ## 进一步阅读
