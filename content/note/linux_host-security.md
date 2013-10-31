@@ -1,5 +1,6 @@
 Title: Linux服务器安全策略
 Date: 2013-08-08 12:14
+Update: 2013-10-30 14:17
 Tags: linux_server, security
 
 记录网站安全策略, 主要参考[Linode的文档](http://library.linode.com/securing-your-server)写成。
@@ -176,6 +177,9 @@ logwatch分析系统日志, 并提取重要的信息发到你的邮箱里, 通�
 
     -A POSTROUTING -s 192.168.0.0/24 -o eth0 -j MASQUERADE 
     COMMIT
+
+#### unable to initialize table filter
+安装`xtables-addons-common`即可。
 
 ## 参考资料
 
