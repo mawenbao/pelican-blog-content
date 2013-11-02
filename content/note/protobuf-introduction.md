@@ -1,4 +1,4 @@
-Title: Google Protocol Buffer介绍
+Title: Google Protocol Buffer介绍和总结
 Date: 2013-10-24 16:13
 Update: 2013-10-25 13:54
 Tags: google, protobuf, library, tutorial
@@ -7,7 +7,7 @@ Tags: google, protobuf, library, tutorial
 [2]: https://developers.google.com/protocol-buffers/ "https://developers.google.com/protocol-buffers/"
 [3]: http://www.ibm.com/developerworks/cn/linux/l-cn-gpb/ "http://www.ibm.com/developerworks/cn/linux/l-cn-gpb/"
 
-简要介绍protobuf，从我之前做的ppt里摘录而成，希望能节省protobuf初学者的入门时间。
+简要介绍和总结protobuf的一些关键点，从我之前做的ppt里摘录而成，希望能节省protobuf初学者的入门时间。
 
 ## Protobuf 简介
 
