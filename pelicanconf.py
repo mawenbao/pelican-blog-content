@@ -128,13 +128,12 @@ NIUX2_GOOGLE_CSE_ID = '016368690064160370938:8u3wwjza9c4'
 NIUX2_DISPLAY_TITLE = True
 
 #NIUX2_LIB_THEME = '/theme'
-NIUX2_LIB_THEME = 'http://atime-me.qiniudn.com/niu-x2'
-NIUX2_LIB_BOOTSTRAP_JS = 'http://atime-me.qiniudn.com/niu-x2/js/bootstrap.min.js'
-NIUX2_LIB_FONTAWESOME = 'http://atime-me.qiniudn.com/niu-x2/css/font-awesome/css/font-awesome.min.css'
-NIUX2_LIB_JQUERY = 'http://atime-me.qiniudn.com/niu-x2/js/jquery-1.10.2.min.js'
+#NIUX2_LIB_THEME = 'http://atime-me.qiniudn.com/niu-x2'
+#NIUX2_LIB_BOOTSTRAP_JS = 'http://atime-me.qiniudn.com/niu-x2/js/bootstrap.min.js'
+#NIUX2_LIB_FONTAWESOME = 'http://atime-me.qiniudn.com/niu-x2/css/font-awesome/css/font-awesome.min.css'
+#NIUX2_LIB_JQUERY = 'http://atime-me.qiniudn.com/niu-x2/js/jquery-1.10.2.min.js'
 
 NIUX2_CATEGORY_MAP = {
-        'art': ('涂鸦', 'icon-picture'),
         'code': ('代码', 'icon-code'),
         'collection': ('搜藏', 'icon-briefcase'),
         'essay': ('随笔', 'icon-leaf'),
