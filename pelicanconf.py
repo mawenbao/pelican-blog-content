@@ -4,7 +4,7 @@ from __future__ import unicode_literals
 import datetime
 
 AUTHOR = u'Ma Wenbao'
-SITENAME = u'baozi'
+SITENAME = u'MWB日常笔记'
 SITEURL = 'http://blog.atime.me'
 #SITEURL = 'http://localhost:8000'
 
@@ -129,9 +129,9 @@ NIUX2_DISPLAY_TITLE = True
 
 #NIUX2_LIB_THEME = '/theme'
 #NIUX2_LIB_THEME = 'http://atime-me.qiniudn.com/niu-x2'
-#NIUX2_LIB_BOOTSTRAP_JS = 'http://atime-me.qiniudn.com/niu-x2/js/bootstrap.min.js'
-#NIUX2_LIB_FONTAWESOME = 'http://atime-me.qiniudn.com/niu-x2/css/font-awesome/css/font-awesome.min.css'
-#NIUX2_LIB_JQUERY = 'http://atime-me.qiniudn.com/niu-x2/js/jquery-1.10.2.min.js'
+NIUX2_LIB_BOOTSTRAP_JS = 'http://atime-me.qiniudn.com/niu-x2/js/bootstrap.min.js'
+NIUX2_LIB_FONTAWESOME = 'http://atime-me.qiniudn.com/niu-x2/css/font-awesome/css/font-awesome.min.css'
+NIUX2_LIB_JQUERY = 'http://atime-me.qiniudn.com/niu-x2/js/jquery-1.10.2.min.js'
 
 NIUX2_CATEGORY_MAP = {
         'code': ('代码', 'icon-code'),
@@ -144,7 +144,7 @@ NIUX2_CATEGORY_MAP = {
 NIUX2_HEADER_SECTIONS = [
         ('关于', 'about me', '/about.html', 'icon-anchor'),
         ('使用协议', 'agreement', '/agreement.html', 'icon-info-sign'),
-        ('项目', 'my projects', '/my_projects.html', 'icon-rocket'),
+#        ('项目', 'my projects', '/my_projects.html', 'icon-rocket'),
         ('存档', 'blog archives', '/archives.html', 'icon-archive'),
         ('标签', 'blog tags', '/tag/', 'icon-tag'),
         ]

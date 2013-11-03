@@ -1,7 +1,7 @@
 Title: Debian/Ubuntu系统小技巧收集
 Date: 2013-08-25 12:14
+Update: 2013-11-03 10:08
 Tags: debian, ubuntu, trick
-Update: 2013-10-24 10:24
 
 整理一些Debian/Ubuntu上的小技巧，包括系统管理、系统美化和娱乐等方面。
 
@@ -13,8 +13,10 @@ Update: 2013-10-24 10:24
 
 ### crontab默认编辑器
 在Debian/Ubuntu上，运行`crontab -e`命令默认使用nano编辑器，如果想使用vim，可在`~/.bashrc`里加入如下一行:
+
     export EDITOR=vi
 然后使用source命令重新载入`~/.bashrc`即可。
+
     source ~/.bashrc
 
 ###  kubuntu开启和关闭笔记本的触摸板 
@@ -124,6 +126,7 @@ nohup帮助程序在后台运行，即使终端关闭也不会有影响。
 
 ### VLC中文字幕乱码
 修改两项配置:
+
 1.  视频>字幕／OSD>文本渲染器>字体 选择一个中文字体。
 2.  输入／编码解码器>字幕编解码器>字幕文本编码 选择GB18030，然后去掉"UTF－8字幕"和"格式化字幕"前面的勾。
 ### 字体
@@ -138,6 +141,7 @@ nohup帮助程序在后台运行，即使终端关闭也不会有影响。
     ibus-daemon -x -r -d
 
 设置ibus-pinyin的候选词个数:
+
    /usr/lib/ibus-pinyin/ibus-setup-pinyin
 
 ## 娱乐
