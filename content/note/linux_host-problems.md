@@ -1,9 +1,22 @@
 Title: Linux服务器常见错误
 Date: 2013-08-08 12:14
+Update: 2013-11-04 11:08
 Tags: linux_server, problem
 
 记录Linux服务器上常见的错误和解决方案，安装和配置参考[这里](/tips/build_linux_host)。
 ## 系统管理相关
+
+### mutt发送邮件到qq(foxmail)邮箱被屏蔽
+
+退回的邮件里包含如下错误信息：
+
+    A message that you sent could not be delivered to one or more of its
+    recipients. This is a permanent error. The following address(es) failed:
+
+    SMTP error from remote mail server after end of data:
+    host mx3.qq.com [103.7.28.233]: 550 Mail content denied. http://service.mail.qq.com/cgi-bin/help?subtype=1&&id=20022&&no=1000726
+
+设置白名单也没用，后来删除了qq邮箱里相应的域名邮箱后不会再被屏蔽。
 
 ### grep: line too long
 使用grep的时候遇到下面的错误:

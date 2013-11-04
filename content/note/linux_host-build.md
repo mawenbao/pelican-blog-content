@@ -1,5 +1,6 @@
 Title: Linux网站搭建手册
 Date: 2013-08-08 12:14
+Update: 2013-11-04 10:38
 Tags: linux_server, tutorial, install
 
 本手册的内容主要包括需要安装的软件及其配置，和常见问题及其解决方案。
@@ -97,16 +98,21 @@ hostname保存于`/etc/hostname`，修改后运行`hostname -F /etc/hostname`设
 
 安装mutt
 `apt-get install mutt`
-常用命令
+
+设置mutt，mutt的默认配置文件在`~/.muttrc`，如果不存在，则从例子里拷贝并修改之，详细的配置说明可参考mutt的相关[文档](http://dev.mutt.org/trac/wiki/MuttGuide)和archlinux wiki的[mutt](https://wiki.archlinux.org/index.php/mutt)。
+
+    :::bash
+    cp /usr/share/doc/mutt/examples/sample.muttrc.gz ~
+    gzip -d ~/sample.muttrc.gz
+    mv ~/sample.muttrc ~/.muttrc
+
 下面的命令将发送一份邮件给a@hotmail.com和a@qq.com，邮件的主题是host backup，邮件内容是host backup on wishome.name，附件是file_a。注意不要漏掉命令中的'--'，在-a选项后添加邮件地址时这是必须的。
 
-	
 	echo 'host backup from wishome.name' | mutt -a 'file_a' -s 'host backup' -- a@hotmail.com a@qq.com
 
 ### 常用系统配置
 
 1. 设置常用编辑器。
-
 	
 	update-alternatives --config editor
 
@@ -262,6 +268,9 @@ PHP-FPM (FastCGI Process Manager)是一种常用的fastcgi的实现方式。使�
 *  [debian下配置exim4发送邮件](http://zww.me/archives/25688)
 *  [exim4文档](http://www.exim.org/exim-html-4.20/doc/html/)
 *  [exim4发送大文件](http://techteam.wordpress.com/2009/05/13/how-to-attach-large-files-to-command-line-email/)
+*  [mutt文档](http://dev.mutt.org/trac/wiki/MuttGuide)
+*  [archlinux mutt wiki](https://wiki.archlinux.org/index.php/mutt)
+*  [Setting Up Mutt on Ubuntu 12.04](http://openswitch.org/blog/setting-up-mutt-on-ubuntu-12-dot-04/)
 *  [使用mutt发送邮件](http://www.iamist.com/2011/08/linux-101-using-mutt-to-send-email.html)
 *  [dokuwiki rewrite手册](doku>rewrite)
 *  [debian6 nginx fastcgi配置](http://library.linode.com/web-servers/nginx/php-fastcgi/debian-6-squeeze)
