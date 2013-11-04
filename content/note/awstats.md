@@ -1,11 +1,13 @@
 Title: awstats+nginx配置笔记
 Date: 2013-11-04 16:33
+Update: 2013-11-04 22:49
 Tags: awstats, perl, nginx, ubuntu
 
 [1]: http://hi.baidu.com/icokeeer/item/2588471c9403c9e05f53b1e2 "http://hi.baidu.com/icokeeer/item/2588471c9403c9e05f53b1e2"
 [2]: http://wangyan.org/blog/howto-setup-geoip-for-awstats.html "http://wangyan.org/blog/howto-setup-geoip-for-awstats.html"
+[3]: http://awstats.atime.me/cgi-bin/awstats.pl?config=blog.atime.me
 
-awstats可以分析服务器日志，并提供图形化的分析结果。以下是一篇简单的awstats教程，记录我在ubuntu系统上安装和配置awstats7.2 + nginx的方法。
+awstats可以分析服务器日志，并提供图形化的分析结果，demo可参考本博客的[awstats页面][3]。以下是一篇简单的awstats教程，记录我在ubuntu系统上安装和配置awstats7.2 + nginx的过程。
 
 ## awstats7.2下载和配置
 下载awstats
@@ -17,7 +19,7 @@ awstats可以分析服务器日志，并提供图形化的分析结果。以下�
     sudo unzip /tmp/awstats-7.2.zip
     sudo mv awstats-7.2 awstats
 
-创建新的配置文件`/etc/awstats/awstats.blog.atime.me.conf`
+以`blog.atime.me`为例，创建新的配置文件`/etc/awstats/awstats.blog.atime.me.conf`
 
     :::bash
     cd /usr/local/awstats
@@ -89,7 +91,7 @@ awstats可以分析服务器日志，并提供图形化的分析结果。以下�
 
 载入配置无误，则可以通过如下网址访问awstats的分析结果
 
-    http://awstats.atime.me/cgi-bin/awstats.pl?config=blog.atime.me
+[http://awstats.atime.me/cgi-bin/awstats.pl?config=blog.atime.me][3]
 
 ## 其他功能
 ### 使用GeoIP插件分析访问者IP所在国家
