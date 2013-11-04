@@ -1,10 +1,13 @@
 Title: Linux服务器常见错误
 Date: 2013-08-08 12:14
-Update: 2013-11-04 11:08
+Update: 2013-11-04 15:23
 Tags: linux_server, problem
 
 记录Linux服务器上常见的错误和解决方案，安装和配置参考[这里](/tips/build_linux_host)。
 ## 系统管理相关
+
+### exim4只监听本地(localhost)25端口
+在执行`dpkg-reconfigure exim4-config`时，设置监听ip列表时，留空即可监听全部ip。
 
 ### mutt发送邮件到qq(foxmail)邮箱被屏蔽
 

@@ -68,12 +68,19 @@ denyhosts通过分析`/var/log/auth.log`来将某些非正常的ip添加到`/etc
 ### logwatch
 
 logwatch分析系统日志, 并提取重要的信息发到你的邮箱里, 通过如下命令安装:
+
     sudo apt-get install logwatch 
+
 拷贝配置文件
+
     sudo cp /usr/share/logwatch/default.conf/logwatch.conf /etc/logwatch/logwatch.conf
+
 修改`/etc/logwatch/logwatch.conf`:
-    Output = html                # 生成html格式的报告
+
+    Output = mail                # 发送邮件 
+    Format = html                # 生成html格式的报告
     MailTo = your_email_address  # 定义你的邮箱地址
+
 运行`logwatch`命令, 稍等片刻后检查是否收到logwatch的邮件. 如果一切正常则可以把logwatch添加到cron计划任务中让其自动运行. (debian6上logwatch默认自动加入cron任务, 检查`/etc/cron.daily/00logwatch`), 如果无法收到邮件, 请检查服务器的邮件发送配置, 可参考[这里](./build_linux_host#邮件设置)的相关配置.
 
 ## 防火墙
@@ -82,8 +89,10 @@ logwatch分析系统日志, 并提取重要的信息发到你的邮箱里, 通�
 使用logwatch后，经常发现某些ip会暴力猜解ssh密码，对某些烦人的IP，可以使用Tcp Wrappers限制其对某些服务的访问。
 
 `/etc/hosts.allow`和`/etc/hosts.deny`两个文件用于控制远端对某些服务的访问，但必须注意的是，通常只有两类服务可以被`/etc/hosts.allow`和`/etc/hosts.deny`限制:
+
  1.  由tcpwrapper服务(tcpd)启动的服务，需要安装xinetd软件，并在`/etc/xinetd.conf`和`/etc/xinetd.d/*`进行相应的设置。
  2.  编译时即添加了libwrapper库支持的服务，使用`apt-cache rdepends libwrap0`查看所有内置支持librwapper的软件。
+
 这里仅介绍第二类情况的配置方法，多数系统服务默认使用此种方法使用Tcp Wrappers。如果想查看某个服务是否内置支持libwrapper，则可以使用如下方法。以sshd为例，使用如下命令查看某个服务是否使用tcpwrappers库:
 	
 	ldd /usr/sbin/sshd | grep libwrap
