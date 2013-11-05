@@ -1,5 +1,6 @@
 Title: Bash小技巧合集
 Date: 2013-08-25 12:14
+Update: 2013-10-05 10:05
 Tags: bash, trick
 
 收集一些bash下的技巧。
@@ -70,6 +71,31 @@ bash里一些特殊的符号的作用。
 
 使用命令`ls !(a*).txt`将输出:
     bbb.txt
+
+## 快捷键
+bash的很多快捷键和emacs相似，可以多尝试一下。
+
+    ctrl + a 行首
+    ctrl + e 行尾
+    ctrl + b 倒退一个字母
+    ctrl + f 前进一个字母
+    alt  + f 前进一个单词（可能被占用）
+    alt  + b 倒退一个单词（可能被占用）
+
+    ctrl + r 逆向搜索历史命令
+    alt  + c 光标处字母大写或右边单词首字母大写
+    alt  + u 光标至单词结尾转为大写
+    alt  + l 光标单词结尾转为小写
+    ctrl + t 交换左右字母
+    alt  + t 交换左右单词
+    ctrl + h 删除左边的字母
+    ctrl + d 删除右边的字母
+
+    ctrl + y 粘贴
+    ctrl + w 剪切左边的单词
+    alt  + d 剪切光标至单词结尾的内容
+    ctrl + k 剪切光标至行尾的内容
+    ctrl + u 剪切光标至行首的内容
 
 ## 参考资料
 

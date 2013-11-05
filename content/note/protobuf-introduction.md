@@ -1,4 +1,4 @@
-Title: Google Protocol Buffer介绍和总结
+Title: Google Protocol Buffers介绍和总结
 Date: 2013-10-24 16:13
 Update: 2013-10-25 13:54
 Tags: google, protobuf, library, tutorial
@@ -11,7 +11,7 @@ Tags: google, protobuf, library, tutorial
 
 ## Protobuf 简介
 
-Protobuf全称Google Protocol Buffer
+Protobuf全称Google Protocol Buffers
 
 *  [http://code.google.com/p/protobuf](http://code.google.com/p/protobuf)
 *  结构化数据存储格式(xml, json)
