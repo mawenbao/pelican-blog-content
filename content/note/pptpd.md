@@ -1,5 +1,6 @@
 Title: 使用pptpd搭建VPN
 Date: 2013-08-25 12:14
+Update: 2013-11-05 17:25
 Tags: pptpd, vpn
 
 pptpd存在安全隐患，详情可参考[这里](http://pptpclient.sourceforge.net/protocol-security.phtml)。
@@ -18,12 +19,18 @@ pptpd存在安全隐患，详情可参考[这里](http://pptpclient.sourceforge.
 
 ## 修改PPPD DNS配置
 
-如果需要，可以在`/etc/ppp/options`添加Google的Public DNS:
+在`/etc/ppp/options`添加Google的Public DNS:
 
     ms-dns 8.8.8.8
     ms-dns 8.8.4.4
 
 可以使用`man pppd`查看pppd及其配置文件的用户手册。
+
+## 修改日志输出位置
+pptpd默认将日志写入`/var/log/syslog`系统日志，在`/etc/ppp/options`里加入如下一行启用单独的日志。
+
+    logfile /var/log/pptpd.log
+
 ## 设置VPN用户名和密码
 
 假设用户名为`xiaoming`，密码为`123`(不要设置过于简单的密码)，则在`/etc/ppp/chap-secrets`添加如下一行:
@@ -78,8 +85,10 @@ pptpd存在安全隐患，详情可参考[这里](http://pptpclient.sourceforge.
 
 ### 无法连接或连接后无法解析DNS
 经过以上设置后，如果依然无法成功连接到VPN服务器，或者连接成后却无法正常访问网络。出现类似`DNS 查找失败`的错误，首先检查你的iptables规则，如果没有问题可以先停掉pptpd服务:
+
     service stop pptpd
-然后运行`pptpd -f`，这时候再从客户端连接，根据`pptpd -f`的输出信息解决问题。
+
+修改pptpd的配置文件`/etc/ppp/options`，开启debug输出。然后运行`pptpd -f`，这时候再从客户端连接，根据`pptpd -f`的输出信息解决问题。
 
 也可查看pppd的日志，默认情况下，pptpd将日志记录于系统日志`/var/log/syslog.*`。
 

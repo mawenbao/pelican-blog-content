@@ -1,6 +1,6 @@
 Title: Bash小技巧合集
 Date: 2013-08-25 12:14
-Update: 2013-10-05 10:05
+Update: 2013-10-05 13:25
 Tags: bash, trick
 
 收集一些bash下的技巧。
@@ -91,6 +91,7 @@ bash的很多快捷键和emacs相似，可以多尝试一下。
     ctrl + h 删除左边的字母
     ctrl + d 删除右边的字母
 
+    # 剪切和粘贴的内容并不位于系统的剪贴板
     ctrl + y 粘贴
     ctrl + w 剪切左边的单词
     alt  + d 剪切光标至单词结尾的内容
