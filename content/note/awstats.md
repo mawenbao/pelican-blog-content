@@ -1,7 +1,7 @@
 Title: awstats+nginx配置笔记
 Date: 2013-11-04 16:33
 Update: 2013-11-04 22:49
-Tags: awstats, perl, nginx, ubuntu
+Tags: awstats, perl, nginx, ubuntu, note, tutorial
 
 [1]: http://hi.baidu.com/icokeeer/item/2588471c9403c9e05f53b1e2 "http://hi.baidu.com/icokeeer/item/2588471c9403c9e05f53b1e2"
 [2]: http://wangyan.org/blog/howto-setup-geoip-for-awstats.html "http://wangyan.org/blog/howto-setup-geoip-for-awstats.html"
