@@ -1,4 +1,4 @@
-Title: MySQL常用配置
+Title: MySQL常用配置(未完成)
 Date: 2013-11-07 11:18
 Tags: mysql, config, linux, not-finished
 
