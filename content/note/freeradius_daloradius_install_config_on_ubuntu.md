@@ -1,5 +1,6 @@
 Title: Ubuntu上安装和配置FreeRadius和DaloRadius
 Date: 2013-11-07 17:50
+Update: 2013-11-07 21:44
 Tags: radius, vpn, ubuntu, tutorial, note
 
 [1]: /note/pptpd.html "blog.atime.me/note/pptpd.html" 
@@ -11,7 +12,7 @@ Tags: radius, vpn, ubuntu, tutorial, note
 [7]: https://help.ubuntu.com/community/CategoryNetworking/daloRADIUS "https://help.ubuntu.com/community/CategoryNetworking/daloRADIUS"
 [8]: http://sourceforge.net/projects/daloradius/ "http://sourceforge.net/projects/daloradius/"
 
-总结我在Ubuntu上安装FreeRadius和DaloRadius的步骤及遇到的问题，以供日后查询，系统为Ubuntu 12.04.3 X86_64，本文的FreeRadius配置使用MySQL作为后端存储用户的相关数据。
+总结我在Ubuntu上安装FreeRadius和DaloRadius的步骤及遇到的问题，以供日后查询，系统为Ubuntu 12.04.3 X86_64，本文的FreeRadius配置使用MySQL作为后端存储相关数据。
 
 FreeRadius可以为pptp和l2tp提供验证和统计等功能，DaloRadius为FreeRadius提供一个网页界面。阅读本文前确保已经正确安装了pptpd或xl2tpd服务器。相关安装配置教程可参考[使用pptpd搭建VPN][1]和[在Ubuntu12.04上安装l2tp/ipsec VPN服务器][2]。
 
@@ -19,12 +20,8 @@ FreeRadius可以为pptp和l2tp提供验证和统计等功能，DaloRadius为Free
 
     sudo apt-get install freeradius freeradius-mysql radiusclient1 php5 php5-mysql php5-gd php5-cgi php5-fpm php-pear php-db mysql-server-5.5
 
-先停掉freeradius服务
-
-    sudo service freeradius stop 
-
 ## 配置FreeRadius 
-FreeRadius服务器的配置文件位于`/etc/freeradius`目录。
+FreeRadius的配置文件位于`/etc/freeradius`目录。
 
 ### 添加client
 修改`/etc/freeradius/clients.conf`，添加如下内容，注意将`IP_ADDRESS`和`SHARED_SECRET`换为你的服务器IP和你的共享密钥。
@@ -42,13 +39,11 @@ FreeRadius服务器的配置文件位于`/etc/freeradius`目录。
     $INCLUDE sql.conf
 
 #### /etc/freeradius/sql.conf
-修改`/etc/freeradius/sql.conf`，设置MySQL数据库的端口，radius数据库的用户名密码等内容。
-
-修改`/etc/freeradius/sql.conf`使FreeRadius从数据读取客户端信息，取消相应的注释即可。
+修改`/etc/freeradius/sql.conf`，设置MySQL数据库的端口，radius数据库的用户名密码等内容。取消如下一行的注释，使FreeRadius从数据库读取客户端信息。
 
     readclients = yes
 
-`/etc/freeradius/sql/mysql`文件夹下的众多sql脚本文件用于构建MySQL数据库，在admin.sql里修改数据库名称，用户名和密码等内容，这些内容必须和`/etc/freeradius/sql.conf`的设置匹配。
+`/etc/freeradius/sql/mysql`文件夹下的众多sql脚本文件用于构建FreeRadius的数据库，首先在admin.sql里修改数据库名称，用户名和密码等内容，这些内容必须和`/etc/freeradius/sql.conf`的设置相同。
 
 #### /etc/freeradius/sql/mysql/dialup.conf
 修改`/etc/freeradius/sql/mysql/dialup.conf`，取消如下几行的注释来提供在线人数统计功能。
@@ -60,15 +55,23 @@ FreeRadius服务器的配置文件位于`/etc/freeradius`目录。
                            WHERE username = '%{SQL-User-Name}' \
                            AND acctstoptime IS NULL"
 
-#### 创建数据库
+#### 创建FreeRadius数据库radius
+
+登录mysql
 
     cd /etc/freeradius/sql/mysql
-    mysql -uroot -p < admin.sql
-    mysql -uroot -p radius < cui.sql
-    mysql -uroot -p radius < ippool.sql
-    mysql -uroot -p radius < nas.sql
-    mysql -uroot -p radius < schema.sql
-    mysql -uroot -p radius < wimax.sql
+    mysql -u root -p
+
+输入以下命令
+
+    create database radius;
+
+    source admin.sql;
+    source cui.sql;
+    source ippool.sql;
+    source nas.sql;
+    source schema.sql;
+    source wimax.sql;
 
 #### /etc/freeradius/sites-enabled
 对`/etc/freeradius/sites-enabled/default`做如下修改
@@ -93,7 +96,7 @@ FreeRadius服务器的配置文件位于`/etc/freeradius`目录。
 RadiusClient用于将pptpd和xl2tpd的radius插件的验证请求发送给FreeRadius服务器，其配置文件位于`/etc/radiusclient`内。
 
 ### 添加字典
-RadiusClient的字典主要负责请求参数的映射，默认没有包含dictionary.microsoft，因此无法处理使用mschapv2加密的请求头。下载dictionary.microsoft并包含到主dictonary文件中。
+RadiusClient的字典主要负责请求参数的映射，默认配置没有包含dictionary.microsoft，因此无法处理使用mschapv2加密的请求头。下载dictionary.microsoft并包含到主dictonary文件中。
 
     cd /etc/radiusclient
     sudo wget http://blog.atime.me/static/resource/dictionary.microsoft
@@ -159,7 +162,7 @@ daloRadius的项目托管在[sourceforge][8]上，下载并解压。
     sudo chown -R www-data:www-data daloradius
     sudo chmod 644 daloradius/library/daloradius.conf.php
 
-`/var/www/daloradius/library/daloradius.conf.php`，修改数据库的连接方式等属性，注意和`/etc/freeradius/sql.conf`的配置相同。
+修改`/var/www/daloradius/library/daloradius.conf.php`，设置关于FreeRadius数据库的各个变量，注意和`/etc/freeradius/sql.conf`的配置相同。
 
     $configValues['FREERADIUS_VERSION'] = '2';
     $configValues['CONFIG_DB_ENGINE'] = 'mysql';
@@ -176,9 +179,14 @@ daloRadius的项目托管在[sourceforge][8]上，下载并解压。
     cd /var/www/daloradius/contrib/db/
     mysql -u root -p radius < mysql-daloradius.sql
 
-由于daloRadius向FreeRadius的数据库`radius`添加了若干新表，我们需要为FreeRadius的数据库用户添加这几张表的访问权限。 FreeRadius的数据库名称和用户可查看`/etc/freeradius/sql.conf`，这里使用默认数据库radius和默认用户radius。执行如下命令。 
+由于daloRadius向FreeRadius的数据库`radius`添加了若干新表，我们需要为FreeRadius的数据库用户添加这几张表的访问权限。 FreeRadius的数据库名称和用户可查看`/etc/freeradius/sql.conf`，这里使用默认数据库radius和默认用户radius。
+
+登录MySQL数据库
 
     mysql -u root -p
+
+输入如下命令
+
     revoke all privileges on *.* from 'radius'@'localhost';
     grant all privileges on radius.* to 'radius'@'localhost';
     flush privileges;
@@ -203,7 +211,6 @@ daloRadius的项目托管在[sourceforge][8]上，下载并解压。
             try_files $uri $uri/ /index.php;
         }
 
-
         location ~ \.php$ {
             fastcgi_pass   127.0.0.1:9000;
             fastcgi_index  index.php;
@@ -220,6 +227,7 @@ daloRadius的项目托管在[sourceforge][8]上，下载并解压。
 
     cd /etc/nginx/sites-enabled/
     sudo ln -s ../sites-available/daloradius.conf .
+
     #sudo service php5-fpm restart
     sudo service nginx restart
     sudo service freeradius restart
