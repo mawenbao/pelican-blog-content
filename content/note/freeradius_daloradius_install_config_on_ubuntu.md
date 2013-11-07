@@ -216,12 +216,13 @@ daloRadius的项目托管在[sourceforge][8]上，下载并解压。
         }
     }
 
-链接到`/etc/nginx/sites-enabled/`目录后重启nginx。
+链接到`/etc/nginx/sites-enabled/`目录后重启相关服务程序。
 
     cd /etc/nginx/sites-enabled/
     sudo ln -s ../sites-available/daloradius.conf .
     #sudo service php5-fpm restart
     sudo service nginx restart
+    sudo service freeradius restart
 
 dns更改生效后，访问http://daloradius.your.domain即可配置FreeRadius，默认的用户名是administrator，密码是radius。
 
