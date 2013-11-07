@@ -110,7 +110,7 @@ RadiusClient的字典主要负责请求参数的映射，默认配置没有包�
 
     localhost   SHARED_SECRET
 
-### 配置VPN服务器
+## 配置VPN服务器
 为pptpd和xl2tpd启用radius插件，首先查找插件的位置。
 
     sudo updatedb
