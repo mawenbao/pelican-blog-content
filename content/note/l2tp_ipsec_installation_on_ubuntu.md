@@ -1,5 +1,6 @@
 Title: 在Ubuntu12.04上安装l2tp/ipsec VPN服务器
 Date: 2013-11-06 13:46
+Update: 2013-11-08 14:13
 Tags: vpn, l2tp, ipsec, ubuntu, note, tutorial
 
 [1]: http://wangyan.org/blog/debian-l2tp-ipsec-vpn.html "http://wangyan.org/blog/debian-l2tp-ipsec-vpn.html"
@@ -117,7 +118,6 @@ Tags: vpn, l2tp, ipsec, ubuntu, note, tutorial
     sysctl -p
 
 ### 配置iptables规则
-尚未验证
 
     iptables -t nat -A POSTROUTING -j MASQUERADE
     iptables -I FORWARD -p tcp --syn -i ppp+ -j TCPMSS --set-mss 1356
@@ -125,6 +125,19 @@ Tags: vpn, l2tp, ipsec, ubuntu, note, tutorial
 ## 重启xl2tpd服务器
 
     service xl2tpd restart
+
+## 修改/etc/rc.local
+
+将如下内容添加到`/etc/rc.local`的exit 0之前。
+
+    for each in /proc/sys/net/ipv4/conf/*
+    do
+        echo 0 > $each/accept_redirects
+        echo 0 > $each/send_redirects
+    done
+
+    iptables -t nat -A POSTROUTING -j MASQUERADE
+    iptables -I FORWARD -p tcp --syn -i ppp+ -j TCPMSS --set-mss 1356
 
 ## 错误检查
 
@@ -136,6 +149,13 @@ Tags: vpn, l2tp, ipsec, ubuntu, note, tutorial
 ### xl2tpd非daemon模式运行
 
     xl2tpd -D
+
+### 可以登录但无法访问网站或无法访问部分网站
+
+通常是mtu设置的问题，执行如下命令
+
+    iptables -t nat -A POSTROUTING -j MASQUERADE
+    iptables -I FORWARD -p tcp --syn -i ppp+ -j TCPMSS --set-mss 1356
 
 ## 参考资料
 
