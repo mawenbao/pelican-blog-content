@@ -1,6 +1,6 @@
 Title: Ubuntu上安装和配置FreeRadius和DaloRadius
 Date: 2013-11-07 17:50
-Update: 2013-11-07 21:44
+Update: 2013-11-08 12:28
 Tags: radius, vpn, ubuntu, tutorial, note
 
 [1]: /note/pptpd.html "blog.atime.me/note/pptpd.html" 
@@ -11,10 +11,14 @@ Tags: radius, vpn, ubuntu, tutorial, note
 [6]: http://poptop.sourceforge.net/dox/skwok/poptop_ads_howto_a5.htm "http://poptop.sourceforge.net/dox/skwok/poptop_ads_howto_a5.htm"
 [7]: https://help.ubuntu.com/community/CategoryNetworking/daloRADIUS "https://help.ubuntu.com/community/CategoryNetworking/daloRADIUS"
 [8]: http://sourceforge.net/projects/daloradius/ "http://sourceforge.net/projects/daloradius/"
+[9]: http://en.wikipedia.org/wiki/RADIUS "http://en.wikipedia.org/wiki/RADIUS"
+[10]: http://blog.csdn.net/liang13664759/article/details/1574367 "http://blog.csdn.net/liang13664759/article/details/1574367"
 
 总结我在Ubuntu上安装FreeRadius和DaloRadius的步骤及遇到的问题，以供日后查询，系统为Ubuntu 12.04.3 X86_64，本文的FreeRadius配置使用MySQL作为后端存储相关数据。
 
 FreeRadius可以为pptp和l2tp提供验证和统计等功能，DaloRadius为FreeRadius提供一个网页界面。阅读本文前确保已经正确安装了pptpd或xl2tpd服务器。相关安装配置教程可参考[使用pptpd搭建VPN][1]和[在Ubuntu12.04上安装l2tp/ipsec VPN服务器][2]。
+
+开始安装前建议先通读一下[wikipedia:RADIUS][9]和[radius介绍][10]，了解一些radius的概念。
 
 ## 安装必要的软件
 
@@ -93,10 +97,10 @@ FreeRadius的配置文件位于`/etc/freeradius`目录。
 > 找到post-auth {}模块，去掉sql前的#号，去掉sql前的#号（Post-Auth-Type REJECT内）。
 
 ## 配置RadiusClient
-RadiusClient用于将pptpd和xl2tpd的radius插件的验证请求发送给FreeRadius服务器，其配置文件位于`/etc/radiusclient`内。
+RadiusClient用于将pptpd和xl2tpd的radius插件的验证请求发送给FreeRadius服务器，充当nas的角色，其配置文件位于`/etc/radiusclient`内。
 
 ### 添加字典
-RadiusClient的字典主要负责请求参数的映射，默认配置没有包含dictionary.microsoft，因此无法处理使用mschapv2加密的请求头。下载dictionary.microsoft并包含到主dictonary文件中。
+RadiusClient的字典主要负责参数的映射，默认配置没有包含dictionary.microsoft，因此无法处理使用mschapv2加密的请求头。下载dictionary.microsoft并包含到主dictonary文件中。
 
     cd /etc/radiusclient
     sudo wget http://blog.atime.me/static/resource/dictionary.microsoft
@@ -104,6 +108,10 @@ RadiusClient的字典主要负责请求参数的映射，默认配置没有包�
 在`/etc/radiusclient/dictionary`文件的最后添加如下一行以包含dictionary.microsoft
 
     INCLUDE /etc/radiusclient/dictionary.microsoft
+
+另外，为解决FreeRadius的`radacct`表不更新的问题，需要在`/etc/radiusclient/dictionary`中加入如下一行，以保证RadiusClient能够识别Acct-Interim-Interval。
+
+    ATTRIBUTE Acct-Interim-Interval 85 integer
 
 ### 设置共享密钥
 修改'/etc/radiusclient/servers'文件，添加如下一行，注意SHARED_SECRET必须和你在`/etc/freeradius/clients.conf`里设置的[共享密钥][3]相同。
@@ -171,7 +179,10 @@ daloRadius的项目托管在[sourceforge][8]上，下载并解压。
     $configValues['CONFIG_DB_USER'] = 'radius';
     $configValues['CONFIG_DB_PASS'] = 'raduser';
 
+其他需要修改的变量，其中`SHARED_SECRET`要和`/etc/freeradius/clients.conf`设置的[共享密钥][3]相同。
+
     $configValues['CONFIG_PATH_DALO_VARIABLE_DATA'] = '/var/www/daloradius/var';
+    $configValues['CONFIG_MAINT_TEST_USER_RADIUSSECRET'] = 'SHARED_SECRET';
 
 ### 为daloRadius创建MySQL数据表
 由于之前已经为FreeRadius创建了相应的表结构，这里只需要为daloRadius创建表即可
