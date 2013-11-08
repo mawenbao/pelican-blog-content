@@ -1,6 +1,6 @@
 Title: 使用pptpd搭建VPN
 Date: 2013-08-25 12:14
-Update: 2013-11-05 17:25
+Update: 2013-11-08 14:58
 Tags: pptpd, vpn
 
 pptpd存在安全隐患，详情可参考[这里](http://pptpclient.sourceforge.net/protocol-security.phtml)。
@@ -124,6 +124,10 @@ pptpd默认将日志写入`/var/log/syslog`系统日志，在`/etc/ppp/options`�
 	  		    else
 	  			newret = CONFREJ;
 	  		}
+
+### Virtualbox上的系统无法使用pptp vpn
+
+Virtualbox的NAT实现不支持GRE协议，解决方案可参考[PPTP VPN connections from VirtualBox guests](http://angryfifer.blogspot.com/2012/03/pptp-vpn-connections-from-virtualbox.html)
 
 ## 参考资料
 

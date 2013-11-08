@@ -127,19 +127,23 @@ Tags: vpn, l2tp, ipsec, ubuntu, note, tutorial
     service xl2tpd restart
 
 ## 修改/etc/rc.local
+如果`/etc/rc.loal`无法正常自动执行，尝试将shebang换成`#!/bin/bash`。
+    :::bash
+    
+    #!/bin/bash
 
-将如下内容添加到`/etc/rc.local`的exit 0之前。
-
+    # for xl2tpd
     for each in /proc/sys/net/ipv4/conf/*
     do
         echo 0 > $each/accept_redirects
         echo 0 > $each/send_redirects
     done
-
     iptables -t nat -A POSTROUTING -j MASQUERADE
     iptables -I FORWARD -p tcp --syn -i ppp+ -j TCPMSS --set-mss 1356
 
-## 错误检查
+    exit 0
+
+## 错误排查
 
 ### 查看日志
 
