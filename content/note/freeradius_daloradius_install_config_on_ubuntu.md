@@ -1,6 +1,6 @@
 Title: Ubuntu上安装和配置FreeRadius和DaloRadius
 Date: 2013-11-07 17:50
-Update: 2013-11-08 12:28
+Update: 2013-11-08 18:02
 Tags: radius, vpn, ubuntu, tutorial, note
 
 [1]: /note/pptpd.html "blog.atime.me/note/pptpd.html" 
@@ -262,6 +262,12 @@ daloRadius的管理账户存储在MySQL的`radius.operators`表中，密码使�
 radtest可以向freeradius服务器发送请求，不过目前不支持mschapv2加密模式，详情见`man radtest`。
 
     radtest user password localhost 0 shared_secret
+
+### 异常掉线的用户在daloRadius显示为在线用户
+
+异常掉线的client无法在退出时更新`radius.radacct`表的`acctstoptime`，这些client在daloRadius里会被显示为在线用户。使用如下的命令可修复该问题，最好使用cron定期执行该任务。
+
+    mysql -uroot -p -e "UPDATE radius.radacct SET acctstoptime = acctstarttime + acctsessiontime WHERE ((UNIX_TIMESTAMP(acctstarttime) + acctsessiontime + 240 - UNIX_TIMESTAMP())<0) AND acctstoptime IS NULL;"
 
 ## 参考资料
 1. [PPTP/L2TP + FreeRADIUS + MySQL 安装与配置][4]
