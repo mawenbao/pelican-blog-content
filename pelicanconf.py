@@ -54,6 +54,9 @@ CATEGORY_SAVE_AS = CATEGORY_URL
 TAG_URL = 'tag/{slug}.html'
 TAG_SAVE_AS = TAG_URL
 TAGS_SAVE_AS = 'tag/index.html'
+# disable author pages
+AUTHOR_SAVE_AS = ''
+AUTHORS_SAVE_AS = ''
 
 TEMPLATE_PAGES = {
         "404.html": "404.html",
