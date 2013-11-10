@@ -1,11 +1,71 @@
 Title: Debian/Ubuntu系统小技巧收集
 Date: 2013-08-25 12:14
-Update: 2013-11-08 17:25
+Update: 2013-11-10 10:21
 Tags: debian, ubuntu, trick
 
 整理一些Debian/Ubuntu上的小技巧，包括系统管理、系统美化和娱乐等方面。
 
 ## 系统管理
+
+### 设置默认UMASK
+umask影响新创建的文件的默认权限，详细的介绍可参考[这篇文章](http://www.cyberciti.biz/tips/understanding-linux-unix-umask-value-usage.html)。设置系统的默认UMASK，首先在`/etc/pam.d/common-session`里添加（可能已存在）如下一行
+
+    session optional pam_umask.so
+
+然后修改`/etc/login.defs`的UMASK值即可。如果只需要改某个用户的UMASK，只要在`~/.bashrc`或`~/.profile`里加入如下一行，注意将00002改为你想要的UMASK。
+
+    umask 0002
+
+### 使用SetGid和umask继承父目录组权限
+用一个例子说明，首先创建两个临时用户temp和temp2并设置密码。
+
+    sudo useradd temp
+    sudo passwd temp
+
+    sudo useradd temp2
+    sudo passwd temp2
+
+创建一个临时组temp-group并将两个临时用户加入临时组里。
+
+    sudo groupadd temp-group
+    sudo usermod -a -G temp-group temp
+    sudo usermod -a -G temp-group temp2
+
+用temp用户创建一个新的文件夹`/tmp/test`
+    
+    cd /tmp
+    sudo -u temp mkdir test
+
+    ls -ld test
+    # drwxr-xr-x 2 temp temp 4096 Nov 10 10:35 test
+
+将`/tmp/test`文件夹的组改为temp-group，并为其添加组的写权限
+
+    sudo chgrp temp-group test
+    ls -ld test
+    # drwxr-xr-x 2 temp temp-group 4096 Nov 10 10:35 test
+
+    sudo chmod g+w test
+    ls -ld test
+    # drwxrwxr-x 2 temp temp-group 4096 Nov 10 10:35 test
+
+设置`/tmp/test`文件夹的SetGid权限
+
+    sudo chmod g+s test
+    ls -ld test
+    # drwxrwsr-x 2 temp temp-group 4096 Nov 10 10:35 test
+
+这样以来，在`/tmp/test`里用temp-group组的用户创建的文件，都会集成父目录`/tmp/test`的组。常见的一个用处就是，temp用户创建的文件，temp2用户也可以直接访问和修改。
+
+`umask 0002`会使新创建文件和文件夹的组用户拥有写权限。
+
+    cd test
+    sudo -u temp bash -c 'umask 0002 && mkdir test-sub-dir'
+    sudo -u temp2 bash -c 'umask 0002 && touch test-file'
+
+    ls -ld test-dir test-file
+    # drwxrwsr-x 2 temp  temp-group 4096 Nov 10 10:45 test-dir
+    # -rw-rw-r-- 1 temp2 temp-group    0 Nov 10 10:45 test-file
 
 ### 同步系统时间
 
@@ -171,4 +231,7 @@ easytag
 *  [Enabling and disabling services during start up in GNU/Linux](http://www.aboutlinux.info/2006/04/enabling-and-disabling-services-during_01.html)
 *  [触摸板](http://wiki.ubuntu.org.cn/%E8%A7%A6%E6%91%B8%E6%9D%BF) from ubuntu wiki cn
 *  [Mounting Windows Partitions](https://help.ubuntu.com/community/MountingWindowsPartitions)
+*  [How to set system wide umask?](http://stackoverflow.com/questions/10220531/how-to-set-system-wide-umask)
+*  [What is Umask and How To Setup Default umask Under Linux?](http://www.cyberciti.biz/tips/understanding-linux-unix-umask-value-usage.html)
+*  [Configure inherit group ownership on Linux folder](http://gsienkiewicz.wordpress.com/2013/04/05/configure-inherit-group-ownership-on-linux-folder/)
 
