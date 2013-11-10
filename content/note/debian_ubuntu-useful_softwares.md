@@ -1,7 +1,7 @@
 Title: Debian/Ubuntu 常用软件
 Date: 2013-08-25 12:14
+Update: 2013-11-10 13:15
 Tags: debian, ubuntu, package, resource
-Update: 2013-10-18 14:43
 
 介绍常用Debian/Ubuntu平台上的软件和部分软件的使用方法。可在[Linux Packages Search](http://pkgs.org/)查找需要的软件包。
 
@@ -11,6 +11,7 @@ Update: 2013-10-18 14:43
 
 系统管理
 
+*  apropos 查找说明手册
 *  apt-file
 *  aptitude
 *  chkconfig
@@ -24,6 +25,7 @@ Update: 2013-10-18 14:43
 
 应用
 
+*  httrack 制作镜像网站
 *  xsel 剪贴板工具
 
 开发相关
