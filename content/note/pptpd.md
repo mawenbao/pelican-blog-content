@@ -1,6 +1,6 @@
 Title: 使用pptpd搭建VPN
 Date: 2013-08-25 12:14
-Update: 2013-11-08 14:58
+Update: 2013-11-11 14:53
 Tags: pptpd, vpn
 
 pptpd存在安全隐患，详情可参考[这里](http://pptpclient.sourceforge.net/protocol-security.phtml)。
@@ -30,6 +30,17 @@ pptpd存在安全隐患，详情可参考[这里](http://pptpclient.sourceforge.
 pptpd默认将日志写入`/var/log/syslog`系统日志，在`/etc/ppp/options`里加入如下一行启用单独的日志。
 
     logfile /var/log/pptpd.log
+
+## 修改连接数
+pptpd的默认配置只有6个IP可供分配，pptpd启动时日志里经常见到如下的警告信息。
+
+    Maximum of 100 connections reduced to 6, not enough IP addresses given
+
+如果想要增加更多的连接，可修改`/etc/pptpd.conf`的`remoteip`选项。
+
+    remoteip 192.168.0.234-248,192.168.0.245
+
+上面的配置将连接数增加到16个，需要注意的是，连接数同时受`remoteip`和`connections`两个配置项控制，详情可参考`man pptpd.conf`。
 
 ## 设置VPN用户名和密码
 

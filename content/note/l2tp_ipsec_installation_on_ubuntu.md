@@ -1,6 +1,6 @@
 Title: 在Ubuntu12.04上安装l2tp/ipsec VPN服务器
 Date: 2013-11-06 13:46
-Update: 2013-11-08 14:13
+Update: 2013-11-11 14:52
 Tags: vpn, l2tp, ipsec, ubuntu, note, tutorial
 
 [1]: http://wangyan.org/blog/debian-l2tp-ipsec-vpn.html "http://wangyan.org/blog/debian-l2tp-ipsec-vpn.html"
@@ -142,6 +142,14 @@ Tags: vpn, l2tp, ipsec, ubuntu, note, tutorial
     iptables -I FORWARD -p tcp --syn -i ppp+ -j TCPMSS --set-mss 1356
 
     exit 0
+
+## 其他设置
+
+### 不将日志输出到/var/log/syslog
+在`/etc/rsyslog.d/`中添加如下配置`/etc/rsyslog.d/20-xl2tpd.conf`，xl2tpd的日志不再输出到`/var/log/syslog`而是`/var/log/xl2tpd.log`。
+
+    if $programname == 'xl2tpd' then /var/log/xl2tpd.log
+    &~
 
 ## 错误排查
 
