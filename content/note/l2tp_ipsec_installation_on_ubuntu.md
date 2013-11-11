@@ -1,6 +1,6 @@
 Title: 在Ubuntu12.04上安装l2tp/ipsec VPN服务器
 Date: 2013-11-06 13:46
-Update: 2013-11-11 14:52
+Update: 2013-11-11 17:06
 Tags: vpn, l2tp, ipsec, ubuntu, note, tutorial
 
 [1]: http://wangyan.org/blog/debian-l2tp-ipsec-vpn.html "http://wangyan.org/blog/debian-l2tp-ipsec-vpn.html"
@@ -150,6 +150,10 @@ Tags: vpn, l2tp, ipsec, ubuntu, note, tutorial
 
     if $programname == 'xl2tpd' then /var/log/xl2tpd.log
     &~
+
+然后重启rsyslogd
+
+    sudo service rsyslog restart
 
 ## 错误排查
 
