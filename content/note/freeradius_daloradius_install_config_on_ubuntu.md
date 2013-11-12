@@ -1,6 +1,6 @@
 Title: Ubuntu上安装和配置FreeRadius和DaloRadius
 Date: 2013-11-07 17:50
-Update: 2013-11-08 18:02
+Update: 2013-11-12 15:50
 Tags: radius, vpn, ubuntu, tutorial, note
 
 [1]: /note/pptpd.html "blog.atime.me/note/pptpd.html" 
@@ -109,7 +109,7 @@ RadiusClient的字典主要负责参数的映射，默认配置没有包含dicti
 
     INCLUDE /etc/radiusclient/dictionary.microsoft
 
-另外，为解决FreeRadius的`radacct`表不更新的问题，需要在`/etc/radiusclient/dictionary`中加入如下一行，以保证RadiusClient能够识别Acct-Interim-Interval。
+为解决FreeRadius的`radacct`表不更新的问题，需要在`/etc/radiusclient/dictionary`中加入如下一行，以保证RadiusClient能够识别Acct-Interim-Interval。另外，记得在daloRadius里为用户添加`Acct-Interim-Interval` reply attribute（对应MySQL的radgroupreply表）。
 
     ATTRIBUTE Acct-Interim-Interval 85 integer
 
