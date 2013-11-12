@@ -1,5 +1,6 @@
 Title: CMake使用总结
 Date: 2013-11-12 17:45
+Update: 2013-11-12 18:00
 Tags: c++, cmake, note, summary
 
 [1]: http://www.cmake.org/cmake/help/documentation.html
@@ -11,7 +12,27 @@ Tags: c++, cmake, note, summary
 CMake意为cross-platform make，可用于管理c/c++工程。CMake解析配置文件CMakeLists.txt生成Makefile，相比直接用Makefile管理工程，CMake更灵活和简单。
 
 ## 简单的例子
-创建CMakeLists.txt文件
+假设当前目录的结构为
+
+    ./a.cpp
+    ./b.cpp
+
+    ./include/common.h
+    ./include/defines.h
+
+    ./other/c.cpp
+    ./other/d.cpp
+
+    ./lib/libB.a
+    ./lib/libBd.a
+    ./lib/libA.so
+    ./lib/libAd.so
+    ./lib/libB.so
+    ./lib/libBd.so
+    ./lib/libC.so
+    ./lib/libCd.so
+
+使用下面的CMakeLists.txt文件，目标是编译当前目录和./other目录下的所有源文件，并链接./lib目录下的相应库文件到最终的可执行文件./bin/hello(或./bin/hellod)。
 
     :::cmake
     cmake_minimum_required(VERSION 2.8)
@@ -19,7 +40,9 @@ CMake意为cross-platform make，可用于管理c/c++工程。CMake解析配置�
 
     set(CMAKE_VERBOSE_MAKEFILE on)
     set(CMAKE_CXX_COMPILER "g++")
-    set(CMAKE_CXX_FLAGS" -g3 -Wall" )
+    set(CMAKE_CXX_FLAGS "")
+    set(CMAKE_CXX_FLAGS_DEBUG "-g3 -Wall")
+    set(CMAKE_CXX_FLAGS_RELEASE "-O2 -Wall")
     set(EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/bin)
 
     aux_source_directory(./ SRC_LIST)
@@ -37,7 +60,7 @@ CMake意为cross-platform make，可用于管理c/c++工程。CMake解析配置�
         target_link_libraries(hello A B.a C.so)
     endif()
 
-执行命令`cmake -DMY_BUILD_TYPE=debug .`生成Makefile。
+执行命令`cmake -DMY_BUILD_TYPE=debug .`生成Makefile，make之后生成./bin/hellod（调试版本），或执行`cmake .`最后生成./bin/hello。
 
 ## 常用的CMake变量
 详细内容请参考[CMake Useful Variables][2]。
@@ -86,6 +109,8 @@ cmake版本至少为2.8
     *  CMAKE_VERBOSE_MAKEFILE on 输出详细的编译和链接信息
     *  CMAKE_CXX_COMPILER "g++" c++编译器
     *  CMAKE_CXX_FLAGS "-Wall" c++编译器参数
+        *  CMAKE_CXX_FLAGS_DEBUG debug版本对应的编译器参数
+        *  CMAKE_CXX_FLAGS_RELEASE release版本对应的编译器参数
     *  EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/bin 可执行文件的输出目录
     *  LIBRARY_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/lib 链接库的输出目录
 
