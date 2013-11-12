@@ -1,6 +1,6 @@
 Title: CMake使用总结
 Date: 2013-11-12 17:45
-Update: 2013-11-12 18:00
+Update: 2013-11-12 20:03
 Tags: c++, cmake, note, summary
 
 [1]: http://www.cmake.org/cmake/help/documentation.html
@@ -101,18 +101,18 @@ cmake版本至少为2.8
 
 > We do not recommend using GLOB to collect a list of source files from your source tree. If no CMakeLists.txt file changes when a source is added or removed then the generated build system cannot know when to ask CMake to regenerate.
 
-大意就是，GLOB收集的源文件增加或删除，而CMakeLists.txt没有发生修改时，不会重新生成Makefile。其实，当CMakeLists.txt使用aux_source_directory和file glob查找工程源文件时，如果添加或删除源文件，都需要重新运行CMake。
+大意就是，GLOB收集的源文件增加或删除，而CMakeLists.txt没有发生修改时，不会重新运行CMake。其实，当CMakeLists.txt使用aux_source_directory和file glob查找工程源文件时，如果添加或删除源文件，都需要重新运行CMake。
 
 ### set命令
 经常配合set命令使用的CMake变量，使用`set(variable value)`进行设置。
 
-    *  CMAKE_VERBOSE_MAKEFILE on 输出详细的编译和链接信息
-    *  CMAKE_CXX_COMPILER "g++" c++编译器
-    *  CMAKE_CXX_FLAGS "-Wall" c++编译器参数
-        *  CMAKE_CXX_FLAGS_DEBUG debug版本对应的编译器参数
-        *  CMAKE_CXX_FLAGS_RELEASE release版本对应的编译器参数
-    *  EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/bin 可执行文件的输出目录
-    *  LIBRARY_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/lib 链接库的输出目录
+*  `CMAKE_VERBOSE_MAKEFILE` on 输出详细的编译和链接信息
+*  `CMAKE_CXX_COMPILER` "g++" c++编译器
+*  `CMAKE_CXX_FLAGS` "-Wall" c++编译器参数
+    *  `CMAKE_CXX_FLAGS_DEBUG` debug版本对应的编译器参数
+    *  `CMAKE_CXX_FLAGS_RELEASE` release版本对应的编译器参数
+*  `EXECUTABLE_OUTPUT_PATH` ${PROJECT_SOURCE_DIR}/bin 可执行文件的输出目录
+*  `LIBRARY_OUTPUT_PATH` ${PROJECT_SOURCE_DIR}/lib 链接库的输出目录
 
 set命令还可以设置自定义变量，比如
 
