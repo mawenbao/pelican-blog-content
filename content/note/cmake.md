@@ -37,7 +37,7 @@ CMake意为cross-platform make，可用于管理c/c++工程。CMake解析配置�
         target_link_libraries(hello A B.a C.so)
     endif()
 
-执行命令`cmake -DMY_BUILD_TYPE=debug .`生成makefile。
+执行命令`cmake -DMY_BUILD_TYPE=debug .`生成Makefile。
 
 ## 常用的CMake变量
 详细内容请参考[CMake Useful Variables][2]。
@@ -126,7 +126,7 @@ set命令还可以设置自定义变量，比如
 
 需要注意的是，target_link_libraries里库文件的顺序符合gcc链接顺序的规则，即被依赖的库放在依赖它的库的后面，比如上面的命令里，libA.so可能依赖于libB.a和libC.so，如果顺序有错，链接时会报错。还有一点，B.a会告诉CMake优先使用静态链接库libB.a，C.so会告诉CMake优先使用动态链接库libC.so，也可直接使用库文件的相对路径或绝对路径。
 
-### 自定义makefile目标
+### 自定义Makefile目标
 运行下面的whatever目标`make whatever`，会先创建一个目录`./hello`，然后将当前目录的`a.txt`拷贝到新建的`./hello`目录里。
 
     add_custom_command(
@@ -168,8 +168,8 @@ list命令
 
 ## 更多的例子
 
-### 自定义makefile目标的完整例子
-下面的CMakeLists.txt添加一个自定义目标proto，该目标在编译工程前先生成Google Protocol Buffers的输出文件。
+### 自定义Makefile目标的完整例子
+下面的CMakeLists.txt添加一个自定义目标proto，该目标在编译工程前，会先调用protobuf程序编译先生成Google Protocol Buffers的消息解析器。
 
     :::cmake
     cmake_minimum_required(VERSION 2.6)
