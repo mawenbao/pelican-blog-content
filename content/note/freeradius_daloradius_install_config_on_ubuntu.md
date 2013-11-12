@@ -109,9 +109,11 @@ RadiusClient的字典主要负责参数的映射，默认配置没有包含dicti
 
     INCLUDE /etc/radiusclient/dictionary.microsoft
 
-为解决FreeRadius的`radacct`表不更新的问题，需要在`/etc/radiusclient/dictionary`中加入如下一行，以保证RadiusClient能够识别Acct-Interim-Interval。另外，记得在daloRadius里为用户添加`Acct-Interim-Interval` reply attribute（对应MySQL的radgroupreply表）。
+为解决FreeRadius的`radacct`表不更新的问题，需要在`/etc/radiusclient/dictionary`中加入如下一行，以保证RadiusClient能够识别Acct-Interim-Interval。
 
     ATTRIBUTE Acct-Interim-Interval 85 integer
+
+另外，记得在daloRadius里为用户添加`Acct-Interim-Interval` reply attribute（对应MySQL的radgroupreply表）。
 
 ### 设置共享密钥
 修改'/etc/radiusclient/servers'文件，添加如下一行，注意SHARED_SECRET必须和你在`/etc/freeradius/clients.conf`里设置的[共享密钥][3]相同。
