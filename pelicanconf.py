@@ -32,6 +32,10 @@ DELETE_OUTPUT_DIRECTORY = True
 DEFAULT_CATEGORY = 'uncategorized'
 DEFAULT_PAGINATION = 7
 
+READERS = {
+        'html': None,
+}
+
 STATIC_PATHS = [
         'static',
         'extra',
@@ -43,6 +47,7 @@ EXTRA_PATH_METADATA = {
         'extra/favicon.ico': { 'path': 'favicon.ico' },
         'extra/CODE_LICENSE.txt': { 'path': 'CODE_LICENSE.txt' },
         'extra/robots.txt': { 'path': 'robots.txt' },
+        'extra/googlea4ca86ec98912b58.html': {'path': 'googlea4ca86ec98912b58.html' },
 }
 
 ARTICLE_URL = '{category}/{slug}.html'
