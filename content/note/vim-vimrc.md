@@ -1,13 +1,14 @@
 Title: VIMRC收集
 Date: 2013-08-25 12:14
+Update: 2013-11-13 10:31
 Tags: vim, config
-Update: 2013-10-22 16:08
 
 [1]: http://yyq123.blogspot.com/2009/10/vim-statusline.html "http://yyq123.blogspot.com/2009/10/vim-statusline.html"
 [2]: http://superuser.com/questions/322865/how-to-make-vim-always-show-the-encoding-of-current-opened-file
 [3]: https://github.com/amix/vimrc "https://github.com/amix/vimrc"
 [4]: http://vim.wikia.com/wiki/Highlight_unwanted_spaces "http://vim.wikia.com/wiki/Highlight_unwanted_spaces"
 [5]: http://vim.wikia.com/wiki/Remove_unwanted_spaces "http://vim.wikia.com/wiki/Remove_unwanted_spaces"
+[6]: https://raw.github.com/lucasoman/Conf/master/.vimrc
 
 记录vim的配置方法，收集好的vim配置文件。
 
@@ -15,6 +16,7 @@ Update: 2013-10-22 16:08
 在linux系统上，vim的配置文件入口是`~/.vimrc`，下面是一些优秀的vim配置文件。
 
 *  [The Ultimate vimrc][3]
+*  [简洁带注释的vimrc][6]
 
 ## vim配置
 
