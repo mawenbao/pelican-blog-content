@@ -3,9 +3,9 @@ Date: 2013-08-25 12:14
 Comment: off
 
 [1]: http://docs.getpelican.com/ "pelican documentation"
-[2]: https://github.com/wilbur-ma/pelican-blog-content "my pelican blog repository"
-[3]: https://github.com/wilbur-ma/niu-x2 "my pelican theme"
-[5]: https://github.com/wilbur-ma "my github homepage"
+[2]: https://github.com/mawenbao/pelican-blog-content "my pelican blog repository"
+[3]: https://github.com/mawenbao/niu-x2 "my pelican theme"
+[5]: https://github.com/mawenbao "my github homepage"
 [6]: http://www.douban.com/people/wishome/ "my douban homepage"
 [7]: /my_gnupg.html "my gnu public key"
 [10]: http://www.hawkhost.com/ "http://www.hawkhost.com/"
@@ -30,7 +30,7 @@ Comment: off
 如有需要，我的公钥在[这里][7]。
 
 *   Email: mwenbao AT gmail DOT com （每天早中晚都会检查）
-*   Github: [@wilbur-ma][5] （基本每天都会瞅一两眼）
+*   Github: [@mawenbao][5] （基本每天都会瞅一两眼）
 *   豆瓣: [@wishome][6] （偶尔登录一次，把她列在这里是为了证明我也有颗文艺的心）
 
 ## 网站历史
