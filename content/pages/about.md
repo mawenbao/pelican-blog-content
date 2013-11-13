@@ -15,22 +15,26 @@ Comment: off
 [14]: /agreement.html "使用协议"
 [15]: /my_projects.html "我的开源项目"
 
-## What
+## 关于本博客
 
 本博客使用[pelican][1]创建，文章(markdown格式)和pelican配置文件放在[这里][2]。博客的主题niu-x2乃闲暇时所作，源码放在[这里][3]。我通常会在这里做一些技术方面的笔记，偶尔也会写点想法和日常琐事。
 
-## About me
+如果没有特殊说明，本网站的原创文字作品和代码都使用商业友好的许可协议发布，详情可参考[使用协议][14]，希望对大家有些用处。
 
-程序猿一只，懒人，资深宅，轻度完美主义者，信奉简单即是美。目前从事于C++和网络方面的工作，懂一点前端开发。喜欢Debian/Ubuntu和Python。喜欢Nightwish, The Cranberries和周杰伦，也常听ACG。很少用QQ和MSN，如有需要最好用邮件联系我。
+## 关于我本人
 
-## Contact me
+程序猿一只，懒人，资深宅，轻度完美主义者，信奉简单即是美。目前从事于C++和网络方面的工作，懂一点前端开发。喜欢Debian/Ubuntu，Python和Golang。喜欢过Nightwish, The Cranberries和周杰伦，喜欢日漫，常听ACG。如有需要请用邮件联系我。
 
-*   我的公钥: [<i class="icon-lock"></i>][7]
-*   Email: wilbur.ma AT foxmail DOT com 
-*   Github: [@wilbur-ma][5]
-*   豆瓣: [@wishome][6]
+## 如何联系我
 
-## History
+如有需要，我的公钥在[这里][7]。
+
+*   Email: mwenbao AT gmail DOT com （每天早中晚都会检查）
+*   Github: [@wilbur-ma][5] （基本每天都会瞅一两眼）
+*   豆瓣: [@wishome][6] （偶尔登录一次，把她列在这里是为了证明我也有颗文艺的心）
+
+## 网站历史
+
 *  2013.10.31 迁回[linode][11]的东京机房，占坑mawenbao.com。
 *  2013.09.02 使用自己创作的pelican主题[niu-x2][3]。
 *  2013.08.25 将博客和wiki迁移到pelican，并暂时托管在Github Pages上。
@@ -40,3 +44,4 @@ Comment: off
 *  2012.11.13 将网站迁移到了[linode][11]的fremont机房，同时将域名换为atime.me。
 *  2012.10.15 Blog和wiki分别换用wordpress3.4和dokuwiki。
 *  2012.09.21 在[hawkhost][10]购买了wishome.name域名和半年的shared hosting服务，并使用drupal7和mediawiki发布内容。
+

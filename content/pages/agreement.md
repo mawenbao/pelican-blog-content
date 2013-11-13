@@ -3,7 +3,7 @@ Date: 2013-01-22 15:20:00
 Update: 2013-11-12 14:45
 Comment: off
 
-[3]: /about.html#2e8954957754dabdb3d4477bc68ce195 "about me"
+[3]: /about.html#1a59b4b3e9d33d250d80feb7579e0045 "about me"
 [4]: http://www.google.com/analytics/ "Google 分析"
 [5]: http://tongji.baidu.com "百度统计"
 [6]: http://atime.me "wilbur的网站"
