@@ -1,10 +1,11 @@
 Title: 糗事百科精选
 Date: 2013-09-06
+Update: 2013-11-13 18:46
 Tags: 糗事百科, 笑话
-Update: 2013-10-31 12:20
 
 [1]: /static/images/qiushibaike/cute_dog.jpg "cute dog"
 [2]: /static/images/qiushibaike/qiushibaike001.jpg "超糗事百科 有画面感的小学生日记"
+[3]: /static/images/qiushibaike/brothers.jpg
 
 一些糗事百科上的趣事。
 
@@ -23,3 +24,6 @@ Update: 2013-10-31 12:20
 ![糗事百科 超有画面感的小学生日记][2]
 
 一天外甥惹我不高兴了，我骂了他一句：“小兔崽子再闹，我揍你了。”外甥听见我骂他，就跑到我姐姐面前。lz原本以为小外甥会像我姐告状，没想到外甥居然埋怨起我姐了。他对着我姐说了句：“都怪你，要不是你属兔子的，我也不会被舅舅叫成兔崽子了。”
+
+![某人的儿时照片][3]
+
