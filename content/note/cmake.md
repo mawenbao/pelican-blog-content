@@ -1,6 +1,6 @@
 Title: CMake使用总结
 Date: 2013-11-12 17:45
-Update: 2013-11-12 20:03
+Update: 2013-11-13 08:48
 Tags: c++, cmake, note, summary
 
 [1]: http://www.cmake.org/cmake/help/documentation.html
@@ -101,7 +101,7 @@ cmake版本至少为2.8
 
 > We do not recommend using GLOB to collect a list of source files from your source tree. If no CMakeLists.txt file changes when a source is added or removed then the generated build system cannot know when to ask CMake to regenerate.
 
-大意就是，GLOB收集的源文件增加或删除，而CMakeLists.txt没有发生修改时，不会重新运行CMake。其实，当CMakeLists.txt使用aux_source_directory和file glob查找工程源文件时，如果添加或删除源文件，都需要重新运行CMake。
+大意就是，GLOB收集的源文件增加或删除，而CMakeLists.txt没有发生修改时，CMake不能识别这些文件。其实，当CMakeLists.txt使用aux_source_directory和file glob查找工程源文件时，如果添加或删除源文件，都需要重新运行CMake。
 
 ### set命令
 经常配合set命令使用的CMake变量，使用`set(variable value)`进行设置。
