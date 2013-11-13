@@ -45,8 +45,9 @@ Tags: python, backup
  2.  为脚本添加执行权限`chmod +x host-admin.py`。
  3.  根据需要修改配置文件。
  4.  进行备份或恢复: 
-    * `./host-admin.py -c daily-backup.ini -b` 使用daily-backup.ini中的配置进行备份，备份时会连同配置文件一起打包。
-    * `./host-admin.py -c daily-backup.ini -f host-backup.tar -r`使用daily-backup.ini中的配置和host-backup.tar中的数据进行恢复。可以直接使用host-backup.tar中的配置文件daily-backup.ini。
+    * `./host-admin.py -c daily-backup.ini -b` 使用daily-backup.ini中的配置进行备份
+    * `./host-admin.py -c daily-backup.ini -f host-backup.tar -r`使用daily-backup.ini中的配置和host-backup.tar中的数据进行恢复。
+
 ## 配置文件说明
 
 ### backup-config.ini
@@ -59,65 +60,65 @@ Tags: python, backup
 6.  Exclude_VCS使用gnu tar的`--exclude-vcs`选项实现。
 7.  Exclude_Pattern使用gnu tar的`--exclude`选项实现，多个pattern使用分号":"隔开，例如剔除后缀为tmp的文件，/var/blog/tmp目录，名为conf.d的目录和所有隐藏文件(文件夹)，可以使用如下pattern: `*.tmp:/var/blog/tmp:conf.d:\.*`，单个Pattern的详细说明请参考[GNU Tar文档](http://www.gnu.org/software/tar/manual/html_node/exclude.html)。
 
-    :::ini
-    [OwnerList]
-    dokuwiki_data = www-data:www-data
-    gitlab_config = gitlab:gitlab
-    git_repo = git
-
-    [FileList]
-    vim_config = /root/.vimrc:/root/.vim_runtime
-    system_config = /etc/nginx:/etc/apache2:/etc/phpmyadmin:/etc/mysql:/etc/exim4
-    crontab = /root/crontab
-    gitlab_config = /home/gitlab/gitlab/config/database.yml:/home/gitlab/gitlab/config/gitlab.yml
-    backup_script = /etc/cron.daily/host-backup
-    git_config = /root/.gitconfig:/root/.gitignore
-    dokuwiki_data = /var/www/wiki/data/pages:/var/www/wiki/data/meta:/var/www/wiki/data/attic:/var/www/wiki/conf
-
-    [General]
-    # 备份[FileList]中的文件时，是否排除版本控制系统的文件，参考man tar。
-    exclude_vcs = 0
-    # 备份文件名的日期格式，参考python的日期格式。
-    date_format = %Y%m%d%H%M%S
-    exclude_pattern = 0
-    # 备份完毕后是否删除备份文件， 1为删除，0为不删除。
-    remove_after_backup = 1
-    # 恢复备份文件时，如果目标文件存在则先删除之，1为删除，0为不删除。
-    remove_exist_first = 1
-
-    [Repo.Git]
-    # 不启用Git仓库备份功能
-    root_dir = 0
-
-    [DB.Mysql]
-    # 使用半角冒号(:)分隔的mysql数据库列表
-    db_list = 0
-    # Mysql用户名
-    user = 0
-    # Mysql密码
-    password = 0
-
-    [Backup]
-    # 设为1则启用dropbox备份，0为不启用。
-    with_dropbox = 0
-    # 设为1则启用email备份，0为不启用。
-    with_email = 1
-
-    [Email]
-    # 使用半角冒号(:)分隔的邮件列表
-    mail_list = 0
-
-    [Dropbox]
-    # 不要手动填写
-    access_token = 0
-    # dropbox的备份文件夹，/为根目录
-    target_dir = /host-backup
-    # 你的APP_SECRET
-    app_secret = 0
-    # 你的APP_KEY
-    app_key = 0
-    # Dropbox用户名
-    user = 0
-    # Dropbox密码，不要手动填写
-    password = 0
-
+        :::ini
+        [OwnerList]
+        dokuwiki_data = www-data:www-data
+        gitlab_config = gitlab:gitlab
+        git_repo = git
+    
+        [FileList]
+        vim_config = /root/.vimrc:/root/.vim_runtime
+        system_config = /etc/nginx:/etc/apache2:/etc/phpmyadmin:/etc/mysql:/etc/exim4
+        crontab = /root/crontab
+        gitlab_config = /home/gitlab/gitlab/config/database.yml:/home/gitlab/gitlab/config/gitlab.yml
+        backup_script = /etc/cron.daily/host-backup
+        git_config = /root/.gitconfig:/root/.gitignore
+        dokuwiki_data = /var/www/wiki/data/pages:/var/www/wiki/data/meta:/var/www/wiki/data/attic:/var/www/wiki/conf
+    
+        [General]
+        # 备份[FileList]中的文件时，是否排除版本控制系统的文件，参考man tar。
+        exclude_vcs = 0
+        # 备份文件名的日期格式，参考python的日期格式。
+        date_format = %Y%m%d%H%M%S
+        exclude_pattern = 0
+        # 备份完毕后是否删除备份文件， 1为删除，0为不删除。
+        remove_after_backup = 1
+        # 恢复备份文件时，如果目标文件存在则先删除之，1为删除，0为不删除。
+        remove_exist_first = 1
+    
+        [Repo.Git]
+        # 不启用Git仓库备份功能
+        root_dir = 0
+    
+        [DB.Mysql]
+        # 使用半角冒号(:)分隔的mysql数据库列表
+        db_list = 0
+        # Mysql用户名
+        user = 0
+        # Mysql密码
+        password = 0
+    
+        [Backup]
+        # 设为1则启用dropbox备份，0为不启用。
+        with_dropbox = 0
+        # 设为1则启用email备份，0为不启用。
+        with_email = 1
+    
+        [Email]
+        # 使用半角冒号(:)分隔的邮件列表
+        mail_list = 0
+    
+        [Dropbox]
+        # 不要手动填写
+        access_token = 0
+        # dropbox的备份文件夹，/为根目录
+        target_dir = /host-backup
+        # 你的APP_SECRET
+        app_secret = 0
+        # 你的APP_KEY
+        app_key = 0
+        # Dropbox用户名
+        user = 0
+        # Dropbox密码，不要手动填写
+        password = 0
+    
