@@ -119,7 +119,7 @@ Tags: dokuwiki, ssl, nginx, config, note
 
 ## 参考资料
 
-*  [doku>tips:httpslogin](doku>tips/httpslogin)
+*  [https://www.dokuwiki.org/tips:httpslogin](https://www.dokuwiki.org/tips:httpslogin)
 *  [Dokuwiki recipes](http://wiki.nginx.org/Dokuwiki) from nginx wiki
 *  [How to Make a Self-Signed SSL Certificate](http://library.linode.com/security/ssl-certificates/self-signed)
 

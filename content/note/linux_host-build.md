@@ -153,7 +153,7 @@ PHP-FPM (FastCGI Process Manager)是一种常用的fastcgi的实现方式。使�
 如果经过以下设置后重写依然失败，可以尝试清空浏览器缓存和dokuwiki的缓存`rm -Rf %dokuwiki_home%/data/cache/*`后再重试。
 #### 2.1 nginx1.2.4设置
 
-参考[doku>rewrite](doku>rewrite)，为nginx添加重写规则，这里修改的文件是/etc/nginx/conf.d/default.conf。我的dokuwiki主目录位于/var/www/kb，使用`atime.me/wiki/`访问wiki, 相关设置如下所示。
+参考[https://www.dokuwiki.org/rewrite](https://www.dokuwiki.org/rewrite)，为nginx添加重写规则，这里修改的文件是/etc/nginx/conf.d/default.conf。我的dokuwiki主目录位于/var/www/kb，使用`atime.me/wiki/`访问wiki, 相关设置如下所示。
 
     root /var/www;
     # dokuwiki
@@ -176,7 +176,7 @@ PHP-FPM (FastCGI Process Manager)是一种常用的fastcgi的实现方式。使�
 
 设置完成后运行`service nginx restart`重启nginx服务器即可。
 
-该重写规则完全参考了[doku>rewrite](doku>rewrite)中的`For NGINX 0.7.65 or later`版本，只是根据dokuwiki的实际所在位置，在规则前添加/kb目录前缀。如果出现`no input files specialfied`错误，则表明php-fastcgi无法找到文件，尝试修改规则的目录前缀。如果设置无效，请尝试清空浏览器缓存和dokuwiki的缓存后再重试。
+该重写规则完全参考了[https://www.dokuwiki.org/rewrite](https://www.dokuwiki.org/rewrite)中的`For NGINX 0.7.65 or later`版本，只是根据dokuwiki的实际所在位置，在规则前添加/kb目录前缀。如果出现`no input files specialfied`错误，则表明php-fastcgi无法找到文件，尝试修改规则的目录前缀。如果设置无效，请尝试清空浏览器缓存和dokuwiki的缓存后再重试。
 
 倘若使用`wiki.atime.me`访问dokuwiki, 应当使用以下重写规则:
 
@@ -272,7 +272,7 @@ PHP-FPM (FastCGI Process Manager)是一种常用的fastcgi的实现方式。使�
 *  [archlinux mutt wiki](https://wiki.archlinux.org/index.php/mutt)
 *  [Setting Up Mutt on Ubuntu 12.04](http://openswitch.org/blog/setting-up-mutt-on-ubuntu-12-dot-04/)
 *  [使用mutt发送邮件](http://www.iamist.com/2011/08/linux-101-using-mutt-to-send-email.html)
-*  [dokuwiki rewrite手册](doku>rewrite)
+*  [dokuwiki rewrite手册](https://www.dokuwiki.org/rewrite)
 *  [debian6 nginx fastcgi配置](http://library.linode.com/web-servers/nginx/php-fastcgi/debian-6-squeeze)
 *  [phpmyadmin suhosin问题](http://www.webhostingtalk.com/archive/index.php/t-1144204.html)
 *  [debian6 perl fastcgi](http://library.linode.com/web-servers/nginx/perl-fastcgi/debian-6-squeeze)

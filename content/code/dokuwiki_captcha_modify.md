@@ -18,11 +18,11 @@ Tags: php, dokuwiki, captcha
 在`AUTH_LOGIN_CHECK`的handler里使用`global $ID`后，`$ID`实际为空字符串，原因暂且未知，改用`getID()`函数后即可解决这一问题。
 ## 参考资料
 
-*  [Dokuwiki Event System](doku>devel/events)
-*  [DokuWiki Event Handlers](doku>devel/event_handlers)
-*  [Dokuwiki Event Reference List](doku>devel/events_list)
-*  [Dokuwiki Core Overview](doku>devel/overview)
-*  [Dokuwiki Environment](doku>devel/environment)
-*  [Action Modes aka. do Modes](doku>devel/action_modes)
-*  [Dokuwiki CAPTCHA plugin](doku>plugin/captcha)
+*  [Dokuwiki Event System](https://www.dokuwiki.org/devel:events)
+*  [DokuWiki Event Handlers](https://www.dokuwiki.org/devel:event_handlers)
+*  [Dokuwiki Event Reference List](https://www.dokuwiki.org/devel:events_list)
+*  [Dokuwiki Core Overview](https://www.dokuwiki.org/devel:overview)
+*  [Dokuwiki Environment](https://www.dokuwiki.org/devel:environment)
+*  [Action Modes aka. do Modes](https://www.dokuwiki.org/devel:action_modes)
+*  [Dokuwiki CAPTCHA plugin](https://www.dokuwiki.org/plugin:captcha)
 

@@ -23,18 +23,18 @@ Tags: dokuwiki, config, seo
 在配置管理界面，定位到`高级设置`，勾选`send 404`即可。
 ### Sitemap
 
-在配置管理界面，定位到`聚合设置`，修改`sitemap`的生成天数即可。sitemap地址是'http://your_domin/path_to_dokuwiki/doku.php?do=sitemap'。以本站为例，sitemap的地址为http://wishome.name/kb/doku.php?do=sitemap。可以参考[doku>sitemap](doku>sitemap)文档。
+在配置管理界面，定位到`聚合设置`，修改`sitemap`的生成天数即可。sitemap地址是'http://your_domin/path_to_dokuwiki/doku.php?do=sitemap'。以本站为例，sitemap的地址为http://wishome.name/kb/doku.php?do=sitemap。可以参考[https://www.dokuwiki.org/sitemap](https://www.dokuwiki.org/sitemap)文档。
 ### 关键字
 
-使用dokuwiki的[keywords](doku>plugin/keywords)插件，为wiki页面添加关键字。
+使用dokuwiki的[keywords](https://www.dokuwiki.org/plugin:keywords)插件，为wiki页面添加关键字。
 ### 简介
 
-使用dokuwiki的[description](doku>plugin/description)插件，为wiki页面天剑简要介绍。
+使用dokuwiki的[description](https://www.dokuwiki.org/plugin:description)插件，为wiki页面天剑简要介绍。
 
 ## 参考资料
 
 *  How to optimize Dokuwiki for SEO http://docs.oseems.com/general/web/dokuwiki/optimize-for-seo
 *  Dokuwiki don't like google http://www.stefanoforenza.com/doku-wiki-dont-like-google/
-*  Dokuwiki Sitemap [doku>sitemap](doku>sitemap)
-*  Dokuwiki SEO [doku>seo](doku>seo)
+*  Dokuwiki Sitemap [https://www.dokuwiki.org/sitemap](https://www.dokuwiki.org/sitemap)
+*  Dokuwiki SEO [https://www.dokuwiki.org/seo](https://www.dokuwiki.org/seo)
 
