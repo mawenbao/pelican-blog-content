@@ -1,6 +1,6 @@
 Title: Bash小技巧合集
 Date: 2013-08-25 12:14
-Update: 2013-10-05 13:25
+Update: 2013-11-14 14:12
 Tags: bash, trick
 
 收集一些bash下的技巧。
@@ -42,6 +42,7 @@ bash里一些特殊的符号的作用。
 	set -o         # 查看当前所有选项的状态
 	set -o history # 开启bash历史记录
 	set +o history # 关闭bash历史记录
+    set -e         # 当脚本中有命令返回不为0时，立即退出脚本
 
 ### shopt
 

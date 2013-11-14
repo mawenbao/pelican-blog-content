@@ -1,6 +1,6 @@
 Title: Debian/Ubuntu系统小技巧收集
 Date: 2013-08-25 12:14
-Update: 2013-11-10 10:21
+Update: 2013-11-14 15:05
 Tags: debian, ubuntu, trick
 
 整理一些Debian/Ubuntu上的小技巧，包括系统管理、系统美化和娱乐等方面。
@@ -137,16 +137,16 @@ Linux系统运行等级简介:
 
 Debian上cron的日志默认和其他系统日志记录在一起，查看起来十分不方便，参考[这篇文章](http://pc-freak.net/blog/enable-rsyslog-and-syslog-cron-events-logging-in-varlogcron-log-on-debian-lenny/)，为debian6的cron启用单独的日志。
 
-1. 创建日志文件（未测试是否为必要）
-	
-	touch /var/log/cron.log
+1. 修改配置文件/etc/rsyslog.conf，
 
-2. 修改配置文件/etc/rsyslog.conf，
-去掉`#cron.* /var/log/cron.log`这一行的注释符`#`。
+    去掉`#cron.* /var/log/cron.log`这一行的注释符`#`。将`*.*;auth,authpriv.none -/var/log/syslog`改为`*.*;auth,authpriv.none,cron.none  -/var/log/syslog`，如下
 
-3. 重启rsyslogd
+        *.*;auth,authpriv.none,cron.none  -/var/log/syslog
+        cron.* /var/log/cron.log
+
+2. 重启rsyslogd
 	
-	service rsyslog restart
+	    service rsyslog restart
 
 ### 自动挂载windows分区
 
