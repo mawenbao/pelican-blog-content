@@ -10,7 +10,7 @@ Tags: php, golang, wordpress, ocp
 
 ## 修改ocp
 
-ocp的源码在[这里](https///github.com/pmylund/ocp)，修改后的源码在[这里](https///github.com/wilbur-ma/ocp)。修改的内容包括:
+ocp的源码在[这里](https://github.com/pmylund/ocp)，修改后的源码在[这里](https://github.com/wilbur-ma/ocp)。修改的内容包括:
 
 1.  添加两个命令行选项:
     *  -u 当sitemap里url的最后修改时间(lastmod)大于本地缓存的最后修改时间(atime)时，本地缓存视为过期，并更新本地缓存。
@@ -19,7 +19,7 @@ ocp的源码在[这里](https///github.com/pmylund/ocp)，修改后的源码在[
 
 ## 修改Google Sitemaps V3 for qtranslate
 
-插件的发布页在[这里](http://wordpress.org/extend/plugins/google-xml-sitemaps-v3-for-qtranslate/)，修改的版本为3.2.8.1，源码放在[这里](https///github.com/wilbur-ma/wordpress-tweak/tree/master/google-xml-sitemaps-v3-for-qtranslate)，3.2.8.1版本的patch放在[这里](https///github.com/wilbur-ma/wordpress-tweak/blob/master/patch/google-xml-sitemaps-v3-for-qtranslate-3.2.8.1.patch)。修改的内容包括:
+插件的发布页在[这里](http://wordpress.org/extend/plugins/google-xml-sitemaps-v3-for-qtranslate/)，修改的版本为3.2.8.1，源码放在[这里](https://github.com/wilbur-ma/wordpress-tweak/tree/master/google-xml-sitemaps-v3-for-qtranslate)，3.2.8.1版本的patch放在[这里](https://github.com/wilbur-ma/wordpress-tweak/blob/master/patch/google-xml-sitemaps-v3-for-qtranslate-3.2.8.1.patch)。修改的内容包括:
 
 1.  输出Category和Tag页面的最后修改时间(lastmod)。
 2.  参考[这篇文章](http://www.qiqiboy.com/2011/06/10/sina-weibo-timestamp-function-2.html)，修正时区问题。在sitemap-core.php的函数

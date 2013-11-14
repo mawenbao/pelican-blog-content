@@ -145,12 +145,12 @@ W3 Total Cache的Minify手动模式已经支持Non Blocking加载js代码，不�
 
 添加如下功能:点击h1以下级别的标题时，平滑滚动到目录列表的对应列表项。
 
-设置方面，将TOC+的高级设置里的"顶部偏移"设为0px。php代码方面，修改toc.php。修改后的代码放在[这里](https///github.com/wilbur-ma/wordpress-tweak/tree/master/table-of-contents-plus)，1211版本的patch放在[这里](https///github.com/wilbur-ma/wordpress-tweak/blob/master/patch/table-of-contents-plus-1211.patch)。
+设置方面，将TOC+的高级设置里的"顶部偏移"设为0px。php代码方面，修改toc.php。修改后的代码放在[这里](https://github.com/wilbur-ma/wordpress-tweak/tree/master/table-of-contents-plus)，1211版本的patch放在[这里](https://github.com/wilbur-ma/wordpress-tweak/blob/master/patch/table-of-contents-plus-1211.patch)。
 
 ## 针对主题的修改
 
 ### Responsive
-针对主题Responsive 1.8.4.1的修改，源码放在[这里](https///github.com/wilbur-ma/wordpress-tweak/tree/master/responsive)。
+针对主题Responsive 1.8.4.1的修改，源码放在[这里](https://github.com/wilbur-ma/wordpress-tweak/tree/master/responsive)。
 #### blog.php
 
 将分类链接挪到post-meta里

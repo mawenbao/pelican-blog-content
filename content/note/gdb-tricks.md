@@ -53,4 +53,4 @@ gdb运行时，使用source命令即可导入
 ## 参考资料
 
 *  [Copy between memory and a file](http://www.linuxtopia.org/online_books/redhat_linux_debugging_with_gdb/dump-restore-files.html)
-*  [HowTo: Writing into process memory with GDB](https///isisblogs.poly.edu/2011/04/26/gdb-tricks/)
+*  [HowTo: Writing into process memory with GDB](https://isisblogs.poly.edu/2011/04/26/gdb-tricks/)

@@ -6,7 +6,7 @@ Tags: php, dokuwiki, captcha
 
 ## 代码
 
-修改后的代码在[这里](https///github.com/wilbur-ma/dokuwiki-tweak/tree/master/plugin-captcha)，2010-06-07发布的captcha插件的patch在[这里](https///raw.github.com/wilbur-ma/dokuwiki-tweak/master/patch/captcha-plugin.patch)下载。在插件文件夹使用如下命令即可:
+修改后的代码在[这里](https://github.com/wilbur-ma/dokuwiki-tweak/tree/master/plugin-captcha)，2010-06-07发布的captcha插件的patch在[这里](https://raw.github.com/wilbur-ma/dokuwiki-tweak/master/patch/captcha-plugin.patch)下载。在插件文件夹使用如下命令即可:
 
     patch -p2 < captcha-plugin.patch
 

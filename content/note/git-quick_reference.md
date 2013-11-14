@@ -318,7 +318,7 @@ from http://stackoverflow.com/questions/3528245/whats-the-difference-between-git
 
 ### 自动补全
 
-git的代码仓库里有针对shell和bash等unix shell的命令行补全脚本，使用后会提高不少工作效率，可以从[这里](https///github.com/git/git/tree/master/contrib/completion)下载。
+git的代码仓库里有针对shell和bash等unix shell的命令行补全脚本，使用后会提高不少工作效率，可以从[这里](https://github.com/git/git/tree/master/contrib/completion)下载。
 
 以bash为例，依次执行以下命令即可。
 

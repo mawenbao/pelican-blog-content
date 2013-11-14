@@ -16,6 +16,6 @@ Git 基础
 Github
 
 *  [Github flow](http://scottchacon.com/2011/08/31/github-flow.html)
-*  [Resouce list of using git on github](https///help.github.com/articles/what-are-other-good-resources-for-using-git-or-github)
+*  [Resouce list of using git on github](https://help.github.com/articles/what-are-other-good-resources-for-using-git-or-github)
 *  [GotGitHub](http://www.worldhello.net/gotgithub/)
 

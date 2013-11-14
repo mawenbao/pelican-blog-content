@@ -8,7 +8,7 @@ Tags: debian, ubuntu, resource
 
 ### 系统管理
 
-*  [Cron Howto](https///help.ubuntu.com/community/CronHowto) from Ubuntu wiki
+*  [Cron Howto](https://help.ubuntu.com/community/CronHowto) from Ubuntu wiki
 *  [Iptables documentation and tutorials](http://www.netfilter.org/documentation/)
 ### 系统安全
 

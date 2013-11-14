@@ -37,6 +37,6 @@ debian6 squeeze上在安装haskell和pandoc
 
 ## 参考资料
 
-*  [Haskell Platform for Ubuntu 11.10](https///gist.github.com/1524859)
+*  [Haskell Platform for Ubuntu 11.10](https://gist.github.com/1524859)
 *  [“cannot determine current directory” while building haskell](http://askubuntu.com/questions/95081/cannot-determine-current-directory-while-building-haskell)
 

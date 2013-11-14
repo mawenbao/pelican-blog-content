@@ -27,7 +27,7 @@ git config ...命令默认修改此配置文件，如果想使用另外的路径
 
 ### .gitmodules
 
-配置git仓库的子模块。可参考[这里](https///www.kernel.org/pub/software/scm/git/docs/gitmodules.html).
+配置git仓库的子模块。可参考[这里](https://www.kernel.org/pub/software/scm/git/docs/gitmodules.html).
 ## 配置文件举例
 
 以我的用户级git配置文件和全局ignore文件为例。
@@ -92,6 +92,6 @@ git config ...命令默认修改此配置文件，如果想使用另外的路径
 
 ## 参考资料
 
-*  [Ignoring files from github](https///help.github.com/articles/ignoring-files)
+*  [Ignoring files from github](https://help.github.com/articles/ignoring-files)
 *  [yyfrankyy's git config](http://f2e.us/wiki/git-config.html#!/)
 

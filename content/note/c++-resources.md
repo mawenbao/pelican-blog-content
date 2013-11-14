@@ -10,7 +10,7 @@ Tags: c++, resource
 
 ### 语法相关
 
-*  [如何正确使用C++多重继承](http://bigasp.com/archives/486) - C++多重继承 [存档](https///www.evernote.com/pub/wilbur_ma/share#b=f811aee8-c2e6-46e0-b058-bd9c0ff79489&st=p&n=017abb98-429f-4122-87e5-fff74bd18287)
+*  [如何正确使用C++多重继承](http://bigasp.com/archives/486) - C++多重继承 [存档](https://www.evernote.com/pub/wilbur_ma/share#b=f811aee8-c2e6-46e0-b058-bd9c0ff79489&st=p&n=017abb98-429f-4122-87e5-fff74bd18287)
 
 ### 工具
 

@@ -145,5 +145,5 @@ Tags: wordpress, ssl
 ## 参考资料
 
 *  [How to Make a Self-Signed SSL Certificate](http://library.linode.com/security/ssl-certificates/self-signed)
-*  [Nginx Rewrite Rules for WP Admin over SSL](https///www.tinywp.in/nginx-ssl-rewrites/)
+*  [Nginx Rewrite Rules for WP Admin over SSL](https://www.tinywp.in/nginx-ssl-rewrites/)
 

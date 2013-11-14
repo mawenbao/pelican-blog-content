@@ -5,7 +5,7 @@ Tags: gitlab, git
 使用Gitlab在VPS上搭建私人Git仓库。
 ## 安装
 
-官方的[安装指南](https///github.com/gitlabhq/gitlabhq/blob/stable/doc/installation.md)非常详尽，参照着执行即可。注意安装数据库之前一定修改数据库配置文件`config/database.yml`里的用户名和密码，不要用root用户。使用如下命令查看gitlab安装状态
+官方的[安装指南](https://github.com/gitlabhq/gitlabhq/blob/stable/doc/installation.md)非常详尽，参照着执行即可。注意安装数据库之前一定修改数据库配置文件`config/database.yml`里的用户名和密码，不要用root用户。使用如下命令查看gitlab安装状态
 
     cd ~gitlab/gitlab
     sudo -u gitlab -H bundle exec rake gitlab:check RAILS_ENV=production
@@ -83,15 +83,15 @@ Tags: gitlab, git
 
 ### 查看文件源码时出现500错误
 
-pygments需要python2.6或python2.7，如果安装了python2.6或python2.7后依然出现该错误，则可能是因为pygments无法找到python2，执行如下命令即可解决，参考[Error 500 while trying to see source file](https///github.com/gitlabhq/gitlabhq/issues/1774)。
+pygments需要python2.6或python2.7，如果安装了python2.6或python2.7后依然出现该错误，则可能是因为pygments无法找到python2，执行如下命令即可解决，参考[Error 500 while trying to see source file](https://github.com/gitlabhq/gitlabhq/issues/1774)。
 
     ln -s /usr/bin/python2.6 /usr/bin/python2
 
 ## 参考资料
 
-*  [gitlab官方安装指南](https///github.com/gitlabhq/gitlabhq/blob/stable/doc/installation.md)
+*  [gitlab官方安装指南](https://github.com/gitlabhq/gitlabhq/blob/stable/doc/installation.md)
 *  [Create subdomain and set it up](http://forum.linode.com/viewtopic.php?t=8004%3E) (for linode dns manager)
 *  [Migrating to mysql](http://blog.gitlabhq.com/migrating-to-mysql/)  
 *  [rake dbmigrate error](http://stackoverflow.com/questions/8408936/rake-dbmigrate-error)(on stackoverflow)
-*  [Error 500 while trying to see source file](https///github.com/gitlabhq/gitlabhq/issues/1774)
+*  [Error 500 while trying to see source file](https://github.com/gitlabhq/gitlabhq/issues/1774)
 

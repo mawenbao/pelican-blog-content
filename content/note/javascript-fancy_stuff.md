@@ -6,7 +6,7 @@ Tags: javascript, note
 
 ## 侧边栏自动滚动
 
-参考[stackoverflow](http://stackoverflow.com/questions/9350461/how-to-add-css-style-if-user-scroll-page-over-112px/9350600#9350600)上的问题和[这个jquery插件](https///github.com/cheald/floatingFixed/blob/master/jquery.floatingFixed.js).
+参考[stackoverflow](http://stackoverflow.com/questions/9350461/how-to-add-css-style-if-user-scroll-page-over-112px/9350600#9350600)上的问题和[这个jquery插件](https://github.com/cheald/floatingFixed/blob/master/jquery.floatingFixed.js).
 
 html代码如下:
 

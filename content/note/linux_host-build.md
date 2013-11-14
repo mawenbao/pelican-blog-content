@@ -256,7 +256,7 @@ PHP-FPM (FastCGI Process Manager)是一种常用的fastcgi的实现方式。使�
 	
 	00 01 * * * /root/bin/host-admin/host-admin.py -c /root/bin/host-admin/daily-backup.ini -b
 
-需要注意的是，如果使用`/etc/cron.*`来放置任务脚本，脚本名(或软链接名)中不能包含点号`.`，否则任务将无法执行且没有任何提示信息，详细信息可参考[Ubuntu CronHowto wiki](https///help.ubuntu.com/community/CronHowto)。
+需要注意的是，如果使用`/etc/cron.*`来放置任务脚本，脚本名(或软链接名)中不能包含点号`.`，否则任务将无法执行且没有任何提示信息，详细信息可参考[Ubuntu CronHowto wiki](https://help.ubuntu.com/community/CronHowto)。
 
 ## 参考资料
 
@@ -277,5 +277,5 @@ PHP-FPM (FastCGI Process Manager)是一种常用的fastcgi的实现方式。使�
 *  [phpmyadmin suhosin问题](http://www.webhostingtalk.com/archive/index.php/t-1144204.html)
 *  [debian6 perl fastcgi](http://library.linode.com/web-servers/nginx/perl-fastcgi/debian-6-squeeze)
 *  [crontab例子](http://www.thegeekstuff.com/2009/06/15-practical-crontab-examples/)
-*  [Cron Howto](https///help.ubuntu.com/community/CronHowto) from Ubuntu wiki
+*  [Cron Howto](https://help.ubuntu.com/community/CronHowto) from Ubuntu wiki
 

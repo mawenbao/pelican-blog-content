@@ -16,7 +16,7 @@ Tags: gcc, tutorial, not-finished
 
 ## 例子
 
-工程涉及4个文件，如下所示，源代码放在[这里](https///github.com/wilbur-ma/gcc-quick-start.git)。
+工程涉及4个文件，如下所示，源代码放在[这里](https://github.com/wilbur-ma/gcc-quick-start.git)。
 
 	common.h  # 定义类型和宏等
 	util.h    # include common.h
