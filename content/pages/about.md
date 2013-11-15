@@ -29,7 +29,7 @@ Comment: off
 
 如有需要，我的公钥在[这里][7]。
 
-*   Email: mwenbao AT gmail DOT com （每天早中晚都会检查）
+*   邮箱: mawenbao AT hotmail DOT com （每天早中晚都会检查）
 *   Github: [@mawenbao][5] （基本每天都会瞅一两眼）
 *   豆瓣: [@wishome][6] （偶尔登录一次，把她列在这里是为了证明我也有颗文艺的心）
 

@@ -1,5 +1,6 @@
 Title: 我的公钥
 Date: 2012-12-14 20:36:23
+Update: 2013-11-15 16:29
 Comment: off
 
 ## 何时使用公钥
@@ -10,22 +11,21 @@ Comment: off
 
 我的公钥可直接从gpg服务器上获得，运行以下命令即可。
 
-    gpg --keyserver hkp://keys.gnupg.net --recv-keys EA6F9830
+    gpg --keyserver hkp://keys.gnupg.net --recv-keys 1FBB0BBF
 
 导入成功之后，首先用你的密钥对我的公钥进行签名，执行如下命令即可。
 
-    gpg --sign-key EA6F9830
+    gpg --sign-key 1FBB0BBF
 
 ## 更新我的公钥
 如果你以前用过我的公钥，用之前只需更新即可。
 
-    gpg --keyserver hkp://keys.gnupg.net --refresh-keys EA6F9830
+    gpg --keyserver hkp://keys.gnupg.net --refresh-keys 1FBB0BBF
 
 ## 使用我的公钥进行加密或验证
 加密文件，即便其他人获取了加密后的文件，也无法查看它加密之前的内容。执行如下命令把plain.txt加密为cipher-message.txt，然后把cipher-message.txt发送给我即可。
 
-    :::sh
-    gpg -r wenbao.ma@hotmail.com -a -o cipher-message.txt -e plain.txt
+    gpg -r mawenbao@hotmail.com -a -o cipher-message.txt -e plain.txt
 
 验证文件是否来自我本人。收到我签名的文件reply.txt后，执行以下命令。
 

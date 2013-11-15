@@ -1,5 +1,6 @@
 Title: GnuPG快速使用指南
 Date: 2013-08-25 12:14
+Update: 2013-11-15 15:56
 Tags: gnupg, tutorial
 
 简单的GnuPG教程，重点介绍GnuPG的常用命令，更详细的使用说明请参考[GnuPG](http://www.gnupg.org/)的官方文档。
@@ -43,7 +44,7 @@ Tags: gnupg, tutorial
 
     gpg -a -o "pubkey.txt" --export 'wilbur ma'   
 
-### 导入公钥
+### 导入公钥/密钥
 
 导入上面导出的公钥:
 
@@ -68,7 +69,7 @@ Tags: gnupg, tutorial
 
 将被撤销的公钥的ID发送到钥匙服务器上即可撤销服务器上的公钥:
 
-    gpg --keyserver hkp://keys.gnupg.net A8FC260E
+    gpg --keyserver hkp://keys.gnupg.net --send-keys A8FC260E
 
 现在查看服务器上你的公钥，可以看到revoked字样。需要注意的是，撤销证书需要妥善保管，因为任何有权获取该证书的人均可撤销你的钥匙。
 
@@ -177,6 +178,7 @@ Tags: gnupg, tutorial
 ### 多对key
 
 相对更安全(更麻烦)的方法是创建两对钥匙，一对用于Sign操作，一对用于Encrypt操作。这样一来，其他用户需要同时拥有并签署你的两把钥匙。
+
 ## 参考资料
 
 *  [Public-key cryptography](http://en.wikipedia.org/wiki/Public_key) from wikipedia
