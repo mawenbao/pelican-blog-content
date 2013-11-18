@@ -1,6 +1,6 @@
 Title: GnuPG快速使用指南
 Date: 2013-08-25 12:14
-Update: 2013-11-15 15:56
+Update: 2013-11-18 12:49
 Tags: gnupg, tutorial
 
 简单的GnuPG教程，重点介绍GnuPG的常用命令，更详细的使用说明请参考[GnuPG](http://www.gnupg.org/)的官方文档。
@@ -174,6 +174,87 @@ Tags: gnupg, tutorial
 *  S = sign (sign data. For example a file or to send signed e-mail)
 *  C = certify (sign another key, establishing a trust-relation)
 *  A = authentication (log in to SSH with a PGP key; this is relatively new usage)
+
+#### 实际使用
+为保证private master key的安全，将其放到离线的其他介质（比如U盘），并从钥匙环中删除。同时为方便日常使用，需要分别创建一个负责加密的subkey（默认已有）和一个负责签名的subkey。
+
+首先创建密钥，注意替换`KEY_ID`为密钥的实际ID。
+
+    :::bash
+    # 创建新的钥匙对，默认会额外创建一个负责加密的subkey
+    gpg --gen-key
+    
+    # 创建一个负责签名的subkey
+    gpg --edit-key KEY_ID
+    > addkey
+    > select RSA (sign only)
+
+    # 生成吊销证书（可选），!!生成的吊销证书必须妥善保管!!
+    gpg -a -o KEY_ID.revoke.asc --gen-revoke
+
+接下来，将`~/.gnupg`目录备份到U盘上
+
+    :::bash
+    cp -r ~/.gnupg /path/to/your/usb-drive/_gnupg
+
+接下来，分别导出密钥（包含subkeys）和subkeys
+
+    :::bash
+    # 导出密钥（包含subkeys）
+    gpg -a -o KEY_ID.sec.asc --export-secret-keys KEY_ID
+    # 导出subkeys
+    gpg -a -o KEY_ID.sub.asc --export-secret-subkeys KEY_ID
+
+删除private master key之前，使用`gpg --list-secret-keys`可输出（举例）
+
+    /home/wilbur/.gnupg/secring.gpg
+    -------------------------------
+    sec   4096R/A571E81D 2013-11-18 [有效至：2014-11-18]
+    uid                  Ma Wenbao <mawenbao@hotmail.com>
+    ssb   4096R/7F08122C 2013-11-18
+    ssb   4096R/AC317C91 2013-11-18
+
+通过如下两步间接删除secret master key
+
+    :::bash
+    # 删除密钥
+    gpg --delete-secret-keys
+    # 导入subkeys
+    gpg --import KEY_ID.sub.asc
+
+    # 删除中间文件
+    rm KEY_ID.sec.asc KEY_ID.sub.asc
+
+此时，再执行`gpg --list-secret-keys`应当输出
+
+    /home/wilbur/.gnupg/secring.gpg
+    -------------------------------
+    sec#  4096R/A571E81D 2013-11-18 [有效至：2014-11-18]
+    uid                  Ma Wenbao <mawenbao@hotmail.com>
+    ssb   4096R/7F08122C 2013-11-18
+    ssb   4096R/AC317C91 2013-11-18
+
+注意第三行的`sec`变成了`sec#`，表示private master key不存在。如此一来，master private key就被删掉了，日常加密和签名操作都通过subkeys进行，需要使用master private key时，挂载U盘然后执行如下操作就能看到master private key了。
+
+    gpg --homedir /path/to/your/usb-drive/_gnupg --list-secret-keys
+
+通常，如下三种情况需要使用到private master key
+
+*  为他人的公钥签名
+*  创建subkey
+*  吊销subkey
+
+为他人的公钥签名时，可先使用U盘上的gnupg配置文件签名，然后可导出签名后的公钥，最后再导入本地钥匙环中，操作如下
+
+    :::bash
+    # 下载某人的公钥
+    gpg --homedir /path/to/your/usb-drive --keyserver hkp://keys.gnupg.net --recv-keys A571E81D
+    # 为他人的公钥签名
+    gpg --homedir /path/to/your/usb-drive --sign-key A571E81D
+    # 导出签名后的公钥
+    gpg --homedir /path/to/your/usb-drive -a -o A571E81D.pub.asc --export A571E81D
+    # 导入本地钥匙环
+    gpg --import A571E81D.pub.asc
 
 ### 多对key
 
