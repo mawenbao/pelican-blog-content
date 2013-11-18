@@ -37,6 +37,10 @@ Comment: off
 
 如果输出Good signature from…之类的信息则表示验证成功，说明reply.txt的确来自我本人。
 
+有时候，签名(.sig)和原文件会分开存储，比如你收到原文件reply.txt和它的签名文件reply.txt.sig，则使用如下命令进行验证。
+
+    gpg --verify reply.txt.sig reply.txt
+
 ## 解密并验证文件
 
 通常情况下，我会发送加密过的签名文件，此时运行如下命令解密并验证文件。其中reply-cipher.txt为加密并签名过的文件，reply-plain.txt为解密后的文件。
