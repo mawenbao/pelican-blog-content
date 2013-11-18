@@ -1,6 +1,6 @@
 Title: GnuPG快速使用指南
 Date: 2013-08-25 12:14
-Update: 2013-11-18 12:49
+Update: 2013-11-18 21:17
 Tags: gnupg, tutorial
 
 简单的GnuPG教程，重点介绍GnuPG的常用命令，更详细的使用说明请参考[GnuPG](http://www.gnupg.org/)的官方文档。
@@ -216,7 +216,7 @@ Tags: gnupg, tutorial
     ssb   4096R/7F08122C 2013-11-18
     ssb   4096R/AC317C91 2013-11-18
 
-通过如下两步间接删除secret master key
+通过如下两步间接删除private master key
 
     :::bash
     # 删除密钥
