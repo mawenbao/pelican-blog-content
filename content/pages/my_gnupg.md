@@ -13,7 +13,7 @@ Comment: off
 
     gpg --keyserver hkp://keys.gnupg.net --recv-keys A571E81D
 
-导入成功之后，首先用你的密钥对我的公钥进行签名，执行如下命令即可。
+导入成功之后，（可选）对我的公钥进行签名，执行如下命令即可。
 
     gpg --sign-key A571E81D
 
