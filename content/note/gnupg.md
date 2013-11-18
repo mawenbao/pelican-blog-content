@@ -5,6 +5,8 @@ Tags: gnupg, tutorial
 
 简单的GnuPG教程，重点介绍GnuPG的常用命令，更详细的使用说明请参考[GnuPG](http://www.gnupg.org/)的官方文档。
 
+需要注意的是，以下内容均以GnuPG 1.4为基础进行说明。
+
 ## GnuPG常用命令
 
 假设生成公钥/密钥时使用的UID为`wilbur ma`，并以此为例。 
