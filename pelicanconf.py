@@ -48,6 +48,7 @@ EXTRA_PATH_METADATA = {
         'extra/CODE_LICENSE.txt': { 'path': 'CODE_LICENSE.txt' },
         'extra/robots.txt': { 'path': 'robots.txt' },
         'extra/googlea4ca86ec98912b58.html': {'path': 'googlea4ca86ec98912b58.html' },
+        'extra/BingSiteAuth.xml': {'path': 'BingSiteAuth.xml' },
 }
 
 ARTICLE_URL = '{category}/{slug}.html'
