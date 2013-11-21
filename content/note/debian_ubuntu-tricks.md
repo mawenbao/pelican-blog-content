@@ -1,11 +1,28 @@
 Title: Debian/Ubuntu系统小技巧收集
 Date: 2013-08-25 12:14
-Update: 2013-11-14 15:05
+Update: 2013-11-20 15:23
 Tags: debian, ubuntu, trick
 
 整理一些Debian/Ubuntu上的小技巧，包括系统管理、系统美化和娱乐等方面。
 
 ## 系统管理
+
+### 手动添加locale
+查看当前已安装的locale
+
+    locale -a
+
+安装`zh_CN`
+
+    sudo /usr/share/locales/install-language-pack zh_CN
+
+修改默认locale
+
+    sudo cat > /etc/default/locale << EOF
+    LANG="zh_CN.UTF-8"
+    LANGUAGE="zh_CN"
+
+    source /etc/default/locale
 
 ### 设置默认UMASK
 umask影响新创建的文件的默认权限，详细的介绍可参考[这篇文章](http://www.cyberciti.biz/tips/understanding-linux-unix-umask-value-usage.html)。设置系统的默认UMASK，首先在`/etc/pam.d/common-session`里添加（可能已存在）如下一行

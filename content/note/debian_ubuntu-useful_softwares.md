@@ -1,6 +1,6 @@
 Title: Debian/Ubuntu 常用软件
 Date: 2013-08-25 12:14
-Update: 2013-11-10 13:15
+Update: 2013-11-20 09:40
 Tags: debian, ubuntu, package, resource
 
 介绍常用Debian/Ubuntu平台上的软件和部分软件的使用方法。可在[Linux Packages Search](http://pkgs.org/)查找需要的软件包。
@@ -12,16 +12,18 @@ Tags: debian, ubuntu, package, resource
 系统管理
 
 *  apropos 查找说明手册
-*  apt-file
-*  aptitude
-*  chkconfig
-*  htop
-*  locate
-*  p7zip
+*  apt-file 可用于查找文件所属的软件包
+*  batch & atq 设置和管理一次计划任务
+*  chkconfig 管理系统服务
+*  exim4 邮件服务器
+*  htop 比top更直观的进程监控/系统信息软件
+*  locate 配合updatedb进行文件索引和搜索
+*  mutt 收发邮件
+*  p7zip 7zip的linux版本
 *  translate-toolkit
-*  unzip
-*  zip
-*  dpkg
+*  unzip 解压zip压缩格式的文件
+*  zgrep 类似于grep，但支持在压缩文件中查找 
+*  zip 压缩为zip格式 
 
 应用
 
@@ -39,14 +41,16 @@ Tags: debian, ubuntu, package, resource
 *  mysql-server-5.1
 *  ruby1.9.1
 
-多媒体
-
-*  exim4
-*  mutt
-
 ## 软件快速使用指南
 
 介绍部分生僻软件或工具的快速使用指南。
+### rtcwake
+将操作系统休眠一段时间后再醒来。
+
+    rtcwake -m mem -s 10
+
+上面的命令表示，休眠10秒后再醒来。
+
 ### screen
 
 ### diff
