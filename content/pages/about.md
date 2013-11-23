@@ -11,7 +11,7 @@ Comment: off
 [10]: http://www.hawkhost.com/ "http://www.hawkhost.com/"
 [11]: http://www.linode.com/ "http://www.linode.com/"
 [12]: http://wordpress.org/extend/themes/responsive "http://wordpress.org/extend/themes/responsive"
-[13]: /tech/create-a-pseudo-static-blog-with-wordpress.html "create a pseudo static blog with wordpress"
+[13]: /research/create_pseudo_static_blog_with_wordpress.html "create a pseudo static blog with wordpress"
 [14]: /agreement.html "使用协议"
 [15]: /my_projects.html "我的开源项目"
 

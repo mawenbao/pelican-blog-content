@@ -1,6 +1,6 @@
 Title: 使用协议
 Date: 2013-01-22 15:20:00
-Update: 2013-11-12 14:45
+Update: 2013-11-23 11:02
 Comment: off
 
 [3]: /about.html#1a59b4b3e9d33d250d80feb7579e0045 "about me"
@@ -10,10 +10,11 @@ Comment: off
 [7]: http://creativecommons.org/licenses/by-nc-nd/3.0/deed.zh "CC BY-NC-ND 3.0"
 [8]: /CODE_LICENSE.txt "Code License"
 [9]: /agreement.html "最新使用协议"
-[11]: http://zh.wikipedia.org/wiki/Cookie "wikipedia"
+[11]: http://zh.wikipedia.org/wiki/Cookie "wikipedia:cookie"
 [12]: http://creativecommons.org/publicdomain/zero/1.0/deed.zh "CC0 1.0 通用"
 [13]: http://creativecommons.org/licenses/by/3.0/cn/ "CC BY 3.0"
 [14]: http://creativecommons.org/licenses/by-sa/3.0/deed.zh "CC BY-SA 3.0"
+[15]: http://duoshuo.com "多说社会化评论"
 
 在访问本网站的内容之前，请务必仔细阅读本协议，若您继续访问本网站，则意味着您已**仔细阅读并同意**本协议。
 当前使用协议自**2013年1月22日**起效，本协议包括[许可](#2b4e44c84fe5e50917f2cb922a27ddbc)、[免责声明](#d4cbff323306f0bacae9569adccf1c09)和[隐私政策](#69a934af98ebdae302fc794dfbfaa7b4)三部分内容，在[适用范围](#9881596e854c5f5b416288a88d0342a2)内有效。
@@ -49,6 +50,6 @@ Comment: off
 
 1.  对于访问者的访问信息(包括IP地址、浏览器类型和地域信息等)，本网站可能会将其用于[Google Analytics][4]或[百度统计][5]等网络流量分析服务，除此之外本网站不会向任何第三方组织或个人泄漏或出售这些信息。
 2.  本网站不会向任何第三方组织或个人泄漏或出售访问者的电子邮件地址等私人信息。
-3.  除非访问者登陆或发表评论，否则本网站不会在其电脑(或移动设备)上储存[cookie][11]。对于登陆或评论的用户，本网站会在cookie里储存加密过的用户名、密码(登陆用户)和邮件地址(评论用户)等信息，访问者可以通过更改浏览器的设置来禁用cookie。
+3.  本网站使用的[Google Analytics][4]和[多说评论][15]等服务会在访问者的电脑(或移动设备)上储存[cookie][11]，您可以通过更改浏览器的设置来禁用cookie。
 4.  对于出现在本网站上的第三方网站或服务(包括各种链接和广告等)，本网站不对其隐私政策做任何担保。
 

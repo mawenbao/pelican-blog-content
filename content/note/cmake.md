@@ -1,7 +1,7 @@
 Title: CMake使用总结
 Date: 2013-11-12 17:45
 Update: 2013-11-13 08:48
-Tags: c++, cmake, note, summary
+Tags: c++, cmake, note, 总结
 
 [1]: http://www.cmake.org/cmake/help/documentation.html
 [2]: http://www.cmake.org/Wiki/CMake_Useful_Variables
