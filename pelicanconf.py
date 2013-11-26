@@ -166,7 +166,7 @@ NIUX2_FOOTER_LINKS = [
 NIUX2_FOOTER_ICONS = [
         ('icon-key', 'my public key', '/my_gnupg.html'),
         ('icon-envelope-alt', 'my email address', 'mailto: mawenbao@hotmail.com'),
-        ('icon-github-alt', 'my github page', 'http://github.com/wilbur-ma'),
-        ('icon-rss', 'subscribe my blog via rss2', '/feed.xml'),
+        ('icon-github-alt', 'my github page', 'http://github.com/mawenbao'),
+        ('icon-rss', 'subscribe my blog', '/feed.xml'),
         ]
 
