@@ -1,12 +1,13 @@
 Title: 糗事百科精选
 Date: 2013-09-06
-Update: 2013-11-15 17:42
+Update: 2013-11-28 12:55
 Tags: 糗事百科, 笑话
 
 [1]: /static/images/qiushibaike/cute_dog.jpg "cute dog"
 [2]: /static/images/qiushibaike/qiushibaike001.jpg "超糗事百科 有画面感的小学生日记"
 [3]: /static/images/qiushibaike/brothers.jpg
 [4]: /static/images/qiushibaike/dog-wocao.jpg "卧槽的狗"
+[5]: /static/images/qiushibaike/lend-me-some-money-if-you-dont-wanna-see-me.jpg
 
 一些糗事百科上的趣事。
 
@@ -36,4 +37,13 @@ Tags: 糗事百科, 笑话
 
 七年前老公和前女友分手时，心情不好，作为朋友的我邀请他来扬州散心，全程安排玩了两天他走时非要塞给我钱，说是让我破费不好意思，我说不要客气了，以后我去苏州玩时，你请我不就得了后来我们结婚了，结婚那天晚上他自言自语:这人啊，真的不能欠债，早晚是要还的，欠一千块，得还一辈子！
 
+午睡时间，一个幼儿总不愿睡觉问其原因，抱拳答曰：我来这里是为了学习的不是来睡觉的！好吧孩子，你的前途不可估量啊。
+
+![如果不想再见我就借钱给我][5]
+
+今天闹别扭，老婆第一次认错
+我：你错哪了？
+老婆：不知道，你第一次还嘴，所以我觉得我错了
+我：那以后怎样避免类似错误？
+老婆：以后你不还嘴我就不犯错误了
 
