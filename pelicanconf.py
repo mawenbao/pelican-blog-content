@@ -153,7 +153,7 @@ NIUX2_CATEGORY_MAP = {
 NIUX2_HEADER_SECTIONS = [
         ('关于', 'about me', '/about.html', 'icon-anchor'),
         ('使用协议', 'agreement', '/agreement.html', 'icon-info-sign'),
-#        ('项目', 'my projects', '/my_projects.html', 'icon-rocket'),
+        ('项目', 'my projects', '/my_projects.html', 'icon-rocket'),
         ('存档', 'blog archives', '/archives.html', 'icon-archive'),
         ('标签', 'blog tags', '/tag/', 'icon-tag'),
         ]
