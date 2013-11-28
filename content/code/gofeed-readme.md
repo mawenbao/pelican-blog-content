@@ -1,11 +1,9 @@
 Title: Gofeed 说明文档
 Date: 2013-11-28 11:04
-Update: 2013-11-28 14:40
+Update: 2013-11-28 23:36
 Tags: doc, golang, feed, rss
 
-# gofeed
-
-Gofeed was inspired by feed43.com. It is disigned to extract full-text feeds from websites which only provide partial feeds or no feeds at all.
+Gofeed was inspired by feed43.com. It is disigned to extract full-text feeds from websites which only provide partial feeds or provide no feeds at all.
 
 This simple program was written when I started to learn golang. So I tried to reinvent everything I need, including a simple crawler which took good use of cache and a very simple rss2.0 feed generator.
 
@@ -55,7 +53,7 @@ See `example_config.json` and `example_config2.json`.
 
 And you should note that
 
-1. There should be as many Feed.URL as Feed.IndexPattern. If array length of the two does not match, there should be only one Feed.IndexPattern, which means all the Feed.URL will use the same Feed.IndexPattern. Otherwise, an configuration parse error will return. 
+1. There should be as many Feed.URL as Feed.IndexPattern. If array length of the two does not match, there should be only one Feed.IndexPattern, which means all the Feed.URL will share the same Feed.IndexPattern. Otherwise, an configuration parse error will return. 
 
     And the same goes for Feed.ContentPattern.
 
@@ -68,7 +66,7 @@ You can use the following predefined patterns in `Feed.IndexPattern` and `Feed.C
 *  {description}: full-text description of feed entry, matched against the corresponding {link} page
 
 ### Custom regular expressions
-You can also write custom regex in `Feed.IndexPattern` and `Feed.ContentPattern`. Make sure there is no predefined patterns in your custom regular expressions. The regex syntax documentation can be found [here](https://code.google.com/p/re2/wiki/Syntax).
+You can also write custom regex in `Feed.IndexPattern` and `Feed.ContentPattern`. Make sure there are no predefined patterns in your custom regular expressions. The regex syntax documentation can be found [here](https://code.google.com/p/re2/wiki/Syntax).
 
 The custom regular expressions have not been tested properly. So I suggest just using the predefined patterns.
 
@@ -81,11 +79,13 @@ The custom regular expressions have not been tested properly. So I suggest just 
     -v=false: be verbose
     -d=false: debug mode
     -l="": path of the log file
+    -k=false: keep feed entries which do not have any description
 
 *  -c: number of cpus, default value is the actual number of your machine's cpus.
 *  -v: print more infomation.
 *  -d: print even more information than `-v` option, should be useful when debugging your index or content patterns.
 *  -l: append output in a log file
+*  -k: do not strip feed entries whose description are empty
 
 ## License
 
