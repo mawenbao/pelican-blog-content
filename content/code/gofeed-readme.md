@@ -1,19 +1,17 @@
 Title: Gofeed 说明文档
 Date: 2013-11-28 11:04
+Update: 2013-11-28 14:40
 Tags: doc, golang, feed, rss
 
-Gofeed was inspired by feed43.com. It is disigned to extract full-text feeds from websites which do not provide any.
+# gofeed
+
+Gofeed was inspired by feed43.com. It is disigned to extract full-text feeds from websites which only provide partial feeds or no feeds at all.
 
 This simple program was written when I started to learn golang. So I tried to reinvent everything I need, including a simple crawler which took good use of cache and a very simple rss2.0 feed generator.
 
 ## Features
 
-* Like feed43.com, you can extract feed titles, feed links and the feed descriptions with the following predefined patterns. Note that all these patterns are **lazy** and perform **leftmost** match, which means they will match as few characters as possible.
-    *  {any}: match any character including newline
-    *  {title}: title of feed entry, matched against the Feed.URL page
-    *  {link}: hyper link of feed entry, matched against the Feed.URL page
-    *  {description}: full-text description of feed entry, matched against the corresponding {link} page
-    *  custom regular expressions: **MUST NOT** contain any of the predefined patterns. And the syntax documentation can be found [here](https://code.google.com/p/re2/wiki/Syntax).
+* Like feed43.com, you can extract feed titles, feed links and the feed descriptions from web pages or partial feeds with some predefined patterns and even your custom regular expressions. 
 * The crawler knows well when to request new html and when to use local html cache. This will save a lot of bandwidth.
  
 ## Things need to be improved
@@ -42,12 +40,16 @@ Now install gofeed.
 
 ## Configuration example
 
+### Json configuration
 See `example_config.json` and `example_config2.json`.
 
 *  CacheDB: (string) path of html cache database(sqlite3), can be absolute or be relative to the current directory.
 *  Targets: array of feed targets, each of which runs in a separate goroutine
     *  Request.Interval: (integer) time to wait before sending a http request to the target.
-    *  Feed.URL: (array of strings) array of urls, used to define urls of the target's index pages.
+    *  Feed.Path: (string) output path of the rss2 feed file, can be relative or absolute.
+    *  Feed.Title: (string) title of the rss2 feed channel. If not defined, feed title will be the filename of Feed.Path.
+    *  Feed.Description: (string) description of the rss2 feed channel. In not defined, feed description will be empty.
+    *  Feed.URL: (array of strings) array of urls, used to define urls of the target's index pages. Note that this url can be html or xml or anything that you can extract feed entry titles and links with regex patterns.
     *  Feed.IndexPattern: (array of strings) array of index patterns, used to extract entry link and entry title from the index page.
     *  Feed.ContentPattern: (array of strings) array of content patterns, used to extract entry description from the entry's content page(identified by entry's link).
 
@@ -57,6 +59,19 @@ And you should note that
 
     And the same goes for Feed.ContentPattern.
 
+### Predefined patterns
+You can use the following predefined patterns in `Feed.IndexPattern` and `Feed.ContentPattern` of the json configuration. Note that all these patterns are **lazy** and perform **leftmost** match, which means they will match as few characters as possible.
+
+*  {any}: match any character including newline
+*  {title}: title of feed entry, matched against the Feed.URL page
+*  {link}: hyper link of feed entry, matched against the Feed.URL page
+*  {description}: full-text description of feed entry, matched against the corresponding {link} page
+
+### Custom regular expressions
+You can also write custom regex in `Feed.IndexPattern` and `Feed.ContentPattern`. Make sure there is no predefined patterns in your custom regular expressions. The regex syntax documentation can be found [here](https://code.google.com/p/re2/wiki/Syntax).
+
+The custom regular expressions have not been tested properly. So I suggest just using the predefined patterns.
+
 ## Command line options
 
     Usage ./gofeed [-v][-d][-c cpu_number] json_config_file
@@ -65,10 +80,12 @@ And you should note that
     -c=2: number of cpus to run simultaneously
     -v=false: be verbose
     -d=false: debug mode
+    -l="": path of the log file
 
 *  -c: number of cpus, default value is the actual number of your machine's cpus.
 *  -v: print more infomation.
 *  -d: print even more information than `-v` option, should be useful when debugging your index or content patterns.
+*  -l: append output in a log file
 
 ## License
 
