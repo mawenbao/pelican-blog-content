@@ -1,6 +1,6 @@
 Title: Gofeed 说明文档
 Date: 2013-11-28 11:04
-Update: 2013-11-29 18:05
+Update: 2013-11-30 16:06
 Tags: doc, golang, feed, rss
 
 Gofeed was inspired by feed43.com. It is disigned to extract full-text feeds from websites which only provide partial feeds or provide no feeds at all.
@@ -75,6 +75,7 @@ The custom regular expressions have not been tested properly. So I suggest just 
     Usage ./gofeed [-v][-d][-c cpu_number] json_config_file
 
     Flags:
+    -a=false: use cache if failed to download web page
     -c=2: number of cpus to run simultaneously
     -v=false: be verbose
     -d=false: debug mode
@@ -83,6 +84,7 @@ The custom regular expressions have not been tested properly. So I suggest just 
     -z=9: compression level when saving html cache with gzip in the cache database.
         0-9 acceptable where 0 means no compression
 
+*  -a: If failed to download the target url, try to use cache even it has expired.
 *  -c: Number of cpus, default value is the actual number of your machine's cpus.
 *  -v: Print more infomation.
 *  -d: Print even more information than `-v` option, should be useful when debugging your index or content patterns.

@@ -1,11 +1,35 @@
 Title: Debian/Ubuntu系统小技巧收集
 Date: 2013-08-25 12:14
-Update: 2013-11-20 15:23
+Update: 2013-11-30 13:49
 Tags: debian, ubuntu, trick
 
 整理一些Debian/Ubuntu上的小技巧，包括系统管理、系统美化和娱乐等方面。
 
 ## 系统管理
+
+### 为kubuntu的Networkmanager添加l2tp支持
+安装l2tp-ipsec-vpn
+
+    :::bash
+    # sudo apt-add-repository ppa:werner-jaeger/ppa-werner-vpn
+    # sudo apt-get update
+    sudo apt-get install l2tp-ipsec-vpn
+
+重启系统。
+
+!!! 下面的NetworkManager-l2tp会导致系统崩溃，以下内容仅为安装记录，不推荐操作。!!!
+
+安装软件
+
+    sudo apt-get install build-essential git intltool ppp-dev libdbus-glib-1-dev libnm-util-dev libnm-glib-dev libnm-glib-vpn-dev libgtk-3-dev libgnome-keyring-dev
+
+安装NetworkManager-l2tp
+
+    git clone https://github.com/seriyps/NetworkManager-l2tp
+    cd NetworkManager-l2tp
+    ./autogensh
+    make
+    make install
 
 ### 手动添加locale
 查看当前已安装的locale
