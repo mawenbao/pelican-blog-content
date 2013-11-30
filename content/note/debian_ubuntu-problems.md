@@ -1,7 +1,7 @@
 Title: Debian/Ubuntu常见问题及解决方法整理
 Date: 2013-08-25 12:14
+Update: 2013-11-30 12:04
 Tags: debian, ubuntu, problem
-Update: 2013-10-17 10:52
 
 记录使用Debian/Ubuntu时遇到的问题及其解决方法。
 
@@ -24,6 +24,24 @@ Update: 2013-10-17 10:52
     #GSSAPIDelegateCredentials no
 
 关于GSSAPI Authentication，可参考[Using GSSAPI authentication at SLAC](http://www.slac.stanford.edu/comp/unix/sshGSSAPI.html)。
+
+## 系统管理
+### fcitx无法使用
+在Chrome和Firefox中，fcitx无法使用。运行`fctix-diagnose`根据提示在`~/.xprofile`里设置如下变量。
+
+    export QT_IM_MODULE=fcitx
+    export GTK_IM_MODULE=fcitx
+    export XMODIFIERS=@im=fcitx
+
+如果使用kdm，还需要创建文件`/etc/X11/Xsession.d/93fcitx`:
+
+    !#/bin/bash
+
+    export QT_IM_MODULE=fcitx
+    export GTK_IM_MODULE=fcitx
+    export XMODIFIERS=@im=fcitx
+
+最后重启系统即可。
 
 ## 参考资料
 
