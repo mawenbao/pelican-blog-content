@@ -26,4 +26,6 @@ Tags: 总结
 2. 阅读如下书籍
     *  结束"Effective C++, 2nd"，完成简单的阅读总结。
     *  回顾"Computer networking, a top-down approach"，复习基础的网络知识。
+3. 把生词本里的众多钉子户干掉。
+4. 背诵10篇新概念英语(三)。
 
