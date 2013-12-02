@@ -1,5 +1,6 @@
 Title: Logwatch简单配置教程
 Date: 2013-08-25 12:14
+Update: 2013-12-02 13:17
 Tags: logwatch, security, debian, tutorial
 
 简要介绍Debian/Ubuntu和CentOS上logwatch的配置方法和常见错误，详细的配置教程见[参考资料](#参考资料)。
@@ -18,9 +19,11 @@ Debian/Ubuntu上logwatch配置目录的结构如下:
 	    logwatch.conf     # 主配置文件
 
 CentOS的logwatch.conf位于/etc/logwatch/conf目录下。
+
 ## 例解logwatch配置步骤
 
 用一个简单的例子说明添加logwatch监控的步骤，详细的配置教程见[参考资料](#35808e79fa5f367a06c83a78b857519c)。
+
 ### 创建logwatch日志文件组
 
 用一个简单的例子介绍logwatch的配置方法。首先创建logwatch日志文件组配置文件`/etc/logwatch/conf/logfiles/test.conf`:
@@ -32,7 +35,7 @@ CentOS的logwatch.conf位于/etc/logwatch/conf目录下。
 
 然后，创建logwatch服务配置文件`/etc/logwatch/conf/services/test.conf`:
 
-    Title = IMCS     # 日志文件里的标题
+    Title = test title     # 日志文件里的标题
     LogFile = test   # logwatch日志文件组的名字，通常是对应的配置文件的文件名部分
 
 ### 创建logwatch服务过滤器脚本
@@ -53,9 +56,11 @@ CentOS的logwatch.conf位于/etc/logwatch/conf目录下。
 
     Output = html                # 生成html格式的报告
     MailTo = your_email_address  # 定义你的邮箱地址
+
 ## 常见错误解决
 
 记录logwatch常见错误的解决方法。
+
 ### 无法发送邮件
 
 CentOS5.4上使用sendmail发送邮件。正常运行一段时间后，突然不再发送邮件。检查后发现，配置一切正常，可以手动发邮件，使用logwatch的`--print`选项输出正常。
