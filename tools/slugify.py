@@ -14,12 +14,13 @@ def slugify(inputStr):
     return "#{} <= {}".format(md5obj.digest().encode("hex"), inputStr)
 
 if __name__ == "__main__":
-    inputStr = sys.stdin.read()
-    if not inputStr:
-        parser = optparse.OptionParser()
-        options, args = parser.parse_args()
+    parser = optparse.OptionParser()
+    options, args = parser.parse_args()
+
+    if len(args) > 0:
         for inputStr in args:
             print(slugify(inputStr.strip()))
     else:
+        inputStr = sys.stdin.read()
         print(slugify(inputStr.strip()))
 
