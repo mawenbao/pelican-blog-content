@@ -1,5 +1,6 @@
 Title: 2012十一月总结和下月计划
 Date: 2013-12-01 11:06
+Update: 2013-12-02 15:18
 Tags: 总结, 计划
 
 [1]: https://github.com/mawenbao/gofeed "my github repo of gofeed"
@@ -32,4 +33,5 @@ Tags: 总结, 计划
     *  回顾"Computer networking, a top-down approach"，复习基础的网络知识。
 3. 把生词本里的众多钉子户干掉。
 4. 背诵10篇新概念英语(三)。
+5. 重构host-backup。
 
