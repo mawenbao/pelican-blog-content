@@ -1,13 +1,14 @@
 Title: Google Protocol Buffers介绍和总结
 Date: 2013-10-24 16:13
-Update: 2013-10-25 13:54
+Update: 2013-12-03 16:30
 Tags: google, protobuf, library, tutorial
 
 [1]: https://developers.google.com/protocol-buffers/docs/techniques#large-data "https://developers.google.com/protocol-buffers/docs/techniques#large-data"
 [2]: https://developers.google.com/protocol-buffers/ "https://developers.google.com/protocol-buffers/"
 [3]: http://www.ibm.com/developerworks/cn/linux/l-cn-gpb/ "http://www.ibm.com/developerworks/cn/linux/l-cn-gpb/"
+[4]: https://github.com/mawenbao/protobuf-demo "https://github.com/mawenbao/protobuf-demo"
 
-简要介绍和总结protobuf的一些关键点，从我之前做的ppt里摘录而成，希望能节省protobuf初学者的入门时间。
+简要介绍和总结protobuf的一些关键点，从我之前做的ppt里摘录而成，希望能节省protobuf初学者的入门时间。[这是][4]一个简单的Demo。
 
 ## Protobuf 简介
 

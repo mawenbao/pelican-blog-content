@@ -1,17 +1,20 @@
 Title: CMake使用总结
 Date: 2013-11-12 17:45
-Update: 2013-11-13 08:48
+Update: 2013-12-03 16:31
 Tags: c++, cmake, note, 总结
 
 [1]: http://www.cmake.org/cmake/help/documentation.html
 [2]: http://www.cmake.org/Wiki/CMake_Useful_Variables
 [3]: http://www.cmake.org/cmake/help/cmake_tutorial.html
+[4]: https://github.com/mawenbao/protobuf-demo
 
 总结CMake的常用命令，并介绍有用的CMake资源。
 
 CMake意为cross-platform make，可用于管理c/c++工程。CMake解析配置文件CMakeLists.txt生成Makefile，相比直接用Makefile管理工程，CMake更灵活和简单。
 
 ## 简单的例子
+一个完整的Demo可参考[这里][4]。
+
 假设当前目录的结构为
 
     ./a.cpp
