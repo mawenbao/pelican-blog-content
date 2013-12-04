@@ -9,7 +9,7 @@ Tags: note, proxy, socks5, ubuntu
 
 总结在Ubuntu上使用Dante和Stunnel搭建socks代理服务器的过程，以供日后查询。
 
-dante是一个免费的socks代理服务器，stunnel可以对tcp连接进行ssl加密，相关程序的版本为
+dante-server是一个免费的socks代理服务器，stunnel可以对tcp连接进行ssl加密，相关程序的版本为
 
 *  Ubuntu: 12.04 x86_64
 *  dante-server: v1.1.19

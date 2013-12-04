@@ -1,6 +1,6 @@
 Title: 使用协议
 Date: 2013-01-22 15:20:00
-Update: 2013-11-23 11:02
+Update: 2013-12-04 15:01
 Comment: off
 
 [3]: /about.html#1a59b4b3e9d33d250d80feb7579e0045 "about me"
@@ -8,7 +8,7 @@ Comment: off
 [5]: http://tongji.baidu.com "百度统计"
 [6]: http://atime.me "wilbur的网站"
 [7]: http://creativecommons.org/licenses/by-nc-nd/3.0/deed.zh "CC BY-NC-ND 3.0"
-[8]: /CODE_LICENSE.txt "Code License"
+[8]: /LICENSE.txt "Code License"
 [9]: /agreement.html "最新使用协议"
 [11]: http://zh.wikipedia.org/wiki/Cookie "wikipedia:cookie"
 [12]: http://creativecommons.org/publicdomain/zero/1.0/deed.zh "CC0 1.0 通用"
@@ -16,9 +16,7 @@ Comment: off
 [14]: http://creativecommons.org/licenses/by-sa/3.0/deed.zh "CC BY-SA 3.0"
 [15]: http://duoshuo.com "多说社会化评论"
 
-在访问本网站的内容之前，请务必仔细阅读本协议，若您继续访问本网站，则意味着您已**仔细阅读并同意**本协议。
-当前使用协议自**2013年1月22日**起效，本协议包括[许可](#2b4e44c84fe5e50917f2cb922a27ddbc)、[免责声明](#d4cbff323306f0bacae9569adccf1c09)和[隐私政策](#69a934af98ebdae302fc794dfbfaa7b4)三部分内容，在[适用范围](#9881596e854c5f5b416288a88d0342a2)内有效。
-本网站保留随时更改和替换本协议的权利，最新版本的使用协议请参考本页面，恕不另行通知。如果您有任何疑问，请[联系我][3]。
+在访问本网站的内容之前，请务必仔细阅读本协议，若您继续访问本网站，则意味着您已**仔细阅读并同意**本协议。 本协议包括[许可](#2b4e44c84fe5e50917f2cb922a27ddbc)、[免责声明](#d4cbff323306f0bacae9569adccf1c09)和[隐私政策](#69a934af98ebdae302fc794dfbfaa7b4)三部分内容，在[适用范围](#9881596e854c5f5b416288a88d0342a2)内有效。 本网站保留随时更改和替换本协议的权利，最新版本的使用协议请参考本页面，恕不另行通知。如果您有任何疑问，请[联系我][3]。
 
 ## 适用范围(Scope)
 
@@ -34,7 +32,7 @@ Comment: off
 详细许可说明:
 
 1.  除额外注明的地方外，本网站的原创文字作品使用[知识共享署名-相同方式共享3.0版本许可协议][14]进行发布。
-2.  除额外注明的地方外，本网站的原创代码按[BSD (3-Clause) License][8]发布，具体内容以代码内附的协议声明和LICENSE.txt文件为准。
+2.  除额外注明的地方外，本网站的原创代码按[Apache License 2.0][8]发布，具体内容以代码内附的协议声明和LICENSE.txt文件为准。
 3.  本网站转载或引用的内容，其版权归原作者或原网站所有，如果本网站侵犯了您的权利，请及时[联系我][3]。
 4.  发表在本网站上的评论等用户创造内容(user generated content)，其版权归内容创造者本人所有。
 
