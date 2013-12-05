@@ -1,6 +1,6 @@
 Title: Gofeed 说明文档
 Date: 2013-11-28 11:04
-Update: 2013-11-30 16:06
+Update: 2013-12-05 09:00
 Tags: doc, golang, feed, rss
 
 Gofeed was inspired by feed43.com. It is disigned to extract full-text feeds from websites which only provide partial feeds or provide no feeds at all.
@@ -42,6 +42,7 @@ Now install gofeed.
 See `example_config.json` and `example_config2.json`.
 
 *  CacheDB: (string) path of html cache database(sqlite3), can be absolute or be relative to the current directory.
+*  CacheLifetime: (string) cache will be removed from cache database after CacheLifetime, "", "5d", "3h", "10m", "1s" and "5d3h10m" are acceptable where "" means cache lives forever in the cache database.
 *  Targets: array of feed targets, each of which runs in a separate goroutine
     *  Request.Interval: (integer) time to wait before sending a http request to the target.
     *  Feed.Path: (string) output path of the rss2 feed file, can be relative or absolute.
@@ -72,7 +73,7 @@ The custom regular expressions have not been tested properly. So I suggest just 
 
 ## Command line options
 
-    Usage ./gofeed [-v][-d][-c cpu_number] json_config_file
+    Usage ./gofeed [-version][-v][-d][-c cpu_number][-l log_file][-k][-z compression_level] json_config_file
 
     Flags:
     -a=false: use cache if failed to download web page
@@ -83,6 +84,7 @@ The custom regular expressions have not been tested properly. So I suggest just 
     -k=false: keep feed entries which do not have any description
     -z=9: compression level when saving html cache with gzip in the cache database.
         0-9 acceptable where 0 means no compression
+    -version=false: print gofeed version
 
 *  -a: If failed to download the target url, try to use cache even it has expired.
 *  -c: Number of cpus, default value is the actual number of your machine's cpus.
@@ -91,6 +93,7 @@ The custom regular expressions have not been tested properly. So I suggest just 
 *  -l: Append output in a log file
 *  -k: Do not strip feed entries whose description are empty
 *  -z: Gofeed compresses html cache data with gzip by default. This option can set compression level of gzip, however, you can pass 0 to disable compression.
+*  -version: Print gofeed version
 
 ## License
 
