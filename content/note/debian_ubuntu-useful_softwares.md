@@ -21,6 +21,7 @@ Tags: debian, ubuntu, package, resource
 *  mutt 收发邮件
 *  p7zip 7zip的linux版本
 *  shred 涂改和彻底删除文件，使其无法被恢复
+*  tcpdump packet analyzer
 *  translate-toolkit
 *  unzip 解压zip压缩格式的文件
 *  zgrep 类似于grep，但支持在压缩文件中查找 
