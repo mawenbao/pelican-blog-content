@@ -1,6 +1,7 @@
 Title: Debian/Ubuntu自启动方法总结
 Date: 2013-08-25 12:14
-Tags: debian, ubuntu, startup, note
+Update: 2013-12-05 14:50
+Tags: debian, ubuntu, startup, note, 未完成
 
 总结Debian/Ubuntu的启动方法.
 
@@ -37,5 +38,13 @@ Tags: debian, ubuntu, startup, note
 
 ## rc.local
 
-## 参考资料
+## /etc/X11/Xsession
+`/etc/X11/Xsession.d`存放了很多图形界面的初始化脚本。
 
+## Upstart
+Ubuntu从6.10引入upstart，并在9.10将多数系统服务转换到upstart下，不过system v init system的服务依然被兼容。
+
+## 参考资料
+1. [UbuntuBootupHowto](https://help.ubuntu.com/community/UbuntuBootupHowto)
+2. [UpstartHowto](https://help.ubuntu.com/community/UpstartHowto)
+3. [Upstart Intro, Cookbook and Best Practises](http://upstart.ubuntu.com/cookbook/)

@@ -20,6 +20,7 @@ Tags: debian, ubuntu, package, resource
 *  locate 配合updatedb进行文件索引和搜索
 *  mutt 收发邮件
 *  p7zip 7zip的linux版本
+*  shred 涂改和彻底删除文件，使其无法被恢复
 *  translate-toolkit
 *  unzip 解压zip压缩格式的文件
 *  zgrep 类似于grep，但支持在压缩文件中查找 
@@ -44,6 +45,13 @@ Tags: debian, ubuntu, package, resource
 ## 软件快速使用指南
 
 介绍部分生僻软件或工具的快速使用指南。
+
+### shred
+rm只是删除了文件系统中相关的项，并没有彻底抹掉磁盘上文件的内容。shred可以将文件进行一定次数的涂改并删除(-n)。
+
+    shred -i 100 password.txt # 涂改100次，默认3次
+    shred -u -i 100 password.txt # 涂改100次然后删除
+
 ### rtcwake
 将操作系统休眠一段时间后再醒来。
 
