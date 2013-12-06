@@ -1,6 +1,6 @@
 Title: 使用pptpd搭建VPN
 Date: 2013-08-25 12:14
-Update: 2013-11-11 14:53
+Update: 2013-12-06 13:08
 Tags: pptpd, vpn
 
 pptpd存在安全隐患，详情可参考[这里](http://pptpclient.sourceforge.net/protocol-security.phtml)。
@@ -147,4 +147,5 @@ Virtualbox的NAT实现不支持GRE协议，解决方案可参考[PPTP VPN connec
 *  [PPTP Server Configuration](http://www.dd-wrt.com/wiki/index.php/PPTP_Server_Configuration)
 *  [PPTP and iptables problem](http://blog.gmane.org/gmane.network.poptop/page=15)
 *  [ppp_mppe osize issue](http://comments.gmane.org/gmane.linux.ppp/1594) for error "compressor dropped pkt"
+*  [pptp client diagnosis howto](http://pptpclient.sourceforge.net/howto-diagnosis.phtml)
 
