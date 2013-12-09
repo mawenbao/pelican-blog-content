@@ -5,8 +5,8 @@ import datetime
 
 AUTHOR = u'Ma Wenbao'
 SITENAME = u'MWB日常笔记'
-#SITEURL = 'http://blog.atime.me'
-SITEURL = 'http://localhost:8000'
+SITEURL = 'http://blog.atime.me'
+#SITEURL = 'http://localhost:8000'
 
 TIMEZONE = 'Asia/Shanghai'
 DATE_FORMATS = {
