@@ -1,5 +1,6 @@
 Title: Git配置文件介绍和举例
 Date: 2013-08-25 12:14
+Update: 2013-12-17 22:01
 Tags: git, config
 
 收集常用的Git配置。
@@ -28,6 +29,12 @@ git config ...命令默认修改此配置文件，如果想使用另外的路径
 ### .gitmodules
 
 配置git仓库的子模块。可参考[这里](https://www.kernel.org/pub/software/scm/git/docs/gitmodules.html).
+
+## 常用配置项
+### http代理
+    git config http.proxy 'http://localhost:8087'
+    git config http.proxy 'socks5://localhost:8088'
+
 ## 配置文件举例
 
 以我的用户级git配置文件和全局ignore文件为例。

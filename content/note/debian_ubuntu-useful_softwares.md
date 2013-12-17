@@ -1,6 +1,6 @@
 Title: Debian/Ubuntu 常用软件
 Date: 2013-08-25 12:14
-Update: 2013-11-20 09:40
+Update: 2013-12-10 12:41
 Tags: debian, ubuntu, package, resource
 
 介绍常用Debian/Ubuntu平台上的软件和部分软件的使用方法。可在[Linux Packages Search](http://pkgs.org/)查找需要的软件包。
@@ -16,6 +16,7 @@ Tags: debian, ubuntu, package, resource
 *  batch & atq 设置和管理一次计划任务
 *  chkconfig 管理系统服务
 *  exim4 邮件服务器
+*  fallocate 创建指定大小的空文件
 *  htop 比top更直观的进程监控/系统信息软件
 *  locate 配合updatedb进行文件索引和搜索
 *  mutt 收发邮件
