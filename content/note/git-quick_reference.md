@@ -1,5 +1,6 @@
 Title: Git快速使用指南
 Date: 2013-08-25 12:14
+Update: 2013-12-20 16:35
 Tags: git, tutorial
 
 阅读“[Pro Git](http://git-scm.com/book)“后写的笔记，当做速查手册(quick git reference)来用，以供日常查阅。常见的git错误和解决方案可参考[git问题整理](/tools/git/errors)。
@@ -91,6 +92,10 @@ Tags: git, tutorial
 仅修改**本地**的提交。
 
     git commit --amend
+
+### 查看上一次提交的文件path/to/file
+
+    git show HEAD^:path/to/file
 
 ## 命令详解
 

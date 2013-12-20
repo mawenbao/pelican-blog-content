@@ -1,6 +1,6 @@
 Title: Redis相关
 Date: 2013-12-19 13:36
-Tags: redis, memory cache
+Tags: redis, cache
 
 Redis是一个键值对存储系统，相比memcached，redis支持多种数据结构（如list, sorted set等）和数据持久化。
 

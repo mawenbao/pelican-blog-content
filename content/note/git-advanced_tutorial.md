@@ -1,6 +1,6 @@
 Title: Git进阶教程
 Date: 2013-08-25 12:14
-Update: 2013-11-19 13:11
+Update: 2013-12-20 16:49
 Tags: git, tutorial
 
 Git的常用命令和场景可参考[Git快速使用指南](/note/git-quick_reference.html)，在这里介绍进一步的使用和部分生僻的命令。
@@ -38,7 +38,20 @@ Git的常用命令和场景可参考[Git快速使用指南](/note/git-quick_refe
 
 最后，可以用如下命令回到second commit状态。
     git checkout master
+
 ## Git生僻命令
+### 检索日志和修改内容
+检索提交消息
+
+    git log --grep "hello world"
+
+检索修改内容
+
+    git log -S "hello world"
+
+使用正则表达式检索修改内容
+
+    git log -G "^hello world$"
 
 ## 参考资料
 
