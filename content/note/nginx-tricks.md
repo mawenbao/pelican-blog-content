@@ -1,5 +1,6 @@
 Title: Nginx小技巧
 Date: 2013-08-25 12:14
+Update: 2013-12-24 16:49
 Tags: nginx, trick
 
 收集使用nginx过程中发现的小技巧。
@@ -21,6 +22,29 @@ txt文件的MIME类型为text/plain，使用浏览器访问时默认行为是直
       default_type text/plain;
       add_header Content-Disposition "inline";
     }
+
+### nginx负载平衡
+配置实例如下
+
+    :::nginx
+    upstream wishome_backend {
+        server atime.me:9001;
+        server atime.me:9002;
+    }
+
+    server {
+        server_name test.atime.me;
+
+        location / {
+            proxy_set_header X-Real-Ip $remote_addr;
+            proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+            proxy_pass http://wishome_backend;
+        }
+    }
+
+通过上面的配置，访问`test.atime.me`的请求将被平均分配到9001和9002两个端口。
+
+proxy_set_header设置的两个http头X-Real-Ip和X-Forwarded-For用于记录访问者的原始ip地址，其中X-Real-Ip只是一个ip，而X-Forwarded-For是一系列逗号分割的ip列表，第一个是访问者的ip，其后都是转发服务器的ip地址。
 
 ## 参考资料
 
