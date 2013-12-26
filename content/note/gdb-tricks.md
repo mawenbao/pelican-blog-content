@@ -1,8 +1,14 @@
 Title: GDB技巧整理
 Date: 2013-08-25 12:14
+Update: 2013-12-26 11:31
 Tags: gdb, trick, gnu
 
+[1]: https://sourceware.org/gdb/onlinedocs/gdb/Source-Path.html "gdb Specifying Source Directories"
+
 整理常用的gdb技巧。
+
+## 设置源码目录
+参考[Specifying Source Directories][1]，使用`dir /path/to/your/sources`可在调试时添加一个源码目录。
 
 ## 设置字符编码
 
@@ -52,5 +58,7 @@ gdb运行时，使用source命令即可导入
 
 ## 参考资料
 
-*  [Copy between memory and a file](http://www.linuxtopia.org/online_books/redhat_linux_debugging_with_gdb/dump-restore-files.html)
-*  [HowTo: Writing into process memory with GDB](https://isisblogs.poly.edu/2011/04/26/gdb-tricks/)
+1. [Copy between memory and a file](http://www.linuxtopia.org/online_books/redhat_linux_debugging_with_gdb/dump-restore-files.html)
+2. [HowTo: Writing into process memory with GDB](https://isisblogs.poly.edu/2011/04/26/gdb-tricks/)
+3. [Specifying Source Directories][1]
+

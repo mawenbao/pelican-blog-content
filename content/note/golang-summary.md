@@ -1,5 +1,6 @@
 Title: Golang学习杂记
 Date: 2013-12-25 18:01
+Update: 2013-12-26 08:56
 Tags: golang, 总结, 未完成
 
 [1]: https://code.google.com/p/go-wiki/wiki/SliceTricks "golang slice tricks"
@@ -14,12 +15,12 @@ Tags: golang, 总结, 未完成
 [10]: http://blog.golang.org/gobs-of-data
 [11]: http://golang.org/pkg/encoding/gob/
 
-记录Golang的一些关键语法和易错易混淆的知识点。目前边学边记，没什么条理，等内容充实后需要整理一下。
-
-以下内容均基于Go1.2，其中可能有错漏之处，欢迎反馈。
+记录Golang的一些关键语法和易错易混淆的知识点。以下内容均基于Go1.2，其中可能有错漏之处，欢迎反馈。
 
 ## 语法总结
 ### 0值
+Zero value
+
 *  boolean: `false`
 *  integer: `0`
 *  float: `0.0`
@@ -33,14 +34,18 @@ Tags: golang, 总结, 未完成
 pointer, slice, channel和map均可看作引用类型，发生值拷贝时，被拷贝的仅仅是指向实际数据的指针，参考[这里][2]。
 
 ### slice和append
-使用append时，如果slice对应的array的长度不够，go会会创建一个新的array以容纳新添加的数据，所有旧的array数据都会被拷贝到新的array里。需要频繁使用append时，需要考虑到其效率问题。
+使用append时，如果slice对应的array的长度不够，go会创建一个新的array以容纳新添加的数据，所有旧的array数据都会被拷贝到新的array里。需要频繁使用append时，需要考虑到其效率问题。
 
 对于数据量已知且每次append一条数据的情况，推荐如下使用方式。
 
-    sourceArray := [5]int{ 1, 2, 3, 4, 5}  // 初始化一个长度为10的数组
-    targetSlice := make([]int, len(sourceArray)) // 初始化一个长度和容量均为10的slice
-    for i := range sourceArray { // 使用range遍历数组，注意不使用第二个返回值以避免额外的拷贝开销
-        targetSlice = append(targetSlice[:i], sourceArray[i]) // 依次在目标slice的i位置插入数组的对应元素
+    // 初始化一个长度为10的数组
+    sourceArray := [5]int{ 1, 2, 3, 4, 5}
+    // 初始化一个长度和容量均为10的slice
+    targetSlice := make([]int, len(sourceArray))
+    // 使用range遍历数组，注意不使用第二个返回值以避免额外的拷贝开销
+    for i := range sourceArray {
+        // 依次在目标slice的i位置插入数组的对应元素
+        targetSlice = append(targetSlice[:i], sourceArray[i])
     }
 
 ### slice和数组
@@ -54,11 +59,12 @@ pointer, slice, channel和map均可看作引用类型，发生值拷贝时，被
 string使用UTF-8编码。
 
 ### 数组类型
-1. 数组的长度也是其类型的一部分，[3]int和[4]int类型不同。
+1. 数组的长度也是其类型的一部分，`[3]int`和`[4]int`类型不同。
 2. 和slice不同，发生值拷贝时，数组的所有数据都会被拷贝。
 
 ### map
     value, found := MapABC[key]
+    
 上面的代码中，value依然是map中key对应的值的拷贝。如果不使用第二个参数found，如下
 
     value := MapABC[key]
@@ -66,6 +72,7 @@ string使用UTF-8编码。
 则当key不存在时，value被初始化为对应的0值。
 
 ### 初始化
+常见的初始化方法。
 1. new初始化变量为0值，返回指针。
 2. 构造函数，使用`&`可返回指针，成员的默认值为0值。
 3. make仅用于初始化slice, map和channel三种类型，返回实际变量。
