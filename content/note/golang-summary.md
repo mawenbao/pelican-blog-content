@@ -1,6 +1,6 @@
 Title: Golang学习杂记
 Date: 2013-12-25 18:01
-Update: 2013-12-27 10:37
+Update: 2013-12-27 10:58
 Tags: golang, 总结, 未完成
 
 [1]: https://code.google.com/p/go-wiki/wiki/SliceTricks "golang slice tricks"
@@ -129,7 +129,7 @@ Open()返回的`type DB`是一个数据库的句柄，而不是一个数据库�
 基于以上的事实，每次数据库请求都调用Open()和Close()是不明智甚至是不正确的。
 
 ### gob
-gob.Encode(a interface{})，如果a保存的是指针类型，实际保存的是a所指向的数据。
+gob.Encode(a interface{})，如果a保存的是指针类型，实际编码的是a所指向的数据。
 
 引用一，[http://blog.golang.org/gobs-of-data][10]
 
