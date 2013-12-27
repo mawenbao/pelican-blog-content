@@ -1,6 +1,6 @@
 Title: Golang学习杂记
 Date: 2013-12-25 18:01
-Update: 2013-12-26 08:56
+Update: 2013-12-27 10:37
 Tags: golang, 总结, 未完成
 
 [1]: https://code.google.com/p/go-wiki/wiki/SliceTricks "golang slice tricks"
@@ -121,6 +121,13 @@ Go1删除了vector容器，所有的vector操作均可通过slice配合一定的
 原因在于，对于使用`&`符号取址的变量，go编译器将其分配到heap上。进一步阅读可参考[faq: stack or heap](http://golang.org/doc/faq#stack_or_heap)和[Escape Analysis in Go][8]。
 
 ## Golang标准库
+### sql
+Open()返回的`type DB`是一个数据库的句柄，而不是一个数据库连接，另外Open函数也不一定立即建立和数据库的连接（见Open函数的说明）。
+
+`type DB`维护着一个数据库连接池，在多个goroutine之间并发使用是安全的。由于连接池的存在，每次执行Query()和Exec()等函数的并不一定是同一个数据库连接，因此如果有需要，可以使用Begin()函数创建一个数据库事务，在Begin()和Commit()/Rollback()之间的数据库操作将被保证在同一个数据库连接上执行。
+
+基于以上的事实，每次数据库请求都调用Open()和Close()是不明智甚至是不正确的。
+
 ### gob
 gob.Encode(a interface{})，如果a保存的是指针类型，实际保存的是a所指向的数据。
 
