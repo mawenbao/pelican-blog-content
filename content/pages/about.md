@@ -14,6 +14,7 @@ Comment: off
 [13]: /research/create_pseudo_static_blog_with_wordpress.html "create a pseudo static blog with wordpress"
 [14]: /agreement.html "使用协议"
 [15]: /my_projects.html "我的开源项目"
+[16]: https://github.com/mawenbao/niu-x2/tree/sidebar-toc "niu-x2 sidebar-toc branch"
 
 ## 关于本博客
 
@@ -37,6 +38,7 @@ Comment: off
 
 ## 网站历史
 
+*  2013.12.30 周末抽时间修改了下博客主题，添加了一个右侧边栏，以显示文章信息和目录，代码在[这里][16]。
 *  2013.10.31 迁回[linode][11]的东京机房，占坑mawenbao.com。
 *  2013.09.02 使用自己创作的pelican主题[niu-x2][3]。
 *  2013.08.25 将博客和wiki迁移到pelican，并暂时托管在Github Pages上。
