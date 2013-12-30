@@ -87,6 +87,8 @@ def my_slugify(value, sep):
     m.update(value)
     return m.digest().encode('hex')
 MY_SLUGIFY_FUNC = my_slugify
+MY_HEADING_LIST_STYLE = 'ol'
+
 from markdown.extensions import headerid, codehilite
 MD_EXTENSIONS = ([
     'extra',
