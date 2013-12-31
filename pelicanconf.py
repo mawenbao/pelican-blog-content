@@ -114,7 +114,7 @@ SITEMAP = {
         }
 
 # theme config
-THEME = './themes/niu-x2'
+THEME = './themes/niu-x2-sidebar'
 #THEME = '../niu-x2'
 
 # niu-x2 theme config

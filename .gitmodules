@@ -7,3 +7,6 @@
 [submodule "plugins/update_date"]
 	path = plugins/update_date
 	url = https://github.com/wilbur-ma/pelican-update-date
+[submodule "themes/niu-x2-sidebar"]
+	path = themes/niu-x2-sidebar
+	url = http://github.com/mawenbao/niu-x2-sidebar

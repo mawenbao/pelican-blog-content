@@ -14,7 +14,7 @@ Comment: off
 [13]: /research/create_pseudo_static_blog_with_wordpress.html "create a pseudo static blog with wordpress"
 [14]: /agreement.html "使用协议"
 [15]: /my_projects.html "我的开源项目"
-[16]: https://github.com/mawenbao/niu-x2/tree/sidebar-toc "niu-x2 sidebar-toc branch"
+[16]: https://github.com/mawenbao/niu-x2-sidebar "niu-x2-sidebar"
 
 ## 关于本博客
 
