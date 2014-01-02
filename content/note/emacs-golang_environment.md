@@ -1,5 +1,6 @@
 Title: Emacs Golang 配置(windows)
 Date: 2013-08-25 12:14
+Update: 2014-01-02 10:13
 Tags: emacs, config, golang
 
 Windows系统下为Emacs配置golang开发环境。
@@ -34,10 +35,10 @@ Windows系统下为Emacs配置golang开发环境。
 
 5. 为emacs配置go
 
-    :::scheme	
-	(when **go-lang
-	  (require 'go-mode-load)
-	  (require 'go-autocomplete)
-	  (require 'auto-complete-config)
-	  )
+        :::scheme	
+        (when **go-lang
+          (require 'go-mode-load)
+          (require 'go-autocomplete)
+          (require 'auto-complete-config)
+          )
 

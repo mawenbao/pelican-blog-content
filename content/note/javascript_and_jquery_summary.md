@@ -1,6 +1,7 @@
 Title: Javascript和jQuery使用总结
 Date: 2013-12-30 15:16
-Tags: javascript, jquery, 总结，未完成
+Update: 2014-01-02 10:14
+Tags: javascript, jquery, 总结, 未完成
 
 [1]: http://api.jquery.com/category/selectors/
 [2]: http://learn.jquery.com/performance/
@@ -49,7 +50,7 @@ pushState函数的具体说明见[这里][5]。
 *  $(window).height(): 获取浏览器可视区域的高度。
 *  $(window).width(): 获取浏览器可视区域的宽度。
 
-## jQuery performance
+## Performance tips
 jQuery性能优化相关的文章可参考[Performance][2]，[jQuery best practices][3]，以下是部分总结。
 
 1. 缓存jQuery selector获取的jQuery对象。
