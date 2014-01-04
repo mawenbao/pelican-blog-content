@@ -1,6 +1,6 @@
 Title: Javascript和jQuery使用总结
 Date: 2013-12-30 15:16
-Update: 2014-01-02 10:14
+Update: 2014-01-03 15:20
 Tags: javascript, jquery, 总结, 未完成
 
 [1]: http://api.jquery.com/category/selectors/
@@ -77,7 +77,7 @@ jQuery性能优化相关的文章可参考[Performance][2]，[jQuery best practi
             // do stuff
         }
 
-4. 添加多个DOM元素时，尽量一次添加多个，而不是每次添加一个。
+4. 添加多个html元素时，尽量一次添加多个，而不是每次添加一个。
 
         var myHtml = "";
          
@@ -86,6 +86,20 @@ jQuery性能优化相关的文章可参考[Performance][2]，[jQuery best practi
         });
 
         $("#ballers").html(myHtml);
+
+5. 从DOM里分离html元素。DOM操作很慢且耗费资源，频繁的对DOM中的html元素进行修改会降低效率。
+
+        var $table = $("#myTable");
+        var $parent = $table.parent();
+
+        $table.detach();
+
+        // ... add lots and lots of rows to table
+        for(var i = 0; i < 1000; i++) {
+            $table.append("<tr><td>hello world</td></tr>");
+        }
+
+        $parent.append($table);
 
 ## 参考资料
 1. [jQuery selectors][1]

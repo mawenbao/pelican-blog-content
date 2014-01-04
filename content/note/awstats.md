@@ -1,6 +1,6 @@
 Title: awstats+nginx配置笔记
 Date: 2013-11-04 16:33
-Update: 2013-11-04 22:49
+Update: 2014-01-04 23:47
 Tags: awstats, perl, nginx, ubuntu, note, tutorial
 
 [1]: http://hi.baidu.com/icokeeer/item/2588471c9403c9e05f53b1e2 "http://hi.baidu.com/icokeeer/item/2588471c9403c9e05f53b1e2"
@@ -128,7 +128,6 @@ awstats可以分析服务器日志，并提供图形化的分析结果，demo可
 
     AllowToUpdateStatsFromBrowser=1
 
-## 
 ## 参考资料
     
 *  [Ubuntu Nginx Awstats Fastcgi][1]

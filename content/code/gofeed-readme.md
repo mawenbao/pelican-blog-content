@@ -1,6 +1,6 @@
 Title: Gofeed 说明文档
 Date: 2013-11-28 11:04
-Update: 2013-12-05 09:00
+Update: 2014-01-04 23:48
 Tags: doc, golang, feed, rss
 
 Gofeed was inspired by feed43.com. It is disigned to extract full-text feeds from websites which only provide partial feeds or provide no feeds at all.
@@ -58,6 +58,7 @@ And you should note that
 
     And the same goes for Feed.ContentPattern.
 
+## Patterns
 ### Predefined patterns
 You can use the following predefined patterns in `Feed.IndexPattern` and `Feed.ContentPattern` of the json configuration. Note that all these patterns are **lazy** and perform **leftmost** match, which means they will match as few characters as possible.
 
