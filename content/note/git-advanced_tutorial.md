@@ -1,9 +1,14 @@
 Title: Git进阶教程
 Date: 2013-08-25 12:14
-Update: 2013-12-20 16:49
+Update: 2014-01-06 11:17
 Tags: git, tutorial
 
 Git的常用命令和场景可参考[Git快速使用指南](/note/git-quick_reference.html)，在这里介绍进一步的使用和部分生僻的命令。
+
+## Git使用ssh协议
+
+    git clone ssh://name@host/absolute/path/to/repo
+    git clone name@host:/path/to/repo
 
 ## Git进阶使用场景
 
