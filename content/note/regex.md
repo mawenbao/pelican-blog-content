@@ -1,8 +1,8 @@
-Title: GNU常用正则表达式
+Title: 正则表达式总结
 Date: 2013-08-25 12:14
-Tags: regular_expression, gnu
+Tags: regular_expression, 总结, 未完成
 
-介绍GNU工具里常用的正则表达式。
+总结一些正则表达式相关的知识。
 
 尚未完成
 

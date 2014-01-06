@@ -1,7 +1,7 @@
 Title: Golang学习杂记
 Date: 2013-12-25 18:01
-Update: 2013-12-27 10:58
-Tags: golang, 总结, 未完成
+Update: 2014-01-06 10:51
+Tags: golang, 总结
 
 [1]: https://code.google.com/p/go-wiki/wiki/SliceTricks "golang slice tricks"
 [2]: http://golang.org/doc/faq#pass_by_value
@@ -87,7 +87,30 @@ string使用UTF-8编码。
 3. 如果已声明的变量作用域在外层，则定义一个新的同名变量，会屏蔽外层的变量。
 
 ### iota
-**未完成**
+每个const关键字都会将iota的值重置为0，每个const表达式让iota增加1。
+
+    const m = iota // m = 0
+    const n = iota // n = 0
+
+    const (
+        a = iota   // a = 0
+        b = iota   // b = 1
+        c          // c = 2
+    )
+
+    const (
+        d = 1 << iota // iota重置为0，d = 1
+        e             // e = 1 << 1 = 2
+        f             // f = 1 << 2 = 4
+    )
+
+在同一个const表达式中多次使用iota，其值不变。
+
+    const (
+        a, b = iota, 1 << iota // a = 0, b = 1
+        c, d                   // c = 1, d = 2
+        e, f                   // e = 2, f = 4
+    )
 
 ### 函数参数和命名的返回变量
 *  函数参数和命名的返回变量的作用域就是函数体。
