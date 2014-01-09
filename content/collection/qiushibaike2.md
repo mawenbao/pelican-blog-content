@@ -1,12 +1,13 @@
 Title: 糗事百科精选2
 Date: 2013-11-29 12:30
-Update: 2013-12-23 09:31
+Update: 2014-01-09 18:00
 Tags: 糗事百科, 笑话, 未完成
 
 [1]: /collection/qiushibaike.html
 [2]: /static/images/qiushibaike/xueba.jpg "学霸和学渣的区别"
 [3]: /static/images/qiushibaike/cute-panda.jpg "卖萌的熊猫"
 [4]: /static/images/qiushibaike/yizhiyegou.jpg "一只野狗"
+[5]: /static/images/qiushibaike/dogs.jpg "狗的一家"
 
 收集糗事百科上的趣事。
 
@@ -44,4 +45,6 @@ Tags: 糗事百科, 笑话, 未完成
 
 老公刚买的，以为是七匹狼，谁知看到下面的拼音，笑死人了，一只野狗？
 ![一只野狗][4]
+
+![狗的一家][5]
 
