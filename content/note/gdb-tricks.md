@@ -97,19 +97,19 @@ gdb默认使用utf-8编码，可以使用如下命令修改编码。
 
 1. 直接运行
 
-    gdb --args prog arg1 arg2
+        gdb --args prog arg1 arg2
 
 2. 运行gdb后使用run命令
 
-    gdb prog
-    run arg1 arg2
+        gdb prog
+        run arg1 arg2
 
 ## 在内存和文件系统之间拷贝数据
 
 1. 将内存数据拷贝到文件里
 
-    dump binary value file_name variable_name
-    dump binary memory file_name begin_addr end_addr 
+        dump binary value file_name variable_name
+        dump binary memory file_name begin_addr end_addr 
 
 2. 改变内存数据
 
