@@ -1,5 +1,6 @@
 Title: C++问题总结
 Date: 2014-01-07 09:24
+Update: 2014-01-11 21:25
 Tags: c++, 总结, 未完成
 
 [1]: http://en.wikipedia.org/wiki/Plain_Old_Data_Structures
@@ -17,7 +18,7 @@ c99标准支持VLA(variable length arrays)，而在c11标准里VLA是一个可�
 
 在上面的例子里，arr就是一个VLA。
 
-gcc从c90标准开始便提供VLA扩展，具体介绍可参考[Arrays of Variable Length][4]。gcc将VLA数组被分配到栈上，潜在的问题是，当目标数组过大时可能导致栈溢出(stack overflow)。因此建议是，除非必要且明确知道数组不会太大，不要使用VLA。
+gcc从c90标准开始便提供VLA扩展，且将VLA数组被分配到栈上。[^1] 这样潜在的问题是，当目标数组过大时可能导致栈溢出(stack overflow)。因此建议是，除非必要且明确知道数组不会太大，不要使用VLA。
 
 ## POD
 POD(plain old data)或PODS(plain old data structure)是指不包含构造函数(constructor)，析构函数(deconstructor)和虚函数(virtual function)等面向对象特性的数据类型。引用wikipedia上[Plain_Old_Data_Structures][1]的话：
@@ -46,9 +47,11 @@ POD(plain old data)或PODS(plain old data structure)是指不包含构造函数(
 1. non-POD类型必须提供无参构造函数，且其初始化列表必须包含该类的所有成员变量。
 2. POD类型在new之后应当用memset等方式重新赋值。
 
-## 参考资料
+## 额外阅读
 1. [wikipedia:Plain_Old_Data_Structures][1]
 2. [What are Aggregates and PODs and how/why are they special?][2]
 3. [Do the parentheses after the type name make a difference with new?][3]
-4. [Arrays of Variable Length][4]
+
+## 参考资料
+[^1]: [Arrays of Variable Length][4]
 
