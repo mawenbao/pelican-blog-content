@@ -11,7 +11,7 @@ Tags: 动漫歌曲, RWBY
 
 More info: [http://rwby.wikia.com/wiki/RWBY_Soundtrack/This_Will_Be_The_Day](http://rwby.wikia.com/wiki/RWBY_Soundtrack/This_Will_Be_The_Day)
 
-Lyrics by [Jeff Williams](http://roosterteeth.com/williams)
+Lyrics by Jeff Williams[^1]
 
     They see you as small and helpless;
     They see you as just a child.
@@ -59,4 +59,7 @@ Lyrics by [Jeff Williams](http://roosterteeth.com/williams)
     In time, your heart will open minds,
     A story will be told,
     That victory is in a simple soul.
+
+## 参考资料
+[^1]: [Jeff Williams](http://roosterteeth.com/williams)
 
