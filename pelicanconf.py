@@ -143,24 +143,24 @@ NIUX2_GOOGLE_CSE_ID = '016368690064160370938:8u3wwjza9c4'
 NIUX2_DISPLAY_TITLE = True
 
 #NIUX2_LIB_THEME = 'http://atime-me.qiniudn.com/niu-x2'
-NIUX2_LIB_BOOTSTRAP_JS = 'http://atime-me.qiniudn.com/niu-x2/js/bootstrap.min.js'
-NIUX2_LIB_FONTAWESOME = 'http://atime-me.qiniudn.com/niu-x2/css/font-awesome'
-NIUX2_LIB_JQUERY = 'http://atime-me.qiniudn.com/niu-x2/js/jquery-1.10.2.min.js'
+#NIUX2_LIB_BOOTSTRAP_JS = 'http://atime-me.qiniudn.com/niu-x2/js/bootstrap.min.js'
+#NIUX2_LIB_FONTAWESOME = 'http://atime-me.qiniudn.com/niu-x2/css/font-awesome'
+#NIUX2_LIB_JQUERY = 'http://atime-me.qiniudn.com/niu-x2/js/jquery-1.10.2.min.js'
 
 NIUX2_CATEGORY_MAP = {
-        'code': ('代码', 'icon-code'),
-        'collection': ('搜藏', 'icon-briefcase'),
-        'essay': ('随笔', 'icon-leaf'),
-        'life': ('日常', 'icon-coffee'),
-        'note': ('笔记', 'icon-book'),
-        'research': ('研究', 'icon-beaker'),
+        'code': ('代码', 'fa-code'),
+        'collection': ('搜藏', 'fa-briefcase'),
+        'essay': ('随笔', 'fa-leaf'),
+        'life': ('日常', 'fa-coffee'),
+        'note': ('笔记', 'fa-book'),
+        'research': ('研究', 'fa-flask'),
         }
 NIUX2_HEADER_SECTIONS = [
-        ('关于', 'about me', '/about.html', 'icon-anchor'),
-        ('使用协议', 'agreement', '/agreement.html', 'icon-info-sign'),
-        ('项目', 'my projects', '/my_projects.html', 'icon-rocket'),
-        ('存档', 'blog archives', '/archives.html', 'icon-archive'),
-        ('标签', 'blog tags', '/tag/', 'icon-tag'),
+        ('关于', 'about me', '/about.html', 'fa-anchor'),
+        ('使用协议', 'agreement', '/agreement.html', 'fa-info-circle'),
+        ('项目', 'my projects', '/my_projects.html', 'fa-rocket'),
+        ('存档', 'blog archives', '/archives.html', 'fa-archive'),
+        ('标签', 'blog tags', '/tag/', 'fa-tag'),
         ]
 NIUX2_HEADER_DROPDOWN_SECTIONS = {}
 NIUX2_FOOTER_LINKS = [
@@ -169,9 +169,9 @@ NIUX2_FOOTER_LINKS = [
         ]
 
 NIUX2_FOOTER_ICONS = [
-        ('icon-key', 'my public key', '/my_gnupg.html'),
-        ('icon-envelope-alt', 'my email address', 'mailto: mawenbao@hotmail.com'),
-        ('icon-github-alt', 'my github page', 'http://github.com/mawenbao'),
-        ('icon-rss', 'subscribe my blog', '/feed.xml'),
+        ('fa-key', 'my public key', '/my_gnupg.html'),
+        ('fa-envelope-o', 'my email address', 'mailto: mawenbao@hotmail.com'),
+        ('fa-github-alt', 'my github page', 'http://github.com/mawenbao'),
+        ('fa-rss', 'subscribe my blog', '/feed.xml'),
         ]
 
