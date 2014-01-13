@@ -258,7 +258,7 @@ PHP-FPM (FastCGI Process Manager)是一种常用的fastcgi的实现方式。使�
 
 需要注意的是，如果使用`/etc/cron.*`来放置任务脚本，脚本名(或软链接名)中不能包含点号`.`，否则任务将无法执行且没有任何提示信息，详细信息可参考[Ubuntu CronHowto wiki](https://help.ubuntu.com/community/CronHowto)。
 
-## 参考资料
+## 阅读资料
 
 *  [debian5软件源列表](http://serverfault.com/questions/374651/apt-get-update-getting-404-on-debian-lenny)
 *  [debian archive keyring](http://serverfault.com/questions/337278/debian-how-can-i-securely-get-debian-archive-keyring-so-that-i-can-do-an-apt-g)

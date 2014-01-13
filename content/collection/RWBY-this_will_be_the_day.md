@@ -60,6 +60,6 @@ Lyrics by Jeff Williams[^1]
     A story will be told,
     That victory is in a simple soul.
 
-## 参考资料
+## 阅读资料
 [^1]: [Jeff Williams](http://roosterteeth.com/williams)
 

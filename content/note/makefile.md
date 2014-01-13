@@ -43,6 +43,6 @@ order-only依赖定义域规则的右侧，与常规依赖用`|`隔开。当目�
     :::makefile
     .PHONY: debug
 
-## 参考资料
+## 阅读资料
 
 *  [Passing additional variables from command line to make](http://stackoverflow.com/questions/2826029/passing-additional-variables-from-command-line-to-make)

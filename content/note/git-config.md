@@ -97,7 +97,7 @@ git config ...命令默认修改此配置文件，如果想使用另外的路径
 	.DS_Store
 	.DS_Store?
 
-## 参考资料
+## 阅读资料
 
 *  [Ignoring files from github](https://help.github.com/articles/ignoring-files)
 *  [yyfrankyy's git config](http://f2e.us/wiki/git-config.html#!/)

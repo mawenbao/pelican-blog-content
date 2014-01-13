@@ -14,7 +14,7 @@ Tags: wordpress, problem
     nameserver 8.8.8.8
     nameserver 8.8.4.4
 
-## 参考资料
+## 阅读资料
 
 *  [wordpress无法在线安装插件](http://www.oukan.net/201207741.html)
 

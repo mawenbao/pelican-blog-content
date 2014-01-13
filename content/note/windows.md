@@ -22,7 +22,7 @@ cygwin下用git向远程https仓库推送数据时遇到以下问题:
 
 参考[这里](http://tech.idv2.com/2012/09/14/cygwin-git-error/)，解决办法是在cygwin上安装ca-certificates。
 
-## 参考资料
+## 阅读资料
 
 *  [cygwin下git出现ca-bundle.crt相关错误的解决办法](http://tech.idv2.com/2012/09/14/cygwin-git-error/)
 

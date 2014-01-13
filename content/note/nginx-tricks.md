@@ -46,7 +46,7 @@ txt文件的MIME类型为text/plain，使用浏览器访问时默认行为是直
 
 proxy_set_header设置的两个http头X-Real-Ip和X-Forwarded-For用于记录访问者的原始ip地址，其中X-Real-Ip只是一个ip，而X-Forwarded-For是一系列逗号分割的ip列表，第一个是访问者的ip，其后都是转发服务器的ip地址。
 
-## 参考资料
+## 阅读资料
 
 *  [How can I make sure that Nginx serves plaintext files as a download, instead of inline?](http://serverfault.com/questions/364370/how-can-i-make-sure-that-nginx-serves-plaintext-files-as-a-download-instead-of)
 

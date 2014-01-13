@@ -15,7 +15,7 @@ Tags: wordpress, trick
 	
 	[short code]
 
-## 参考资料
+## 阅读资料
 
 *  [How to Quote a Shortcode in WordPress](http://romkey.com/2011/04/13/how-to-quote-a-shortcode-in-wordpress/)
 

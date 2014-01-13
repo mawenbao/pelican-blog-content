@@ -16,7 +16,7 @@ Tags: php, wordpress, copyright
     $copyInfo .= (" `<a href='/blog'>`Wilbur's Home`</a>` - Some Rights Reserved " . "`<a rel='license' href='http://creativecommons.org/licenses/by-nc-nd/3.0/cn/'>``<img alt='知识共享许可协议' style='border-width:0' src='http://i.creativecommons.org/l/by-nc-nd/3.0/cn/80x15.png' />``</a>`");
     echo $copyInfo;
 
-## 参考资料
+## 阅读资料
 
 *  php date http://php.net/manual/en/function.date.php
 *  php 字符串操作 http://php.net/manual/en/language.operators.string.php

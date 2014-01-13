@@ -21,7 +21,7 @@ Tags: python, note
 *  r+: 可读写，文件必须存在，open后不会清空（truncate）文件的内容
 *  w+: 可写读，文件不存在则创建之，已存在则在open后立刻清空（truncate）文件的内容
 
-## 参考资料
+## 阅读资料
 *  [python2.7 documentation for open()](http://docs.python.org/2/library/functions.html#open)
 *  [cplusplus fopen()](http://www.cplusplus.com/reference/cstdio/fopen/)
 *  [Confused by python file mode “w+”](http://stackoverflow.com/questions/16208206/confused-by-python-file-mode-w) 

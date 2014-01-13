@@ -72,7 +72,7 @@ Tags: gcc, tutorial, 未完成
 
 上面的命令将zlib和libfoo链接为静态库，将libbar链接为动态库。 -Wl选项将后面的用逗号隔开的参数列表传给链接器ld。
 
-## 参考资料
+## 阅读资料
 
 *  [GCC Option Summary](http://gcc.gnu.org/onlinedocs/gcc-4.7.2/gcc/Option-Summary.html#Option-Summary) from gcc manual
 *  [GCC 命令行详解](http://www.51testing.com/html/24/1817.html)

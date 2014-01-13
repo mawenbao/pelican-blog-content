@@ -31,7 +31,7 @@ Tags: dokuwiki, config, seo
 
 使用dokuwiki的[description](https://www.dokuwiki.org/plugin:description)插件，为wiki页面天剑简要介绍。
 
-## 参考资料
+## 阅读资料
 
 *  How to optimize Dokuwiki for SEO http://docs.oseems.com/general/web/dokuwiki/optimize-for-seo
 *  Dokuwiki don't like google http://www.stefanoforenza.com/doku-wiki-dont-like-google/

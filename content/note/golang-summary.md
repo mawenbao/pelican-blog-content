@@ -347,7 +347,7 @@ defer在return之前执行，但return并非原子操作。具体的说return分
 ## 其他资源
 *  [Go Playground][7] 方便共享golang的代码，向别人请教问题时尤其有用。
 
-## 参考资料
+## 阅读资料
 1. [Effective Go][6]
 2. [The Go Programming Language Specification][5]
 3. [Golang Frequently Asked Questions (FAQ)][4]

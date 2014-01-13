@@ -57,7 +57,7 @@ Tags: vim, config
 
     autocmd BufWritePre * :%s/\s\+$//e
 
-## 参考资料
+## 阅读资料
 
 *  [VIM学习笔记 状态行(statusline)][1]
 *  [How to make vim always show the encoding of current opened file?][2]

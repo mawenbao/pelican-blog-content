@@ -271,7 +271,7 @@ radtest可以向freeradius服务器发送请求，不过目前不支持mschapv2�
 
     mysql -uroot -p -e "UPDATE radius.radacct SET acctstoptime = acctstarttime + acctsessiontime WHERE ((UNIX_TIMESTAMP(acctstarttime) + acctsessiontime + 240 - UNIX_TIMESTAMP())<0) AND acctstoptime IS NULL;"
 
-## 参考资料
+## 阅读资料
 1. [PPTP/L2TP + FreeRADIUS + MySQL 安装与配置][4]
 2. [在PPTP VPN服务器上配置FreeRADIUS+daloRADIUS实现用户跟踪管理][5]
 3. [RadiusClient配置][6]

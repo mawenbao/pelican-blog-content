@@ -23,7 +23,7 @@ Swatch是一个日志监控工具，以下介绍在CentOS上的安装和配置�
 
     swatch -c $CONFIG -t $LOG
 
-## 参考资料
+## 阅读资料
 
 *  [Swatch的安装和使用](http://fanqiang.chinaunix.net/a5/b6/20010810/1500001102.html)
 *  [Linux Packages Search](http://pkgs.org/)

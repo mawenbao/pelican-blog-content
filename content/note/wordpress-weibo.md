@@ -20,7 +20,7 @@ Tags: wordpress, plugin
 ## 日期格式
 
 参考[php日期函数](http://uk3.php.net/manual/en/function.date.php)，定义为`Y.m.d H:s`，显示样式为`2012.11.13 10:22`
-## 参考资料
+## 阅读资料
 
 *  linux下给php安装curl, gd（ubuntu）[http://www.cnblogs.com/macula7/.../1977580.html](http://www.cnblogs.com/macula7/archive/2011/03/08/1977580.html)
 *  nginx and cURL http://forum.linode.com/viewtopic.php?t=6542

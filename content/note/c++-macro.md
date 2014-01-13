@@ -53,7 +53,7 @@ gcc版本
 	_LP64(__LP64__)  LP64数据模型，用于64位系统
 	
 
-## 参考资料
+## 阅读资料
 
 *  [VS2012内建宏](http://msdn.microsoft.com/en-us/library/vstudio/b0084kay.aspx)
 *  [GCC内建宏](http://gcc.gnu.org/onlinedocs/cpp/Predefined-Macros.html)

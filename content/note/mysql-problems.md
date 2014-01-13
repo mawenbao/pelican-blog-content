@@ -40,7 +40,7 @@ Tags: mysql, database, problem
 
 之前使用[backup脚本](/codes/projects/host_backup)迁移网站时，只迁移了/etc/mysql/debian.cnf，没有迁移mysql里的mysql数据库，导致mysql数据库中user表里的debian-sys-maint的密码和/etc/mysql/debian.cnf不一致。
 
-## 参考资料
+## 阅读资料
 
 1. [MySQL Tips: safe-updates][1]
 2. [Stopping MySQL database server : mysqld failed!][2]

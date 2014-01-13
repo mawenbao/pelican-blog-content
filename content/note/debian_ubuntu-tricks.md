@@ -262,7 +262,7 @@ easytag
 	sudo apt-get install convmv iconv python-mutagen
 	find . -iname "*.mp3" -execdir mid3iconv -e GBK {} \;
 
-## 参考资料
+## 阅读资料
 
 *  [Linux 技巧：让进程在后台可靠运行的几种方法](http://www.ibm.com/developerworks/cn/linux/l-cn-nohup/)
 *  [Enable Rsyslog and Syslog cron events logging in /var/log/cron.log on Debian Lenny](http://pc-freak.net/blog/enable-rsyslog-and-syslog-cron-events-logging-in-varlogcron-log-on-debian-lenny/)

@@ -18,7 +18,7 @@ Tags: markdown, markup_language, note
 
 [Markdown语法](http://www.ituring.com.cn/article/775)翻译自[Markdown: Syntax](http://daringfireball.net/projects/markdown/syntax)
 
-## 参考资料
+## 阅读资料
 
 *  [Markdown语法](http://www.ituring.com.cn/article/775)
 

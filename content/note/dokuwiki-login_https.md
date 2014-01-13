@@ -117,7 +117,7 @@ Tags: dokuwiki, ssl, nginx, config, note
             include sites-available/dokuwiki.conf;
         }
 
-## 参考资料
+## 阅读资料
 
 *  [https://www.dokuwiki.org/tips:httpslogin](https://www.dokuwiki.org/tips:httpslogin)
 *  [Dokuwiki recipes](http://wiki.nginx.org/Dokuwiki) from nginx wiki

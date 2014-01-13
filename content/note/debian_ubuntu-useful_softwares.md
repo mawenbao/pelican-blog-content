@@ -155,7 +155,7 @@ display information from object files，常用于查看目标文件的架构。
 
     uname -a
 
-## 参考资料
+## 阅读资料
 
 *  [Get The Home Directory After Su](http://www.computing.net/answers/solaris/get-the-home-directory-after-su/5035.html)
 

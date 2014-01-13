@@ -15,7 +15,7 @@ Tags: dev, wordpress, plugin
 
 显示调试信息
 
-## 参考资料
+## 阅读资料
 
 *  [Wordpress函数文档](http://codex.wordpress.org/Function_Reference/)
 

@@ -79,7 +79,7 @@ Tags: debian, ubuntu, apt, dpkg
 6.  h: Half-inst - The package is only partially installed
 7.  w: Trig - Wait
 8.  t: Trig - Pend
-## 参考资料
+## 阅读资料
 
 *  [apt-get, apt-file, apt-cache和dpkg的例子](http://www.thegeekstuff.com/2009/10/debian-ubuntu-install-upgrade-remove-packages-using-apt-get-apt-cache-apt-file-dpkg/)
 *  [How to interpret the status of dpkg (–list)?](http://linuxprograms.wordpress.com/2010/05/11/status-dpkg-list/)

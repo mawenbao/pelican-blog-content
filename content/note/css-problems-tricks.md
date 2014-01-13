@@ -32,7 +32,7 @@ word-break
 
 解决办法是为table-cell设置height，参考了某个论坛上的一个[帖子][3]。
 
-## 参考资料
+## 阅读资料
 1. [css2: tables][1]
 2. [Position: fixed changes width of element when using percentages][2]
 3. [How to add padding & margin to LI elements with display:table-row?][3]

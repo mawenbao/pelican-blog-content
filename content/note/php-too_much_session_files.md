@@ -26,7 +26,7 @@ php session文件太多的解决办法.
     find /tmp/php-session -cmin +1440 -name "sess_*" -delete > /dev/null 2>&1
 将以上脚本加入cron计划任务即可自动清除session文件.
 
-## 参考资料
+## 阅读资料
 
 *  http://blog.longwin.com.tw/2008/10/php-too-more-session-file-set-2008/
 

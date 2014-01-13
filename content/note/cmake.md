@@ -228,7 +228,7 @@ list命令
     add_dependencies(demo proto)
     target_link_libraries(demo protobuf)
 
-## 参考资料
+## 阅读资料
 
 1. [CMake文档列表][1]
 2. [CMake常用变量列表][2]

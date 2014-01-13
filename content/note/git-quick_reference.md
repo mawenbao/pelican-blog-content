@@ -365,7 +365,7 @@ git的代码仓库里有针对shell和bash等unix shell的命令行补全脚本�
 
 更多内容可参考[这里](/note/git-advanced_tutorial.html)。
 
-## 参考资料
+## 阅读资料
 
 *  [The Pro Git Book](http://git-scm.com/book/zh/)
 *  [Git user manual](http://www.kernel.org/pub/software/scm/git/docs/user-manual.html)

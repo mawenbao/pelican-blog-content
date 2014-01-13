@@ -27,5 +27,5 @@ for nginx 1.2.5. status.net安装文件位于/var/www/t（/var/www是网站根�
 
 现在访问yourdomain.com/t即可使用status.net。
 
-## 参考资料
+## 阅读资料
 

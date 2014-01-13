@@ -67,7 +67,7 @@ ld.so用于查找并加载动态链接库文件(*.so)，详情可参考[man ld.s
 >
 >      o      In the default path /lib, and then /usr/lib.
 
-## 参考资料
+## 阅读资料
 
 *  [Environment variables](http://www.network-theory.co.uk/docs/gccintro/gccintro_23.html) from ["An Introduction to GCC"](http://www.network-theory.co.uk/gcc/intro/)
 *  [LIBRARY_PATH和LD_LIBRARY_PATH环境变量的区别](http://www.cnblogs.com/panfeng412/archive/2011/10/20/library_path-and-ld_library_path.html)

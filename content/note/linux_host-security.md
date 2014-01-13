@@ -190,7 +190,7 @@ logwatch分析系统日志, 并提取重要的信息发到你的邮箱里, 通�
 #### unable to initialize table filter
 安装`xtables-addons-common`即可。
 
-## 参考资料
+## 阅读资料
 
 *  [Securing your server](http://library.linode.com/securing-your-server) from linode documentation
 *  [Control Network Traffic with iptables](http://library.linode.com/security/firewalls/iptables) from linode documentation  

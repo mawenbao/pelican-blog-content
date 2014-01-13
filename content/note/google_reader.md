@@ -34,7 +34,7 @@ Google Reader的所有快捷键。
 	u	            切换全屏模式	 隐藏或展示订阅列表
 	?	            键盘快捷键帮助	 展示有关 Google 阅读器快捷键的快捷指南
 
-## 参考资料
+## 阅读资料
 
 *  [Google Reader有没有键盘快捷键？](http://support.google.com/reader/answer/69973?hl=zh-Hans)
 

@@ -19,7 +19,7 @@ Python2的默认编码是ascii，可以采用如下方法设置为UTF-8。
     import sys 
     sys.setdefaultencoding("UTF-8")
 
-## 参考资料
+## 阅读资料
 
 *  [修改python的默认编码](http://stackoverflow.com/questions/2276200/changing-default-encoding-of-python)
 

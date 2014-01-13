@@ -101,7 +101,7 @@ jQuery性能优化相关的文章可参考[Performance][2]，[jQuery best practi
 
         $parent.append($table);
 
-## 参考资料
+## 阅读资料
 1. [jQuery selectors][1]
 2. [HTML5: Changing the browser-URL without refreshing page][4]
 3. [pushState函数][5]

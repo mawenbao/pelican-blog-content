@@ -103,7 +103,7 @@ optional string name = `2`;
 *  接口文档 [https://developers.google.com/protocol-buffers/docs/reference/overview](https://developers.google.com/protocol-buffers/docs/reference/overview)
 *  Protobuf benchmarking [https://code.google.com/p/thrift-protobuf-compare/wiki/Benchmarking](https://code.google.com/p/thrift-protobuf-compare/wiki/Benchmarking)
 
-## 参考资料
+## 阅读资料
 
 *  [Protobuf documentation][2]
 *  [Protobuf的使用和原理][3]

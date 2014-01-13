@@ -60,7 +60,7 @@ cygwin下用git向远程https仓库推送数据时遇到以下问题:
 > git config http.postBuffer *bytes*
 > where bytes is the maximum number of bytes permitted.
 
-## 参考资料
+## 阅读资料
 
 *  [git aliases causing permission denied error](http://stackoverflow.com/questions/7997700/git-aliases-causing-permission-denied-error)
 *  [git push fails: RPC failed; result=22, HTTP code = 411](http://stackoverflow.com/questions/12651749/git-push-fails-rpc-failed-result-22-http-code-411)

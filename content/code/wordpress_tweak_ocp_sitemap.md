@@ -82,7 +82,7 @@ update-wp-cache.sh脚本如下。
 ### 删除文章或页面时无法自动删除对应的缓存
 
 人为删除文章(post)和页面(page)后，ocp无法删除对应的页面缓存，也无法更新包含删除文章或页面的缓存(比如文章存档，月归档，标签和文章分类页面)等，此时需要手动删除对应的页面缓存。
-## 参考资料
+## 阅读资料
 
 *  [The Go Programming Language Package Reference](http://doc.golang.org/pkg/)
 *  [Wordpress函数参考](http://codex.wordpress.org/Function_Reference/)

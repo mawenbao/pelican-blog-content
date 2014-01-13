@@ -65,7 +65,7 @@ git add默认情况下只更新新添加文件和修改过的文件的索引，�
 
     git log -G "^hello world$"
 
-## 参考资料
+## 阅读资料
 
 *  [Git Tip of the Week: Detached Heads](http://alblue.bandlem.com/2011/08/git-tip-of-week-detached-heads.html)
 

@@ -87,7 +87,7 @@ pygments需要python2.6或python2.7，如果安装了python2.6或python2.7后依
 
     ln -s /usr/bin/python2.6 /usr/bin/python2
 
-## 参考资料
+## 阅读资料
 
 *  [gitlab官方安装指南](https://github.com/gitlabhq/gitlabhq/blob/stable/doc/installation.md)
 *  [Create subdomain and set it up](http://forum.linode.com/viewtopic.php?t=8004%3E) (for linode dns manager)

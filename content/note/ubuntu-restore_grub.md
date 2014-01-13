@@ -70,7 +70,7 @@ Tags: ubuntu, grub, boot_loader
 	sudo grub-install --boot-directory=/mnt/boot /dev/sda
 
 最后重启即可。
-## 参考资料
+## 阅读资料
 
 *  [Grub Rescue修复方法](http://www.2cto.com/os/201111/112327.html)
 *  [grub rescue模式下修复](http://www.douban.com/note/66041888/)

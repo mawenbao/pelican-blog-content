@@ -45,7 +45,7 @@ Tags: wordpress, plugin
 *  **WP Realtime Sitemap** - 在页面或文章里展示网站地图，非xml  
 *  **WP-Syntax** - wordpress代码高亮插件
 
-## 参考资料
+## 阅读资料
 
 *  http://wordpress.org/extend/plugins/
 

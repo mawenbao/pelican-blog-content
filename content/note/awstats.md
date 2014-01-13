@@ -128,7 +128,7 @@ awstats可以分析服务器日志，并提供图形化的分析结果，demo可
 
     AllowToUpdateStatsFromBrowser=1
 
-## 参考资料
+## 阅读资料
     
 *  [Ubuntu Nginx Awstats Fastcgi][1]
 *  [AWStats 国家地区扩展 GeoIP 安装配置][2]

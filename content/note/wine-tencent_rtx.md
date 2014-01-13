@@ -32,7 +32,7 @@ Tags: wine, ubuntu, rtx
 	
 	The native implementation of OLEAUT32.DLL cannot be used with Wine's RPCRT4.DLL. Remove OLEAUT32.DLL and try again.
 
-## 参考资料
+## 阅读资料
 
 *  [关于用wine安装rtx的问题](http://www.oschina.net/question/193954_33387)
 *  [Ubuntu 下 wine rtx 的安装（解决组织架构不显示问题）](http://www.oldfeel.cn/?p=840)

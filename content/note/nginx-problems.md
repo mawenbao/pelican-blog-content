@@ -20,5 +20,5 @@ gzip配置如下:
 
 在新版本的nginx中，开启gzip后会默认压缩text/html，所以不需要手动配置。因此去掉gzip_types中的text/html即可。
 
-## 参考资料
+## 阅读资料
 

@@ -262,7 +262,7 @@ Tags: gnupg, tutorial
 
 相对更安全(更麻烦)的方法是创建两对钥匙，一对用于Sign操作，一对用于Encrypt操作。这样一来，其他用户需要同时拥有并签署你的两把钥匙。
 
-## 参考资料
+## 阅读资料
 
 *  [Public-key cryptography](http://en.wikipedia.org/wiki/Public_key) from wikipedia
 *  [Home page of GnuPG](http://www.gnupg.org/)

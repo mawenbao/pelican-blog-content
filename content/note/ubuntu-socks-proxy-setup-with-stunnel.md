@@ -215,7 +215,7 @@ stunnel4的配置文件默认位于`/etc/stunnel`目录内，配置文件的例�
 
 如果不能找到解决方案，再查看相关文档和google即可。
 
-## 参考资料
+## 阅读资料
 
 1. [通过 stunnel 搭建安全高性能的 sockts 代理服务器][1]
 2. [How To Set Up an SSL Tunnel Using Stunnel on Ubuntu][2]

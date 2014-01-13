@@ -47,7 +47,7 @@ c:\grldr.mbr="Grub4dos"
 
 日后，只需要使用grub4dos引导项里的`Boot Ubuntu`即可启动Ubuntu。
 
-## 参考资料
+## 阅读资料
 
 *  [Grub4dos引导Grub2][3]
 *  [Grub4dos Guide][4]

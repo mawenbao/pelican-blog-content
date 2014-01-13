@@ -13,7 +13,7 @@ Tags: proxy
 {{http://static.atime.me/images/dokuwiki/tools/bitvise-tunnelier/ssh_proxy_error-swichysharp.jpg?nolink}}
 
 另外，参考[这里](http://www.appinn.com/bitvise-tunnelier/)vising的评论，这个问题还可以通过CCProxy或者是Proxy Forward将socks代理转发成http代理，不过未经测试。
-## 参考资料
+## 阅读资料
 
 *  [Bitvise Tunnelier下，http代理與socks代理設置教程](http://0618.us/bitvise-tunnelier-under-http-proxy-with-socks-proxy-settings-tutorial/)
 

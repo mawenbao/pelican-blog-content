@@ -234,7 +234,7 @@ W3 Total Cache的Minify手动模式已经支持Non Blocking加载js代码，不�
 	msgstr "分类：%s"
 
 改完后，可参考[这里](/tools/debian/tricks#编译po文件)的方法编译po文件。
-## 参考资料
+## 阅读资料
 
 *  [Best Practices for Speeding Up Your Web Site](http://developer.yahoo.com/performance/rules.html)
 *  [Plugin API/Filter Reference/excerpt length](http://codex.wordpress.org/Plugin_API/Filter_Reference/excerpt_length)

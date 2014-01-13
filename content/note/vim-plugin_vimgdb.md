@@ -15,7 +15,7 @@ Tags: vim, plugin, gdb
 
 1. (未解决) 调试时在可视模式下，使用Ctrl-P添加监控变量时报错`Unable to create variable object`，只能直接使用gdb命令`createvar`。
 
-## 参考资料
+## 阅读资料
 
 *  [vim+vimgdb完全编译安装手册](http://blog.sina.com.cn/s/blog_4c451e0e0100eofw.html)
 *  [vi/vim使用进阶: 在VIM中使用GDB调试 – 使用vimgdb](http://easwy.com/blog/archives/advanced-vim-skills-vim-gdb-vimgdb/)

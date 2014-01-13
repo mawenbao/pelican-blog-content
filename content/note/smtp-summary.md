@@ -58,7 +58,7 @@ MIME(Multipurpose Internet Mail Extensions)对电子邮件格式进行扩展，�
 
 为方便阅读，在上面的例子中，所有的\r\n换行符均使用回车替换。
 
-## 参考资料
+## 阅读资料
 1. [RFC5321][1]
 2. [wikipedia:Simple Mail Transfer Protocol][2]
 3. [wikipedia:Extended SMTP][5]

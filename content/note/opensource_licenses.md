@@ -38,7 +38,7 @@ Tags: license
 
 ## Mozilla Public License
 
-## 参考资料
+## 阅读资料
 
 *  [开源协议列表](http://opensource.org/licenses/alphabetical)
 *  [五种开源协议比较](http://www.awflasher.com/blog/archives/939)

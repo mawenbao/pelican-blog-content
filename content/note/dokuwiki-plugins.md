@@ -14,7 +14,7 @@ Tags: dokuwiki, plugin
 *  [orphanswanted](https://www.dokuwiki.org/plugin:orphanswanted) 检查dokuwiki里的deadlink
 *  [wrap](https://www.dokuwiki.org/plugin:wrap) 功能强大的语法插件，集合许多插件的功能于一身，有点allinone的感觉。
 *  [yalist](https://www.dokuwiki.org/plugin:yalist) 列表语法插件，支持definition list，列表元素可为多个段落。
-## 参考资料
+## 阅读资料
 
 *  [https://www.dokuwiki.org/plugin](https://www.dokuwiki.org/plugin)
 

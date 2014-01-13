@@ -44,7 +44,7 @@ Tags: debian, ubuntu, startup, note, 未完成
 ## Upstart
 Ubuntu从6.10引入upstart，并在9.10将多数系统服务转换到upstart下，不过system v init system的服务依然被兼容。
 
-## 参考资料
+## 阅读资料
 1. [UbuntuBootupHowto](https://help.ubuntu.com/community/UbuntuBootupHowto)
 2. [UpstartHowto](https://help.ubuntu.com/community/UpstartHowto)
 3. [Upstart Intro, Cookbook and Best Practises](http://upstart.ubuntu.com/cookbook/)

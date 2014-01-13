@@ -10,5 +10,5 @@ Tags: mysql, config, linux, 未完成
     general-log=1
     general-log-file = /var/log/mysql/general.log
 
-## 参考资料
+## 阅读资料
 

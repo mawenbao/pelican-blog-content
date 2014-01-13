@@ -173,7 +173,7 @@ Tags: vpn, l2tp, ipsec, ubuntu, note, tutorial
     iptables -t nat -A POSTROUTING -j MASQUERADE
     iptables -I FORWARD -p tcp --syn -i ppp+ -j TCPMSS --set-mss 1356
 
-## 参考资料
+## 阅读资料
 
 *  [Debian/Ubuntu L2TP/IPSec VPN 安装笔记][1]
 

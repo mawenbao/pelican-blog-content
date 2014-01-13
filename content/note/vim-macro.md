@@ -12,7 +12,7 @@ Tags: vim, tutorial
 ## 高级技巧 暂无
 
 暂无
-## 参考资料
+## 阅读资料
 
 *  http://www.thegeekstuff.com/2009/01/vi-and-vim-macro-tutorial-how-to-record-and-play/
  

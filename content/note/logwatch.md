@@ -3,7 +3,7 @@ Date: 2013-08-25 12:14
 Update: 2013-12-02 13:17
 Tags: logwatch, security, debian, tutorial
 
-简要介绍Debian/Ubuntu和CentOS上logwatch的配置方法和常见错误，详细的配置教程见[参考资料](#参考资料)。
+简要介绍Debian/Ubuntu和CentOS上logwatch的配置方法和常见错误，详细的配置教程见[参考资料](#35808e79fa5f367a06c83a78b857519c)。
 ## 配置文件说明
 
 Debian/Ubuntu上logwatch配置目录的结构如下:
@@ -71,7 +71,7 @@ CentOS5.4上使用sendmail发送邮件。正常运行一段时间后，突然不
 	  Warning: Large mailbox: root (257959878)
 
 解决办法是清空旧的mailbox(/var/spool/mail/root)或将mailbox上限调大。参考[这里](http://haprakjingga.wordpress.com/2008/07/11/setting-sendmail-largeboxes-in-logwatch-report/)的方法，将`/usr/share/logwatch/default.conf/services/sendmail-largeboxes.conf`的`sendmail_largeboxes_size`变量设置的大一些即可。
-## 参考资料
+## 阅读资料
 
 *  [HOWTO Customize LogWatch](http://web.archive.org/web/20080822051428/http://www.logwatch.org/tabs/docs/HOWTO-Customize-LogWatch.html)
 *  [Managing your log files](http://tuxradar.com/content/managing-your-log-files)

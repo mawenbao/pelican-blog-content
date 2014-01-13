@@ -80,7 +80,7 @@ Require:
 	    img.save(imageLoc, "png")
 	    print("Generate %s" % imageLoc)
 
-## 参考资料
+## 阅读资料
 
 *  [PIL Tutorial](http://effbot.org/imagingbook/)
 *  [PIL文档](http://www.pythonware.com/library/pil/handbook/index.htm)

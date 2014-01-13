@@ -35,7 +35,7 @@ debian6 squeeze上在安装haskell和pandoc
 	cabal install pandoc
 	ln -s ~/.cabal/bin/pandoc /usr/bin/pandoc
 
-## 参考资料
+## 阅读资料
 
 *  [Haskell Platform for Ubuntu 11.10](https://gist.github.com/1524859)
 *  [“cannot determine current directory” while building haskell](http://askubuntu.com/questions/95081/cannot-determine-current-directory-while-building-haskell)

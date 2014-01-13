@@ -99,7 +99,7 @@ bash的很多快捷键和emacs相似，可以多尝试一下。
     ctrl + k 剪切光标至行尾的内容
     ctrl + u 剪切光标至行首的内容
 
-## 参考资料
+## 阅读资料
 
 *  [Reference Cards](http://tldp.org/LDP/abs/html/refcards.html) from ["advanced bash scripting guide"](http://tldp.org/LDP/abs/html/)
 *  [The Set Builtin](http://www.gnu.org/software/bash/manual/bash.html#The-Set-Builtin) from gnu bash documentation

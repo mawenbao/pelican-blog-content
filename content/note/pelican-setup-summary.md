@@ -222,7 +222,7 @@ Tags: pelican, setup, static_blog, 总结
             ('icon-rss', 'subscribe my blog via rss2', 'http://atime.me/feed.xml'),
             ]
 
-## 参考资料
+## 阅读资料
 
 *  [Pelican 3.2 官方文档][12]
 

@@ -134,7 +134,7 @@ php5-fpm日志中连续报child exited on signal 11'这样的错, 如下所示:
 
 经查后发现是php session目录不存在(或权限不对)所致，重新创建php session目录并为www-data用户分配权限后问题解决。
 
-## 参考资料
+## 阅读资料
 
 *  [socket bind() to port 25 for address 146.232.128.43 failed](http://www.exim.org/lurker/message/20030730.105421.ee14dd63.en.html) from exim4 mail list
 *  [grep line too long error message](http://stackoverflow.com/questions/3657236/grep-line-too-long-error-message) from StackOverflow

@@ -43,7 +43,7 @@ Tags: nginx, install, tutorial
 
 手动创建`/var/cache/nginx`即可。
 
-## 参考资料
+## 阅读资料
 
 *  [Websites with nginx on Debian 6 (Squeeze)](http://library.linode.com/web-servers/nginx/installation/debian-6-squeeze) from linode documentation
 *  [Nginx third party modules](http://wiki.nginx.org/Nginx3rdPartyModules)

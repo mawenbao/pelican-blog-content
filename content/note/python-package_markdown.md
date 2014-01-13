@@ -18,7 +18,7 @@ Tags: python, package
 
     sed -i '1i\`<meta http-equiv="content-type" content="text/html; charset=UTF-8">` a.md
 
-## 参考资料
+## 阅读资料
 
 *  [如何在Linux下使用Markdown进行文档工作](http://www.ituring.com.cn/article/10044)
 *  [Using Python-Markdown on the Command Line](http://packages.python.org/Markdown/cli.html) from python docs

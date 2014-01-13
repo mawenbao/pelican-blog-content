@@ -140,7 +140,7 @@ pptpd的默认配置只有6个IP可供分配，pptpd启动时日志里经常见�
 
 Virtualbox的NAT实现不支持GRE协议，解决方案可参考[PPTP VPN connections from VirtualBox guests](http://angryfifer.blogspot.com/2012/03/pptp-vpn-connections-from-virtualbox.html)
 
-## 参考资料
+## 阅读资料
 
 *  [Debian、Ubuntu下pptpd的架设方法](http://popu.org/post_5.html)
 *  [debian下设置pptpd](http://liuzuhuijunlian.blog.163.com/blog/static/72489767201111233410835/)

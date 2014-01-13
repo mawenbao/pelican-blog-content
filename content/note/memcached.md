@@ -4,7 +4,7 @@ Tags: memcached, cache, distributed
 
 ## php memcached
 
-## 参考资料
+## 阅读资料
 
 *  [Install Memcached And PHP5-MemCached Module On Debian 6.0 (Squeeze)](http://www.howtoforge.com/install-memcached-and-php5-memcached-module-on-debian-6.0-squeeze)  
 *  [PECL: configuration option "php_ini" is not set to php.ini location](http://arcadian83.livejournal.com/16386.html)

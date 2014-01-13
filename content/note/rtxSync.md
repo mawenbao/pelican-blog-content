@@ -35,7 +35,7 @@ Tags: rtx, rtxSync, ubuntu
         echo 1 | nc -u -w 1 10.1.5.85 3000
     如果xptray不闪烁，很有可能是监听地址配置错误，或rtx上的rtxsync配置有误。重新配置后，重启rtx和xptray再查看。
 
-## 参考资料
+## 阅读资料
 
 *  [rtx消息 虚拟机xp 通知到 主机ubuntu][1]
 

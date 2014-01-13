@@ -28,7 +28,7 @@ rst的许多Markup两端必须是空格, 比如链接、斜体等等. 然而对�
 	|imageA|_
 	.. |imageA| image:: http://url-of-the-image
 
-## 参考资料
+## 阅读资料
 
 *  [Quick restructuredText](http://docutils.sourceforge.net/docs/user/rst/quickref.html)
 *  [resteditor](http://resteditor.sourceforge.net/) eclipse plugin  
