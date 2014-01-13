@@ -52,6 +52,5 @@ POD(plain old data)或PODS(plain old data structure)是指不包含构造函数(
 2. [What are Aggregates and PODs and how/why are they special?][2]
 3. [Do the parentheses after the type name make a difference with new?][3]
 
-## 参考资料
 [^1]: [Arrays of Variable Length][4]
 

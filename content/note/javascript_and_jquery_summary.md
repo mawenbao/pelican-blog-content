@@ -1,6 +1,6 @@
 Title: Javascript和jQuery使用总结
 Date: 2013-12-30 15:16
-Update: 2014-01-03 15:20
+Update: 2014-01-13 17:09
 Tags: javascript, jquery, 总结, 未完成
 
 [1]: http://api.jquery.com/category/selectors/
@@ -13,6 +13,9 @@ Tags: javascript, jquery, 总结, 未完成
 总结近期学到的javascript和jquery知识点，备忘。
 
 ## Javascript
+### 全局变量
+在全局作用域里定义的变量是全局变量，在局部作用域里不用var定义的变量是全局变量，window对象的属性是全局变量[^1]; 在局部作用域里使用var定义的变量是局部变量。
+
 ### 修改地址栏的url且不刷新页面
 参考[这篇文章][4]，修改url的同时将其加入浏览器的历史里，代码如下。
 
@@ -22,6 +25,15 @@ pushState函数的具体说明见[这里][5]。
 
 ### 获取DOM元素的坐标
 `getBoundingClientRect`函数可获取html元素在浏览器可视区域内的坐标和长宽，函数文档见[这里][6]。
+
+### ASCII string and integer
+使用`charCodeAt()`和`String.fromCharCode()`可在两者之间进行转换。
+
+    "a".charCodeAt(0);
+    // 97
+
+    String.fromCharCode(97 + 1);
+    // "b"
 
 ## jQuery
 ### selectors
@@ -108,4 +120,6 @@ jQuery性能优化相关的文章可参考[Performance][2]，[jQuery best practi
 4. [getBoundingRect函数][6]
 5. [jQuery best practices][3]
 6. [jQuery performance tips][2]
+
+[^1]: 多数浏览器里，全局变量都是window对象的属性。
 
