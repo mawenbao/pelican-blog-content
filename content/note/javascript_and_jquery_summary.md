@@ -1,6 +1,6 @@
 Title: Javascript和jQuery使用总结
 Date: 2013-12-30 15:16
-Update: 2014-01-13 17:09
+Update: 2014-01-14 13:33
 Tags: javascript, jquery, 总结, 未完成
 
 [1]: http://api.jquery.com/category/selectors/
@@ -9,6 +9,7 @@ Tags: javascript, jquery, 总结, 未完成
 [4]: http://spoiledmilk.com/blog/html5-changing-the-browser-url-without-refreshing-page/
 [5]: http://www.w3.org/TR/2011/WD-html5-author-20110705/history.html#dom-history-pushstate
 [6]: https://developer.mozilla.org/en-US/docs/Web/API/Element.getBoundingClientRect
+[7]: http://www.jacklmoore.com/notes/mouse-position/
 
 总结近期学到的javascript和jquery知识点，备忘。
 
@@ -61,6 +62,12 @@ pushState函数的具体说明见[这里][5]。
 *  $('#elemId').width(): 获取宽度。
 *  $(window).height(): 获取浏览器可视区域的高度。
 *  $(window).width(): 获取浏览器可视区域的宽度。
+
+鼠标坐标[^2]
+
+*  clientX, clientY: 鼠标在浏览器的viewport内的相对坐标。
+*  screenX, screenY: 鼠标在用户屏幕内的相对坐标。
+*  pageX, pageY: 鼠标相对于html document的坐标。
 
 ## Performance tips
 jQuery性能优化相关的文章可参考[Performance][2]，[jQuery best practices][3]，以下是部分总结。
@@ -122,4 +129,5 @@ jQuery性能优化相关的文章可参考[Performance][2]，[jQuery best practi
 6. [jQuery performance tips][2]
 
 [^1]: 多数浏览器里，全局变量都是window对象的属性。
+[^2]: 详细介绍参考[Cross-browser mouse positioning][7]。
 
