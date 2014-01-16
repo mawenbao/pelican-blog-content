@@ -1,6 +1,6 @@
 Title: Golang学习杂记
 Date: 2013-12-25 18:01
-Update: 2014-01-06 10:51
+Update: 2014-01-16 09:34
 Tags: golang, 总结
 
 [1]: https://code.google.com/p/go-wiki/wiki/SliceTricks "golang slice tricks"
@@ -14,8 +14,28 @@ Tags: golang, 总结
 [9]: http://bbs.mygolang.com/thread-406-1-1.html "你真的懂defer了吗"
 [10]: http://blog.golang.org/gobs-of-data
 [11]: http://golang.org/pkg/encoding/gob/
+[12]: http://golang.org/pkg/container/list/#pkg-overview
+[13]: http://golang.org/pkg/time/#LoadLocation
+[14]: http://golang.org/pkg/time/#Time.In
+[15]: http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+[16]: http://golang.org/cmd/6g/
+[17]: http://golang.org/cmd/8g/
+[18]: http://golang.org/doc/install/gccgo
+[19]: http://blog.golang.org/profiling-go-programs
+[20]: http://golang.org/ref/spec#RangeClause
 
 记录Golang的一些关键语法和易错易混淆的知识点。以下内容均基于Go1.2，其中可能有错漏之处，欢迎反馈。
+
+## golang基础
+### 编译器版本
+golang的编译器有如下几个版本：
+
+*  [6g][16]: x86-64架构(64位操作系统)上使用的编译器
+*  [8g][17]: x86架构(32位操作系统)上使用的编译器
+*  [gccgo][18]: GCC的前端，有些时候用gccgo编译出的可执行程序比6g和8g编译出的要快几倍。
+
+### 辅助工具
+*  `go tool pprof`: profiling工具，参考文章[Profiling Go Programs][19]。
 
 ## 语法总结
 ### 0值
@@ -33,7 +53,30 @@ Zero value
 ### 引用类型
 pointer, slice, channel和map均可看作引用类型，发生值拷贝时，被拷贝的仅仅是指向实际数据的指针，参考[这里][2]。
 
-### slice和append
+### range表达式
+range表达式仅在循环开始前执行一次[^1]，每次循环的迭代都会对左边的迭代变量附一次值[^1]，因此在循环中对迭代变量的修改不会影响到其他的迭代。
+
+    a := []int{ 1, 2, 3 }
+    for i, v := range a {
+        println(i)
+        i -= 1
+    }
+
+输出`1 2 3`(省略了换行符)。
+
+### 数组和slice
+#### 数组类型
+1. 数组的长度也是其类型的一部分，`[3]int`和`[4]int`类型不同。
+2. 和slice不同，发生值拷贝时，数组的所有数据都会被拷贝。
+
+#### slice和数组的定义
+
+    sl := []int{1, 2, 3}
+    ar := [3]int{1, 2, 3}
+
+上面的代码中，sl是长度和容量均为3的slice，ar是长度为3的数组。
+
+#### slice和append
 使用append时，如果slice对应的array的长度不够，go会创建一个新的array以容纳新添加的数据，所有旧的array数据都会被拷贝到新的array里。需要频繁使用append时，需要考虑到其效率问题。
 
 对于数据量已知且每次append一条数据的情况，推荐如下使用方式。
@@ -48,19 +91,28 @@ pointer, slice, channel和map均可看作引用类型，发生值拷贝时，被
         targetSlice = append(targetSlice[:i], sourceArray[i])
     }
 
-### slice和数组
+#### slice和数组访问越界
+以下是常见的使用场景和常见的错误：
 
-    sl := []int{1, 2, 3}
-    ar := [3]int{1, 2, 3}
+    ar := [3]int{1, 2, 3} // len(ar) == 3
+    sa := ar[:]           // len(sa) == 3
+    sb := ar[:2]          // len(sb) == 2
 
-上面的代码中，sl是长度和容量均为3的slice，ar是长度为3的数组。
+    ar[3:] // []
+    sa[3:] // []
+    sb[2:] // panic
+
+    ar[4:] // compiler error
+    sa[4:] // panic 访问越界
+    sb[3:] // panic 访问越界
+
+超过slice长度的元素，即使slice指向的数组里存在该元素，使用slice访问依然会越界。
+
+    ar[3]  // == 3
+    sb[3]  // panic error
 
 ### string类型
 string使用UTF-8编码。
-
-### 数组类型
-1. 数组的长度也是其类型的一部分，`[3]int`和`[4]int`类型不同。
-2. 和slice不同，发生值拷贝时，数组的所有数据都会被拷贝。
 
 ### map
     value, found := MapABC[key]
@@ -162,9 +214,66 @@ gob.Encode(a interface{})，如果a保存的是指针类型，实际编码的是
 
 > Pointers are not transmitted, but the things they point to are transmitted; that is, the values are flattened. Recursive types work fine, but recursive values (data with cycles) are problematic. **This may change**.
 
+### time
+涉及到时区的常用函数：
+
+*  LoadLocation: 根据时区的名称获取对应的Location，时区名称可参考[List of tz database time zones][15]，文档见[此][13]。
+*  In(Location): 将time转换为Location所在的时区，返回转换后的time，文档见[此][14]。
+
+### list
+golang的list实现了一个双向链表[^2]，不适合随机存取(按索引取值)，不是goroutine安全的。相比slice，list适合用在需要频繁在首尾插入元素或删除某个元素的情况。
+
 ## 疑难问题
+### 在循环中删除slice的元素
+`不要`这么做，考虑用[list](#10ae9fc7d453b0dd525d0edf2ede7961)替换slice。
+
+    a := []int { 1, 2, 4, 5 }
+    println(len(a)) // 4
+    println(a[4:])  // []
+    println(a[5:])  // panic
+
+以上是一些关于slice的基础知识，下面举个循环中删除slice元素的例子。假设我们有如下一个需求：
+
+> 给定一个slice []int{1, 2, 4, 5}，我们希望通过一个for循环删除其中的偶数元素，期望的输出是1, 5。
+
+以下的代码会直接panic，原因是在第4次迭代的时候，发生了slice访问越界(此时slice长度为3, i为3)，完整代码见[这里](http://play.golang.org/p/85hbFJgWGz)。
+
+    a := []int{1, 2, 4, 5}
+    for i, _ := range a {
+        if a[i]%2 == 0 {
+            // delete a[i]
+            a = append(a[:i], a[i+1:]...)
+        }
+    }
+    fmt.Println(a)
+
+以下的代码不会panic，但结果不是我们期望的。完整代码见[这里](http://play.golang.org/p/o8-OrdSVfH):
+
+    s := []int{1, 2, 4, 5}
+    for i := 0; i < len(s); i++ {
+        if s[i]%2 == 0 {
+            // delete s[i]
+            s = append(s[:i], s[i+1:]...)
+        }
+    }
+    fmt.Println(s)
+
+输出`[1 4 5]`。
+
+原因在于删除第二个元素`2`之后，目标slice变为了`[]int{1, 4, 5}`，而此时i为1，下一次迭代i自增后直接略过了`4`。解决方案是在删除过后，将i减1。如下，完整代码见[这里](http://play.golang.org/p/3sxuJfcCVa):
+
+    s := []int{1, 2, 4, 5}
+    for i := 0; i < len(s); i++ {
+        if s[i]%2 == 0 {
+            // delete s[i]
+            s = append(s[:i], s[i+1:]...)
+            i -= 1
+        }
+    }
+    fmt.Println(s) 
+
 ### defer
-以下的代码参考了文章[<<你真的懂defer了吗>>][9]中的代码。
+以下参考了文章[《你真的懂defer了吗》][9]中的代码。
 
 例子1，见[这里](http://play.golang.org/p/wY8p-jY0ex)，输出1。
 
@@ -354,4 +463,8 @@ defer在return之前执行，但return并非原子操作。具体的说return分
 4. [Escape Analysis in Go][8]
 5. [你真的懂defer了吗][9]
 6. [Gobs of data][10]
+7. [Profiling Go Programs][19]
+
+[^1]: The Go Programming Language Specification, [range clause][20], version of Nov 13, 2013
+[^2]: Golang Package Documentation, [list][12] overview.
 

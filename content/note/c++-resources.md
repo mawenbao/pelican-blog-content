@@ -1,5 +1,6 @@
 Title: C/C++资源收集
 Date: 2013-08-25 12:14
+Update: 2014-01-16 10:45
 Tags: c++, resource
 
 收集有用的C/C++资源。
@@ -22,3 +23,6 @@ Tags: c++, resource
 *  [Why is it wrong to use std::auto_ptr`<>` with standard containers?](http://stackoverflow.com/questions/111478/why-is-it-wrong-to-use-stdauto-ptr-with-standard-containers)
 *  [std::auto_ptr to std::unique_ptr](http://stackoverflow.com/questions/3451099/stdauto-ptr-to-stdunique-ptr)
 
+### 优化
+
+*  [GCC编译优化指南](http://lamp.linux.gov.cn/Linux/optimize_guide.html)
