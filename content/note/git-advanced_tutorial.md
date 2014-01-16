@@ -1,6 +1,6 @@
 Title: Git进阶教程
 Date: 2013-08-25 12:14
-Update: 2014-01-12 12:49
+Update: 2014-01-16 17:00
 Tags: git, tutorial
 
 Git的常用命令和场景可参考[Git快速使用指南](/note/git-quick_reference.html)，在这里介绍进一步的使用和部分生僻的命令。
@@ -45,7 +45,14 @@ Git的常用命令和场景可参考[Git快速使用指南](/note/git-quick_refe
     git checkout master
 
 ## Git生僻命令
-### git-add
+### git rev-list
+按时间逆序列出提交对象，常用于查找涉及到某些文件的提交的hash。例如，查找所有关系到文件readme的提交：
+
+    git rev-list HEAD -- readme
+
+更多功能参考`man git-rev-list`。
+
+### git add
 git add默认情况下只更新新添加文件和修改过的文件的索引，对于不是用git rm删除的文件，会被忽略掉。可以使用`git add --all`选项来更新所有改动的索引。
 
 > 'git add --ignore-removal <pathspec>', which is the current default, ignores paths you removed from your working tree.
