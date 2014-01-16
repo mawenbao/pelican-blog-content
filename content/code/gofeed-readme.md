@@ -1,6 +1,6 @@
 Title: Gofeed 说明文档
 Date: 2013-11-28 11:04
-Update: 2014-01-04 23:48
+Update: 2014-01-16 16:49
 Tags: doc, golang, feed, rss
 
 Gofeed was inspired by feed43.com. It is disigned to extract full-text feeds from websites which only provide partial feeds or provide no feeds at all.
@@ -49,16 +49,20 @@ See `example_config.json` and `example_config2.json`.
     *  Feed.Title: (string) title of the rss2 feed channel. If not defined, feed title will be the filename of Feed.Path.
     *  Feed.Description: (string) description of the rss2 feed channel. In not defined, feed description will be empty.
     *  Feed.URL: (array of strings) array of urls, used to define urls of the target's index pages. Note that this url can be html or xml or anything that you can extract feed entry titles and links with regex patterns.
-    *  Feed.IndexPattern: (array of strings) array of index patterns, used to extract entry link and entry title from the index page.
-    *  Feed.ContentPattern: (array of strings) array of content patterns, used to extract entry description from the entry's content page(identified by entry's link).
+    *  Feed.IndexFilterPattern: (array of strings) array of index filter patterns, used to filter valid index html from the entire html.
+    *  Feed.IndexPattern: (array of strings) array of index patterns, used to extract entry link and entry title from the filtered content by Feed.IndexFilterPattern.
+    *  Feed.ContentFilterPattern: (array of strings) array of content patterns, used to extract valid content html from the entire html identified by {link}.
+    *  Feed.ContentPattern: (array of strings) array of content patterns, used to extract entry description from the entry's filtered html content by Feed.ContentFilterPattern.
+    *  Feed.PubDateFormat: (string) string format of publish date, see these [predefined format constants](http://golang.org/pkg/time/#pkg-constants) for example.
 
 And you should note that
 
-1. There should be as many Feed.URL as Feed.IndexPattern. If array length of the two does not match, there should be only one Feed.IndexPattern, which means all the Feed.URL will share the same Feed.IndexPattern. Otherwise, an configuration parse error will return. 
+1. There should be as many Feed.URL as Feed.IndexPattern. If array length of the two does not match, there should be only one Feed.IndexPattern or only one Feed.URL, which means all the Feed.URL will share the same Feed.IndexPattern or all the Feed.IndexPattern share the same Feed.URL. Otherwise, an configuration parse error will return. 
 
-    And the same goes for Feed.ContentPattern.
+2. For Feed.ContentPattern, there should be as many Feed.URL as Feed.ContentPattern. If array length of the two does not match, there should be only one Feed.ContentPattern, which means all the Feed.URL will share the same Feed.ContentPattern. And the same goes for Feed.PubDateFormat.
 
-## Patterns
+3. Both Feed.IndexPattern and Feed.ContentPattern can contain {pubdate} pattern, and if {pubdate} exists in both, gofeed will use the Feed.ContentPattern's.
+
 ### Predefined patterns
 You can use the following predefined patterns in `Feed.IndexPattern` and `Feed.ContentPattern` of the json configuration. Note that all these patterns are **lazy** and perform **leftmost** match, which means they will match as few characters as possible.
 
@@ -66,6 +70,8 @@ You can use the following predefined patterns in `Feed.IndexPattern` and `Feed.C
 *  {title}: title of feed entry, matched against the Feed.URL page
 *  {link}: hyper link of feed entry, matched against the Feed.URL page
 *  {description}: full-text description of feed entry, matched against the corresponding {link} page
+*  {pubdate}: publish date of feed entry
+*  {filter}: filtered content, used in Feed.IndexFilterPattern or Feed.ContentFilterPattern
 
 ### Custom regular expressions
 You can also write custom regex in `Feed.IndexPattern` and `Feed.ContentPattern`. Make sure there are no predefined patterns in your custom regular expressions. The regex syntax documentation can be found [here](https://code.google.com/p/re2/wiki/Syntax).
@@ -92,7 +98,6 @@ The custom regular expressions have not been tested properly. So I suggest just 
 *  -v: Print more infomation.
 *  -d: Print even more information than `-v` option, should be useful when debugging your index or content patterns.
 *  -l: Append output in a log file
-*  -k: Do not strip feed entries whose description are empty
 *  -z: Gofeed compresses html cache data with gzip by default. This option can set compression level of gzip, however, you can pass 0 to disable compression.
 *  -version: Print gofeed version
 
