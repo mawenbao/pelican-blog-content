@@ -1,6 +1,6 @@
 Title: 糗事百科精选2
 Date: 2013-11-29 12:30
-Update: 2014-01-14 08:50
+Update: 2014-01-17 17:30
 Tags: 糗事百科, 笑话, 未完成
 
 [1]: /collection/qiushibaike.html
@@ -9,6 +9,7 @@ Tags: 糗事百科, 笑话, 未完成
 [4]: /static/images/qiushibaike/yizhiyegou.jpg "一只野狗"
 [5]: /static/images/qiushibaike/dogs.jpg "狗的一家"
 [6]: /static/images/qiushibaike/nvshenzuile.jpg "女神被灌醉后"
+[7]: /static/images/qiushibaike/xiaoxueyingyongti.jpg "小学应用题"
 
 收集糗事百科上的趣事。
 
@@ -61,6 +62,12 @@ Tags: 糗事百科, 笑话, 未完成
 ## 狗的一家
 ![狗的一家][5]
 
+## Good morning to you
+前几天，公司领导来汉口开大区会议，昨天开完后去KTV唱K，到一半的时候，领导端着个蛋糕进来，对我说过几天就是你的生日，都是在外面上班不容易，趁这个机会提前给你过个生日，当时我那个感动啊！领导又说，我起个头大家唱个生日歌，good morning to you……当时我那个没憋住啊，现在都停不下来。
+
 ## 女神喝醉之后
 ![女神醉了之后][6]
+
+## 一道小学应用题
+![小学应用题][7]
 
