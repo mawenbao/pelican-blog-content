@@ -1,6 +1,6 @@
 Title: Golang学习杂记
 Date: 2013-12-25 18:01
-Update: 2014-01-16 09:34
+Update: 2014-01-17 09:09
 Tags: golang, 总结
 
 [1]: https://code.google.com/p/go-wiki/wiki/SliceTricks "golang slice tricks"
@@ -24,9 +24,21 @@ Tags: golang, 总结
 [19]: http://blog.golang.org/profiling-go-programs
 [20]: http://golang.org/ref/spec#RangeClause
 
-记录Golang的一些关键语法和易错易混淆的知识点。以下内容均基于Go1.2，其中可能有错漏之处，欢迎反馈。
+记录Golang的一些关键语法和易错易混淆的知识点。以下内容均基于Linux x86-64平台下的Go1.2，其中可能有错漏之处，欢迎反馈。
 
-## golang基础
+## 开发环境和工具
+升级Go之前，必须先移除旧的版本。
+
+### 环境变量
+Go开发涉及的环境变量有两个:
+
+*  `GOROOT`: go的安装目录，类似于Java的`JAVA_HOME`变量。
+*  `GOPATH`: go的工作目录，所有通过`go get`下载的第三方库都会位于该目录下。
+
+然后设置`PATH`变量:
+
+    export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
+
 ### 编译器版本
 golang的编译器有如下几个版本：
 
@@ -36,6 +48,9 @@ golang的编译器有如下几个版本：
 
 ### 辅助工具
 *  `go tool pprof`: profiling工具，参考文章[Profiling Go Programs][19]。
+*  `gofmt`: 格式化go源码。
+
+        find . -name "*.go" | xargs gofmt -w
 
 ## 语法总结
 ### 0值
@@ -48,13 +63,13 @@ Zero value
 *  pointer, function, interface, slice, channel, map: `nil`
 
 ### 值传递
-**Everything** in Go is passed by value，参考[这里][2]。
+**Everything** in Go is passed by value[^1]。
 
 ### 引用类型
-pointer, slice, channel和map均可看作引用类型，发生值拷贝时，被拷贝的仅仅是指向实际数据的指针，参考[这里][2]。
+pointer, slice, channel和map均可看作引用类型，发生值拷贝时，被拷贝的仅仅是指向实际数据的指针[^1]。
 
 ### range表达式
-range表达式仅在循环开始前执行一次[^1]，每次循环的迭代都会对左边的迭代变量附一次值[^1]，因此在循环中对迭代变量的修改不会影响到其他的迭代。
+range表达式仅在循环开始前执行一次[^2]，每次循环的迭代都会对左边的迭代变量赋一次值[^2]，因此在循环中对迭代变量的修改不会影响到其他的迭代。
 
     a := []int{ 1, 2, 3 }
     for i, v := range a {
@@ -195,7 +210,7 @@ Go1删除了vector容器，所有的vector操作均可通过slice配合一定的
 
 原因在于，对于使用`&`符号取址的变量，go编译器将其分配到heap上。进一步阅读可参考[faq: stack or heap](http://golang.org/doc/faq#stack_or_heap)和[Escape Analysis in Go][8]。
 
-## Golang标准库
+## 标准库
 ### sql
 Open()返回的`type DB`是一个数据库的句柄，而不是一个数据库连接，另外Open函数也不一定立即建立和数据库的连接（见Open函数的说明）。
 
@@ -221,11 +236,13 @@ gob.Encode(a interface{})，如果a保存的是指针类型，实际编码的是
 *  In(Location): 将time转换为Location所在的时区，返回转换后的time，文档见[此][14]。
 
 ### list
-golang的list实现了一个双向链表[^2]，不适合随机存取(按索引取值)，不是goroutine安全的。相比slice，list适合用在需要频繁在首尾插入元素或删除某个元素的情况。
+golang的list实现了一个双向链表[^3]，不适合随机存取(按索引取值)，不是goroutine安全的。相比slice，list适合用在需要频繁在首尾插入元素或删除某个元素的情况。
 
 ## 疑难问题
 ### 在循环中删除slice的元素
-`不要`这么做，考虑用[list](#10ae9fc7d453b0dd525d0edf2ede7961)替换slice。
+<span class="alert-danger">
+不要这么做，考虑用[list](#10ae9fc7d453b0dd525d0edf2ede7961)替换slice。
+</span>
 
     a := []int { 1, 2, 4, 5 }
     println(len(a)) // 4
@@ -449,7 +466,7 @@ defer在return之前执行，但return并非原子操作。具体的说return分
         }()
     }
     
-## Golang书籍推荐
+## 书籍推荐
 ### Go学习笔记 By雨痕
 这其实是人家的学习笔记，内容详细且全面，非常适合通读。
 
@@ -465,6 +482,7 @@ defer在return之前执行，但return并非原子操作。具体的说return分
 6. [Gobs of data][10]
 7. [Profiling Go Programs][19]
 
-[^1]: The Go Programming Language Specification, [range clause][20], version of Nov 13, 2013
-[^2]: Golang Package Documentation, [list][12] overview.
+[^1]: Golang Frequently Asked Questions (FAQ), [When are function parameters passed by value][2], 引用于2014.01.17.
+[^2]: The Go Programming Language Specification, [range clause][20], version of Nov 13, 2013.
+[^3]: Golang Package Documentation, [list][12] overview.
 
