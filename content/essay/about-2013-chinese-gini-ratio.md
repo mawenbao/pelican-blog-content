@@ -1,6 +1,6 @@
-Title: 关于中国2013年基尼系数的笑谈
+Title: 中国2013年基尼系数引发的笑谈
 Date: 2014-01-20 18:01
-Tags: 基尼系数, 精神胜利
+Tags: 社会, 基尼系数, 精神胜利
 
 [1]: http://zh.wikipedia.org/wiki/%E5%9F%BA%E5%B0%BC%E7%B3%BB%E6%95%B0
 
