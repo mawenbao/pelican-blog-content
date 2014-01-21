@@ -1,7 +1,7 @@
 Title: 糗事百科精选2
 Date: 2013-11-29 12:30
 Update: 2014-01-17 17:30
-Tags: 糗事百科, 笑话, 未完成
+Tags: 糗事百科, 笑话, 转载, 未完成
 
 [1]: /collection/qiushibaike.html
 [2]: /static/images/qiushibaike/xueba.jpg "学霸和学渣的区别"

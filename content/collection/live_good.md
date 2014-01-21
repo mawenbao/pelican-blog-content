@@ -1,6 +1,6 @@
 Title: 好好活着
 Date: 2013-11-01 13:21
-Tags: 转载
+Tags: 生活, 转载
 
 [1]: http://blog.renren.com/blog/286070096/915300732 "http://blog.renren.com/blog/286070096/915300732"
 

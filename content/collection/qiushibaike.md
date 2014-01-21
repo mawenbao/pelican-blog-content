@@ -1,7 +1,7 @@
 Title: 糗事百科精选
 Date: 2013-09-06
 Update: 2013-11-28 12:55
-Tags: 糗事百科, 笑话
+Tags: 糗事百科, 笑话, 转载
 
 [1]: /static/images/qiushibaike/cute_dog.jpg "cute dog"
 [2]: /static/images/qiushibaike/qiushibaike001.jpg "超糗事百科 有画面感的小学生日记"
