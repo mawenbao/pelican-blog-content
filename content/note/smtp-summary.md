@@ -1,5 +1,6 @@
 Title: SMTP协议相关知识总结
 Date: 2013-12-18 10:58
+Update: 2014-01-21 14:06
 Tags: 总结, email, smtp
 
 [1]: http://tools.ietf.org/html/rfc5321 "RFC5321"
@@ -29,7 +30,7 @@ HELO向邮件服务器初始化一次会话，MAIL设置发信人地址，RCP设
 详细的命令介绍可参考[SMTP Commands][3]。
 
 ### HELO vs EHLO
-HELO和EHLO命令都可用于向邮件服务器初始化一个会话，不同的是EHLO对HELO进行了扩展以支持[Extended SMTP][2]。
+HELO和EHLO命令都可用于向邮件服务器初始化一个会话，不同的是EHLO对HELO进行了扩展以支持[Wikipedia:Extended SMTP][5]。
 
 ## 易混淆点
 ### 行分隔符
@@ -44,7 +45,7 @@ HELO和EHLO命令都可用于向邮件服务器初始化一个会话，不同的
 
 ## 其他相关知识
 ### MIME
-MIME(Multipurpose Internet Mail Extensions)对电子邮件格式进行扩展，以支持非ASCII字符集，非文本文件附件和multipart的邮件正文等。详细信息可参考[wikipedia:MIME][4]。
+MIME(Multipurpose Internet Mail Extensions)对电子邮件格式进行扩展，以支持非ASCII字符集，非文本文件附件和multipart的邮件正文等。详细信息可参考[Wikipedia:MIME][4]。
 
 常用MIME头有MIME-Version, Content-Type和Content-Transfer-Encoding，MIME-Version标识MIME版本，Content-Type说明邮件正文的编码和格式。比如
 
@@ -60,8 +61,8 @@ MIME(Multipurpose Internet Mail Extensions)对电子邮件格式进行扩展，�
 
 ## 阅读资料
 1. [RFC5321][1]
-2. [wikipedia:Simple Mail Transfer Protocol][2]
-3. [wikipedia:Extended SMTP][5]
-4. [wikipedia:MIME][4]
+2. [Wikipedia:Simple Mail Transfer Protocol][2]
+3. [Wikipedia:Extended SMTP][5]
+4. [Wikipedia:MIME][4]
 5. [SMTP Commands][3]
 
