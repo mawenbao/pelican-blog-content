@@ -1,6 +1,6 @@
 Title: Git资源
 Date: 2013-08-25 12:14
-Update: 2013-12-19 11:16
+Update: 2014-01-21 14:34
 Tags: git, resource
 
 收集好的Git资源。
@@ -14,6 +14,7 @@ Tags: git, resource
 *  [The "Git Magic" Book](http://www-cs-students.stanford.edu/~blynn/gitmagic/intl/zh_cn/index.html)
 *  [Git Tip of the Week](http://alblue.bandlem.com/Tag/gtotw/)
 *  [Git Tips and Tricks](http://root.cern.ch/drupal/content/git-tips-and-tricks)
+*  [What’s The Deal With The Git Index](http://www.gitguys.com/topics/whats-the-deal-with-the-git-index/)
 
 ### Github
 

@@ -30,7 +30,7 @@ HELO向邮件服务器初始化一次会话，MAIL设置发信人地址，RCP设
 详细的命令介绍可参考[SMTP Commands][3]。
 
 ### HELO vs EHLO
-HELO和EHLO命令都可用于向邮件服务器初始化一个会话，不同的是EHLO对HELO进行了扩展以支持[Wikipedia:Extended SMTP][5]。
+HELO和EHLO命令都可用于向邮件服务器初始化一个会话，不同的是EHLO对HELO进行了扩展以支持[Extended SMTP][5]。
 
 ## 易混淆点
 ### 行分隔符

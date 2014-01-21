@@ -1,9 +1,16 @@
 Title: Git快速使用指南
 Date: 2013-08-25 12:14
-Update: 2013-12-20 16:35
+Update: 2014-01-21 16:46
 Tags: git, tutorial
 
 阅读“[Pro Git](http://git-scm.com/book)“后写的笔记，当做速查手册(quick git reference)来用，以供日常查阅。常见的git错误和解决方案可参考[git问题整理](/tools/git/errors)。
+
+使用git的时候，不管出现什么问题，只要修改被commit了，你所要做的就是:
+
+<img alt="Keep calm and use git reflog" width="200px" src="/static/images/note/keep-calm-and-use-git-reflog.png">
+
+(图片取自[
+KEEP CALM AND USE GIT REFLOG](http://www.keepcalm-o-matic.co.uk/p/keep-calm-and-use-git-reflog/))
 
 ## 特殊符号
 
@@ -234,6 +241,9 @@ bundle命令可以对git仓库进行打包，如下所示。
 
     git log -- LICENSE README
 
+### git-reflog
+记录了HEAD指针的完整改动历史，通常用于于查找“丢失”的commit和跨分支查看提交历史。当因为某些操作导致某些commit“丢失”时，可以使用`git reflog`配合`git reset --hard`来恢复到之前的提交状态。
+
 ### git-remote
 
 使用man查看详细内容。
@@ -265,6 +275,9 @@ bundle命令可以对git仓库进行打包，如下所示。
 ### git-rebase
 
 修改commit历史
+
+### git-cherry-pick
+通常用于将其他分支的提交rebase到当前分支上。
 
 ### git-bitsect
 
@@ -298,25 +311,6 @@ bundle命令可以对git仓库进行打包，如下所示。
 
     git ls-files -d -m -o -z | xargs -0 git update-index --add --remove
 
-### git-reset
-
-from http://stackoverflow.com/questions/3528245/whats-the-difference-between-git-reset-mixed-soft-and-hard
-
->When you modify a file in your repository, the change is initially unstaged. In order to commit it, you must stage it—that is, add it to the index—using git add. When you make a commit, the changes that are committed are those that have been added to the index.
-
->git reset changes, at minimum, where your current branch is pointing. The difference between --mixed and --soft is whether or not your index is also modified. So, if we're on branch master with this series of commits:
-
->- A - B - C (master)
->HEADpoints to C and the index matches C.
-
->When we run git reset --soft B, master (and thus HEAD) now points to B, but the index still has the changes from C; git status will show them as staged. So if we run git commit at this point, we'll get a new commit with the same changes as C.
-
->Okay, so starting from here again:
-
->- A - B - C (master)
->Now let's do git reset --mixed B. Once again, master and HEAD point to B, but this time the index is also modified to match B. If we run git commit at this point, nothing will happen since the index matches HEAD. We still have the changes in the working directory, but since they're not in the index, git status shows them as unstaged. To commit them, you would git add and then commit as usual.
-
->And finally, --hard is the same as --mixed (it changes your HEAD and index), except that --hard also modifies your working directory. If we're at C and run git reset --hard B, then the changes added in C, as well as any uncommitted changes you have, will be removed, and the files in your working copy will match commit B. Since you can permanently lose changes this way, you should always run git status before doing a hard reset to make sure your working directory is clean or that you're okay with losing your uncommitted changes.
 ## Git技巧
 
 一些git的小技巧。
