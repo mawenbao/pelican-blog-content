@@ -1,6 +1,6 @@
-Title: 2013日漫新番整理
+Title: 2013动漫新番整理
 Date: 2014-01-22 22:35
-Tags: 日漫, 新番
+Tags: 动漫, 新番
 
 [1]: /static/images/cartoon/JinJiDeJuRen.jpg
 [2]: /static/images/cartoon/DaoJianShenYu.jpg
@@ -21,7 +21,7 @@ Tags: 日漫, 新番
 [17]: /static/images/cartoon/NongLin.jpg
 [18]: /static/images/cartoon/WangXiangXueShengHui.jpg
 
-收集最近看过的日漫新番，因为是第一次整理，部分很久之前的也汇总于此。
+收集最近看过的动漫新番，因为是第一次整理，部分很久之前的也汇总于此。
 
 ## 进击的巨人
 ![进击的巨人][1]
