@@ -1,6 +1,6 @@
 Title: 从源码安装nginx
 Date: 2013-08-25 12:14
-Tags: nginx, install, tutorial
+Tags: nginx, install, 教程
 
 ## 准备工作
 

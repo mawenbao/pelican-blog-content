@@ -1,7 +1,7 @@
 Title: Makefile
 Date: 2013-08-25 12:14
 Update: 2013-11-01 10:55
-Tags: makefile, tutorial
+Tags: makefile, 教程
 
 使用GNU Make 3.8的语法。
 

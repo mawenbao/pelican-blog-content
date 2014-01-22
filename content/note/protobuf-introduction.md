@@ -1,7 +1,7 @@
 Title: Google Protocol Buffers介绍和总结
 Date: 2013-10-24 16:13
 Update: 2014-01-20 16:25
-Tags: google, protobuf, library, tutorial
+Tags: google, protobuf, library, 教程
 
 [1]: https://developers.google.com/protocol-buffers/docs/techniques#large-data "https://developers.google.com/protocol-buffers/docs/techniques#large-data"
 [2]: https://developers.google.com/protocol-buffers/ "https://developers.google.com/protocol-buffers/"

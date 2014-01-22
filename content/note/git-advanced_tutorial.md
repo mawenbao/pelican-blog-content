@@ -1,7 +1,7 @@
 Title: Git进阶教程
 Date: 2013-08-25 12:14
 Update: 2014-01-21 16:34
-Tags: git, tutorial
+Tags: git, 教程
 
 Git的常用命令和场景可参考[Git快速使用指南](/note/git-quick_reference.html)，在这里介绍进一步的使用和部分生僻的命令。
 

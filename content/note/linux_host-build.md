@@ -1,7 +1,7 @@
 Title: Linux网站搭建手册
 Date: 2013-08-08 12:14
 Update: 2013-11-04 10:38
-Tags: linux_server, tutorial, install
+Tags: linux_server, 教程, install
 
 本手册的内容主要包括需要安装的软件及其配置，和常见问题及其解决方案。
 

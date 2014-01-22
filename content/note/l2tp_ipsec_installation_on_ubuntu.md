@@ -1,7 +1,7 @@
 Title: 在Ubuntu12.04上安装l2tp/ipsec VPN服务器
 Date: 2013-11-06 13:46
 Update: 2013-11-11 17:06
-Tags: vpn, l2tp, ipsec, ubuntu, note, tutorial
+Tags: vpn, l2tp, ipsec, ubuntu, note, 教程
 
 [1]: http://wangyan.org/blog/debian-l2tp-ipsec-vpn.html "http://wangyan.org/blog/debian-l2tp-ipsec-vpn.html"
 

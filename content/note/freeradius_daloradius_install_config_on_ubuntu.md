@@ -1,7 +1,7 @@
 Title: Ubuntu上安装和配置FreeRadius和DaloRadius
 Date: 2013-11-07 17:50
 Update: 2013-11-12 15:50
-Tags: radius, vpn, ubuntu, tutorial, note
+Tags: radius, vpn, ubuntu, 教程, note
 
 [1]: /note/pptpd.html "blog.atime.me/note/pptpd.html" 
 [2]: /note/l2tp_ipsec_installation_on_ubuntu.html "blog.atime.me/note/l2tp_ipsec_installation_on_ubuntu.html"

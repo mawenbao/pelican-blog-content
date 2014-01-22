@@ -1,6 +1,6 @@
 Title: GCC/G++快速使用指南
 Date: 2013-08-25 12:14
-Tags: gcc, tutorial, 未完成
+Tags: gcc, 教程, 未完成
 
 使用一个例子介绍GCC/G++的编译选项。
 
