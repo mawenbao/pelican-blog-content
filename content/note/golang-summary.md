@@ -1,6 +1,6 @@
 Title: Golang学习杂记
 Date: 2013-12-25 18:01
-Update: 2014-01-17 09:09
+Update: 2014-01-24 08:56
 Tags: golang, 总结
 
 [1]: https://code.google.com/p/go-wiki/wiki/SliceTricks "golang slice tricks"
@@ -23,6 +23,7 @@ Tags: golang, 总结
 [18]: http://golang.org/doc/install/gccgo
 [19]: http://blog.golang.org/profiling-go-programs
 [20]: http://golang.org/ref/spec#RangeClause
+[21]: http://golang.org/doc/go1#deleted
 
 记录Golang的一些关键语法和易错易混淆的知识点。以下内容均基于Linux x86-64平台下的Go1.2，其中可能有错漏之处，欢迎反馈。
 
@@ -198,7 +199,7 @@ string使用UTF-8编码。
     }
     
 ### vector容器
-Go1删除了vector容器，所有的vector操作均可通过slice配合一定的技巧实现，具体请参考[Slice技巧][1]。
+Go1删除了vector容器[^3]，所有的vector操作均可通过slice配合一定的技巧实现，具体请参考[Slice技巧][1]。
 
 ### 返回临时变量的指针
 在Golang里，返回临时变量的指针是完全合法的，比如下面的函数。
@@ -236,7 +237,7 @@ gob.Encode(a interface{})，如果a保存的是指针类型，实际编码的是
 *  In(Location): 将time转换为Location所在的时区，返回转换后的time，文档见[此][14]。
 
 ### list
-golang的list实现了一个双向链表[^3]，不适合随机存取(按索引取值)，不是goroutine安全的。相比slice，list适合用在需要频繁在首尾插入元素或删除某个元素的情况。
+golang的list实现了一个双向链表[^4]，不适合随机存取(按索引取值)，不是goroutine安全的。相比slice，list适合用在需要频繁在首尾插入元素或删除某个元素的情况。
 
 ## 疑难问题
 ### 在循环中删除slice的元素
@@ -484,5 +485,6 @@ defer在return之前执行，但return并非原子操作。具体的说return分
 
 [^1]: Golang Frequently Asked Questions (FAQ), [When are function parameters passed by value][2], 引用于2014.01.17.
 [^2]: The Go Programming Language Specification, [range clause][20], version of Nov 13, 2013.
-[^3]: Golang Package Documentation, [list][12] overview.
+[^3]: Go 1 Release Notes, [deleted packages][21].
+[^4]: Golang Package Documentation, [list package overview][12].
 

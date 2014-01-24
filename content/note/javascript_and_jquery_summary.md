@@ -1,6 +1,6 @@
 Title: Javascript和jQuery使用总结
 Date: 2013-12-30 15:16
-Update: 2014-01-14 13:33
+Update: 2014-01-24 11:03
 Tags: javascript, jquery, 总结, 未完成
 
 [1]: http://api.jquery.com/category/selectors/
@@ -68,6 +68,19 @@ pushState函数的具体说明见[这里][5]。
 *  clientX, clientY: 鼠标在浏览器的viewport内的相对坐标。
 *  screenX, screenY: 鼠标在用户屏幕内的相对坐标。
 *  pageX, pageY: 鼠标相对于html document的坐标。
+
+### 滚动条的滚动长度计算
+滚动条内的元素的实际长度，等于该元素的实际显示长度和滚动条的滚动长度之和。
+
+以整个html页面的垂直滚动条为例，滚动条的滚动长度（将滚动条拖至最低端的时候，$(window).scrollTop()的值），使用`$(document).height() - $(window).height()`计算即可，其中$(document).height()是页面的实际高度，而$(window).height()是页面的实际显示高度。
+
+另外，使用jQuery的animate函数滚动某个带滚动条的元素时，注意animate每次都是从滚动条的最顶端开始滚动，因此如果要每次滚动一点点（比如20px），则需要加上滚动条已滚过的距离，如下。
+
+    var target = $('#some-element');
+    target.animate(
+        { scrollTop: target.scrollTop() + 20 },
+        400
+    );
 
 ## Performance tips
 jQuery性能优化相关的文章可参考[Performance][2]，[jQuery best practices][3]，以下是部分总结。
