@@ -15,11 +15,14 @@ Tags: 动漫, 新番
 [11]: /static/images/cartoon/WoDeNaoNeiLianAiXuanXiang.jpg
 [12]: /static/images/cartoon/ServantXService.jpg
 [13]: /static/images/cartoon/NanZiGaoZhongShengDeRiChang.jpg
-[14]: /static/images/cartoon/YouZaiRiChangDaWang.jpg
-[15]: /static/images/cartoon/ShangKeXiaoDongZuo.jpg
-[16]: /static/images/cartoon/JunWen.jpg
-[17]: /static/images/cartoon/NongLin.jpg
-[18]: /static/images/cartoon/WangXiangXueShengHui.jpg
+[14]: /static/images/cartoon/NanZiGaoZhongShengDeRiChang_1.jpg
+[15]: /static/images/cartoon/NanZiGaoZhongShengDeRiChang_2.jpg
+[16]: /static/images/cartoon/YouZaiRiChangDaWang.jpg
+[17]: /static/images/cartoon/ShangKeXiaoDongZuo.jpg
+[18]: /static/images/cartoon/JunWen.jpg
+[19]: /static/images/cartoon/NongLin.jpg
+[20]: /static/images/cartoon/WangXiangXueShengHui.jpg
+[21]: /static/images/cartoon/WoDePengYouHenShao.jpg
 
 收集最近看过的动漫新番，因为是第一次整理，部分很久之前的也汇总于此。
 
@@ -60,20 +63,25 @@ Tags: 动漫, 新番
 ![Servant × Service][12]
 
 ## 男子高中生的日常
-![男子高中生的日常][13]
+![男子高中生的日常][14]
+
+![男子高中生的日常][15]
 
 ## 悠哉日常大王
-![悠哉日常大王][14]
+![悠哉日常大王][16]
 
 ## 上课小动作
-![上课小动作][15]
+![上课小动作][17]
 
 ## 君吻
-![君吻][16]
+![君吻][18]
 
 ## 农林
-![农林][17]
+![农林][19]
 
 ## 妄想学生会
-![妄想学生会][18]
+![妄想学生会][20]
+
+## 我的朋友很少
+![我的朋友很少][21]
 
