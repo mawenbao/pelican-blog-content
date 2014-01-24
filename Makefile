@@ -6,6 +6,7 @@ GITHUB_PUSH_OPTIONS=
 BASEDIR=$(CURDIR)
 INPUTDIR=$(BASEDIR)/content
 OUTPUTDIR=~/www/blog
+TMPDIR=/tmp/pelican-temp
 CONFFILE=$(BASEDIR)/pelicanconf.py
 PUBLISHCONF=$(BASEDIR)/publishconf.py
 
@@ -46,7 +47,8 @@ help:
 	@echo '                                                                       '
 
 
-html: clean $(OUTPUTDIR)/index.html
+html: clean-tmp $(TMPDIR)/index.html clean
+	cp -rf $(TMPDIR)/* $(OUTPUTDIR)
 
 $(OUTPUTDIR)/%.html:
 	$(PELICAN) $(INPUTDIR) -o $(OUTPUTDIR) -s $(CONFFILE) $(PELICANOPTS)
@@ -57,6 +59,12 @@ github: html
 	
 clean:
 	[ ! -d $(OUTPUTDIR) ] || find $(OUTPUTDIR) -mindepth 1 -delete
+
+$(TMPDIR)/%.html:
+	$(PELICAN) $(INPUTDIR) -o $(TMPDIR) -s $(CONFFILE) $(PELICANOPTS)
+
+clean-tmp:
+	[ ! -d $(TMPDIR) ] || find $(TMPDIR) -mindepth 1 -delete
 
 regenerate: clean
 	$(PELICAN) -r $(INPUTDIR) -o $(OUTPUTDIR) -s $(CONFFILE) $(PELICANOPTS)
@@ -90,4 +98,4 @@ ftp_upload: publish
 s3_upload: publish
 	s3cmd sync $(OUTPUTDIR)/ s3://$(S3_BUCKET) --acl-public --delete-removed
 
-.PHONY: html help clean regenerate serve devserver publish ssh_upload rsync_upload dropbox_upload ftp_upload s3_upload github
+.PHONY: clean-tmp html help clean regenerate serve devserver publish ssh_upload rsync_upload dropbox_upload ftp_upload s3_upload github
