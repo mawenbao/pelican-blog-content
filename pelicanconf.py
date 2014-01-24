@@ -115,7 +115,7 @@ SITEMAP = {
 
 # theme config
 THEME = './themes/niu-x2-sidebar'
-#THEME = '../niu-x2'
+#THEME = '../niu-x2-sidebar'
 
 # niu-x2 theme config
 NIUX2_404_TITLE_TRANSL = '404错误 页面未找到!'
