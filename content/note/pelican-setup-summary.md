@@ -1,5 +1,6 @@
 Title: Pelican静态博客搭建总结
 Date: 2013-09-08 15:04
+Update: 2014-01-24 16:10
 Tags: pelican, setup, static_blog, 总结
 
 介绍Pelican并总结在搭建Pelican博客过程中需要注意的问题等。
@@ -51,9 +52,11 @@ Tags: pelican, setup, static_blog, 总结
 ![Elegant screenshoot][5]
 
 ### Niu-X2
-接下来是毛遂自荐，Niu-X2是本人业余时间用bootstrap3创作的一个主题，本站目前正在用，功能比较齐全，不算漂亮但很对我自己的口味，代码和配置方法都在[这里][9]。官方主题仓库里的那个niu-x2版本比较老了，如果感兴趣请直接从我的仓库里拉取。
+接下来是毛遂自荐，Niu-X2是本人业余时间用bootstrap3创作的一个主题，<del>本站目前正在用</del>，功能比较齐全，不算漂亮但很对我自己的口味，代码和配置方法都在[这里][9]。官方主题仓库里的那个niu-x2版本比较老了，如果感兴趣请直接从我的仓库里拉取。
 
 ![niu-x2 screenshoot][8]
+
+本博客目前在用的主题是Niu-X2的一个带侧边栏的分支，代码见[niu-x2-sidebar][15]。相对与Niu-X2，目前的主题添加了目录定位和目录自动滚动等功能，同时还完善了脚注(footnote)支持(示例见[这篇文章][16])。需要注意的是，添加侧边栏后，主题的自适应性不如Niu-X2。具体表现是，当可视区域比较窄的时候，侧边栏会被置于页面底部，目前还没有解决办法。 
 
 ## 优秀插件推荐
 使用插件会延长pelican的编译时间，不过这不是什么问题。这里仅推荐我认为必备的插件，另外官方插件仓库见[这里][3]。
@@ -218,7 +221,7 @@ Tags: pelican, setup, static_blog, 总结
     NIUX2_FOOTER_ICONS = [
             ('icon-envelope-alt', 'my email address', 'mailto: wilbur.ma@foxmail.com'),
             ('icon-weibo', 'my sina weibo page', 'http://weibo.com/baozi2x'),
-            ('icon-github-alt', 'my github page', 'http://github.com/wilbur-ma'),
+            ('icon-github-alt', 'my github page', 'http://github.com/mawenbao'),
             ('icon-rss', 'subscribe my blog via rss2', 'http://atime.me/feed.xml'),
             ]
 
@@ -234,9 +237,12 @@ Tags: pelican, setup, static_blog, 总结
 [6]: https://github.com/talha131/pelican-elegant "pelican-elegant主题"
 [7]: http://oncrashreboot.com/pelican-elegant "pelican-elegant介绍和配置说明"
 [8]: /static/images/pelican/pelican-niu-x2-screenshot.png "pelican niu-x2 theme screenshoot"
-[9]: https://github.com/wilbur-ma/niu-x2 "niu-x2主题"
+[9]: https://github.com/mawenbao/niu-x2 "niu-x2主题"
 [10]: https://github.com/getpelican/pelican-plugins/tree/master/sitemap "pelican sitemap插件"
 [11]: https://github.com/getpelican/pelican-plugins/tree/master/gzip_cache "pelican gzip_cache插件"
 [12]: http://docs.getpelican.com/en/3.2/ "pelican3.2文档"
 [13]: /note/python-notes.html#11d0f24533a5bf4819deb8f98b5375de "python2.x设置默认编码为UTF-8"
-[14]: https://github.com/wilbur-ma/extract_headings "pelican extract_headings插件"
+[14]: https://github.com/mawenbao/extract_headings "pelican extract_headings插件"
+[15]: https://github.com/mawenbao/niu-x2-sidebar "niu-x2带侧边栏的主题"
+[16]: http://blog.atime.me/note/golang-summary.html
+
