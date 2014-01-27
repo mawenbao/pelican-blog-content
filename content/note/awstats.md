@@ -1,6 +1,6 @@
 Title: awstats+nginx配置笔记
 Date: 2013-11-04 16:33
-Update: 2014-01-04 23:47
+Update: 2014-01-27 14:25
 Tags: awstats, perl, nginx, ubuntu, note, 教程
 
 [1]: http://hi.baidu.com/icokeeer/item/2588471c9403c9e05f53b1e2 "http://hi.baidu.com/icokeeer/item/2588471c9403c9e05f53b1e2"
@@ -127,6 +127,10 @@ awstats可以分析服务器日志，并提供图形化的分析结果，demo可
 确保www-data用户对awstats的输出目录拥有写权限，然后在awstats的配置文件里做如下修改
 
     AllowToUpdateStatsFromBrowser=1
+
+## 问题
+### 关键词乱码
+修改配置文件，取消`LoadPlugin="decodeutfkeys"`一行的注释即可，然后重新生成报告。
 
 ## 阅读资料
     
