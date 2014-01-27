@@ -10,7 +10,7 @@ Tags: linode, VPS
 
 买vps主要是为了跑自己的个人博客，当时在网上看到Linode的口碑评价甚好，虽然价格比其他的服务商要高一些，但也没有太过计较，记得当初还专门为此办了一张双币信用卡。
 
-之后因为博客暂停更新，暂停使用Linode一段时间，后来重新写博客后，第一时间选的还是Linode。这里不得不说一下Linode的诸多优点：
+之后因为博客暂停更新，暂停使用Linode一段时间，后来重新开始写博客后，第一时间选的还是Linode。这里不得不说一下Linode的诸多优点：
 
 1. 客服响应及时，态度友好。一般发帖后10分钟之内必有回复，这已是众所周知的事了。
 2. 稳定性良好。除了偶尔的系统维护之外，我还没遇到过意外宕机的情况。
@@ -25,7 +25,7 @@ Tags: linode, VPS
 
 不过我最近正打算撤离Linode。
 
-前面说过，我买vps主要是为了运行这个用pelican搭建的静态博客。每当我写完一篇文章后，要将markdown文件“编译”（严格的说应该叫“转换”来着）为html文件。而目前pelican这个东东每次编译的时候都要“从头再来”一次，就是说每次都要编译全部文章，不管你是写了N篇新文章还是只改了某篇旧文章里的一个标点，它都要“从头再来”一次。
+前面说过，我买vps主要是为了运行这个用pelican搭建的静态博客。每当我写完一篇文章后，要将markdown文件“编译”（严格的说应该叫“转换”来着）为html文件。而目前pelican这个东东每次在编译的时候都要“从头再来”一次，就是说每次都要编译全部文章，不管你是写了N篇新文章还是只改了某篇旧文章里的一个标点，它都要“从头再来”一次。
 
 在我工作的台式机上（大概是10年左右的顶级配置，现在早已落伍了），编译130篇文章5个页面，这个过程大概要5秒左右（实际过程可能受插件和主题影响），还可以接受的说。而在我的linode 1g上，整个过程要20秒左右，有时竟要50秒。
 
@@ -40,17 +40,17 @@ Tags: linode, VPS
 未完待续。
 
 ## 2014.01.27 更新
-昨天发的linode太慢的ticket，经过一番测试后，客服回复如下：
+昨天发的linode太慢的ticket，经过一番沟通后，客服回复如下：
 
 > Thanks for getting that for us. Those results do show you are experiencing a small amount of CPU steal but nothing major. Are you seeing any particular performance issues in your actual web application or services? I understand that a benchmark score might be lower than you expected, but that is always going to be a moving target on a virtualized platform where many users are sharing resources.
 
 > That said, we have made some adjustments to the host that hopefully will help you see better performance, however they may take about 48 hours to fully implement. If the major problem is you aren't happy with that benchmark number, would you mind checking again in 48 hours? We can leave this ticket open until then.
 
-大意就是同一台母鸡上的其他linode占用了我linode的一些cpu资源(估计是我的日常cpu使用率太低的原因)，然后他们帮我重新调整了下资源配置，但是要完全生效需要48个小时。
+大意就是同一台母鸡上的其他linode占用了我linode的一些cpu资源(估计是我的日常cpu使用率太低的原因)，然后他们帮我重新调整了下资源配置，但是完全生效需要48个小时。
 
 今天重新跑了一遍[UnixBench][1]，最后评分提高到了800多，博客的编译时间也降到了10秒左右，基本还能接受。所以暂时先呆在Linode算了，临近年关也没那么多时间折腾。
 
-最后提醒一下购买VPS的同学们，最好时不时的在自己的VPS上跑一下[UnixBench][1]等系统测试程序，再将结果和[ServerBear][2]上的平均值比较一下，如果差距太大，最好及时投诉。
+最后提醒一下购买VPS的同学们，用[UnixBench][1]等工具测试下VPS的系统性能，再将结果和[ServerBear][2]上的平均值比较一下，如果差距太大，最好及时投诉。
 
 ## 相关资源列表
 *  [UnixBench][1] 系统性能测试工具
