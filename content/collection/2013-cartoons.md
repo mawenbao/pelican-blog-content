@@ -23,6 +23,7 @@ Tags: 动漫, 新番
 [19]: /static/images/cartoon/NongLin.jpg
 [20]: /static/images/cartoon/WangXiangXueShengHui.jpg
 [21]: /static/images/cartoon/WoDePengYouHenShao.jpg
+[22]: /static/images/cartoon/BXingHXi.jpg
 
 收集最近看过的动漫新番，因为是第一次整理，部分很久之前的也汇总于此。
 
@@ -84,4 +85,7 @@ Tags: 动漫, 新番
 
 ## 我的朋友很少
 ![我的朋友很少][21]
+
+## B型H系
+![B型H系][22]
 

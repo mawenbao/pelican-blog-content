@@ -1,6 +1,7 @@
 Title: CSS技巧和问题整理
 Date: 2014-01-02 17:33
-Tags: css, problem, trick
+Update: 2014-01-28 16:27
+Tags: css, problem, trick, 未完成
 
 [1]: http://www.w3.org/TR/CSS2/tables.html#height-layout
 [2]: http://stackoverflow.com/questions/1993277/css-table-layout-why-does-table-row-not-accept-a-margin "Position: fixed changes width of element when using percentages"
@@ -11,17 +12,13 @@ Tags: css, problem, trick
 
 ## CSS技巧
 ### word-wprap研究。
-word-wrap: break-word;
-word-break
+
+    word-wrap: break-word;
+    word-break
 
 ## CSS问题
 ### #1
-使用百分数定义width的div，其position变为static之后，宽度发生突变。具体问题见[这里][2]。
-
-解决方法在position变为static之后添加：
-
-    width: inherit;
-
+使用百分数定义width的div，其position变为static之后，宽度发生突变。具体问题见[这里][2]。原因是position变为fixed后，div会从文档流中脱离出去，解决方法是给div定义具体的width，不要用inherit和百分比等相对值。
 
 ### #2
 具有`display: table-row`的元素无法设置margin。具体问题见[这里][4]。

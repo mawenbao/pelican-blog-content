@@ -1,5 +1,6 @@
 Title: GCC/G++快速使用指南
 Date: 2013-08-25 12:14
+Update: 2014-01-28 09:17
 Tags: gcc, 教程, 未完成
 
 使用一个例子介绍GCC/G++的编译选项。
@@ -50,7 +51,7 @@ Tags: gcc, 教程, 未完成
 介绍将二进制文件打包为动态和静态链接库的方法。
 ### 动态链接库 shared library
 
-   g++ -shared -o libctest.so -fPIC a.cpp b.cpp
+    g++ -shared -o libctest.so -fPIC a.cpp b.cpp
  
 ### 静态链接库 static library
 
@@ -66,7 +67,7 @@ Tags: gcc, 教程, 未完成
 
 ### 强制使用静态/动态库
 
-使用-WL选项可以设置使用静态或动态库，可参考[这篇文章](http://stackoverflow.com/questions/3698321/g-linker-force-static-linking-if-static-library-exists)。
+使用-Wl选项可以设置使用静态或动态库，可参考[这篇文章](http://stackoverflow.com/questions/3698321/g-linker-force-static-linking-if-static-library-exists)。
 
     g++ -Wl,-Bstatic -lz -lfoo -Wl,-Bdynamic -lbar -Wl,--as-needed
 
