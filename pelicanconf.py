@@ -76,7 +76,7 @@ PLUGINS = [
     'update_date',
     'extract_headings',
     'sitemap',
-    'summary'
+    'summary',
     ]
 UPDATEDATE_MODE = 'metadata'
 
@@ -162,7 +162,12 @@ NIUX2_HEADER_SECTIONS = [
         ('存档', 'blog archives', '/archives.html', 'fa-archive'),
         ('标签', 'blog tags', '/tag/', 'fa-tag'),
         ]
-NIUX2_HEADER_DROPDOWN_SECTIONS = {}
+NIUX2_HEADER_DROPDOWN_SECTIONS = {
+        ('其他', 'fa-umbrella'): [
+            ('留言&提问', 'guestbook', 'http://talk.atime.me', 'fa-comment'),
+            ('论坛', 'forum', 'http://forum.atime.me', 'fa-users')
+            ],
+        }
 NIUX2_FOOTER_LINKS = [
         ('About', 'about me', '/about.html', ''),
         ('Agreement', 'terms, license and privacy etc.', '/agreement.html', ''),
