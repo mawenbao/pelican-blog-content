@@ -1,4 +1,4 @@
-Title: Vanilla论坛搭建总结
+Title: Vanilla论坛安装和配置总结
 Date: 2014-02-08 17:35
 Tags: vanilla, ubuntu, 总结
 
