@@ -1,5 +1,6 @@
 Title: 使用dante-server和stunnel搭建socks代理服务器
 Date: 2013-12-04 13:30
+Update: 2014-02-08 15:26
 Tags: note, proxy, socks5, ubuntu
 
 [1]: https://wido.me/sunteya/setup-a-socks-proxy-server-pass-by-secure-firewall/ "https://wido.me/sunteya/setup-a-socks-proxy-server-pass-by-secure-firewall/"
@@ -154,7 +155,7 @@ stunnel4的配置文件默认位于`/etc/stunnel`目录内，配置文件的例�
 
 最后，重启stunnel服务
     
-    service stunnel restart
+    service stunnel4 restart
 
 ### 配置stunnel客户端
 在你的客户端机器上安装stunnel，并将`/etc/default/stunnel4`的ENABLED改为1。
@@ -202,7 +203,7 @@ stunnel4的配置文件默认位于`/etc/stunnel`目录内，配置文件的例�
 
 最后重启客户端stunnel服务
 
-    service stunnel restart
+    service stunnel4 restart
 
 ## 使用socks5代理
 按照上文的相关配置，将浏览器的socks5代理项设置为localhost:1997即可使用。
