@@ -163,9 +163,10 @@ NIUX2_HEADER_SECTIONS = [
         ('标签', 'blog tags', '/tag/', 'fa-tag'),
         ]
 NIUX2_HEADER_DROPDOWN_SECTIONS = {
-        ('其他', 'fa-umbrella'): [
-            ('留言&提问', 'guestbook', 'http://talk.atime.me', 'fa-comment'),
-            ('论坛', 'forum', 'http://forum.atime.me', 'fa-users')
+        ('社区', 'fa-user'): [
+            ('留言&提问', 'guestbook', 'http://qa.atime.me', 'fa-comment'),
+            ('论坛', 'forum', 'http://forum.atime.me', 'fa-comments'),
+            (' Wiki', 'dokuwiki', 'http://wiki.atime.me', 'fa-puzzle-piece'),
             ],
         }
 NIUX2_FOOTER_LINKS = [

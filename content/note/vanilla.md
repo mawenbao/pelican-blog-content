@@ -1,6 +1,6 @@
 Title: Vanilla论坛安装和配置总结
 Date: 2014-02-08 17:35
-Tags: vanilla, ubuntu, 总结
+Tags: vanilla, install, config, 总结
 
 总结在Ubuntu服务器上搭建Vanilla论坛的过程和遇到的问题，以下内容均基于Vanilla 2.2.5。
 
