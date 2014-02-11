@@ -1,6 +1,6 @@
 Title: Debian/Ubuntu 常用软件
 Date: 2013-08-25 12:14
-Update: 2013-12-10 12:41
+Update: 2014-02-11 11:02
 Tags: debian, ubuntu, package, resource
 
 介绍常用Debian/Ubuntu平台上的软件和部分软件的使用方法。可在[Linux Packages Search](http://pkgs.org/)查找需要的软件包。
@@ -43,6 +43,10 @@ Tags: debian, ubuntu, package, resource
 *  phpmyadmin
 *  mysql-server-5.1
 *  ruby1.9.1
+
+网络
+
+*  jnettop 监控最占用网络流量的连接
 
 ## 软件快速使用指南
 
