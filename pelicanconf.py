@@ -170,8 +170,8 @@ NIUX2_HEADER_DROPDOWN_SECTIONS = {
             ],
         }
 NIUX2_FOOTER_LINKS = [
-        ('About', 'about me', '/about.html', ''),
-        ('Agreement', 'terms, license and privacy etc.', '/agreement.html', ''),
+        ('关于', 'about me', '/about.html', ''),
+        ('协议', 'terms, license and privacy etc.', '/agreement.html', ''),
         ]
 
 NIUX2_FOOTER_ICONS = [
