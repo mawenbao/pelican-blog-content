@@ -1,10 +1,11 @@
 Title: [转]糗事百科精选3
 Date: 2014-01-27 18:01
-Update: 2014-02-07 10:32
+Update: 2014-02-11 17:24
 Tags: 糗事百科, 笑话, 转载
 
 [1]: /static/images/qiushibaike/BangZhuRenMaiCaiDeGou.jpg
 [2]: /static/images/qiushibaike/RangGouGouKanHui.jpg
+[3]: /static/images/qiushibaike/dog-under-the-table.jpg
 
 收集糗事百科上的趣事。
 
@@ -38,4 +39,10 @@ Tags: 糗事百科, 笑话, 转载
 我：但是妈，你真胖啊！！
 
 爸爸非常贱的接了句：哼，这还没吃饱呢！
+
+## 一放炮就钻茶几底下
+![钻茶几底下][3]
+
+## 金山毒霸加速球
+孬种金山杀毒有个加速球，总是弹广告，我关了，关的时候还可怜兮兮的问我为什么关。过了1分钟右下角弹出一个恭喜你中奖，送你一个新年礼物，我点来一看，送我一个加速球……
 
