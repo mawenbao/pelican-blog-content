@@ -1,7 +1,7 @@
 Title: GCC相关的环境变量
 Date: 2013-08-25 12:14
-Update: 2014-01-03 09:36
-Tags: gcc, config
+Update: 2014-02-12 16:08
+Tags: c, c++, gcc, config
 
 介绍GCC在编译阶段和程序运行阶段用到的环境变量。
 
@@ -17,6 +17,7 @@ GCC编译时查找头文件的目录列表。比如:
 	## /usr/include:/usr/local/include
 
 ### CPLUS_INCLUDE_PATH
+类似C_INCLUDE_PATH，适用于g++。
 
 ### LIBRARY_PATH
 gcc和g++在编译的链接(link)阶段查找库文件的目录列表，比如:
@@ -28,7 +29,7 @@ gcc和g++在编译的链接(link)阶段查找库文件的目录列表，比如:
 ## 程序运行时用到的环境变量
 
 程序运行阶段用到的变量。
-#### LD_LIBRARY_PATH
+### LD_LIBRARY_PATH
 
 程序运行时查找动态链接库(.so文件)的目录列表。比如:
 
@@ -36,7 +37,7 @@ gcc和g++在编译的链接(link)阶段查找库文件的目录列表，比如:
 	# outputs
 	## /usr/lib:/usr/lib64:/usr/local/lib:/usr/local/lib64
 
-#### Debian动态链接库搜索路径
+### Debian动态链接库搜索路径
 
 Debian系统上，如果修改LD_LIBRARY_PATH没有用，可修改/etc/ld.so.conf或/etc/ld.so.conf.d/*.conf，将库目录作为一行加入以上的conf文件中，然后运行ldconfig命令即可。
 
