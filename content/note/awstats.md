@@ -1,11 +1,12 @@
 Title: awstats+nginx配置笔记
 Date: 2013-11-04 16:33
-Update: 2014-01-27 14:25
+Update: 2014-02-18 11:27
 Tags: awstats, perl, nginx, ubuntu, note, 教程
 
 [1]: http://hi.baidu.com/icokeeer/item/2588471c9403c9e05f53b1e2 "http://hi.baidu.com/icokeeer/item/2588471c9403c9e05f53b1e2"
 [2]: http://wangyan.org/blog/howto-setup-geoip-for-awstats.html "http://wangyan.org/blog/howto-setup-geoip-for-awstats.html"
 [3]: http://awstats.atime.me/cgi-bin/awstats.pl?config=blog.atime.me
+[4]: http://awstats.sourceforge.net/docs/awstats_faq.html#MULTILOG "FAQ-COM360 : HOW CAN I PROCESS SEVERAL LOG FILES IN ONE RUN?"
 
 awstats可以分析服务器日志，并提供图形化的分析结果，demo可参考本博客的[awstats页面][3]。以下是一篇简单的awstats教程，记录我在ubuntu系统上安装和配置awstats7.2 + nginx的过程。
 
@@ -127,6 +128,15 @@ awstats可以分析服务器日志，并提供图形化的分析结果，demo可
 确保www-data用户对awstats的输出目录拥有写权限，然后在awstats的配置文件里做如下修改
 
     AllowToUpdateStatsFromBrowser=1
+
+### 读取多个日志文件
+按照官方的[建议][4]，可以使用awstats自带的一个脚本`logresolvemerge.pl`来解析多个日志文件。
+
+`logresolvemerge.pl`脚本还支持直接读取gz和bz2等压缩文件，默认位于awstats安装目录的tools文件夹里。使用该脚本的话需要将配置文件里的`LogFile`改为类似下面的样子（注意修改logresolvemerge.pl的位置）：
+
+    LogFile="/usr/local/awstats/tools/logresolvemerge.pl /var/log/nginx/access.log* |" 
+
+需要注意的是，为使`logresolvemerge.pl`脚本能访问相应的日志文件，需要为分配合理的权限。
 
 ## 问题
 ### 关键词乱码
