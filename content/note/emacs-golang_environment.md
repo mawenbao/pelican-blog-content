@@ -1,6 +1,6 @@
 Title: Emacs Golang 配置(windows)
 Date: 2013-08-25 12:14
-Update: 2014-01-02 10:13
+Update: 2014-02-18 11:59
 Tags: emacs, config, golang
 
 Windows系统下为Emacs配置golang开发环境。
@@ -14,12 +14,12 @@ Windows系统下为Emacs配置golang开发环境。
 
 ## 配置过程
 
-1. 安装emacs和go，假设emacs安装在%EMACS_HOME%目录，go安装在%GO_HOME%目录。
+1. 安装emacs和go，假设go安装在%GOROOT%目录。
 2. 为emacs和go配置好环境变量。
 3. 安装gocode，运行之。
 
         gocode set propose-builtins true
-        gocode set lib-path %GO_HOME%\pkg\windows_386
+        gocode set lib-path %GOROOT%\pkg\windows_386
         gocode -s
 
 最后将emacs/go-autocomplete.el拷贝到emacs的加载目录中。
