@@ -1,6 +1,6 @@
 Title: Git进阶教程
 Date: 2013-08-25 12:14
-Update: 2014-01-21 16:34
+Update: 2014-02-19 14:11
 Tags: git, 教程
 
 Git的常用命令和场景可参考[Git快速使用指南](/note/git-quick_reference.html)，在这里介绍进一步的使用和部分生僻的命令。
@@ -100,7 +100,64 @@ git add默认情况下只更新新添加文件和修改过的文件的索引，�
 
     git log -G "^hello world$"
 
+### git rebase
+rebase操作可以将一个分支上的提交合并到另一个分支上，和merge操作不同的是，rebase最后形成线性的历史。
+
+#### 注意事项
+使用git rebase需要注意的一点就是**不要rebase已经提交到远程仓库的代码**。
+
+#### pull request
+向远程仓库提交pull-request之前，先在自己的分支上rebase一下
+
+    git rebase master
+
+这样仓库管理员在merge你的pull-request时就可以直接快进，而不用解决冲突了。
+
+#### 撤销rebase
+需要撤销rebase引入的变更时，比较简便的方法是使用git reflog。首先通过`git reflog`和`git log HEAD@{XX}`找到恢复点，然后使用git reset --hard。如果rebase之后还没有做过其他会变更提交历史的git操作，直接执行`git reset --hard ORIG_HEAD`即可。
+
+举例说明，假设master分支的提交记录如下（`#`后为注释内容）：
+
+    * 2014-02-19 0101db8 update a3 # A2
+    * 2014-02-19 6a741e8 update a2 # A1
+    * 2014-02-19 d2e4ed4 update a  # A
+    * 2014-02-19 f4d5abd init
+
+test分支的提交记录如下：
+
+    * 2014-02-19 82137d8 update b3 # B2
+    * 2014-02-19 74bfa49 update b2 # B1
+    * 2014-02-19 d2e4ed4 update a  # A
+    * 2014-02-19 f4d5abd init
+
+直观的分支图如下：
+
+    A--A1--A2 (分支master)
+     \
+      \B1--B2 (分支test)
+
+现在执行命令`git rebase test^1 master`[^1]，则分支图变为:
+
+    A--B1--A1'--A2' (分支master)
+     \
+      \B1--B2       (分支test)
+
+如果想撤销rebase操作，执行`get reflog`输出如下（节选）：
+
+    691342e HEAD@{3}: rebase finished: returning to refs/heads/master
+    691342e HEAD@{4}: rebase: update a3
+    1ce3d6a HEAD@{5}: rebase: update a2
+    74bfa49 HEAD@{6}: checkout: moving from test to 74bfa49cadc0bf53bd471e330e3c769509018c74^0
+    0101db8 HEAD@{7}: reset: moving to HEAD^
+
+上面的日志中，HEAD@{3} ~ HEAD@{6}属于rebase操作，我们要做的就是找到rebase操作前的那个提交，然后执行
+
+    git log HEAD@{7}           # 查看日志以确认是正确的恢复点
+    git reset --hard HEAD@{7}  # 撤销rebase操作
+
 ## 阅读资料
 
 *  [Git Tip of the Week: Detached Heads](http://alblue.bandlem.com/2011/08/git-tip-of-week-detached-heads.html)
+
+[^1]: test^1表示仅rebase到提交B1
 

@@ -1,6 +1,6 @@
 Title: Git资源
 Date: 2013-08-25 12:14
-Update: 2014-01-21 14:34
+Update: 2014-02-19 13:09
 Tags: git, resource
 
 收集好的Git资源。
@@ -15,6 +15,7 @@ Tags: git, resource
 *  [Git Tip of the Week](http://alblue.bandlem.com/Tag/gtotw/)
 *  [Git Tips and Tricks](http://root.cern.ch/drupal/content/git-tips-and-tricks)
 *  [What’s The Deal With The Git Index](http://www.gitguys.com/topics/whats-the-deal-with-the-git-index/)
+*  [Git Tutorials and Workflows](https://www.atlassian.com/git)
 
 ### Github
 
