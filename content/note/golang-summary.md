@@ -1,6 +1,6 @@
 Title: Golang学习杂记
 Date: 2013-12-25 18:01
-Update: 2014-01-24 08:56
+Update: 2014-02-20 14:23
 Tags: golang, 总结
 
 [1]: https://code.google.com/p/go-wiki/wiki/SliceTricks "golang slice tricks"
@@ -24,6 +24,7 @@ Tags: golang, 总结
 [19]: http://blog.golang.org/profiling-go-programs
 [20]: http://golang.org/ref/spec#RangeClause
 [21]: http://golang.org/doc/go1#deleted
+[22]: http://golang.org/cmd/cgo/
 
 记录Golang的一些关键语法和易错易混淆的知识点。以下内容均基于Linux x86-64平台下的Go1.2，其中可能有错漏之处，欢迎反馈。
 
@@ -473,6 +474,10 @@ defer在return之前执行，但return并非原子操作。具体的说return分
 
 ## 其他资源
 *  [Go Playground][7] 方便共享golang的代码，向别人请教问题时尤其有用。
+
+## 其他问题
+### 动态链接
+众所周知，除了用[cgo][22]链接的c动态库之外，golang库都是被静态链接到可执行文件的。对于没有动态链接这个特性，官方貌似一直没有给出具体解释，目前看来估计以后也不会实现。
 
 ## 阅读资料
 1. [Effective Go][6]
