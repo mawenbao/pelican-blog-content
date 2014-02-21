@@ -30,7 +30,7 @@ Tags: c++, resource
 
 #### 工具文档
 
-*  [Doxygen注释](http://www.doxygen.nl/docblocks.html) - [总结](/tools/cpp/doxygen_summary)
+*  [Doxygen注释](http://www.doxygen.nl/docblocks.html) - [总结](/note/c++-doxygen_summary.html)
 
 #### 指针相关
 
