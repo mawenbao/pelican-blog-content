@@ -1,6 +1,6 @@
 Title: Git进阶教程
 Date: 2013-08-25 12:14
-Update: 2014-02-19 14:11
+Update: 2014-03-03 16:43
 Tags: git, 教程
 
 Git的常用命令和场景可参考[Git快速使用指南](/note/git-quick_reference.html)，在这里介绍进一步的使用和部分生僻的命令。
@@ -73,32 +73,24 @@ Git index中的改动可以用git commit提交到本地仓库中。
     git checkout master
 
 ## Git生僻命令
+### git fsck
+检查git对象是否有效和能否被链接到。
+
+使用`git fsck`的一个例子是，当不小心drop或clear了stash列表时，可以这样找回(代码取自stackoverflow上的一个[回答](http://stackoverflow.com/questions/89332/recover-dropped-stash-in-git)):
+
+    for ref in `git fsck --unreachable | grep commit | cut -d' ' -f3`; do git show --summary $ref; done | less
+
+`git fsck`的速度会比较慢，上面的命令会列出比较多的commit，因为`git stash`的默认提交信息都是`WIP on ...`，所以根据提交信息即可找到丢失的stash提交。
+
+### git reflog
+记录了HEAD指针的完整改动历史，通常用于于查找“丢失”的commit和跨分支查看提交历史。当因为某些操作导致某些commit“丢失”时，可以使用`git reflog`配合`git reset --hard`来恢复到之前的提交状态。
+
 ### git rev-list
 按时间逆序列出提交对象，常用于查找涉及到某些文件的提交的hash。例如，查找所有关系到文件readme的提交：
 
     git rev-list HEAD -- readme
 
 更多功能参考`man git-rev-list`。
-
-### git add
-git add默认情况下只更新新添加文件和修改过的文件的索引，对于不是用git rm删除的文件，会被忽略掉。可以使用`git add --all`选项来更新所有改动的索引。
-
-> 'git add --ignore-removal <pathspec>', which is the current default, ignores paths you removed from your working tree.
-
-> 'git add --all <pathspec>' will let you also record the removals.
-
-### 检索日志和修改内容
-检索提交消息
-
-    git log --grep "hello world"
-
-检索修改内容
-
-    git log -S "hello world"
-
-使用正则表达式检索修改内容
-
-    git log -G "^hello world$"
 
 ### git rebase
 rebase操作可以将一个分支上的提交合并到另一个分支上，和merge操作不同的是，rebase最后形成线性的历史。

@@ -1,6 +1,6 @@
 Title: Git快速使用指南
 Date: 2013-08-25 12:14
-Update: 2014-01-21 16:46
+Update: 2014-03-03 16:28
 Tags: git, 教程
 
 阅读“[Pro Git](http://git-scm.com/book)“后写的笔记，当做速查手册(quick git reference)来用，以供日常查阅。常见的git错误和解决方案可参考[git问题整理](/note/git-problems.html)，更多内容可参考[这里](/note/git-advanced_tutorial.html)。
@@ -106,6 +106,12 @@ KEEP CALM AND USE GIT REFLOG](http://www.keepcalm-o-matic.co.uk/p/keep-calm-and-
     git show HEAD^:path/to/file
 
 ## 命令详解
+### git add
+git add默认情况下只更新新添加文件和修改过的文件的索引，对于不是用git rm删除的文件，会被忽略掉。可以使用`git add --all`选项来更新所有改动的索引。
+
+> 'git add --ignore-removal <pathspec>', which is the current default, ignores paths you removed from your working tree.
+
+> 'git add --all <pathspec>' will let you also record the removals.
 
 ### git-tag
 
@@ -242,8 +248,19 @@ bundle命令可以对git仓库进行打包，如下所示。
 
     git log -- LICENSE README
 
-### git-reflog
-记录了HEAD指针的完整改动历史，通常用于于查找“丢失”的commit和跨分支查看提交历史。当因为某些操作导致某些commit“丢失”时，可以使用`git reflog`配合`git reset --hard`来恢复到之前的提交状态。
+检索日志和修改内容
+
+* 检索提交消息
+
+        git log --grep "hello world"
+
+* 检索修改内容
+
+        git log -S "hello world"
+
+* 使用正则表达式检索修改内容
+
+        git log -G "^hello world$"
 
 ### git-remote
 
