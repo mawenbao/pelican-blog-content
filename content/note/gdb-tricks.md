@@ -1,6 +1,6 @@
 Title: GDB技巧整理
 Date: 2013-08-25 12:14
-Update: 2014-01-09 16:14
+Update: 2014-03-07 16:34
 Tags: gdb, trick, gnu
 
 [1]: https://sourceware.org/gdb/onlinedocs/gdb/Source-Path.html "gdb Specifying Source Directories"
@@ -131,6 +131,23 @@ gdb运行时，使用source命令即可导入
     gdb -x /path/to/breakpoints.txt prog
 
 对于每次gdb运行都要调用的脚本，比如设置字符集等，可以放在~/.gdbinit初始文件里，这样每次gdb启动时都会自动调用。
+
+## 自定义命令
+参考[gdb/Define](https://sourceware.org/gdb/onlinedocs/gdb/Define.html)，可以在gdb中自定义命令，比如：
+
+    (gdb) define hello
+    (gdb) print "welcome"
+    (gdb) print "hello $arg0"
+    (gdb) end
+
+然后如此调用
+
+    (gdb) hello world
+
+即可输出
+
+    (gdb) $1 = "welcome"
+    (gdb) $2 = "hello world"
 
 ## 阅读资料
 
