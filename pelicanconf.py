@@ -164,8 +164,7 @@ NIUX2_HEADER_SECTIONS = [
         ]
 NIUX2_HEADER_DROPDOWN_SECTIONS = {
         ('社区', 'fa-user'): [
-            ('留言&提问', 'guestbook', 'http://qa.atime.me', 'fa-comment'),
-            ('论坛', 'forum', 'http://forum.atime.me', 'fa-comments'),
+            ('留言板', 'guestbook', 'http://qa.atime.me', 'fa-comment'),
             (' Wiki', 'dokuwiki', 'http://wiki.atime.me', 'fa-puzzle-piece'),
             ],
         }
