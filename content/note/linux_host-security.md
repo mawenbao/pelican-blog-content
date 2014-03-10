@@ -1,6 +1,6 @@
 Title: Linux服务器安全策略
 Date: 2013-08-08 12:14
-Update: 2013-10-30 14:17
+Update: 2014-03-10 12:21
 Tags: linux_server, security
 
 记录网站安全策略, 主要参考[Linode的文档](http://library.linode.com/securing-your-server)写成。
@@ -64,6 +64,12 @@ denyhosts通过分析`/var/log/auth.log`来将某些非正常的ip添加到`/etc
 	sudo apt-get install denyhosts
 
 配置文件位于`/etc/denyhosts.conf`
+
+如果自己的电脑ssh连接时出现类似下面这样的错误：
+
+    ssh_exchange_identification: Connection closed by remote host
+
+那基本能确定是denyhosts将你的ip添加到了`/etc/hosts.deny`中[^1]。为避免类似的情况，可以将自己的ip添加到`/etc/hosts.allow`中。
 
 ### logwatch
 
@@ -199,4 +205,6 @@ logwatch分析系统日志, 并提取重要的信息发到你的邮箱里, 通�
 *  [Quick HOWTO : Ch14 : Linux Firewalls Using iptables](http://www.linuxhomenetworking.com/wiki/index.php/Quick_HOWTO_:_Ch14_:_Linux_Firewalls_Using_iptables)
 *  [Debian iptables wiki](http://wiki.debian.org/iptables)
 *  [Iptables docuemntation](http://www.netfilter.org/documentation/)
+
+[^1]: 参考[Ssh exchange identification: Connection closed by remote host](https://www.linode.com/wiki/index.php/Ssh_exchange_identification:_Connection_closed_by_remote_host)，引用于2014-03-10。
 
