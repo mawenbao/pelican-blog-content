@@ -1,6 +1,6 @@
 Title: Debian/Ubuntu 常用软件
 Date: 2013-08-25 12:14
-Update: 2014-02-20 11:32
+Update: 2014-03-10 17:13
 Tags: debian, ubuntu, package, resource
 
 介绍常用Debian/Ubuntu平台上的软件和部分软件的使用方法。可在[Linux Packages Search](http://pkgs.org/)查找需要的软件包。
@@ -25,7 +25,7 @@ Tags: debian, ubuntu, package, resource
 *  tcpdump packet analyzer
 *  translate-toolkit
 *  unzip 解压zip压缩格式的文件
-*  watch 每隔一段时间执行某个程序，然后全屏输出执行结果。
+*  watch 每隔一段时间执行某个程序，然后全屏输出执行结果
 *  zgrep 类似于grep，但支持在压缩文件中查找 
 *  zip 压缩为zip格式 
 
@@ -44,6 +44,7 @@ Tags: debian, ubuntu, package, resource
 *  phpmyadmin
 *  mysql-server-5.1
 *  ruby1.9.1
+*  addr2line 可以将objdump中的函数地址翻译为文件名和行数
 
 网络
 
