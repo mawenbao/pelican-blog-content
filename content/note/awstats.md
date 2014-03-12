@@ -1,6 +1,6 @@
 Title: awstats+nginx配置笔记
 Date: 2013-11-04 16:33
-Update: 2014-02-18 11:27
+Update: 2014-03-12 22:34
 Tags: awstats, perl, nginx, ubuntu, note, 教程
 
 [1]: http://hi.baidu.com/icokeeer/item/2588471c9403c9e05f53b1e2 "http://hi.baidu.com/icokeeer/item/2588471c9403c9e05f53b1e2"
@@ -35,6 +35,9 @@ awstats可以分析服务器日志，并提供图形化的分析结果，demo可
     sudo vi /etc/awstats/awstats.blog.atime.me.conf
     # 将LogFile改为nginx的access日志的位置
     # LogFile="/var/log/nginx/access.log"
+
+    sudo chown -R www-data:www-data /usr/local/awstats/wwwroot
+
     # 修改awstats的输出目录为/usr/local/awstats/wwwroot/output
     # DirData="/usr/local/awstats/wwwroot/output"
     sudo -u www-data mkdir /usr/local/awstats/wwwroot/output
@@ -47,7 +50,6 @@ awstats可以分析服务器日志，并提供图形化的分析结果，demo可
 ## nginx配置
 准备工作
 
-    sudo chown -R www-data:www-data /usr/local/awstats/wwwroot
     # 安装spawn-fcgi
     sudo apt-get install spawn-fcgi libfcgi0ldbl fcgiwrap
 
@@ -100,7 +102,7 @@ awstats可以分析服务器日志，并提供图形化的分析结果，demo可
 
     :::bash
     # 下载IP数据
-    cd /usr/local/awstats
+    cd /usr/local/awstats/wwwroot
     sudo wget http://geolite.maxmind.com/download/geoip/database/GeoLiteCountry/GeoIP.dat.gz
     sudo gzip -d GeoIP.dat.gz
 
