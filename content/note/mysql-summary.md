@@ -1,5 +1,6 @@
 Title: 关于MySQL的各种总结
 Date: 2014-02-17 08:55
+Update: 2014-03-11 16:50
 Tags: mysql, database, 总结, 未完成
 
 [1]: http://dev.mysql.com/doc/refman/5.5/en/mysql-tips.html#safe-updates "MySQL tips: safe updates"
@@ -13,6 +14,17 @@ Tags: mysql, database, 总结, 未完成
 若无特别说明，文中的内容均基于Ubuntu 12.04和MySQL5.5。对于本文中出现的代码，`...`表示省略内容，`#`之后为代码注释。
 
 ## 配置
+### 使用utf8编码
+在MySQL的配置文件中做如下设置：
+
+    [client]
+    default-character-set = utf8
+
+    [mysqld]
+    character-set-server = utf8
+
+然后重启MySQL服务，需要注意的是，已经创建的表不受影响。
+
 ### 启用查询日志
 
     [mysqld]
@@ -90,6 +102,41 @@ MySQL5.5之后使用Innodb作为默认引擎，如果嫌其太耗内存，可以
 之前使用[backup脚本](/code/host_backup.html)迁移网站时，只迁移了/etc/mysql/debian.cnf，没有迁移mysql里的mysql数据库，导致mysql数据库中user表里的debian-sys-maint的密码和/etc/mysql/debian.cnf不一致。
 
 ## Snippets
+以数据库db和表tb为例。
+
+### 管理相关
+
+显示所有的数据库
+
+    mysql> show databases;
+
+显示当前数据库的所有表
+
+    mysql> show tables;
+
+切换数据库
+
+    mysql> use db
+
+显示表的结构
+
+    mysql> desc tb;
+
+显示数据库的创建信息
+
+    mysql> show create database db;
+
+显示表的创建语句
+
+    mysql> show create table tb;
+
+### 表管理
+修改表的字符集
+
+    mysql> ALTER TABLE 'db'.'tb' CHARACTER SET utf8;
+
+修改字段的字符集，参考[Column Character Set Conversion](http://dev.mysql.com/doc/refman/5.1/en/charset-conversion.html)。
+
 ### 权限相关
 详细内容见[MySQL Account Management SQL][3]。
 
