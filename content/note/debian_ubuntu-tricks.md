@@ -1,6 +1,6 @@
 Title: Debian/Ubuntu系统小技巧收集
 Date: 2013-08-25 12:14
-Update: 2013-11-30 13:49
+Update: 2014-03-12 13:42
 Tags: debian, ubuntu, trick
 
 整理一些Debian/Ubuntu上的小技巧，包括系统管理、系统美化和娱乐等方面。
@@ -36,17 +36,22 @@ Tags: debian, ubuntu, trick
 
     locale -a
 
-安装`zh_CN`
+在Ubuntu上安装`zh_CN.UTF-8`
 
     sudo /usr/share/locales/install-language-pack zh_CN
 
-修改默认locale
+然后，修改默认locale
 
     sudo cat > /etc/default/locale << EOF
     LANG="zh_CN.UTF-8"
     LANGUAGE="zh_CN"
 
     source /etc/default/locale
+
+在Debian上安装`zh_CN.UTF-8`[^1]
+
+    apt-get install debconf
+    dpkg-reconfigure locales
 
 ### 设置默认UMASK
 umask影响新创建的文件的默认权限，详细的介绍可参考[这篇文章](http://www.cyberciti.biz/tips/understanding-linux-unix-umask-value-usage.html)。设置系统的默认UMASK，首先在`/etc/pam.d/common-session`里添加（可能已存在）如下一行
@@ -277,4 +282,6 @@ easytag
 *  [How to set system wide umask?](http://stackoverflow.com/questions/10220531/how-to-set-system-wide-umask)
 *  [What is Umask and How To Setup Default umask Under Linux?](http://www.cyberciti.biz/tips/understanding-linux-unix-umask-value-usage.html)
 *  [Configure inherit group ownership on Linux folder](http://gsienkiewicz.wordpress.com/2013/04/05/configure-inherit-group-ownership-on-linux-folder/)
+
+[^1]: 参考[Debian Wiki: Locale](https://wiki.debian.org/Locale#Standard)，引用于2014-03-12。
 

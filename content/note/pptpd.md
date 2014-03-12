@@ -29,7 +29,9 @@ pptpd存在安全隐患，详情可参考[这里](http://pptpclient.sourceforge.
 ## 修改日志输出位置
 pptpd默认将日志写入`/var/log/syslog`系统日志，在`/etc/ppp/options`里加入如下一行启用单独的日志。
 
-    logfile /var/log/pptpd.log
+    logfile /var/log/ppp.log
+
+需要注意的是，pptpd依然会写系统日志。
 
 ## 修改连接数
 pptpd的默认配置只有6个IP可供分配，pptpd启动时日志里经常见到如下的警告信息。

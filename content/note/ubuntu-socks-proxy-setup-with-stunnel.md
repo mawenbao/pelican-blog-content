@@ -1,6 +1,6 @@
 Title: 使用dante-server和stunnel搭建socks代理服务器
 Date: 2013-12-04 13:30
-Update: 2014-02-08 15:26
+Update: 2014-03-12 15:55
 Tags: note, proxy, socks5, ubuntu
 
 [1]: https://wido.me/sunteya/setup-a-socks-proxy-server-pass-by-secure-firewall/ "https://wido.me/sunteya/setup-a-socks-proxy-server-pass-by-secure-firewall/"
@@ -114,7 +114,7 @@ stunnel4的配置文件默认位于`/etc/stunnel`目录内，配置文件的例�
 
 接下来创建stunnel配置文件`/etc/stunnel/stunnel.conf`，配置说明
 
-1. 日志位于/var/lig/stunnel4/stunnel4.log，默认日志级别为debug(7)，下面的配置里修改为warning(4)。
+1. 日志位于/var/lib/stunnel4/stunnel4.log，默认日志级别为debug(7)，下面的配置里修改为warning(4)。
 2. 证书和key都为上面创建的stunnel.pem。
 3. 最后的danted服务配置，stunnel将在1998端口监听dante-server的连接请求，并转发到dante-server的监听端口1999。
 

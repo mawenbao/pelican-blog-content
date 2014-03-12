@@ -1,6 +1,6 @@
 Title: 在Ubuntu12.04上安装l2tp/ipsec VPN服务器
 Date: 2013-11-06 13:46
-Update: 2013-11-11 17:06
+Update: 2014-03-12 17:50
 Tags: vpn, l2tp, ipsec, ubuntu, note, 教程
 
 [1]: http://wangyan.org/blog/debian-l2tp-ipsec-vpn.html "http://wangyan.org/blog/debian-l2tp-ipsec-vpn.html"
@@ -172,6 +172,13 @@ Tags: vpn, l2tp, ipsec, ubuntu, note, 教程
 
     iptables -t nat -A POSTROUTING -j MASQUERADE
     iptables -I FORWARD -p tcp --syn -i ppp+ -j TCPMSS --set-mss 1356
+
+### probable authentication failure
+查看`/var/log/auth.log`，发现ipsec报如下错误:
+
+    probable authentication failure (mismatch of preshared secrets?): malformed payload in packet
+
+问题是由`/etc/ipsec.secrets`里的ipsec公钥和客户端里设置的不一致造成的。
 
 ## 阅读资料
 
