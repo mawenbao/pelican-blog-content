@@ -1,6 +1,6 @@
 Title: awstats+nginx配置笔记
 Date: 2013-11-04 16:33
-Update: 2014-03-12 22:34
+Update: 2014-03-13 09:17
 Tags: awstats, perl, nginx, ubuntu, note, 教程
 
 [1]: http://hi.baidu.com/icokeeer/item/2588471c9403c9e05f53b1e2 "http://hi.baidu.com/icokeeer/item/2588471c9403c9e05f53b1e2"
@@ -140,9 +140,15 @@ awstats可以分析服务器日志，并提供图形化的分析结果，demo可
 
 需要注意的是，为使`logresolvemerge.pl`脚本能访问相应的日志文件，需要为分配合理的权限。
 
+    chmod +x logresolvemerge.pl
+
 ## 问题
 ### 关键词乱码
 修改配置文件，取消`LoadPlugin="decodeutfkeys"`一行的注释即可，然后重新生成报告。
+
+如果出现`Cannot locate URI/Escape.pm`这样的错误，则运行如下命令安装URI::Escape模块
+
+    cpan -i URI::Escape
 
 ## 阅读资料
     
