@@ -1,5 +1,6 @@
 Title: 关于
 Date: 2013-08-25 12:14
+Update: 2014-03-13 09:38
 Comment: off
 
 [1]: http://docs.getpelican.com/ "pelican documentation"
@@ -15,6 +16,8 @@ Comment: off
 [14]: /agreement.html "使用协议"
 [15]: /my_projects.html "我的开源项目"
 [16]: https://github.com/mawenbao/niu-x2-sidebar "niu-x2-sidebar"
+[17]: /life/thinking-about-moving-away-from-linode.html "撤离Linode"
+[18]: /life/trying-digitalocean-vps.html "尝试DigitalOcean"
 
 ## 关于本博客
 
@@ -38,6 +41,7 @@ Comment: off
 
 ## 网站历史
 
+*  2014.03.13 因为性能方面的[原因][17]，将vps从Linode搬到了DigitalOcean，搬迁[后记][18]。
 *  2014.01.11 让[niu-x2-sidebar][16]主题更好的支持footnote。
 *  2013.12.30 周末抽时间修改了下博客主题，添加了一个右侧边栏，以显示文章信息和目录，代码在[niu-x2-sidebar][16]。
 *  2013.10.31 迁回[linode][11]的东京机房，占坑mawenbao.com。

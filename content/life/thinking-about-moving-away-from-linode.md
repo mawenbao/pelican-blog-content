@@ -1,7 +1,7 @@
 Title: 考虑撤离Linode
 Date: 2014-01-26 10:01
-Update: 2014-03-11 13:38
-Tags: linode, VPS
+Update: 2014-03-13 09:31
+Tags: linode, digitalocean, VPS
 
 [1]: https://code.google.com/p/byte-unixbench/
 [2]: http://serverbear.com/
@@ -52,6 +52,9 @@ Tags: linode, VPS
 
 ## 2014.03.11 更新
 最近linode又慢的像蜗牛一样，肯定是资源又被人"抢走了"，花了钱却享受不到应得的服务，实在让人愤怒，这次我是铁了心离开了。
+
+## 2014.03.13 更新
+搬家已基本完成，这次使用的是Digitalocean最便宜的一款plan，价格只有linode 1g的四分之一，感觉性能反而更好一些，后记在[此](/life/trying-digitalocean-vps.html)。
 
 ## 相关资源列表
 *  [UnixBench][1] 系统性能测试工具
