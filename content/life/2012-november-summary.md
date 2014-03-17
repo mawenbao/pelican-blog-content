@@ -2,6 +2,7 @@ Title: 2012十一月总结和下月计划
 Date: 2013-12-01 11:06
 Update: 2013-12-02 15:18
 Tags: 总结, 计划
+Status: draft
 
 [1]: https://github.com/mawenbao/gofeed "my github repo of gofeed"
 
