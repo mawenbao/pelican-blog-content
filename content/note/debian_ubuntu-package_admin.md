@@ -1,5 +1,6 @@
 Title: Debian软件管理常用命令
 Date: 2013-08-25 12:14
+Update: 2014-03-18 09:26
 Tags: debian, ubuntu, apt, dpkg
 
 参考了[这篇文章](http://www.thegeekstuff.com/2009/10/debian-ubuntu-install-upgrade-remove-packages-using-apt-get-apt-cache-apt-file-dpkg/)，在这里记录debian系统上管理软件经常用到的命令，以方便以后查询。
@@ -33,11 +34,12 @@ Tags: debian, ubuntu, apt, dpkg
 ### dpkg
 
 *  `dpkg -l` 列出所有已安装的软件
-*  `dpkg -i `<.deb>` 安装本地deb软件包
+*  `dpkg -i <.deb>` 安装本地deb软件包
 *  `dpkg -L` 列出已安装的软件所包含的文件
 *  `dpkg -r` 删除软件包
-*  dpkg --force-all -r 强制删除软件包
-*  dpkg --force-all -P 强制删除软件包及其配置文件（若删除失败可先尝试强制安装该软件包）
+*  `dpkg --force-all -r` 强制删除软件包
+*  `dpkg --force-all -P` 强制删除软件包及其配置文件（若删除失败可先尝试强制安装该软件包）
+*  `dpkg -I <.deb>` 显示deb包的说明信息，常用于查看deb的依赖关系等。
 ### dpkg-reconfigure
 
 重新配置软件

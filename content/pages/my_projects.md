@@ -1,6 +1,6 @@
 Title: 我的开源项目
 Date: 2013-10-23 10:10
-Update: 2014-02-18 10:14
+Update: 2014-03-17 17:42
 comment: off
 
 [1]: https://github.com/mawenbao/niu-x2 "github repo for niu-x2"
@@ -37,7 +37,7 @@ comment: off
 学习Golang的时候编写的一个小程序，类似feed43.com。可以输出任意网站的全文RSS2订阅源。
 
 *  发布时间 2013-11-28
-*  当前版本 0.1.4
+*  当前版本 0.1.5
 *  使用协议 BSD License
 *  项目地址 [mawenbao/gofeed][3]
 *  说明文档 [readme][4]
