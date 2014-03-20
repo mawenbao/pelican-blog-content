@@ -1,11 +1,22 @@
 Title: Debian/Ubuntu系统小技巧收集
 Date: 2013-08-25 12:14
-Update: 2014-03-13 14:11
+Update: 2014-03-20 10:48
 Tags: debian, ubuntu, trick
 
 整理一些Debian/Ubuntu上的小技巧，包括系统管理、系统美化和娱乐等方面。
 
 ## 系统管理
+### 彻底关闭pulseaudio服务
+pulseaudio是一个音乐服务程序，如果想彻底关闭它，可做如下操作。
+
+首先禁止其开机自启动：
+
+    update-rc.d pulseaudio disable
+
+修改配置文件`/etc/pulse/client.conf`，将下面两行配置取消注释并改为[^1]：
+
+    autospawn = no
+    daemon-binary = /bin/true
 
 ### kubuntu的l2tp vpn支持
 安装l2tp-ipsec-vpn
@@ -48,7 +59,7 @@ Tags: debian, ubuntu, trick
 
     source /etc/default/locale
 
-在Debian上安装`zh_CN.UTF-8`[^1]
+在Debian上安装`zh_CN.UTF-8`[^2]
 
     apt-get install debconf
     dpkg-reconfigure locales
@@ -288,5 +299,6 @@ easytag
 *  [What is Umask and How To Setup Default umask Under Linux?](http://www.cyberciti.biz/tips/understanding-linux-unix-umask-value-usage.html)
 *  [Configure inherit group ownership on Linux folder](http://gsienkiewicz.wordpress.com/2013/04/05/configure-inherit-group-ownership-on-linux-folder/)
 
-[^1]: 参考[Debian Wiki: Locale](https://wiki.debian.org/Locale#Standard)，引用于2014-03-12。
+[^1]: 配置文件修改参考了[Ubuntu Tip: Turning PulseAudio On and Off](http://www.linuxplanet.com/linuxplanet/tutorials/7130/2)，引用于2014-03-20。
+[^2]: 参考[Debian Wiki: Locale](https://wiki.debian.org/Locale#Standard)，引用于2014-03-12。
 
