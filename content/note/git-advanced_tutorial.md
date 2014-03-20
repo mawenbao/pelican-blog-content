@@ -6,11 +6,6 @@ Tags: git, 教程
 Git的常用命令和场景可参考[Git快速使用指南](/note/git-quick_reference.html)，在这里介绍进一步的使用和部分生僻的命令。
 
 ## Git概念和技巧
-### Git使用ssh协议
-
-    git clone ssh://name@host/absolute/path/to/repo
-    git clone name@host:/path/to/repo
-
 ### Index vs. Working tree
 使用git reset命令的时候不容易搞懂Index和Working tree这两个概念，下面简要总结一下。
 

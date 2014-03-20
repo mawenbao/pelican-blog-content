@@ -9,26 +9,33 @@ Tags: git, config
 
 Git的配置文件分为系统级别(system)、用户级别(global)和仓库级别三个，详细内容可参考man git-config。
 ### /etc/gitconfig
+系统级别的git配置文件，对系统上的所有用户和所有代码仓库都有效，可被用户级别(~/.gitconfig)和仓库级别(.git/config)的配置文件覆盖。
 
-/etc/gitconfig是系统级别的git配置文件，对系统上的所有用户和所有代码仓库都有效，可被用户级别(~/.gitconfig)和仓库级别(.git/config)的配置文件覆盖。
-
-使用git config --system ... 命令可以修改该配置。
+使用`git config --system ...` 命令可以修改该配置。
 
 ### ~/.gitconfig
 
-~/.gitconfig是用户级别的git配置文件，对该用户的所有代码仓库都有效，可被仓库级别的配置文件(.git/config)覆盖。
+用户级别的git配置文件，对该用户的所有代码仓库都有效，可被仓库级别的配置文件(.git/config)覆盖。
 
-使用git config --global ... 命令可以直接修改该配置。
+使用`git config --global ...` 命令可以直接修改该配置。
 
 ### $repo/.git/config
 
-$repo/.git/config是仓库级别的git配置文件，仅对当前代码仓库($repo)有效，但是可覆盖定义在/etc/gitconfig和~/.gitconfig里的配置。
+仓库级别的git配置文件，仅对当前代码仓库($repo)有效，但是可覆盖定义在/etc/gitconfig和~/.gitconfig里的配置。
 
-git config ...命令默认修改此配置文件，如果想使用另外的路径存储配置文件可以为git confi命令使用'-f/--file'选项。
+`git config ...` 命令默认修改此配置文件，如果想使用另外的路径存储配置文件可以为git confi命令使用'-f/--file'选项。
 
 ### .gitmodules
 
 配置git仓库的子模块。可参考[这里](https://www.kernel.org/pub/software/scm/git/docs/gitmodules.html).
+
+## 传输协议
+### 使用ssh协议
+
+    git clone ssh://name@host/absolute/path/to/repo
+    git clone name@host:/path/to/repo
+
+如果ssh的端口不是默认的22或者需要定义单独的密钥位置，则需要修改ssh的配置文件`~/.ssh/config`，详情可参考[ssh配置](/note/debian_ubuntu-tricks.html#81b946c715e023cc04458d7aeae15546)。
 
 ## 常用配置项
 ### http代理

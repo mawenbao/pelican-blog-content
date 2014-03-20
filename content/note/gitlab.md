@@ -28,7 +28,7 @@ Tags: gitlab, git
 	    cp config/database.yml config/database.yml.old
 	    cp config/database.yml.mysql config/database.yml
 
-修改database.yml中mysql数据库的用户名和密码。
+    修改database.yml中mysql数据库的用户名和密码。
 
 3. 创建数据库。
 

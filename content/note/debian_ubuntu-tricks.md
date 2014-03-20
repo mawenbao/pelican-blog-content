@@ -1,6 +1,6 @@
 Title: Debian/Ubuntu系统小技巧收集
 Date: 2013-08-25 12:14
-Update: 2014-03-20 10:48
+Update: 2014-03-20 14:07
 Tags: debian, ubuntu, trick
 
 整理一些Debian/Ubuntu上的小技巧，包括系统管理、系统美化和娱乐等方面。
@@ -173,7 +173,10 @@ Linux系统运行级别简介:
 
 使用`runlevel`查看当前运行级别。
 
-### 管理多个ssh key文件
+### ssh配置
+详细内容可参考`man ssh_config`
+
+#### 管理多个ssh key文件
 
 生成key:
 
@@ -192,7 +195,12 @@ Linux系统运行级别简介:
 	IdentityFile ~/.ssh/id_rsa.work
 	User `<your work account>`
 
-更多内容可参考`man ssh_config`
+#### 定义ssh端口号
+如果sshd监听的端口不是默认的22，则可在`~/.ssh/config`里如下设置
+
+    Host atime.me
+    IdentityFile ~/.ssh/id_rsa.atime_me
+    Port 12345
 
 ### 为不同的用户使用单独的sshd配置
 在`/etc/ssh/sshd_config`文件中，使用Match块可以为某些用户启用单独的配置，这些配置将覆盖全局配置，详情可参考`man sshd_config`.
