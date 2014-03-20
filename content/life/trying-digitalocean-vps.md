@@ -1,6 +1,6 @@
 Title: 搬家至DigitalOcean
 Date: 2014-03-13 09:35
-Update: 2014-03-18 12:57
+Update: 2014-03-20 13:49
 Tags: digitalocean, linode, vps
 
 [1]: /life/thinking-about-moving-away-from-linode.html
@@ -35,6 +35,12 @@ Tags: digitalocean, linode, vps
 从测试结果看，新加坡机房的rtt小一些，但丢包率有点吓人，先迁移过去试几天。
 
 迁到新加坡机房后，感觉网速半斤八两，暂时就这样了。
+
+## 2014-03-20 更新
+今天抽空又ping了下sfo1和sgp1两个机房，得到的结果和前天的正好相反，具体结果也懒得贴了。用在线的[tracert服务](http://www.webkaka.com/Tracert.aspx)测了下两个机房，发现从中国访问新加坡机房，不管是走电信还是联通的网络，都得先从美国绕一圈。
+
+正在考虑迁回sfo1机房，X，就不能省点儿心。说起来还是怪自己，功课没做好就下了手，太草率了。
+
 
 [^1]: 吐槽见[此][1]
 
