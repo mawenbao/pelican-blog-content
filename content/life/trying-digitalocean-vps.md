@@ -1,6 +1,6 @@
 Title: 搬家至DigitalOcean
 Date: 2014-03-13 09:35
-Update: 2014-03-20 13:49
+Update: 2014-03-21 08:59
 Tags: digitalocean, linode, vps
 
 [1]: /life/thinking-about-moving-away-from-linode.html
@@ -41,6 +41,8 @@ Tags: digitalocean, linode, vps
 
 正在考虑迁回sfo1机房，X，就不能省点儿心。说起来还是怪自己，功课没做好就下了手，太草率了。
 
+## 2014-03-21 更新
+昨晚迁回sfo1后，网络果断抽了，丢包率一度高达73%，今天一早看了下，又正常了。。。
 
 [^1]: 吐槽见[此][1]
 

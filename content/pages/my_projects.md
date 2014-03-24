@@ -1,6 +1,6 @@
 Title: 我的开源项目
 Date: 2013-10-23 10:10
-Update: 2014-03-17 17:42
+Update: 2014-03-24 22:41
 comment: off
 
 [1]: https://github.com/mawenbao/niu-x2 "github repo for niu-x2"
@@ -11,6 +11,9 @@ comment: off
 [6]: /code/host_backup.html "readme for host-backup"
 [7]: https://github.com/mawenbao?tab=repositories "my github repositories"
 [8]: https://github.com/mawenbao/niu-x2-sidebar "github repo for niu-x2-sidebar"
+[9]: https://github.com/revel/revel "revel web framework"
+[10]: https://github.com/mawenbao/wishome "wishome web app"
+[11]: http://wishome.atime.me "wishome live demo"
 
 以下是我的部分开源项目，大部分都是基于BSD协议发布，欢迎fork和讨论。另外，更多的项目可参考鄙人的[github仓库列表][7]。
 
@@ -41,4 +44,14 @@ comment: off
 *  使用协议 BSD License
 *  项目地址 [mawenbao/gofeed][3]
 *  说明文档 [readme][4]
+
+## Wishome
+
+使用[revel][9]搭建的简单网站程序，目前仅支持用户注册和邮件发送等简单功能。
+
+*  发布时间 2013-12-12
+*  当前版本 dev
+*  使用协议
+*  项目地址 [mawenbao/wishome][10]
+*  演示地址 [wishome.atime.me][11]
 
