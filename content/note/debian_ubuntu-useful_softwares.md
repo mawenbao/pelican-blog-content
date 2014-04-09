@@ -1,6 +1,6 @@
 Title: Debian/Ubuntu 常用软件
 Date: 2013-08-25 12:14
-Update: 2014-03-10 17:13
+Update: 2014-04-09 08:51
 Tags: debian, ubuntu, package, resource
 
 介绍常用Debian/Ubuntu平台上的软件和部分软件的使用方法。可在[Linux Packages Search](http://pkgs.org/)查找需要的软件包。
@@ -53,6 +53,12 @@ Tags: debian, ubuntu, package, resource
 ## 软件快速使用指南
 
 介绍部分生僻软件或工具的快速使用指南。
+
+### strace
+常用于调试程序，可以输出程序的系统调用。
+
+    -f      同时输出fork出的子进程的系统调用
+    -p PID  输出进程号为PID的进程的系统调用
 
 ### shred
 rm只是删除了文件系统中相关的项，并没有彻底抹掉磁盘上文件的内容。shred可以将文件进行一定次数的涂改并删除(-n)。
