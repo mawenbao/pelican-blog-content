@@ -258,6 +258,12 @@ nohup帮助程序在后台运行，即使终端关闭也不会有影响。
 
     msgfmt -cvo zh_CN.mo zh_CN.po
 
+## 脚本
+### 获取bash脚本的所在目录
+
+    #!/bin/bash
+    SCRIPT_DIR="$( cd "$( dirname "$0" )" && pwd )"
+
 ##  系统美化 
 
 ### VLC中文字幕乱码
