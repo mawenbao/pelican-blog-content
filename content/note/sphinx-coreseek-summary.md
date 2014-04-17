@@ -205,7 +205,7 @@ Tags: 搜索引擎, 总结, 未完成
 ### Python数据源
 ### Xmlpipe2数据源
 ## 索引
-Sphinx使用indexer工具建立和更新索引，据称indexer的索引速度能达到10~15MB/秒[^2]，实际使用过程中，我尝试过分别用Python数据源和xmlpipe2数据源来建立索引，xmlpipe2稍微快一点点，基本在3MB/秒左右，速度差距很大，估计和中文分词有关。
+Sphinx使用indexer工具建立和更新索引，据称indexer的索引速度能达到10~15MB/秒[^2]，实际使用过程中，我尝试过分别用Python数据源和xmlpipe2数据源来建立索引，xmlpipe2稍微快一点点，基本在3MB/秒左右，估计是慢在中文分词上。
 
 ## 查询
 ### SphinxAPI v.s. SphinxQL
@@ -219,5 +219,5 @@ Sphinx使用indexer工具建立和更新索引，据称indexer的索引速度能
 1. [Sphinx 2.0.1 Documentation][11]
 
 [^1]: Sphinx indexer program configuration options, [mem_limit][15]，引用于2014-04-17。
-[^2]: [Wikipedia:Sphinx#Performance and scalability][16]，引用于2014-04-17。
+[^2]: [Wikipedia:Sphinx][16]，引用于2014-04-17。
 
