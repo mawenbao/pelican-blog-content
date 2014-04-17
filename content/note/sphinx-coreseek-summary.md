@@ -1,5 +1,6 @@
 Title: Sphinx/Coreseek搭建全文搜索引擎二三事
 Date: 2014-04-10 20:09
+Update: 2014-04-17 17:31
 Tags: 搜索引擎, 总结, 未完成
 
 [1]: http://sphinxsearch.com/
@@ -12,6 +13,12 @@ Tags: 搜索引擎, 总结, 未完成
 [8]: https://www.gnu.org/software/libiconv/
 [9]: http://forum.z27315.com/topic/15662-%E8%A7%A3%E5%86%B3%E7%BC%96%E8%AF%91libiconv%E6%97%B6%E7%9A%84gets-undeclared-here%E9%94%99%E8%AF%AF/
 [10]: https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=667378
+[11]: http://sphinxsearch.com/docs/archives/2.0.1/
+[12]: http://sphinxsearch.com/docs/archives/2.0.1/confgroup-searchd.html
+[13]: http://sphinxsearch.com/docs/archives/2.0.1/sphinxql-reference.html
+[14]: http://sphinxsearch.com/docs/archives/2.0.1/confgroup-indexer.html
+[15]: http://sphinxsearch.com/docs/archives/2.0.1/conf-mem-limit.html
+[16]: http://en.wikipedia.org/wiki/Sphinx_(search_engine)#Performance_and_scalability
 
 最近忙着做一个coreseek全文检索的项目，都没时间更新博客了。目前项目已接近尾声，这里总结下coreseek的安装，配置和项目的设计考量等，以备将来查询。
 
@@ -122,18 +129,95 @@ Tags: 搜索引擎, 总结, 未完成
 
 或者你也可以直接修改src/sphixexpr.cpp文件的1746, 1777和1823行，将三行中的`ExprEval`改为`this->ExprEval`。
 
-## Coreseek目录结构
+### 安装辅助工具
+将`csft-4.1/contrib/scripts`目录下的searchd脚本拷贝到`/etc/init.d/`目录下，即可使用service命令启动和终止searchd服务。
+
+安装好coreseek后，将`/usr/local/coreseek/share/man/`目录下的所有文件和目录都拷贝到`/usr/local/share/man/`目录里，即可使用man命令查看indexer和searchd的使用手册。
+
+## Sphinx目录结构
+按照上面的步骤正确安装Coreseek后，在`/usr/local/coreseek`可看到如下几个文件夹
+
+    bin/            sphinx的程序目录
+        searchd     搜索服务器程序
+        indexer     索引建立工具
+    etc/            配置文件目录
+        csft.conf   默认配置文件
+    share/
+        man/        sphinx的man手册，建议拷贝到系统man目录，方便查询
+    var/
+        data/       默认的索引存放目录
+        log/        默认的日志目录和pid文件目录
+
+实际使用sphinx的流程大概如下:
+
+1. 使用indexer建立或更新索引，如果searchd已经运行，则需要使用`--rotate`选项。
+2. 运行searchd
+
+例如：
+
+    cd /usr/local/coreseek
+    ./bin/indexer --all     # 第一次建立索引，使用默认配置文件/usr/local/coreseek/etc/csft.conf
+    ./bin/searchd           # 使用默认配置文件/usr/local/coreseek/etc/csft.conf
+
 ## Sphinx配置
+配置文件可参考Sphinx的[官方文档][11]和配置例子(/usr/local/coreseek/etc/sphinx.conf.dist)。
+
 ### searchd
+配置示例
+
+    searchd
+    {
+        listen          = 9312
+        listen          = 9306:mysql41
+        log             = /usr/local/coreseek/var/log/searchd.log
+        query_log       = /usr/local/coreseek/var/log/query.log
+        read_timeout    = 5
+        max_children    = 30
+        pid_file        = /usr/local/coreseek/var/log/searchd.pid
+        max_matches     = 1000
+        seamless_rotate = 1
+        preopen_indexes = 1
+        unlink_old      = 1
+        workers         = threads # for RT to work
+    }
+
+这里面的诸多配置选项可参考[searchd program configuration options][12]。
+
+其中，通过第二个listen配置`listen = 9306:mysql41`，你可以使用mysql的client来访问searchd的索引。
+
+    mysql -h 127.0.0.1 -P 9306
+
+然后使用[SphinxQL][13]查询语言即可搜索索引。
+
 ### indexer
+配置示例
+
+    indexer {
+        mem_limit    = 1024M
+        write_buffer = 16M
+    }
+
+索引工具indexer的配置相对少一些，参考[indexer program configuration options][14]。需要注意的是，mem_limit如果查过2048M会出问题[^1]。
+
+### 索引配置
+
 ## 数据源
 ### Python数据源
 ### Xmlpipe2数据源
+## 索引
+Sphinx使用indexer工具建立和更新索引，据称indexer的索引速度能达到10~15MB/秒[^2]，实际使用过程中，我尝试过分别用Python数据源和xmlpipe2数据源来建立索引，xmlpipe2稍微快一点点，基本在3MB/秒左右，速度差距很大，估计和中文分词有关。
+
+## 查询
+### SphinxAPI v.s. SphinxQL
 ## 其他
 ### 自定义中文词库
 ### lxml & tornado etc
 ## 设计考量
-### indexer速度慢?
+### Python __slots__
 ### 分布式searchd
 ## 资源和参考资料
+1. [Sphinx 2.0.1 Documentation][11]
+
+[^1]: Sphinx indexer program configuration options, [mem_limit][15]，引用于2014-04-17。
+[^2]: [Wikipedia:Sphinx#Performance and scalability][16]，引用于2014-04-17。
 
