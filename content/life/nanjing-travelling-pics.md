@@ -11,7 +11,7 @@ Tags: 南京, 旅游, 照片
 
 中山陵1
 
-![/static/images/travel/nanjing/DSC02680.JPG)
+![中山陵 松树](/static/images/travel/nanjing/DSC02680.JPG)
 
 中山陵松树，这张貌似又过曝了
 

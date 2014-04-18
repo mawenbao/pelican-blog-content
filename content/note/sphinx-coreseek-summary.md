@@ -1,6 +1,6 @@
 Title: Sphinx/Coreseek搭建全文搜索引擎二三事
 Date: 2014-04-10 20:09
-Update: 2014-04-17 17:31
+Update: 2014-04-18 16:01
 Tags: 搜索引擎, 总结, 未完成
 
 [1]: http://sphinxsearch.com/
@@ -19,36 +19,42 @@ Tags: 搜索引擎, 总结, 未完成
 [14]: http://sphinxsearch.com/docs/archives/2.0.1/confgroup-indexer.html
 [15]: http://sphinxsearch.com/docs/archives/2.0.1/conf-mem-limit.html
 [16]: http://en.wikipedia.org/wiki/Sphinx_(search_engine)#Performance_and_scalability
+[17]: http://team.91town.com/2011/05/coreseek%E4%B8%8E%E7%AC%AC%E5%9B%9B%E5%9F%8E%E6%90%9C%E7%B4%A2/
+[18]: http://www.coreseek.cn/docs/coreseek_4.1-sphinx_2.0.1-beta.html#pysource
+[19]: http://www.coreseek.cn/docs/coreseek_4.1-sphinx_2.0.1-beta.html#coreseek-confgroup-pysource
+[20]: http://www.coreseek.cn/products-install/python/
+[21]: http://sphinxsearch.com/docs/archives/2.0.1/xmlpipe2.html
+[22]: http://sphinxsearch.com/docs/archives/2.0.1/confgroup-source.html
+[23]: http://sphinxsearch.com/docs/archives/2.0.1/confgroup-index.html
+[24]: http://sphinxsearch.com/docs/archives/2.0.1/api-reference.html
+[25]: http://sphinxsearch.com/docs/archives/2.0.1/sphinxql-reference.html
+[26]: http://sphinxsearch.com/docs/archives/2.0.1/delta-updates.html
+[27]: http://lxml.de/performance.html
+[28]: http://lxml.de/performance.html#xpath
+[29]: https://docs.python.org/2/library/stdtypes.html#object.__dict__
+[30]: http://guppy-pe.sourceforge.net/#Heapy
+[31]: https://docs.python.org/release/2.5.2/ref/slots.html
+[32]: http://tech.oyster.com/save-ram-with-python-slots/
+[33]: http://stackoverflow.com/questions/3522765/python-pickling-slots-error
+[34]: http://stackoverflow.com/questions/472000/python-slots
+[35]: https://docs.python.org/2.7/library/pickle.html#data-stream-format
+[36]: http://stackoverflow.com/questions/563840/how-can-i-check-the-memory-usage-of-objects-in-ipython/565382#565382
+[37]: https://wiki.python.org/moin/TimeComplexity
 
 最近忙着做一个coreseek全文检索的项目，都没时间更新博客了。目前项目已接近尾声，这里总结下coreseek的安装，配置和项目的设计考量等，以备将来查询。
-
-未完成
-
-## 项目简介
-项目的部分需求：
-
-1. 目前需要做全文检索的数据是html网页文件，总数在1000万左右，文件总大小大概是200GB，每天新增1000个文件左右。将来很可能需要检索pdf和mysql等不同的数据来源。
-2. 提供RESTful风格的搜索接口，返回json格式的查询结果。因为搜索服务主要是内部使用，估计搜索请求的压力不大。
-
-为缩短开发周期，整个项目使用python实现。
 
 ## 开发环境
 
 * 操作系统: Ubuntu 12.04 x86-64
-* Coreseek: 4.1测试版
+* Coreseek: 4.1测试版(Sphinx-2.0.1)
 * Python: 2.7
-
-另外在开发过程中使用了如下的第三方Python packages:
-
-* lxml-3.3.4: 解析html文件
-* tornado-3.2: 异步http服务器，异步socket通信等
 
 ## Sphinx/Coreseek简介
 [Sphinx][1]是一个高性能的全文检索引擎，使用C++语言开发，采用GPL协议发布，可购买商业授权，目前的稳定版本是2.1.7。
 
 [Coreseek][2]是基于Sphinx的中文全文检索引擎，使用[MMSEG算法][3]进行中文分词，并且提供[Python数据源][4]。Coreseek采用GPLv2协议发布，可购买商业授权，目前的稳定版本是3.2.14，基于Sphinx-0.9.9，测试版本是4.1，基于Sphinx-2.0.1。（另外，Coreseek官方论坛在2013年的年末称即将发布[5.0版本][5]，不过至今无详细消息）
 
-## Coreseek安装
+## Sphinx/Coreseek安装
 下载Coreseek-4.1的源代码
 
     wget http://www.coreseek.cn/uploads/csft/4.0/coreseek-4.1-beta.tar.gz
@@ -134,7 +140,7 @@ Tags: 搜索引擎, 总结, 未完成
 
 安装好coreseek后，将`/usr/local/coreseek/share/man/`目录下的所有文件和目录都拷贝到`/usr/local/share/man/`目录里，即可使用man命令查看indexer和searchd的使用手册。
 
-## Sphinx目录结构
+## Sphinx/Coreseek目录结构
 按照上面的步骤正确安装Coreseek后，在`/usr/local/coreseek`可看到如下几个文件夹
 
     bin/            sphinx的程序目录
@@ -159,8 +165,8 @@ Tags: 搜索引擎, 总结, 未完成
     ./bin/indexer --all     # 第一次建立索引，使用默认配置文件/usr/local/coreseek/etc/csft.conf
     ./bin/searchd           # 使用默认配置文件/usr/local/coreseek/etc/csft.conf
 
-## Sphinx配置
-配置文件可参考Sphinx的[官方文档][11]和配置例子(/usr/local/coreseek/etc/sphinx.conf.dist)。
+## Sphinx/Coreseek配置
+配置文件可参考Sphinx的[官方文档][11]和配置例子`/usr/local/coreseek/etc/sphinx.conf.dist`。
 
 ### searchd
 配置示例
@@ -199,25 +205,83 @@ Tags: 搜索引擎, 总结, 未完成
 
 索引工具indexer的配置相对少一些，参考[indexer program configuration options][14]。需要注意的是，mem_limit如果查过2048M会出问题[^1]。
 
-### 索引配置
+### 数据源和索引配置
+参考示例配置文件`/usr/local/coreseek/etc/sphinx.conf.dist`和官方文档[Data source configuration options][22]，[Index configuration options][23]即可。
 
 ## 数据源
 ### Python数据源
-### Xmlpipe2数据源
-## 索引
-Sphinx使用indexer工具建立和更新索引，据称indexer的索引速度能达到10~15MB/秒[^2]，实际使用过程中，我尝试过分别用Python数据源和xmlpipe2数据源来建立索引，xmlpipe2稍微快一点点，基本在3MB/秒左右，估计是慢在中文分词上。
+Coreseek开发了一个号称万能的Python数据源，使用起来比xmlpipe2要方便一些。其实就是用Python脚本来获取待索引数据，配置文档见[这里][18]，接口文档见[这里][19]，示例程序见[这里][20]。
 
-## 查询
-### SphinxAPI v.s. SphinxQL
-## 其他
+### Xmlpipe2数据源
+这是用Sphinx官方支持的一个"万能"数据源，其实就是将待索引数据按照xmlpipe2的[schema][21]写入标准输出中。
+
+在数据源的配置项中需要设置type为xmlpipe2，另外还要设置一个xmlpipe_command选项，该选项的命令必须输出符合[xmlpipe2 schema][21]的xml文档到标准输出流(stdout)里，比如:
+
+    source news_src
+    {
+        type = xmlpipe2
+        xmlpipe_command = cat /tmp/xmlpipe2_out.xml
+    }
+
+## 建立索引
+Sphinx使用indexer工具建立和更新索引，据称indexer的索引速度能达到10~15MB/秒[^2]。实际使用过程中，我尝试过分别用Python数据源和xmlpipe2数据源来建立索引，xmlpipe2稍微快一点点。使用Python数据源索引14G文本，大约50万个文件，最后生成2.3G索引，最快在2.8MB/秒左右，估计是慢在中文分词上。
+
 ### 自定义中文词库
-### lxml & tornado etc
-## 设计考量
-### Python __slots__
-### 分布式searchd
+## 查询
+Sphinx支持使用SphinxAPI和SphinxQL查询数据。
+### SphinxAPI
+SphinxAPI用于和searchd通信，官方提供PHP, Python和Java的实现，API的文档见[此][24]。Coreseek携带的API和示例程序实现都放在`csft-4.1/api/`目录下。
+
+### SphinxQL
+SphinxQL是Sphinx提供的SQL方言，用于查询和管理索引，相比SphinxAPI，SphinxQL支持的操作更多，比如删除索引等，文档在[此][25]。
+
+## 实际应用
+### 项目简介
+项目的部分需求：
+
+1. 目前需要做全文检索的数据是html网页文件，总数在1000万左右，文件总大小大概是200GB，每天新增几千个文件左右。将来很可能需要检索pdf和mysql等不同的数据来源。
+2. 提供RESTful风格的搜索接口，返回json格式的查询结果。因为搜索服务主要是内部使用，估计搜索请求的压力不大。
+
+为缩短开发周期，整个项目采用Python实现，使用coreseek自带的Python数据源建立索引。
+
+在开发过程中使用了如下的第三方Python packages:
+
+* lxml-3.3.4: 解析html文件
+* tornado-3.2: 异步http服务器，异步socket通信等
+
+### 设计考量
+
+#### 建立索引
+上面有提到过，indexer是一个单线程的工具，建立中文索引的速度基本上很难超过3MB/秒，因此可以考虑将大的索引拆分成若干小索引，这些小索引可以同时建立，最后再合并成一个完整的索引。
+
+因为待索引文档的基数很大，但每天更新的数量又比较小，所以建立索引的时候最好使用官方推荐的一种`Main + Delta`的方式，主(Main)索引只需要最开始建立一次，然后每天重建一次增量(Delta)索引并合并到主索引中，相关文档见[Delta index updates][26]。
+
+#### Python相关
+项目里需要使用Python查找和解析html文件。
+
+文件查找没有使用Python标准库os的walk函数，当文件数量较多时，walk函数的效率会比较低。有兴趣的可以看下一个叫[betterwalk](https://github.com/benhoyt/betterwalk)的第三方库，据称比`os.walk`快不少。实际项目中，因为待索引文件的目录结构固定且很有规律，直接用`os.listdir`和`os.lstat`即可解决，`os.lstat`可以获取文件的最后修改日期，在建立增量索引的时候非常有用。
+
+html文件的解析使用了口碑很给力的lxml库，用lxml解析html文件时通常有多种方法，使用之前最好仔细看一下lxml各个函数的[benchmark][27]，了解一下哪种方法更快一些，比如使用xpath查找html节点时，lxml的XPath类比xpath()函数要快好几倍[^3]。
+
+另外，Python的多线程处理计算密集型(CPU Bound)任务是一个众所周知的大坑，比如多线程解析html文件。这时最好用多进程分别做解析任务，然后将解析好的文件收集起来。
+
+前面说过indexer比较慢，一般建立索引的时候，速度瓶颈就在indexer上。因此解析好的文件通常要缓存起来，比如缓存在内存里。然而内存是紧俏资源，必须限量节约使用。
+
+关于内存的限量使用，在实现时可以为缓存设定一个阀值，缓存满了就先暂停所有的文件扫描和解析进程，等缓存快没了的时候再继续，在Linux上使用SIGSTOP和SIGCONT信号可以很容易就实现这一功能。相比之下，如何准确的获取缓存对象所占用的内存大小倒是比较困难，折中的办法是统计整个进程的内存占用或是[间接的方法][36]，或者干脆通过限制缓存对象的数目来做限制（这个比较弱智的感觉）。
+
+关于内存的节约使用，大家都知道一般的Python对象都会自动创建一个[__dict__][29]属性来存储其他的属性，然而不太广为人知的是，Python的内置类型dict是一个内存大户，当Python对象少的时候可能很难发现，如果在内存里存储十万或一百万个Python对象时，用Memory
+Profiler（比如[Heapy][30]）做下profiling你会发现，光是`__dict__`本身（不包括存在`__dict__`里的数据）就能吃掉你巨量的内存。通过设置类属性[__slots__][31]可以禁止`__dict__`属性的自动创建，其中一个成功故事在[这里][32]，这个哥们通过`__slots__`节约了9G内存。需要说明的是，`__slots__`会带来一些[负面作用][34]，比较明显的一个是，使用version
+0版本的pickle协议序列化定义了`__slots__`属性的对象会有报错，但使用更高级别的pickle协议则没问题[^4]（一般很少用到cPickle的[protocol version 0][35]，因为又慢又占空间)。
+
+另外缓存所使用的数据结构也比较重要，直接用Python的内置类型list肯定不行，因为缓存应该是一个FIFO的队列，而del(list[0])操作是O(n)的时间复杂度[^5]，用collections.deque比较合适。
+
 ## 资源和参考资料
 1. [Sphinx 2.0.1 Documentation][11]
+2. [Coreseek与第四城搜索][17]，有很多性能相关的测试，很详尽。
 
 [^1]: Sphinx indexer program configuration options, [mem_limit][15]，引用于2014-04-17。
 [^2]: [Wikipedia:Sphinx][16]，引用于2014-04-17。
+[^3]: lxml benchmarks and speed, [xpath][28]，引用于2014-04-18。
+[^4]: [python pickling slots error][33]，引用于2014-04-18。
+[^5]: [Python Time Complexity][37]，引用于2014-04-18。
 
