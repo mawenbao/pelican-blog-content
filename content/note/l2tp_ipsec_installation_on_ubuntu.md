@@ -1,9 +1,10 @@
 Title: 在Ubuntu12.04上安装l2tp/ipsec VPN服务器
 Date: 2013-11-06 13:46
-Update: 2014-03-12 17:50
+Update: 2014-04-19 13:24
 Tags: vpn, l2tp, ipsec, ubuntu, note, 教程
 
 [1]: http://wangyan.org/blog/debian-l2tp-ipsec-vpn.html "http://wangyan.org/blog/debian-l2tp-ipsec-vpn.html"
+[2]: https://launchpad.net/~seriy-pr/+archive/network-manager-l2tp/+packages
 
 记录我在Ubuntu服务器上安装l2tp/ipsec VPN的过程，以供日后查询。ipsec用于验证和加密数据包，由openswan提供；l2tp即第二层隧道协议，由xl2tpd提供。
 
@@ -154,6 +155,20 @@ Tags: vpn, l2tp, ipsec, ubuntu, note, 教程
 然后重启rsyslogd
 
     sudo service rsyslog restart
+
+## Ubuntu客户端安装和配置
+Ubuntu的NetworkManager默认没有l2tp vpn的插件，需要从ppa的源里安装。
+
+    sudo apt-add-repository ppa:seriy-pr/network-manager-l2tp
+    sudo apt-get update
+    sudo apt-get install network-manager-l2tp
+   
+然后停止并禁用xl2tpd服务
+
+   sudo service xl2tpd stop
+   sudo update-rc.d xl2tpd disable
+
+如果安装失败，可以直接从[这里][2]下载合适的deb包手动安装。最后重启系统即可在NetworkManager里添加l2tp的vpn。
 
 ## 错误排查
 

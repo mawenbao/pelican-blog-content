@@ -275,7 +275,7 @@ Profiler（比如[Heapy][30]）做下profiling你会发现，光是`__dict__`本
 通过设置类属性[\_\_slots\_\_][31]可以禁止`__dict__`属性的自动创建，其中一个成功故事在[这里][32]，这个哥们通过`__slots__`节约了9G内存。需要说明的是，`__slots__`会带来一些[负面作用][34]，比较明显的一个是，使用version
 0版本的pickle协议序列化定义了`__slots__`属性的对象会有报错，但使用更高级别的pickle协议则没问题[^4]（一般很少用到cPickle的[protocol version 0][35]，因为又慢又占空间)。
 
-另外缓存所使用的数据结构也比较重要，直接用Python的内置类型list肯定不行，因为缓存应该是一个FIFO的队列，而`del(list[0])`操作是O(n)的时间复杂度[^5]，用collections.deque比较合适。
+另外缓存所使用的数据结构也比较重要，直接用Python的内置类型list肯定不行，因为缓存应该是一个FIFO的队列，而`del(list[0])`操作是O(n)的复杂度[^5]，用collections.deque比较合适。
 
 ## 资源和参考资料
 1. [Sphinx 2.0.1 Documentation][11]

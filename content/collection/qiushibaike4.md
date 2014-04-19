@@ -1,11 +1,12 @@
 Title: [转]糗事百科精选4
 Date: 2014-03-27 17:40
-Update: 2014-04-16 17:56
+Update: 2014-04-18 17:49
 Tags: 糗事百科, 笑话, 转载
 
 [1]: /static/images/qiushibaike/ZhenXiangDi.jpg
 [2]: /static/images/qiushibaike/dog-smiling.jpg
 [3]: /static/images/qiushibaike/yuehuifenqi.jpg
+[4]: /static/images/qiushibaike/CatLearnsFast.jpg
 
 收集糗事百科上的趣事。
 
@@ -49,4 +50,7 @@ Tags: 糗事百科, 笑话, 转载
 
 ## 约会分歧
 ![约会分歧][3]
+
+## 喵星人拥有强大的学习能力
+![喵星人拥有强大的学习能力][4]
 
