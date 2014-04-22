@@ -165,8 +165,8 @@ Ubuntu的NetworkManager默认没有l2tp vpn的插件，需要从ppa的源里安�
    
 然后停止并禁用xl2tpd服务
 
-   sudo service xl2tpd stop
-   sudo update-rc.d xl2tpd disable
+    sudo service xl2tpd stop
+    sudo update-rc.d xl2tpd disable
 
 如果安装失败，可以直接从[这里][2]下载合适的deb包手动安装。最后重启系统即可在NetworkManager里添加l2tp的vpn。
 

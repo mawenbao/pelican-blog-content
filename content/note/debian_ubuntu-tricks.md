@@ -1,6 +1,6 @@
 Title: Debian/Ubuntu系统小技巧收集
 Date: 2013-08-25 12:14
-Update: 2014-03-20 14:07
+Update: 2014-04-22 14:31
 Tags: debian, ubuntu, trick
 
 整理一些Debian/Ubuntu上的小技巧，包括系统管理、系统美化和娱乐等方面。
@@ -284,7 +284,20 @@ nohup帮助程序在后台运行，即使终端关闭也不会有影响。
 
 设置ibus-pinyin的候选词个数:
 
-   /usr/lib/ibus-pinyin/ibus-setup-pinyin
+    /usr/lib/ibus-pinyin/ibus-setup-pinyin
+
+### fcitx
+在Kubuntu上推荐使用fcitx输入法，词库感觉比ibus-pinyin好些。
+
+    sudo apt-get install fcitx fcitx-sunpinyin
+
+然后在`~/.xprofile`里设置三个环境变量
+
+    export QT_IM_MODULE="fcitx"
+    export XMODIFIERS="@im=fcitx"
+    export GTK_IM_MODULE="fcitx"
+
+然后重新登陆，如果有问题可以使用`fcitx-diagnose`工具查找问题。
 
 ## 娱乐
 
