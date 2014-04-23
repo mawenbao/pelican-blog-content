@@ -289,7 +289,7 @@ nohup帮助程序在后台运行，即使终端关闭也不会有影响。
 ### fcitx
 在Kubuntu上推荐使用fcitx输入法，词库感觉比ibus-pinyin好些。
 
-    sudo apt-get install fcitx fcitx-sunpinyin
+    sudo apt-get install fcitx fcitx-pinyin
 
 然后在`~/.xprofile`里设置三个环境变量
 

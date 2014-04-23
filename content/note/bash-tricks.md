@@ -1,6 +1,6 @@
 Title: Bash小技巧合集
 Date: 2013-08-25 12:14
-Update: 2013-11-14 14:12
+Update: 2014-04-22 17:32
 Tags: bash, trick
 
 收集一些bash下的技巧。
@@ -72,6 +72,17 @@ bash里一些特殊的符号的作用。
 
 使用命令`ls !(a*).txt`将输出:
     bbb.txt
+
+## IO重定向和复制文件描述符
+Bash中可以通过`<`, `<<`, `>`和`>>`四个符号实现IO重定向，详情参考`man bash`的**REDIRECTION**部分。还可以通过`<&`和`>&`复制文件描述符，详情参考`man bash`的**Duplicating File Descriptors**部分。需要说明的是，当这两者混合使用的时候，必须注意先后顺序。援引`man bash`中的例子，
+
+    ls >dirlist 2>&1
+
+首先将ls的标准输出(1)重定向到dirlist文件，然后将ls的标准错误(2)设置为标准输出(已被重定向)的拷贝，所以ls的标准输出和标准错误都被重定向到了dirlist文件中。
+
+    ls 2>&1 >dirlist
+
+首先将ls的标准错误(2)设置为标准输出(1)的拷贝，然后将标准输出重定向到dirlist文件，所以ls的标准错误最终被写入标准输出中，而ls原本的标准输出被重定向到了dirlist文件中。
 
 ## 快捷键
 bash的很多快捷键和emacs相似，可以多尝试一下。
