@@ -1,6 +1,6 @@
 Title: Git进阶教程
 Date: 2013-08-25 12:14
-Update: 2014-03-03 16:43
+Update: 2014-04-24 17:27
 Tags: git, 教程
 
 Git的常用命令和场景可参考[Git快速使用指南](/note/git-quick_reference.html)，在这里介绍进一步的使用和部分生僻的命令。
@@ -88,7 +88,23 @@ Git index中的改动可以用git commit提交到本地仓库中。
 更多功能参考`man git-rev-list`。
 
 ### git rebase
-rebase操作可以将一个分支上的提交合并到另一个分支上，和merge操作不同的是，rebase最后形成线性的历史。
+rebase操作可以将两个分支上的差异合并到另一个分支上，和merge操作不同的是，rebase最后形成线性的历史。
+
+    git rebase --onto O U B
+
+上面的命令将U和B之间的差异`U..B`在分支O上重新做一遍。通常我们用的是这个命令的简化版本，例如
+
+    A - B - C - D - E   (master)
+            \
+             F - G - H  (hotfix)
+
+在分支`hotfix`上运行命令`git rebase master`，实际上就是运行`git rebase --onto master master hotfix`，最后生成如下的线性提交历史
+
+    A - B - C - D - E - F' - G' - H' (hotfix)
+                    \
+                     (master)
+
+实际应用中，当需要提交pull request时，最好在自己的分支上rebase下主分支并解决发生的conflicts，这样仓库管理员就可以直接用`git merge hotfix`来接受你的pr，而不会遇到任何冲突。
 
 #### 注意事项
 使用git rebase需要注意的一点就是**不要rebase已经提交到远程仓库的代码**。
