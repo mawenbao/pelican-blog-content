@@ -1,6 +1,6 @@
 Title: C/C++资源收集
 Date: 2013-08-25 12:14
-Update: 2014-02-20 17:07
+Update: 2014-04-24 15:21
 Tags: c++, resource
 
 收集有用的C/C++资源。
@@ -41,6 +41,8 @@ Tags: c++, resource
 #### 优化相关
 
 *  [GCC编译优化指南](http://lamp.linux.gov.cn/Linux/optimize_guide.html)
+*  [Software optimization resources](http://www.agner.org/optimize/)
+*  [Wikibooks:Optimizing C++](http://en.wikibooks.org/wiki/Category:Optimizing_C%2B%2B)
 
 ### C++类库
 #### gpertools

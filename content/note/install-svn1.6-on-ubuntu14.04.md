@@ -14,7 +14,7 @@ Subversion现在已经是Apache基金会下的软件了，但是官网的源码�
 
 ## 安装依赖
 
-Kubuntu上自带的gcc是4.8的，编译1.6.20的代码有有点问题，但是基本能绕过去。
+Kubuntu上自带的gcc是4.8的，编译1.6.20的代码会有点问题，但是基本能绕过去。
 
 下面是一些编译要用的工具，一般都应该装过了。
 
@@ -42,7 +42,7 @@ seahorse是一个管理gnome-keyring的图形界面，装不装都可以。
     make -j4
     sudo make install
 
-运行`svn --version`，查看下版本和仓库获取模块，如果有
+运行`svn --version`，查看svn版本和仓库获取模块，如果有
 
     * ra_neon : Module for accessing a repository via WebDAV protocol using Neon.
       - handles 'http' scheme
