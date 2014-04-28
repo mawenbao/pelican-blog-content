@@ -141,6 +141,7 @@ NIUX2_RECENT_UPDATE_NUM = 10
 NIUX2_FAVICON_URL = '/favicon.ico'
 NIUX2_GOOGLE_CSE_ID = '016368690064160370938:8u3wwjza9c4'
 NIUX2_DISPLAY_TITLE = True
+NIUX2_LAZY_LOAD = True
 
 #NIUX2_LIB_THEME = 'http://atime-me.qiniudn.com/niu-x2'
 #NIUX2_LIB_BOOTSTRAP_JS = 'http://atime-me.qiniudn.com/niu-x2/js/bootstrap.min.js'
