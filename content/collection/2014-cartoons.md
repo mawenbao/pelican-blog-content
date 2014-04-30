@@ -11,6 +11,7 @@ Tags: 动漫, 新番, 未完成
 [6]: /static/images/cartoon/ShiJieZhengFuMouLueDeXingChen.jpg
 [7]: /static/images/cartoon/ShiJieZhengFuMouLueDeXingChen1.jpg
 [8]: /static/images/cartoon/DaoBuLiaoDeTaS1.jpg
+[9]: /static/images/cartoon/DaoBuLiaoDeTaS1_1.jpg
 
 收集最近看过的动漫，不断积累中。
 
@@ -47,6 +48,8 @@ Tags: 动漫, 新番, 未完成
 ![倒不了的塔][8]
 
 罕见的国产良心作品，看得出来制作非常用心，逗乐方面也没有靠滥俗的网络流行词撑场面，其中娃犀利的配音和台词都非常高明，总让人忍不住要喷饭。其实第一季在2013年就发布了，只是最近才无意间发现，差点就错过了的说。
+
+![倒不了的塔][9]
 
 另外，吐嘈下主题曲，真的不好听。
 

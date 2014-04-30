@@ -17,6 +17,7 @@ Tags: 糗事百科, 笑话, 转载
 2. [糗事百科精选2](/collection/qiushibaike2.html)
 3. [糗事百科精选3](/collection/qiushibaike3.html)
 4. [糗事百科精选4](/collection/qiushibaike4.html)
+5. [糗事百科精选5](/collection/qiushibaike5.html)
 
 ## 老一点的苍蝇都知道落在正确答案上
 高中数学老师骂人挺损，有一次他发试卷，大家考的都很差，他站在讲台上特别气愤的说：为什么你们眼中只有错误答案？啊？教室里老一点的苍蝇都知道落在正确答案上！

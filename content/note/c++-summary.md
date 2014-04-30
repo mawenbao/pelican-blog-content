@@ -42,10 +42,12 @@ POD(plain old data)或PODS(plain old data structure)是指不包含构造函数(
 
 上面这段话引用自stackoverflow上问题[Do the parentheses after the type name make a difference with new?][3]的一个回答，另外作者还仔细的对new A和new A()进行了总结。
 
-我懒得去纠结这种问题，总之记得一件事情，不管是什么类型都用`new A()`来初始化，另外：
+懒得去纠结这种问题，总之记得一件事情，不管是什么类型都用`new A()`来初始化，另外：
 
 1. non-POD类型必须提供无参构造函数，且其初始化列表必须包含该类的所有成员变量。
 2. POD类型在new之后应当用memset等方式重新赋值。
+
+## 调用函数的时候发生了什么
 
 ## 阅读资料
 1. [wikipedia:Plain_Old_Data_Structures][1]
