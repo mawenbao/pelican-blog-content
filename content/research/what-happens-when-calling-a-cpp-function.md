@@ -12,6 +12,7 @@ Tags: cpp, 未完成
 [8]: http://turkeyland.net/projects/overflow/crash.php
 [9]: http://eli.thegreenplace.net/2011/09/06/stack-frame-layout-on-x86-64/
 [10]: http://www.tenouk.com/Bufferoverflowc/Bufferoverflow2a.html
+[11]: http://www.win.tue.nl/~aeb/linux/hh/protection.html
 
 用一个简单的例子解释C++函数调用的过程，备忘。
 
@@ -28,18 +29,34 @@ Tags: cpp, 未完成
 
 * [Understanding Memory][1]
 * [Wikipedia:call stack][2]
-* [Gentle Introduction to x86-64 Assembly][4]
+* [A Readers Guide to x86 Assembly][3]
 
 ## 调用堆栈简介
 
 ## 简单的例子
+下面是一个非常简单的例子。
+
+<script src="https://gist.github.com/mawenbao/96dbd44c385764ed90b0.js"></script>
+
+使用如下命令编译`call_stack_example.cpp`
+
+    g++ -g -O0 call_stack_example.cpp -o a.out
+
+然后使用`objdump`输出汇编代码
+
+    objdump -dS a.out -j .text
+
+下面是call_stack_example.cpp内两个函数的汇编代码。
+
+<script src="https://gist.github.com/mawenbao/becea4b6acdc9d3dfb14.js"></script>
 
 ## 阅读资料
 1. [x86-64 abi][5]
-2. [A Readers Guide to x86 Assembly][3]
+2. [Gentle Introduction to x86-64 Assembly][4]
 3. [x86-64 Machine-Level Programming][6]
 4. [What is exactly the base pointer and stack pointer? To what do they point?][7]
 5. [Buffer Overflows and You][8]
-6. [Stack frame layout on x86-64][9]
-7. [BUFFER OVERFLOW 6: The Function Stack][10]
+6. [Buffer overflow Protection][11]
+7. [Stack frame layout on x86-64][9]
+8. [BUFFER OVERFLOW 6: The Function Stack][10]
 
