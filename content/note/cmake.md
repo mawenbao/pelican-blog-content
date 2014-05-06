@@ -1,12 +1,13 @@
 Title: CMake使用总结
 Date: 2013-11-12 17:45
-Update: 2013-12-03 16:31
+Update: 2014-05-06 17:33
 Tags: c++, cmake, note, 总结
 
 [1]: http://www.cmake.org/cmake/help/documentation.html
 [2]: http://www.cmake.org/Wiki/CMake_Useful_Variables
 [3]: http://www.cmake.org/cmake/help/cmake_tutorial.html
 [4]: https://github.com/mawenbao/protobuf-demo
+[5]: http://www.cmake.org/Wiki/CMake_Useful_Variables#Compilers_and_Tools
 
 总结CMake的常用命令，并介绍有用的CMake资源。
 
@@ -70,9 +71,33 @@ CMake意为cross-platform make，可用于管理c/c++工程。CMake解析配置�
 
 *  PROJECT_SOURCE_DIR 工程的源文件目录，通常是包含CMakeLists.txt（有Project命令的）的目录。
 
+### 自定义变量
 可在命令行下向CMake传递自定义变量
 
-    cmake -DMY_BUILD_TYPE=debug .
+    cmake -DMY_VAR=hello .
+
+然后在CMakeLists.txt中使用，注意大小写。
+
+    message(${MY_VAR})
+
+### 构建类型
+cmake默认支持多种构建类型(build type)，每种构建类型都有专门的编译参数变量，详情见下表[^1]:
+
+CMAKE_BUILD_TYPE | 对应的c编译选项变量          | 对应的c++编译选项变量
+-----------------|------------------------------|----------------------
+None             | CMAKE_C_FLAGS                | CMAKE_CXX_FLAGS
+Debug            | CMAKE_C_FLAGS_DEBUG          | CMAKE_CXX_FLAGS_DEBUG
+Release          | CMAKE_C_FLAGS_RELEASE        | CMAKE_CXX_FLAGS_RELEASE
+RelWithDebInfo   | CMAKE_C_FLAGS_RELWITHDEBINFO | CMAKE_CXX_FLAGS_RELWITHDEBINFO
+MinSizeRel       | CMAKE_C_FLAGS_MINSIZEREL     | CMAKE_CXX_FLAGS_MINSIZEREL
+
+在CMakeLists.txt中可以自定义编译选项变量
+
+    set(CMAKE_CXX_FLAGS_RELEASE "-Wall -O2")
+
+然后运行cmake的时候，传入相应的构建类型即可
+
+    cmake -DCMAKE_BUILD_TYPE=Release
 
 ## 常用命令
 详情可参考对应版本的[CMake文档][1]。
@@ -154,6 +179,11 @@ set命令还可以设置自定义变量，比如
 
 需要注意的是，target_link_libraries里库文件的顺序符合gcc链接顺序的规则，即被依赖的库放在依赖它的库的后面，比如上面的命令里，libA.so可能依赖于libB.a和libC.so，如果顺序有错，链接时会报错。还有一点，B.a会告诉CMake优先使用静态链接库libB.a，C.so会告诉CMake优先使用动态链接库libC.so，也可直接使用库文件的相对路径或绝对路径。
 
+### 自定义链接选项
+有时候需要自定义链接选项，比如需要单独对B.a使用`--whole-archive`选项，可以
+
+    target_link_libraryies(hello A -Wl,--whole-archive B.a -Wl,--no-whole-archive C.so)
+
 ### 自定义Makefile目标
 运行下面的whatever目标`make whatever`，会先创建一个目录`./hello`，然后将当前目录的`a.txt`拷贝到新建的`./hello`目录里。
 
@@ -233,4 +263,6 @@ list命令
 1. [CMake文档列表][1]
 2. [CMake常用变量列表][2]
 3. [CMake入门教程][3]
+
+[^1]: [CMake Useful Variables: Compilers and Tools][5]，引用于2014-05-06。
 

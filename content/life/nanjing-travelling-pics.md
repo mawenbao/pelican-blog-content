@@ -58,12 +58,6 @@ Tags: 南京, 旅游, 照片
 
 ![不知名的河](/static/images/travel/nanjing/DSC02848.JPG)
 
-不知名的河
-
-![不知名的河上](/static/images/travel/nanjing/DSC02839.JPG)
-
-在千年古镇的小桥上，右边的屌丝是我，左边的女神是我女朋友 :) （开什么玩笑，难得一张状态好的，旁边怎么还有一个抢镜的？？？）
-
 ![乌衣巷外的纪念品店](/static/images/travel/nanjing/DSC02850.JPG)
 
 乌衣巷外的纪念品店
