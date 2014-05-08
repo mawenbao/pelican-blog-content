@@ -133,6 +133,10 @@ NIUX2_PUBLISHED_TRANSL = '发布时间'
 NIUX2_LASTMOD_TRANSL = '最后修改'
 NIUX2_PAGE_TITLE_TRANSL = '页面'
 NIUX2_RECENT_UPDATE_TRANSL = '最近修改'
+NIUX2_HIDE_SIDEBAR_TRANSL = '隐藏侧边栏'
+NIUX2_SHOW_SIDEBAR_TRANSL = '显示侧边栏'
+NIUX2_REVISION_HISTORY_TRANSL = '修订历史'
+NIUX2_VIEW_SOURCE_TRANSL = '查看源文件'
 
 NIUX2_DUOSHUO_SHORTNAME = 'atime-me'
 NIUX2_PYGMENTS_THEME = 'github'
@@ -142,6 +146,8 @@ NIUX2_FAVICON_URL = '/favicon.ico'
 NIUX2_GOOGLE_CSE_ID = '016368690064160370938:8u3wwjza9c4'
 NIUX2_DISPLAY_TITLE = True
 NIUX2_LAZY_LOAD = True
+NIUX2_TOOLBAR = True
+NIUX2_GITHUB_REPO = 'mawenbao/pelican-blog-content'
 
 #NIUX2_LIB_THEME = 'http://atime-me.qiniudn.com/niu-x2'
 #NIUX2_LIB_BOOTSTRAP_JS = 'http://atime-me.qiniudn.com/niu-x2/js/bootstrap.min.js'
