@@ -5,7 +5,7 @@ import datetime
 
 AUTHOR = u'Ma Wenbao'
 SITENAME = u'MWB日常笔记'
-SITEURL = 'http://blog.atime.me'
+SITEURL = 'https://blog.atime.me'
 #SITEURL = 'http://localhost:8000'
 
 TIMEZONE = 'Asia/Shanghai'
@@ -139,6 +139,7 @@ NIUX2_REVISION_HISTORY_TRANSL = '修订历史'
 NIUX2_VIEW_SOURCE_TRANSL = '查看源文件'
 
 NIUX2_DUOSHUO_SHORTNAME = 'atime-me'
+#DISQUS_SITENAME = 'blog-atime-me'
 NIUX2_PYGMENTS_THEME = 'github'
 NIUX2_PAGINATOR_LENGTH = 11
 NIUX2_RECENT_UPDATE_NUM = 10
