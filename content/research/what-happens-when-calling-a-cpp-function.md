@@ -88,12 +88,12 @@ Tags: cpp, callstack, 函数调用
 
 2. 寄存器:
     * %rax: 通常用于返回第一个整数。
-    * %rbp: base pointer，指向当前frame的顶部附近(caller的%rbp)。
-    * %rsp: stack pointer，用于保存最新分配的frame的底部，也就是stack顶部。
+    * %rbp: base pointer，指向当前frame的底部附近(caller的%rbp)。
+    * %rsp: stack pointer，用于保存最新分配的frame的顶部，也就是stack顶部。
 3. 调用者(caller)和被调用者(callee): 在函数foo的上下文中，调用者(caller)就是main函数，被调用者(callee)就是foo函数。
 4. stack frame: stack是由一个个的stack frmae组成的，每次函数调用都会在栈上分配一个新的frame，该frame内保存了当前函数调用的上下文信息，包括请求参数(可能直接保存在寄存器中[^2])，返回地址和局部变量等内容。
 5. 返回地址: callq指令会在调用函数的时候将下一条指令的地址push到stack上，当本次调用结束后，retq指令会跳转到被保存的返回地址处使程序继续执行。
-6. stack上的数据是字节对齐的，参考[Data Alignment][19]。
+6. stack上的数据是[字节对齐][19]的。
 7. stack由高地址处向低地址处生长，在下图中`16(%rbp)`表示地址`16 + value of register[%rbp]`
 
         +----------------------+ <- 高地址处
