@@ -31,7 +31,7 @@ def content_object_init(instance):
     if 'summary' in instance.metadata:
         return
     if not hasattr(instance, '_summary') and instance._content is not None:
-        content = instance.content
+        content = instance._content
         firstP = FirstParagraphParser()
         firstP.feed(content)
         endCharA = '。'
