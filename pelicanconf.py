@@ -78,6 +78,7 @@ PLUGINS = [
     'sitemap',
     'summary',
     'better_figures_and_images',
+    'minify',
     ]
 UPDATEDATE_MODE = 'metadata'
 
