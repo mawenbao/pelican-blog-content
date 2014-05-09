@@ -77,6 +77,7 @@ PLUGINS = [
     'extract_headings',
     'sitemap',
     'summary',
+    'better_figures_and_images',
     ]
 UPDATEDATE_MODE = 'metadata'
 
