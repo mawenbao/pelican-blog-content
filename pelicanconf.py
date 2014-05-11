@@ -67,7 +67,9 @@ AUTHORS_SAVE_AS = ''
 TEMPLATE_PAGES = {
         "404.html": "404.html",
         }
-JINJA_EXTENSIONS = ['jinja2.ext.ExprStmtExtension',]
+JINJA_EXTENSIONS = [
+    'jinja2.ext.ExprStmtExtension',
+]
 
 # plugin config
 PLUGIN_PATH = './plugins'
@@ -77,7 +79,7 @@ PLUGINS = [
     'extract_headings',
     'sitemap',
     'summary',
-    'better_figures_and_images',
+    'niux2_lazyload_helper',
     'minify',
     ]
 UPDATEDATE_MODE = 'metadata'
@@ -149,12 +151,13 @@ NIUX2_FAVICON_URL = '/favicon.ico'
 NIUX2_GOOGLE_CSE_ID = '016368690064160370938:8u3wwjza9c4'
 NIUX2_DISPLAY_TITLE = True
 NIUX2_LAZY_LOAD = True
+NIUX2_LAZY_LOAD_TEXT = '图片加载中 ...'
 NIUX2_TOOLBAR = True
 NIUX2_GITHUB_REPO = 'mawenbao/pelican-blog-content'
 
 #NIUX2_LIB_THEME = 'http://atime-me.qiniudn.com/niu-x2'
 #NIUX2_LIB_BOOTSTRAP_JS = 'http://atime-me.qiniudn.com/niu-x2/js/bootstrap.min.js'
-NIUX2_LIB_FONTAWESOME = '//netdna.bootstrapcdn.com/font-awesome/4.0.3'
+#NIUX2_LIB_FONTAWESOME = '//netdna.bootstrapcdn.com/font-awesome/4.0.3'
 NIUX2_LIB_JQUERY = '//ajax.aspnetcdn.com/ajax/jQuery/jquery-1.11.0.min.js'
 
 NIUX2_CATEGORY_MAP = {
