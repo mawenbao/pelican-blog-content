@@ -1,7 +1,7 @@
 Title: Makefile
 Date: 2013-08-25 12:14
 Update: 2014-05-12 15:01
-Tags: makefile, 教程
+Tags: makefile, 总结
 
 [1]: http://www.gnu.org/software/make/manual/html_node/Flavors.html
 [2]: https://www.gnu.org/software/make/manual/html_node/Automatic-Variables.html
@@ -16,16 +16,16 @@ Tags: makefile, 教程
 [11]: https://www.gnu.org/software/make/manual/html_node/Static-Usage.html#Static-Usage
 [12]: http://www.gnu.org/software/make/manual/html_node/Functions.html#Functions
 
-使用GNU Make 3.8的语法。
+总结GNU Make的一些基础知识和技巧，以下内容均基于Ubuntu 14.04 x86_64平台的GNU Make 3.81。
 
 ## 变量
 ### 变量类型
-make支持两种风格的类型定义，文档见[The Two Flavors of Variables][1]
+make支持[两种风格的变量定义方式][1]:
 
 1. 递归扩展变量(recursively expanded variables)
     * 使用`=`或define指令定义
     * `CFLAGS = $(CFLAGS) -O`会导致无限递归
-    * `变量每次被展开的时候，所使用的函数都会重新被执行，会降低make的效率，更严重的是，wildcard等函数会返回预料之外的结果。
+    * 变量每次被展开的时候，所使用的函数都会重新被执行，会降低make的效率，更严重的是，wildcard等函数会返回预料之外的结果。
 2. 简单扩展变量(simply expanded varialbes)
     * 使用`:=`或`::=`定义
     * 在变量定义的时候展开一次
@@ -105,8 +105,8 @@ pattern首先从targets里匹配出一个个的目标，然后按照类似于[pa
 ### 特殊的符号
 * `@`: 用于规则中的命令之前，可以在make时只显示命令的输出而不显示命令的内容，比如
 
-    all:
-        @echo hello
+        all:
+            @echo hello
 
     只输出hello，不会输出`echo hello`这条命令的内容。
 
@@ -137,8 +137,8 @@ pattern首先从targets里匹配出一个个的目标，然后按照类似于[pa
     .PHONY: debug
 
 ### 不要滥用空白字符
-1. `objects = a.o b.o    # object files`，这里${objects}变量的值是`a.o b.o    `，包含后面的四个空格。
-2. `str = ${subst abc, 123,abcde}`，这里${str}变量的值是` 123de`，包含开头的一个空格。
+1. `objects = a.o b.o # object files`，这里${objects}变量的值是`a.o b.o '（包含后面的一个空格）。
+2. `str = ${subst abc, 123,abcde}`，这里${str}变量的值是` 123de'（包含开头的一个空格）。
 3. `str = ${subst abc ,123,abcde}`，这里${str}变量的值还是`abcde`，因为要替换的子串`abc `（包含最后的空格）没有找到。
 
 ## 例子
