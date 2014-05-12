@@ -53,6 +53,11 @@ html: clean-tmp $(TMPDIR)/index.html clean
 $(OUTPUTDIR)/%.html:
 	$(PELICAN) $(INPUTDIR) -o $(OUTPUTDIR) -s $(CONFFILE) $(PELICANOPTS)
 
+optimize: optimize-jpg
+
+optimize-jpg:
+	find content/static/images -name "*.jpg" -o -name "*.JPG" | xargs jpegoptim --strip-all
+
 github: html
 	ghp-import -m $(GITHUB_PAGES_UPDATE_MSG) $(OUTPUTDIR)
 	git push $(GITHUB_PUSH_OPTIONS) $(GITHUB_PAGES_REPO) gh-pages:$(GITHUB_PAGES_BRANCH)
@@ -98,4 +103,4 @@ ftp_upload: publish
 s3_upload: publish
 	s3cmd sync $(OUTPUTDIR)/ s3://$(S3_BUCKET) --acl-public --delete-removed
 
-.PHONY: clean-tmp html help clean regenerate serve devserver publish ssh_upload rsync_upload dropbox_upload ftp_upload s3_upload github
+.PHONY: clean-tmp html help clean regenerate serve devserver publish ssh_upload rsync_upload dropbox_upload ftp_upload s3_upload github optimize optimize-jpg
