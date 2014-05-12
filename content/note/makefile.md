@@ -15,6 +15,7 @@ Tags: makefile, 总结
 [10]: https://www.gnu.org/software/make/manual/html_node/Substitution-Refs.html#Substitution-Refs
 [11]: https://www.gnu.org/software/make/manual/html_node/Static-Usage.html#Static-Usage
 [12]: http://www.gnu.org/software/make/manual/html_node/Functions.html#Functions
+[13]: https://www.gnu.org/software/make/manual/html_node/Substitution-Refs.html
 
 总结GNU Make的一些基础知识和技巧，以下内容均基于Ubuntu 14.04 x86_64平台的GNU Make 3.81。
 
@@ -50,7 +51,7 @@ shell变量应使用`@`转义，比如变量`${var}`要改为`$${var}`。
 [sust函数][4]用于替换字符串，格式是`$(subst from,to,text)`，其中from是要被替换的子串，to是要替换成的子串，text是需要被替换的字符串。注意from和to之间的逗号左右不要随意添加空格，否则也会被视为需要替换的内容。
 
 ### patsubst
-[patsubst函数][5]可以匹配并保留第一个没被`\`转义的`%`字符，然后在替换成的字符串里使用，比如`$(patsubst %.css,%.min.css,hello.css)`替换的结果就是`hello.min.css`，同样的，逗号左右不要随意添加空白字符。类似的功能还可以用[Substitution References]实现，语法更简洁一些。
+[patsubst函数][5]可以匹配并保留第一个没被`\`转义的`%`字符，然后在替换成的字符串里使用，比如`$(patsubst %.css,%.min.css,hello.css)`替换的结果就是`hello.min.css`，同样的，逗号左右不要随意添加空白字符。类似的功能还可以用[Substitution References][13]实现，语法更简洁一些。
 
 ### filter
 [filter函数][6]可以按一定的规则过滤目标，然后返回符合规则的数据。
@@ -148,7 +149,7 @@ pattern首先从targets里匹配出一个个的目标，然后按照类似于[pa
     # 查找所有的css源文件
     CSS_SOURCE_FILES = ${wildcard src/*.css}
     # 构建目标名
-    CSS_OUTPUT_FILES = ${CSS_SOURCE_FILES:src/%.css=output/%.min.css}
+    CSS_OUTPUT_FILES = ${subst src/,output/,${patsubst %.css,%.min.css,${CSS_SOURCE_FILES}}}
 
     all: ${CSS_OUTPUT_FILES}
     
