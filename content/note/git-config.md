@@ -1,6 +1,6 @@
 Title: Git配置文件介绍和举例
 Date: 2013-08-25 12:14
-Update: 2013-12-17 22:01
+Update: 2014-05-13 09:34
 Tags: git, config
 
 收集常用的Git配置。
@@ -42,6 +42,19 @@ Git的配置文件分为系统级别(system)、用户级别(global)和仓库级�
     git config http.proxy 'http://localhost:8087'
     git config http.proxy 'socks5://localhost:8088'
 
+### alias
+git config中的alias可以像bash的内置命令alias一样为常用的很长的命令分配一个别名，比如
+
+    git config alias.lsm "ls-files -m"
+
+然后使用`git lsm`即相当于`git ls-files -m`的效果。
+
+另外如果alias的命令开头带叹号`!`，则表示后面的命令将被视为shell命令[^1]，例如
+
+    git config alias.lsm '!git ls-files -m'
+
+效果和之前一样，需要注意的是为防止shell解释叹号，命令左右要用单引号。
+
 ## 配置文件举例
 
 以我的用户级git配置文件和全局ignore文件为例。
@@ -71,14 +84,12 @@ Git的配置文件分为系统级别(system)、用户级别(global)和仓库级�
 
 	
 	# Backup files
-
 	*~
 	 
 	# Version control
 	.svn*
 	
 	# Compiled source
-
 	*.com
 	*.class
 	*.dll
@@ -89,8 +100,7 @@ Git的配置文件分为系统级别(system)、用户级别(global)和仓库级�
 	*.egg-info
 	nbproject/
 	
-	# Packages
-
+	# Archives
 	*.7z
 	*.dmg
 	*.gz
@@ -108,4 +118,6 @@ Git的配置文件分为系统级别(system)、用户级别(global)和仓库级�
 
 *  [Ignoring files from github](https://help.github.com/articles/ignoring-files)
 *  [yyfrankyy's git config](http://f2e.us/wiki/git-config.html#!/)
+
+[^1]: 参考`man git config`的Variables部分`alias.*`的说明，引用于2014-05-13。
 
