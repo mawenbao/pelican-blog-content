@@ -1,6 +1,6 @@
 Title: 2014年动漫新番整理
 Date: 2014-03-25 20:26
-Update: 2014-04-28 21:23
+Update: 2014-05-13 19:40
 Tags: 动漫, 新番, 未完成
 
 [1]: /static/images/cartoon/ShuXingTongHaoHui.jpg
@@ -12,6 +12,8 @@ Tags: 动漫, 新番, 未完成
 [7]: /static/images/cartoon/ShiJieZhengFuMouLueDeXingChen1.jpg
 [8]: /static/images/cartoon/DaoBuLiaoDeTaS1.jpg
 [9]: /static/images/cartoon/DaoBuLiaoDeTaS1_1.jpg
+[10]: /static/images/cartoon/RuGuoTaDeQiZhiBeiZheDuanLe.jpg
+[11]: /static/images/cartoon/RuGuoTaDeQiZhiBeiZheDuanLe2.jpg
 
 收集最近看过的动漫，不断积累中。
 
@@ -53,5 +55,11 @@ Tags: 动漫, 新番, 未完成
 
 另外，吐嘈下主题曲，真的不好听。
 
-## 漆黑的子弹
+## 如果她的旗帜被折断了
+
+![如果她的旗帜被折断了][10]
+
+![如果她的旗帜被折断了][11]
+
+至今不晓得ta是男是女，反正萌翻了。
 
