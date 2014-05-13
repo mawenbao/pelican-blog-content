@@ -1,6 +1,6 @@
 Title: Git快速使用指南
 Date: 2013-08-25 12:14
-Update: 2014-03-03 16:28
+Update: 2014-05-13 09:57
 Tags: git, 教程
 
 阅读“[Pro Git](http://git-scm.com/book)“后写的笔记，当做速查手册(quick git reference)来用，以供日常查阅。常见的git错误和解决方案可参考[git问题整理](/note/git-problems.html)，更多内容可参考[这里](/note/git-advanced_tutorial.html)。
@@ -317,6 +317,9 @@ bundle命令可以对git仓库进行打包，如下所示。
 	
 	-o, --others
 	Show other (i.e. untracked) files in the output
+
+    -o --exclude-standard
+    Untracked files
 
 使用ls-files和update-index来更新git索引
 
