@@ -6,8 +6,7 @@ Tags: 动漫歌曲, RWBY
 
 (图片来自[itunes store](https://itunes.apple.com/us/album/this-will-be-day-rooster-teeths/id675671215))
 
-<audio src="/static/music/RWBY/This_Will_Be_The_Day.ogg" preload="auto" controls></audio>
-<script src="/static/js/audioplayer.min.js"></script>
+[hermit id=31162441 auto loop]
 
 More info: [http://rwby.wikia.com/wiki/RWBY_Soundtrack/This_Will_Be_The_Day](http://rwby.wikia.com/wiki/RWBY_Soundtrack/This_Will_Be_The_Day)
 
