@@ -1,6 +1,6 @@
 Title: Debian/Ubuntu 常用软件
 Date: 2013-08-25 12:14
-Update: 2014-05-12 15:33
+Update: 2014-05-14 14:57
 Tags: debian, ubuntu, package, resource
 
 介绍常用Debian/Ubuntu平台上的软件和部分软件的使用方法。可在[Linux Packages Search](http://pkgs.org/)查找需要的软件包。
@@ -19,6 +19,7 @@ Tags: debian, ubuntu, package, resource
 *  fallocate 创建指定大小的空文件
 *  fontconfig: 管理字体，fc-list列出当前可用的字体
 *  htop 比top更直观的进程监控/系统信息软件
+*  imagemagick 转换和编辑图片
 *  locate 配合updatedb进行文件索引和搜索
 *  mutt 收发邮件
 *  p7zip 7zip的linux版本
@@ -43,6 +44,7 @@ Tags: debian, ubuntu, package, resource
 *  python-pip
 *  php5-fpm
 *  phpmyadmin
+*  pstack 打印进程的调用堆栈
 *  mysql-server-5.1
 *  ruby1.9.1
 *  addr2line 可以将objdump中的函数地址翻译为文件名和行数
@@ -54,6 +56,27 @@ Tags: debian, ubuntu, package, resource
 ## 软件快速使用指南
 
 介绍部分生僻软件或工具的快速使用指南。
+
+### imagemagick
+显示图片的详细信息
+
+    identify -verbose a.jpg
+
+按比例压缩图片，宽度压缩为200px
+
+    convert a.jpg -resize 200 b.jpg
+
+压缩图片，高度压缩为150px，并直接替换原图片
+
+    convert a.jpg -resize x150 a.jpg
+
+压缩图片，宽度压缩为200px，高度压缩为150px（乘号其实是小写的`x`字母），叹号是必须的，否则压缩后的图片依然会保持原有的高宽比。
+
+    convert a.jpg -resize 200x150! b.jpg
+
+切割图片，从左上角开始截取宽200px，高150px的部分[^1]
+
+    convert a.jpg -crop 200x150+0+0 b.jpg
 
 ### strace
 常用于调试程序，可以输出程序的系统调用。
@@ -175,4 +198,7 @@ bash的内置命令，可通过`man builtins`查看使用说明，通常用`type
 ## 阅读资料
 
 *  [Get The Home Directory After Su](http://www.computing.net/answers/solaris/get-the-home-directory-after-su/5035.html)
+*  [Examples of ImageMagick Usage (Version 6)](http://www.imagemagick.org/Usage/)
+
+[^1]: 200x150是截取图片的大小，+0+0表示截取的起始坐标(0,0)，默认原点(0,0)在左上角。坐标的计算方法见[Image Geometry](http://www.imagemagick.org/script/command-line-processing.php#geometry)的`Offsets in geometry`部分的说明。
 
