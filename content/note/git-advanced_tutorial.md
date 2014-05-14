@@ -1,6 +1,6 @@
 Title: Git进阶教程
 Date: 2013-08-25 12:14
-Update: 2014-04-24 17:27
+Update: 2014-05-14 13:56
 Tags: git, 教程
 
 Git的常用命令和场景可参考[Git快速使用指南](/note/git-quick_reference.html)，在这里介绍进一步的使用和部分生僻的命令。
@@ -157,6 +157,24 @@ test分支的提交记录如下：
 
     git log HEAD@{7}           # 查看日志以确认是正确的恢复点
     git reset --hard HEAD@{7}  # 撤销rebase操作
+
+## 图形化界面(GUI)
+git有许多很好的图形化界面，比如gitk, qgit和tig等。
+
+### big-picture
+[git-big-picture](https://github.com/esc/git-big-picture)可以将git仓库的分支和标签之间的衍生关系以图片的形式展示出来，对于直观上了解代码的历史很有帮助。
+
+    git big-picture -o pic.png
+
+下面是[pelican](https://github.com/getpelican/pelican)的big-picture（部分）:
+
+![big picture of pelican default](/static/images/pelican/pelican-3.3.0-big-picture-default.jpg)
+
+默认显示所有的分支，标签和首次提交，所以上图看上去很乱，可以通过如下选项只显示标签之间的关系（部分）
+
+    git big-picture --no-branches --no-roots -o pic.png
+
+![big picture of pelican tags](/static/images/pelican/pelican-3.3.0-big-picture-tags.jpg)
 
 ## 阅读资料
 
