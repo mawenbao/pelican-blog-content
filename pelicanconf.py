@@ -66,6 +66,7 @@ AUTHORS_SAVE_AS = ''
 
 TEMPLATE_PAGES = {
         "404.html": "404.html",
+        "archives_updatedate.html": "archives_updatedate.html",
         }
 JINJA_EXTENSIONS = [
     'jinja2.ext.ExprStmtExtension',
@@ -121,12 +122,15 @@ SITEMAP = {
 # theme config
 THEME = './themes/niu-x2-sidebar'
 #THEME = '../niu-x2-sidebar'
+NIUX2_DEBUG = False
 
 # niu-x2 theme config
 NIUX2_404_TITLE_TRANSL = '404错误 页面未找到!'
 NIUX2_404_INFO_TRANSL = '请求页面未找到!'
 NIUX2_TAG_TRANSL = '标签'
 NIUX2_ARCHIVE_TRANSL = '存档'
+NIUX2_ARCHIVE_PUBDATE_TRANSL = '存档 (按发布时间)'
+NIUX2_ARCHIVE_UPDATEDATE_TRANSL = '存档 (按修改时间)'
 NIUX2_CATEGORY_TRANSL = '分类'
 NIUX2_TAG_CLEAR_TRANSL = '清空'
 NIUX2_TAG_FILTER_TRANSL = '过滤标签'
@@ -152,7 +156,7 @@ NIUX2_FAVICON_URL = '/favicon.ico'
 NIUX2_GOOGLE_CSE_ID = '016368690064160370938:8u3wwjza9c4'
 NIUX2_DISPLAY_TITLE = True
 NIUX2_LAZY_LOAD = True
-NIUX2_LAZY_LOAD_TEXT = '图片加载中 ...'
+NIUX2_LAZY_LOAD_TEXT = '图片加载中'
 NIUX2_TOOLBAR = True
 NIUX2_GITHUB_REPO = 'mawenbao/pelican-blog-content'
 
@@ -173,8 +177,6 @@ NIUX2_HEADER_SECTIONS = [
         ('关于', 'about me', '/about.html', 'fa-anchor'),
         ('使用协议', 'agreement', '/agreement.html', 'fa-info-circle'),
         ('项目', 'my projects', '/my_projects.html', 'fa-rocket'),
-        ('存档', 'blog archives', '/archives.html', 'fa-archive'),
-        ('标签', 'blog tags', '/tag/', 'fa-tag'),
         ]
 NIUX2_HEADER_DROPDOWN_SECTIONS = {
         ('社区', 'fa-user'): [
