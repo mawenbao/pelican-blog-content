@@ -82,6 +82,7 @@ PLUGINS = [
     'sitemap',
     'summary',
     'niux2_lazyload_helper',
+    'niux2_hermit_player',
     'minify',
     ]
 UPDATEDATE_MODE = 'metadata'

@@ -13,3 +13,9 @@
 [submodule "plugins/niux2_lazyload_helper"]
 	path = plugins/niux2_lazyload_helper
 	url = https://github.com/mawenbao/niux2_lazyload_helper
+[submodule "plugins/niux2_hermit_player"]
+	path = plugins/niux2_hermit_player
+	url = https://github.com/mawenbao/niux2_hermit_player
+[submodule "plugins/pandoc_reader"]
+    path = plugins/pandoc_reader
+    url = https://github.com/liob/pandoc_reader
