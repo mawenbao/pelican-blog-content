@@ -62,15 +62,15 @@ Tags: debian, ubuntu, package, resource
 
     identify -verbose a.jpg
 
-按比例压缩图片，宽度压缩为200px
+按原高宽比修改图片大小，宽度改为200px
 
     convert a.jpg -resize 200 b.jpg
 
-压缩图片，高度压缩为150px，并直接替换原图片
+按原高宽比修改图片大小，高度改为150px，并直接替换原图片
 
     convert a.jpg -resize x150 a.jpg
 
-压缩图片，宽度压缩为200px，高度压缩为150px（乘号其实是小写的`x`字母），叹号是必须的，否则压缩后的图片依然会保持原有的高宽比。
+修改图片大小，宽度改为200px，高度改为150px（乘号其实是小写的`x`字母），叹号是必须的，否则压缩后的图片依然会保持原有的高宽比。
 
     convert a.jpg -resize 200x150! b.jpg
 
