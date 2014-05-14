@@ -56,7 +56,7 @@ $(OUTPUTDIR)/%.html:
 optimize: optimize-jpg
 
 optimize-jpg:
-	find content/static/images -name "*.jpg" -o -name "*.JPG" | xargs jpegoptim --strip-all
+	find content/static/images -name "*.jpg" -o -name "*.JPG" | xargs jpegoptim --strip-all | grep -v 'skipped'
 
 github: html
 	ghp-import -m $(GITHUB_PAGES_UPDATE_MSG) $(OUTPUTDIR)

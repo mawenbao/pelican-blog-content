@@ -7,13 +7,13 @@
 COMMIT_MSG="update article"
 
 function filter_articles() {
-    echo `echo $1 | grep '^content' | grep -E '(md|rst)$'`
+    echo `ls -1 $1 | grep '^content' | grep -E '(md|rst)$'`
 }
 
 git reset > /dev/null
 
-MODIFIED_FILES=`filter_articles $(git ls-files -m)`
-UNTRACKED_FILES=`filter_articles $(git ls-files -o --exclude-standard)`
+MODIFIED_FILES=`filter_articles "$(git ls-files -m)"`
+UNTRACKED_FILES=`filter_articles "$(git ls-files -o --exclude-standard)"`
 
 for f in ${MODIFIED_FILES} ${UNTRACKED_FILES}; do
     git add ${f}
