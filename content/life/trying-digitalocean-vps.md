@@ -1,6 +1,6 @@
 Title: 搬家至DigitalOcean
 Date: 2014-03-13 09:35
-Update: 2014-03-21 08:59
+Update: 2014-05-15 10:54
 Tags: digitalocean, linode, vps
 
 [1]: /life/thinking-about-moving-away-from-linode.html
@@ -44,5 +44,18 @@ Tags: digitalocean, linode, vps
 ## 2014-03-21 更新
 昨晚迁回sfo1后，网络果断抽了，丢包率一度高达73%，今天一早看了下，又正常了。。。
 
+## 2014-05-15 更新
+最近感觉在vps执行命令，远程编辑文件都流畅了许多（以前卡的那叫一个蛋疼），白天的时候ping了下，我这边是上海电信的线路，结果如下，貌似平均延迟比之前好了不少。
+
+    --- speedtest-sfo1.digitalocean.com ping statistics ---
+    306 packets transmitted, 305 received, 0% packet loss, time 305646ms
+    rtt min/avg/max/mdev = 207.885/225.128/387.930/26.514 ms
+
+再看了下新加坡机房的，丢包率依然处于生活不能自理的状态
+
+    --- speedtest-sgp1.digitalocean.com ping statistics ---
+    281 packets transmitted, 211 received, 24% packet loss, time 280651ms
+    rtt min/avg/max/mdev = 164.564/218.554/312.690/40.736 ms
+    
 [^1]: 吐槽见[此][1]
 
