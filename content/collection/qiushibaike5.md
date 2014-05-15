@@ -1,9 +1,7 @@
 Title: [转]糗事百科精选5
 Date: 2014-04-30 10:02
-Update: 2014-05-09 16:39
+Update: 2014-05-15 08:45
 Tags: 糗事百科, 笑话, 转载
-
-[1]: /static/images/qiushibaike/HomeSweetHome.jpg
 
 收集糗事百科上的趣事。
 
@@ -20,5 +18,10 @@ Tags: 糗事百科, 笑话, 转载
 前两天大表哥买了辆二手奥拓，非要载我去逛街，我看那破破烂烂的汽车就真心找不出地方夸两句，正好大表哥按喇叭，声音嘎嘣脆的，我就说，大表哥你这车可以啊，喇叭挺脆的，他说当然了，刹车不灵就算了，喇叭再不好使还怎么开，尼玛～活该撞花池上！
 
 ## Home, Sweet Home
-![甜蜜的家][1]
+下面是[Pascal Campion](http://www.pascalcampion.com/)的作品，在qb上看到的。
+
+<img width="350px" src="/static/images/qiushibaike/HomeSweetHome.jpg" alt="甜蜜的家" />
+
+## 合租的猫
+<img width="350px" src="/static/images/qiushibaike/HeZuDeMao.jpg" alt="合租的猫" />
 
