@@ -1,6 +1,6 @@
 Title: C/C++资源收集
 Date: 2013-08-25 12:14
-Update: 2014-04-24 15:21
+Update: 2014-05-15 09:47
 Tags: c++, resource
 
 收集有用的C/C++资源。
@@ -43,6 +43,7 @@ Tags: c++, resource
 *  [GCC编译优化指南](http://lamp.linux.gov.cn/Linux/optimize_guide.html)
 *  [Software optimization resources](http://www.agner.org/optimize/)
 *  [Wikibooks:Optimizing C++](http://en.wikibooks.org/wiki/Category:Optimizing_C%2B%2B)
+*  [Linux profiling tools and techniques](http://www.pixelbeat.org/programming/profiling/)
 
 ### C++类库
 #### gpertools
@@ -64,6 +65,12 @@ Tags: c++, resource
 * 项目主页: [http://zeromq.org/]()
 * 说明: 网络库(消息队列)
 * License: GPLv3 with a static linking exception[^2]
+
+### C++工具
+#### Profiler
+* [Poor man's profiler](http://poormansprofiler.org/)
+* [Oprofile](http://oprofile.sourceforge.net/about/)
+* [Perf](https://perf.wiki.kernel.org/index.php/Main_Page)
 
 [^1]: 见[http://sglib.sourceforge.net/#license]()。
 [^2]: 见[http://zeromq.org/area:licensing]()。
