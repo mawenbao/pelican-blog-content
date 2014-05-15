@@ -1,12 +1,13 @@
 Title: RWBY片首曲This will be the day
 Date: 2013-11-02 19:40
+Update: 2014-05-15 09:30
 Tags: 动漫歌曲, RWBY 
 
 ![This will be the day](/static/images/RWBY/this_will_be_the_day_cover.jpg)
 
 (图片来自[itunes store](https://itunes.apple.com/us/album/this-will-be-day-rooster-teeths/id675671215))
 
-[hermit id=31162441 auto loop]
+[hermit id=31162441 auto nolist]
 
 More info: [http://rwby.wikia.com/wiki/RWBY_Soundtrack/This_Will_Be_The_Day](http://rwby.wikia.com/wiki/RWBY_Soundtrack/This_Will_Be_The_Day)
 
