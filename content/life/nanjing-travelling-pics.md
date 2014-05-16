@@ -91,7 +91,7 @@ Tags: 南京, 旅游, 照片
 
 总统府7
 
-## 玄武胡
+## 玄武湖公园
 ![玄武门](/static/images/travel/nanjing/DSC03071.JPG)
 
 玄武门
