@@ -5,7 +5,7 @@ Tags: 动漫歌曲, RWBY
 
 ![This will be the day](/static/images/RWBY/this_will_be_the_day_cover.jpg)
 
-(图片来自[itunes store](https://itunes.apple.com/us/album/this-will-be-day-rooster-teeths/id675671215))
+<span class="text-muted">图片来自[itunes store](https://itunes.apple.com/us/album/this-will-be-day-rooster-teeths/id675671215)</span>
 
 [hermit id=31162441 auto nolist]
 
