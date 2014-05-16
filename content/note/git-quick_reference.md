@@ -10,8 +10,8 @@ Tags: git, 教程
 
 <img alt="Keep calm and use git reflog" width="200px" src="/static/images/note/keep-calm-and-use-git-reflog.png">
 
-(图片取自[
-KEEP CALM AND USE GIT REFLOG](http://www.keepcalm-o-matic.co.uk/p/keep-calm-and-use-git-reflog/))
+<span class="text-muted">图片取自[
+KEEP CALM AND USE GIT REFLOG](http://www.keepcalm-o-matic.co.uk/p/keep-calm-and-use-git-reflog/)</span>
 
 ## 特殊符号
 
