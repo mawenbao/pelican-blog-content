@@ -242,7 +242,7 @@ golang的list实现了一个双向链表[^4]，不适合随机存取(按索引�
 
 ## 疑难问题
 ### 在循环中删除slice的元素
-<span class="alert-danger">
+<span class="text-danger">
 不要这么做，考虑用[list](#10ae9fc7d453b0dd525d0edf2ede7961)替换slice。
 </span>
 
