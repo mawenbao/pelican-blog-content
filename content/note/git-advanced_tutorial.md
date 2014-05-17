@@ -1,6 +1,6 @@
 Title: Git进阶教程
 Date: 2013-08-25 12:14
-Update: 2014-05-14 13:56
+Update: 2014-05-17 13:24
 Tags: git, 教程
 
 Git的常用命令和场景可参考[Git快速使用指南](/note/git-quick_reference.html)，在这里介绍进一步的使用和部分生僻的命令。
@@ -20,6 +20,54 @@ Git index中的改动可以用git commit提交到本地仓库中。
 
 #### Git working tree
 也被称作Working directory，git add之前的文件改动都是在working tree中进行的，运行git status后，列在Changes not staged for commit和Untracked files后面的改动都位于working tree上。
+
+### 提交范围
+
+可参考[Commit Ranges](http://git-scm.com/book/ch6-1.html#Commit-Ranges)。
+
+通常用于git log和git diff，主要有两种格式，以下面的提交历史为例:
+
+    A - B - C - D - E - F
+
+* double dot `C..E`: E能追溯到且C不能追溯到的提交
+
+        D - E
+    
+    `git log C..E`等同于`git log ^C E`和`git log E --not C`
+
+* triple dot `C...E`: E和C能追溯到且不能同时被E和C追溯到的提交，即`C xor E`
+
+        D - E
+
+以下面的提交历史为例:
+
+    A - B - C - D - E - F
+             \
+              G - H - I
+
+* `F..I`: G H I
+* `F...I`: D E F G H I
+
+另外:
+
+1. `git log`的选项`--not`和`^`符号可以构造比`..`更复杂的筛选条件。`--not`和`^`的区别在于`--not`对之后(下一个`--not`之前)的所有提交（包括`^`前缀的提交)都有效，而`^`仅对其之后的一个提交有效，例如
+
+    * `--not F H --not I`: I
+    * `--not F H ^I`: I
+    * `^F H ^I`: 无
+    * `^F F`: 无
+    * `D H --not C`: D G H
+
+2. 在`git log`中使用`...`时，使用`--left-right`选项可以直观的输出结果
+
+        $ git log --left-right F...I
+        > I
+        > H
+        > G
+        < F
+        < E
+        < D
+
 
 ## Git进阶使用场景
 
@@ -108,13 +156,6 @@ rebase操作可以将两个分支上的差异合并到另一个分支上，和me
 
 #### 注意事项
 使用git rebase需要注意的一点就是**不要rebase已经提交到远程仓库的代码**。
-
-#### pull request
-向远程仓库提交pull-request之前，先在自己的分支上rebase一下
-
-    git rebase master
-
-这样仓库管理员在merge你的pull-request时就可以直接快进，而不用解决冲突了。
 
 #### 撤销rebase
 需要撤销rebase引入的变更时，比较简便的方法是使用git reflog。首先通过`git reflog`和`git log HEAD@{XX}`找到恢复点，然后使用git reset --hard。如果rebase之后还没有做过其他会变更提交历史的git操作，直接执行`git reset --hard ORIG_HEAD`即可。
