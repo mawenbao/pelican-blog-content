@@ -1,7 +1,7 @@
 Title: RWBY片首曲This will be the day
 Date: 2013-11-02 19:40
 Update: 2014-05-15 09:30
-Tags: 动漫歌曲, RWBY 
+Tags: 音乐, RWBY 
 
 ![This will be the day](/static/images/RWBY/this_will_be_the_day_cover.jpg)
 
