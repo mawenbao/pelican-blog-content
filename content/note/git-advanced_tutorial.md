@@ -23,7 +23,7 @@ Git index中的改动可以用git commit提交到本地仓库中。
 
 ### 提交范围
 
-可参考[Commit Ranges](http://git-scm.com/book/ch6-1.html#Commit-Ranges)。
+详细内容可参考[Commit Ranges](http://git-scm.com/book/ch6-1.html#Commit-Ranges)。
 
 通常用于git log和git diff，主要有两种格式，以下面的提交历史为例:
 
@@ -48,7 +48,7 @@ Git index中的改动可以用git commit提交到本地仓库中。
 * `F..I`: G H I
 * `F...I`: D E F G H I
 
-另外:
+另外，需要说明的是:
 
 1. `git log`的选项`--not`和`^`符号可以构造比`..`更复杂的筛选条件。`--not`和`^`的区别在于`--not`对之后(下一个`--not`之前)的所有提交（包括`^`前缀的提交)都有效，而`^`仅对其之后的一个提交有效，例如
 
