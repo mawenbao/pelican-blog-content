@@ -179,7 +179,7 @@ NIUX2_HEADER_SECTIONS = [
     ('关于', 'about me', '/about.html', 'fa-anchor'),
     ('使用协议', 'agreement', '/agreement.html', 'fa-info-circle'),
     ('项目', 'my projects', '/my_projects.html', 'fa-rocket'),
-    ('标签', 'tags', '/tags.html', 'fa-tag'),
+    ('标签', 'tags', '/tag/', 'fa-tag'),
 ]
 
 NIUX2_HEADER_DROPDOWN_SECTIONS = OrderedDict()
