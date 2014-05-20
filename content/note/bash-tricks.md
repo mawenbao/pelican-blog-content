@@ -1,6 +1,6 @@
 Title: Bash小技巧合集
 Date: 2013-08-25 12:14
-Update: 2014-04-22 17:32
+Update: 2014-05-20 11:26
 Tags: bash, trick
 
 收集一些bash下的技巧。
@@ -51,6 +51,7 @@ bash里一些特殊的符号的作用。
 	shopt             # 查看所有选项的状态
 	shopt -s extglob  # 启用扩展的glob匹配
 	shopt -u extglob  # 禁用扩展的glob匹配
+    shopt -s dotglob  # 使wildcard(*)匹配dot开头的文件(隐藏文件)
 
 ## 模式匹配
 
