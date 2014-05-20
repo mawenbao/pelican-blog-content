@@ -1,6 +1,6 @@
 Title: 2014年动漫新番整理
 Date: 2014-03-25 20:26
-Update: 2014-05-13 19:40
+Update: 2014-05-19 20:21
 Tags: 动漫, 新番, 未完成
 
 [1]: /static/images/cartoon/ShuXingTongHaoHui.jpg
@@ -16,6 +16,10 @@ Tags: 动漫, 新番, 未完成
 [11]: /static/images/cartoon/RuGuoTaDeQiZhiBeiZheDuanLe2.jpg
 
 收集最近看过的动漫，不断积累中。
+
+部分动漫的OP/ED，歌曲均来自虾米。
+
+[hermit id=31273902 auto loop]
 
 ## 属性同好会
 ![属性同好会][1]

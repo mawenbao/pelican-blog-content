@@ -1,6 +1,6 @@
 Title: CSS技巧和问题整理
 Date: 2014-01-02 17:33
-Update: 2014-05-15 14:09
+Update: 2014-05-19 14:03
 Tags: css, problem, trick
 
 [1]: http://www.w3.org/TR/CSS2/tables.html#height-layout
@@ -8,17 +8,32 @@ Tags: css, problem, trick
 [3]: http://www.sitepoint.com/forums/showthread.php?752068-How-to-add-padding-amp-margin-to-LI-elements-with-display-table-row "How to add padding & margin to LI elements with display:table-row?"
 [4]: http://stackoverflow.com/questions/1993277/css-table-layout-why-does-table-row-not-accept-a-margin "CSS table layout - why does table-row not accept a margin?"
 [5]: http://stackoverflow.com/questions/8004765/css-9-in-width-property
+[6]: http://css-tricks.com/almanac/properties/t/transition/
 
 整理日常使用CSS时遇到的问题和技巧。
 
 ## CSS技巧
-### word-wprap研究。
+### word-wprap研究
 
     word-wrap: break-word;
     word-break
 
 ### \9 hack
 参考stackoverflow上的一个回答[CSS \9 in width property][5]，`\9`取代`;`行结束符的规则表示仅对IE7, IE8和IE9有效。
+
+### transition
+css3的过渡特效，比如，当鼠标位于超链接上时，将超链接的颜色由蓝色逐渐变为红色:
+
+    a {
+        color: blue;
+        transition: color 0.5s ease;
+    }
+
+    a:hover {
+        color: read;
+    }
+
+详细的讲解和跨浏览器问题可参考[transition][6]。
 
 ## CSS问题
 ### #1
