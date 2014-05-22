@@ -1,10 +1,9 @@
 Title: Git快速使用指南
 Date: 2013-08-25 12:14
-Update: 2014-05-17 13:28
+Update: 2014-05-21 17:13
 Tags: git, 教程
 
 阅读“[Pro Git](http://git-scm.com/book)“后写的笔记，当做速查手册(quick git reference)来用，以供日常查阅。常见的git错误和解决方案可参考[git问题整理](/note/git-problems.html)，更多内容可参考[这里](/note/git-advanced_tutorial.html)。
-
 
 使用git的时候，不管出现什么问题，只要修改被commit了，你所要做的就是:
 
@@ -101,7 +100,7 @@ KEEP CALM AND USE GIT REFLOG](http://www.keepcalm-o-matic.co.uk/p/keep-calm-and-
 
     git commit --amend
 
-### 查看上一次提交的文件path/to/file
+### 查看上一次提交的文件
 
     git show HEAD^:path/to/file
 
@@ -154,6 +153,11 @@ git add默认情况下只更新新添加文件和修改过的文件的索引，�
 把所有标签都推送到远程服务器上。
 
     git push origin --tags
+
+删掉远程服务器上的标签。
+
+    git tag -d v2.0
+    git push origin :refs/tags/v2.0
 
 ### git-branch
 
