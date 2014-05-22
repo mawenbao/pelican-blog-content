@@ -4,6 +4,8 @@ from __future__ import unicode_literals
 from HTMLParser import HTMLParser
 from pelican import signals, contents
 
+_MAX_SUMMARY_POS = 45
+
 class FirstParagraphParser(HTMLParser):
     def __init__(self):
         HTMLParser.__init__(self)
@@ -38,8 +40,10 @@ def content_object_init(instance):
         endCharB = '.'
         endPosA = firstP.data.find(endCharA)
         endPosB = firstP.data.find(endCharB)
-        endPos = endPosA if endPosA > endPosB else endPosB
+        endPos = min(max(endPosA, endPosB), _MAX_SUMMARY_POS)
         instance._summary = firstP.data[:endPos + 1 if endPos > 0 else None]
+        if endPos == _MAX_SUMMARY_POS:
+            instance._summary += ' …'
 
 def register():
     signals.content_object_init.connect(content_object_init)
