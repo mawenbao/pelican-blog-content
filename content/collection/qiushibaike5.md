@@ -1,6 +1,6 @@
 Title: [转]糗事百科精选5
 Date: 2014-04-30 10:02
-Update: 2014-05-15 08:45
+Update: 2014-05-21 12:50
 Tags: 糗事百科, 笑话, 转载
 
 收集糗事百科上的趣事。
@@ -21,6 +21,9 @@ Tags: 糗事百科, 笑话, 转载
 下面是[Pascal Campion](http://www.pascalcampion.com/)的作品，在qb上看到的。
 
 <img width="350px" src="/static/images/qiushibaike/HomeSweetHome.jpg" alt="甜蜜的家" />
+
+## 夸我长的高
+今天和老妈去吃酒席，去之前老妈教我，出去嘴要甜一点，说看见别人小孩长得还过去的就要夸奖人家长得好漂亮，实在看着丑的就夸奖别人长得好高，割割割，吃个饭已经有好多人夸我长得高了。
 
 ## 合租的猫
 <img width="350px" src="/static/images/qiushibaike/HeZuDeMao.jpg" alt="合租的猫" />
