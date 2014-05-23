@@ -128,6 +128,7 @@ NIUX2_DEBUG = False
 #NIUX2_DEBUG = True
 
 # niu-x2 theme config
+NIUX2_AUTHOR_TRANSL = '作者'
 NIUX2_404_TITLE_TRANSL = '404错误 页面未找到!'
 NIUX2_404_INFO_TRANSL = '请求页面未找到!'
 NIUX2_TAG_TRANSL = '标签'
@@ -149,6 +150,7 @@ NIUX2_SHOW_SIDEBAR_TRANSL = '显示侧边栏'
 NIUX2_REVISION_HISTORY_TRANSL = '修订历史'
 NIUX2_VIEW_SOURCE_TRANSL = '查看源文件'
 
+NIUX2_AUTHOR_LINK = 'https://plus.google.com/103085433969422189692?rel=author'
 NIUX2_DUOSHUO_SHORTNAME = 'atime-me'
 #DISQUS_SITENAME = 'blog-atime-me'
 NIUX2_PYGMENTS_THEME = 'github'
@@ -188,7 +190,7 @@ NIUX2_HEADER_DROPDOWN_SECTIONS[('存档', 'fa-archive')] = [
     ('存档 (按发布时间)', 'archives order by publish time', '/archives.html', 'fa-calendar'),
     ('存档 (按修改时间)', 'archives order by modify time', '/archives_updatedate.html', 'fa-pencil'),
 ]
-NIUX2_HEADER_DROPDOWN_SECTIONS[('社区', 'fa-user')] = [
+NIUX2_HEADER_DROPDOWN_SECTIONS[('社区', 'fa-users')] = [
     ('留言板', 'guestbook', 'http://qa.atime.me', 'fa-comment'),
     (' Wiki', 'dokuwiki', 'http://wiki.atime.me', 'fa-puzzle-piece'),
 ]
@@ -196,6 +198,7 @@ NIUX2_HEADER_DROPDOWN_SECTIONS[('社区', 'fa-user')] = [
 NIUX2_FOOTER_LINKS = [
     ('关于', 'about me', '/about.html', ''),
     ('协议', 'terms, license and privacy etc.', '/agreement.html', ''),
+    ('沪ICP备14018579号', '备案号', 'http://www.miitbeian.gov.cn/', ''),
 ]
 
 NIUX2_FOOTER_ICONS = [
