@@ -4,7 +4,7 @@ from __future__ import unicode_literals
 from collections import OrderedDict
 import datetime
 
-AUTHOR = u'Ma Wenbao'
+AUTHOR = u'马文豹'
 SITENAME = u'MWB日常笔记'
 SITEURL = '//blog.atime.me'
 #SITEURL = 'http://localhost:8000'
@@ -76,6 +76,7 @@ JINJA_EXTENSIONS = [
 # plugin config
 PLUGIN_PATH = './plugins'
 PLUGINS = [
+    'niux2_remap',
     #'pandoc_reader',
     #'gzip_cache',
     'update_date',
@@ -84,9 +85,12 @@ PLUGINS = [
     'summary',
     'niux2_lazyload_helper',
     'niux2_hermit_player',
-    'minify',
+    #'minify',
 ]
 UPDATEDATE_MODE = 'metadata'
+NIUX2_REMAP = {
+    ('img', 'data-original'): ('/static/images', 'http://static.atime.me/images'),
+}
 
 # extrac_headings plugin config
 import md5
@@ -164,10 +168,10 @@ NIUX2_LAZY_LOAD_TEXT = 'orz 努力加载中'
 NIUX2_TOOLBAR = True
 NIUX2_GITHUB_REPO = 'mawenbao/pelican-blog-content'
 
-#NIUX2_LIB_THEME = 'http://atime-me.qiniudn.com/niu-x2'
-#NIUX2_LIB_BOOTSTRAP_JS = 'http://atime-me.qiniudn.com/niu-x2/js/bootstrap.min.js'
-#NIUX2_LIB_FONTAWESOME = '//netdna.bootstrapcdn.com/font-awesome/4.0.3'
-NIUX2_LIB_JQUERY = '//ajax.aspnetcdn.com/ajax/jQuery/jquery-1.11.0.min.js'
+#NIUX2_LIB_THEME = 'http://cdn.atime.me/niu-x2-sidebar'
+NIUX2_LIB_FONTAWESOME = 'http://cdn.atime.me/font-awesome/4.1'
+NIUX2_LIB_JQUERY = 'http://cdn.atime.me/jquery/jquery-1.11.0.min.js'
+NIUX2_LIB_BOOTSTRAP = 'http://cdn.atime.me/bootstrap/3.1.1'
 
 NIUX2_CATEGORY_MAP = {
     'code': ('代码', 'fa-code'),

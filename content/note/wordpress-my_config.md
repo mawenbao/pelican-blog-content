@@ -191,7 +191,7 @@ W3 Total Cache的Minify手动模式已经支持Non Blocking加载js代码，不�
 1. 添加favicon。
 
         :::html
-	    <link rel="shortcut icon" href="http://static.atime.me/images/favicon.ico" />
+	    <link rel="shortcut icon" href="/static/images/favicon.ico" />
 
 2. 添加自定义的css文件。
 
