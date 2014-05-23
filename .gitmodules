@@ -19,3 +19,6 @@
 [submodule "plugins/pandoc_reader"]
     path = plugins/pandoc_reader
     url = https://github.com/liob/pandoc_reader
+[submodule "plugins/niux2_remap"]
+	path = plugins/niux2_remap
+	url = https://github.com/mawenbao/niux2_remap
