@@ -1,7 +1,7 @@
 Title: 计划将博客迁回国内
 Date: 2014-05-20 11:28
 Update: 2014-05-23 11:40
-Tags: 备案, VPS, 妥协
+Tags: 备案, VPS
 
 [1]: https://library.linode.com/upgrading/upgrade-to-debian-7-wheezy
 [2]: https://www.digitalocean.com/community/articles/how-to-add-swap-on-ubuntu-12-04

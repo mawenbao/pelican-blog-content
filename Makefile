@@ -7,6 +7,7 @@ BASEDIR=$(CURDIR)
 INPUTDIR=$(BASEDIR)/content
 OUTPUTDIR=~/www/blog
 TMPDIR=/tmp/pelican-temp
+TESTDIR=~/www/blog-test
 CONFFILE=$(BASEDIR)/pelicanconf.py
 PUBLISHCONF=$(BASEDIR)/publishconf.py
 
@@ -46,6 +47,9 @@ help:
 	@echo '   github                           upload the web site via gh-pages   '
 	@echo '                                                                       '
 
+
+test: clean-tmp $(TMPDIR)/index.html
+	cp -rf $(TMPDIR)/* $(TESTDIR)
 
 html: clean-tmp $(TMPDIR)/index.html clean
 	cp -rf $(TMPDIR)/* $(OUTPUTDIR)
