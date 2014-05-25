@@ -1,6 +1,6 @@
 Title: 2013年动漫新番整理
 Date: 2014-01-22 22:35
-Tags: 动漫, 新番
+Tags: 动漫, 新番, 音乐
 
 [1]: /static/images/cartoon/JinJiDeJuRen.jpg
 [2]: /static/images/cartoon/DaoJianShenYu.jpg

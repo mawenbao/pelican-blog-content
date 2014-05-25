@@ -1,7 +1,7 @@
 Title: 2014年动漫新番整理
 Date: 2014-03-25 20:26
 Update: 2014-05-19 20:21
-Tags: 动漫, 新番, 未完成
+Tags: 动漫, 新番, 音乐, 未完成
 
 [1]: /static/images/cartoon/ShuXingTongHaoHui.jpg
 [2]: /static/images/cartoon/MoNvDeShiMing.jpg
