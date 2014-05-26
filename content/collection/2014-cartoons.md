@@ -19,7 +19,7 @@ Tags: 动漫, 新番, 音乐, 未完成
 
 部分动漫的OP/ED，歌曲均来自虾米。
 
-[hermit xiami=31273902 auto loop]
+[hermit xiami=31273902 netease=14264382 auto loop]
 
 ## 属性同好会
 ![属性同好会][1]
