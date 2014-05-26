@@ -1,6 +1,6 @@
 Title: GDB技巧整理
 Date: 2013-08-25 12:14
-Update: 2014-03-07 16:34
+Update: 2014-05-26 13:17
 Tags: gdb, trick, gnu
 
 [1]: https://sourceware.org/gdb/onlinedocs/gdb/Source-Path.html "gdb Specifying Source Directories"
@@ -113,7 +113,7 @@ gdb默认使用utf-8编码，可以使用如下命令修改编码。
 
 2. 改变内存数据
 
-使用set命令
+    使用set命令
 
 ## 执行gdb脚本
 
