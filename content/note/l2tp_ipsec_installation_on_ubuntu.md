@@ -129,7 +129,6 @@ Tags: vpn, l2tp, ipsec, ubuntu, note, 教程
 
 ## 修改/etc/rc.local
 如果`/etc/rc.loal`无法正常自动执行，尝试将shebang换成`#!/bin/bash`。
-    :::bash
     
     #!/bin/bash
 
