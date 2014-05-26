@@ -1,11 +1,12 @@
 Title: 搬家至DigitalOcean
 Date: 2014-03-13 09:35
-Update: 2014-05-15 10:54
+Update: 2014-05-26 23:37
 Tags: digitalocean, linode, vps
 
 [1]: /life/thinking-about-moving-away-from-linode.html
 [2]: /static/plain/digitalocean-512m-unixbench-report-20140313.txt
 [3]: /static/plain/linode-1g-unixbench-report-20140126.txt
+[4]: /life/moving-blog-back-to-china.html
 
 因为一些[很恶心的原因][1]，这几天将vps搬到了DigitalOcean。事实再次证明，盲信权威和无脑随大流是不可取的，我不会再迷信Linode了。
 
@@ -57,5 +58,8 @@ Tags: digitalocean, linode, vps
     281 packets transmitted, 211 received, 24% packet loss, time 280651ms
     rtt min/avg/max/mdev = 164.564/218.554/312.690/40.736 ms
     
+## 2014-05-26 更新
+博客已[备案并迁往阿里云服务器][4]。
+
 [^1]: 吐槽见[此][1]
 

@@ -1,11 +1,12 @@
 Title: 考虑撤离Linode
 Date: 2014-01-26 10:01
-Update: 2014-04-30 14:11
+Update: 2014-05-26 23:37
 Tags: linode, digitalocean, VPS
 
 [1]: https://code.google.com/p/byte-unixbench/
 [2]: http://serverbear.com/
 [3]: https://blog.linode.com/2014/04/17/linode-cloud-ssds-double-ram-much-more/
+[4]: /life/moving-blog-back-to-china.html
 
 最近我的linode好慢。
 
@@ -59,6 +60,9 @@ Tags: linode, digitalocean, VPS
 
 ## 2014.04.30 更新
 4月17号，Linode将硬盘升级到SSD，并加倍了内存，换了新的CPU，详情见[The New Linode Cloud: SSDs, Double RAM & much more][3]。另外一个明显的变化就是，新的plan限制了一些用户超额使用cpu的可能性，对普通的用户而言更为公平（这也是我离开Linode的原因之一）。
+
+## 2014-05-26 更新
+博客已[备案并迁往阿里云服务器][4]。
 
 ## 相关资源列表
 *  [UnixBench][1] 系统性能测试工具
