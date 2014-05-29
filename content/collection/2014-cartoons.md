@@ -1,6 +1,6 @@
 Title: 2014年动漫新番整理
 Date: 2014-03-25 20:26
-Update: 2014-05-19 20:21
+Update: 2014-05-28 12:41
 Tags: 动漫, 新番, 音乐, 未完成
 
 [1]: /static/images/cartoon/ShuXingTongHaoHui.jpg
@@ -14,6 +14,9 @@ Tags: 动漫, 新番, 音乐, 未完成
 [9]: /static/images/cartoon/DaoBuLiaoDeTaS1_1.jpg
 [10]: /static/images/cartoon/RuGuoTaDeQiZhiBeiZheDuanLe.jpg
 [11]: /static/images/cartoon/RuGuoTaDeQiZhiBeiZheDuanLe2.jpg
+[12]: /static/images/cartoon/JiHeiDeBuLunXiErTe.jpg
+[13]: http://www.vap.co.jp/gokukoku/
+[14]: /static/images/cartoon/GuanJiJiaYiKa.jpg
 
 收集最近看过的动漫，不断积累中。
 
@@ -65,5 +68,13 @@ Tags: 动漫, 新番, 音乐, 未完成
 
 ![如果她的旗帜被折断了][11]
 
-至今不晓得ta是男是女，反正萌翻了。
+至今不晓得是男是女。
+
+## 极黑的布伦希尔特
+![极黑的布伦希尔特][12]
+
+<span class="text-muted">图片取自[http://www.vap.co.jp/gokukoku/][13]</span>
+
+## 棺姬嘉依卡
+![棺姬嘉依卡][14]
 
