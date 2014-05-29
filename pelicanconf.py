@@ -169,7 +169,7 @@ NIUX2_TOOLBAR = True
 NIUX2_GITHUB_REPO = 'mawenbao/pelican-blog-content'
 
 #NIUX2_LIB_THEME = 'http://cdn.atime.me/niu-x2-sidebar'
-#NIUX2_LIB_FONTAWESOME = 'http://cdn.atime.me/font-awesome/4.1'
+NIUX2_LIB_FONTAWESOME = 'http://cdn.atime.me/font-awesome/4.1'
 NIUX2_LIB_JQUERY = 'http://cdn.atime.me/jquery/jquery-1.11.0.min.js'
 NIUX2_LIB_BOOTSTRAP = 'http://cdn.atime.me/bootstrap/3.1.1'
 
