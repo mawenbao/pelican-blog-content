@@ -1,11 +1,14 @@
 Title: 计划将博客迁回国内
 Date: 2014-05-20 11:28
-Update: 2014-05-23 11:40
+Update: 2014-05-28 12:50
 Tags: 备案, VPS
 
 [1]: https://library.linode.com/upgrading/upgrade-to-debian-7-wheezy
 [2]: https://www.digitalocean.com/community/articles/how-to-add-swap-on-ubuntu-12-04
 [3]: /note/linux_host-security.html
+[4]: https://code.google.com/p/byte-unixbench/
+[5]: /static/plain/aliyun-1cpu512ram-unixbench-report-20140528.txt
+[6]: /static/plain/digitalocean-512m-unixbench-report-20140313.txt
 
 基于种种靠谱的不靠谱的考虑，近期计划将博客迁到国内的阿里云主机，目前正在筹备备案的事情。。。
 
@@ -39,4 +42,16 @@ Tags: 备案, VPS
 还没下班就收到通管局的短信说备案通过了，原本还打算要坚持久战来着，没想到不用两个小时就结束战斗了。这边的办事效率出奇的高啊。
 
 不知是不是我使用方法不对，<del>感觉阿里云的cdn服务就一大坑</del>，是我太白痴配置错了晕。
+
+## 2014-05-27
+<del>阿里云的cdn目前不支持CORS(跨域资源共享)配置</del>，具体问题就是如果把font-awesome单独部署到cdn子域上，firefox和ie无法加载字体文件，报错
+
+    CSS3117: @font-face 跨源请求失败
+
+解决办法就是用别家的cdn，或者把整个博客放到cdn上。
+
+又白痴了，跨域问题可以通过白名单来解决，不过要等cdn的缓存刷新后才有效。
+
+## 2014-05-28
+抽空用[UnixBench][4]测试了下系统性能，综合得分1475.7，详细报告[此][5]，和之前用的同级别的digitalocean vps差不多，do的报告在[此][6]。
 
