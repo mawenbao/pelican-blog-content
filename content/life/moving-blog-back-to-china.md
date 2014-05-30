@@ -9,6 +9,7 @@ Tags: 备案, VPS
 [4]: https://code.google.com/p/byte-unixbench/
 [5]: /static/plain/aliyun-1cpu512ram-unixbench-report-20140528.txt
 [6]: /static/plain/digitalocean-512m-unixbench-report-20140313.txt
+[7]: /static/plain/aliyun-1cpu512ram-unixbench-report-20140529.txt
 
 基于种种靠谱的不靠谱的考虑，近期计划将博客迁到国内的阿里云主机，目前正在筹备备案的事情。。。
 
@@ -53,5 +54,5 @@ Tags: 备案, VPS
 又白痴了，跨域问题可以通过白名单来解决，不过要等cdn的缓存刷新后才有效。
 
 ## 2014-05-28
-抽空用[UnixBench][4]测试了下系统性能，综合得分1475.7，详细报告[此][5]，和之前用的同级别的digitalocean vps差不多，do的报告在[此][6]。
+抽空用[UnixBench][4]测试了下系统性能，综合得分1475.7，详细报告[此][5]和[此][7]，和之前用的同级别的digitalocean vps差不多，do的报告在[此][6]。
 

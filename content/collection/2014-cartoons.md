@@ -1,6 +1,6 @@
 Title: 2014年动漫新番整理
 Date: 2014-03-25 20:26
-Update: 2014-05-28 12:41
+Update: 2014-05-29 22:16
 Tags: 动漫, 新番, 音乐, 未完成
 
 [1]: /static/images/cartoon/ShuXingTongHaoHui.jpg
@@ -17,12 +17,14 @@ Tags: 动漫, 新番, 音乐, 未完成
 [12]: /static/images/cartoon/JiHeiDeBuLunXiErTe.jpg
 [13]: http://www.vap.co.jp/gokukoku/
 [14]: /static/images/cartoon/GuanJiJiaYiKa.jpg
+[15]: /static/images/cartoon/ShiHunShiNot.jpg
+[16]: http://www.souleaternot.tv/
 
 收集最近看过的动漫，不断积累中。
 
-部分动漫的OP/ED，歌曲均来自虾米。
+部分动漫的OP/ED，歌曲来自虾米和网易云音乐。
 
-[hermit xiami=31273902 netease=14264382 auto loop]
+[hermit xiami=31273902 loop]
 
 ## 属性同好会
 ![属性同好会][1]
@@ -77,4 +79,9 @@ Tags: 动漫, 新番, 音乐, 未完成
 
 ## 棺姬嘉依卡
 ![棺姬嘉依卡][14]
+
+##  噬魂师NOT
+![ 噬魂师NOT][15]
+
+<span class="text-muted">图片取自[http://www.souleaternot.tv/][16]</span>
 
