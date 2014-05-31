@@ -53,5 +53,5 @@ comment: off
 *  当前版本 dev
 *  使用协议
 *  项目地址 [mawenbao/wishome][10]
-*  演示地址 [wishome.atime.me][11]
+*  演示地址 <del>[wishome.atime.me][11]</del> <i class="fa fa-gear fa-spin"></i> 链接修复中
 
