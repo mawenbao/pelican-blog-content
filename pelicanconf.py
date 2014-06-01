@@ -194,10 +194,10 @@ NIUX2_HEADER_DROPDOWN_SECTIONS[('存档', 'fa-archive')] = [
     ('存档 (按发布时间)', 'archives order by publish time', '/archives.html', 'fa-calendar'),
     ('存档 (按修改时间)', 'archives order by modify time', '/archives_updatedate.html', 'fa-pencil'),
 ]
-NIUX2_HEADER_DROPDOWN_SECTIONS[('社区', 'fa-users')] = [
-    ('留言板', 'guestbook', 'http://qa.atime.me', 'fa-comment'),
-    (' Wiki', 'dokuwiki', 'http://wiki.atime.me', 'fa-puzzle-piece'),
-]
+#NIUX2_HEADER_DROPDOWN_SECTIONS[('社区', 'fa-users')] = [
+#    ('留言板', 'guestbook', 'http://qa.atime.me', 'fa-comment'),
+#    (' Wiki', 'dokuwiki', 'http://wiki.atime.me', 'fa-puzzle-piece'),
+#]
 
 NIUX2_FOOTER_LINKS = [
     ('关于', 'about me', '/about.html', ''),
