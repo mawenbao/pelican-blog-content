@@ -7,7 +7,7 @@ Tags: 音乐, RWBY
 
 <span class="text-muted">图片来自[itunes store](https://itunes.apple.com/us/album/this-will-be-day-rooster-teeths/id675671215)</span>
 
-[hermit xiami=31162441 nolist]
+[hermit xiami=collect#:31162441 nolist]
 
 More info: [http://rwby.wikia.com/wiki/RWBY_Soundtrack/This_Will_Be_The_Day](http://rwby.wikia.com/wiki/RWBY_Soundtrack/This_Will_Be_The_Day)
 

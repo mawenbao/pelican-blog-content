@@ -9,7 +9,7 @@ Tags: 天籁之音, 音乐, 轻音乐, 中国风
 
 收集一些唯美的中国风轻音乐，歌曲均来自虾米。
 
-[hermit xiami=31181538 loop
+[hermit xiami=collect#:31181538 loop
 {一舞倾城|秦时明月之诸子百家|http://dl.atime.me/music/秦时明月/一舞倾城.mp3}
 ]
 
