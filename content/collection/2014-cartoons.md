@@ -19,6 +19,7 @@ Tags: 动漫, 新番, 音乐, 未完成
 [14]: /static/images/cartoon/GuanJiJiaYiKa.jpg
 [15]: /static/images/cartoon/ShiHunShiNot.jpg
 [16]: http://www.souleaternot.tv/
+[17]: /static/images/cartoon/QiHeiDeZiDan.jpg
 
 收集最近看过的动漫，不断积累中。
 
@@ -81,7 +82,10 @@ Tags: 动漫, 新番, 音乐, 未完成
 ![棺姬嘉依卡][14]
 
 ##  噬魂师NOT
-![ 噬魂师NOT][15]
+![噬魂师NOT][15]
 
 <span class="text-muted">图片取自[http://www.souleaternot.tv/][16]</span>
+
+## 漆黑的子弹
+![漆黑的子弹][17]
 

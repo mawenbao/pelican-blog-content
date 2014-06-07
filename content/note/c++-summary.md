@@ -47,6 +47,11 @@ POD(plain old data)或PODS(plain old data structure)是指不包含构造函数(
 1. non-POD类型必须提供无参构造函数，且其初始化列表必须包含该类的所有成员变量。
 2. POD类型在new之后应当用memset等方式重新赋值。
 
+## 初始化
+### 值初始化
+### 零初始化
+### 集合初始化
+
 ## 阅读资料
 1. [wikipedia:Plain_Old_Data_Structures][1]
 2. [What are Aggregates and PODs and how/why are they special?][2]

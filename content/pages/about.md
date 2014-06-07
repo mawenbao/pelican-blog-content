@@ -1,6 +1,6 @@
 Title: 关于
 Date: 2013-08-25 12:14
-Update: 2014-05-24 11:30
+Update: 2014-06-05 20:45
 Comment: off
 
 [1]: http://docs.getpelican.com/ "pelican documentation"
@@ -22,13 +22,13 @@ Comment: off
 
 ## 关于本博客
 
-本博客使用[pelican][1]创建，文章(markdown格式)和pelican配置文件放在[这里][2]。博客的主题niu-x2-sidebar乃闲暇时所作，源码放在[这里][16]。我通常会在这里做一些技术方面的笔记，偶尔也会写点想法和日常琐事。
+本博客使用[pelican][1]搭建，文章(markdown格式)和pelican配置文件放在[这里][2]。博客的主题niu-x2-sidebar乃闲暇时所作，源码放在[这里][16]。我通常会在这里做一些技术方面的笔记，偶尔也会写点想法和日常琐事。
 
 如果没有特殊说明，本网站的原创文字作品和代码都使用商业友好的许可协议发布，详情可参考[使用协议][14]，希望对大家有些用处。
 
 ## 关于我本人
 
-程序猿一只，懒人，资深宅，轻度完美主义者，信奉简单即是美。目前从事于C++和网络方面的工作，懂一点前端开发。喜欢Debian/Ubuntu，Python和Golang。喜欢过Nightwish, The Cranberries和周杰伦，喜欢日漫，常听ACG。如有需要请用邮件联系我。
+程序猿一只，懒人，资深宅，轻度完美主义者，信奉简单即是美。目前从事于C++后端开发，也懂一点前端。喜欢Debian/Ubuntu，Python和Golang。喜欢过Nightwish, The Cranberries和周杰伦，喜欢日漫和ACG歌曲。如有需要请用邮件联系我。
 
 [这里][15]列了一些我的开源项目，有兴趣可以围观一下。
 

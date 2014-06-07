@@ -1,10 +1,11 @@
 Title: [转]糗事百科精选5
 Date: 2014-04-30 10:02
-Update: 2014-06-04 18:28
+Update: 2014-06-06 08:45
 Tags: 糗事百科, 笑话, 转载
 
 [1]: /static/images/qiushibaike/BieChanWo.jpg
 [2]: /static/images/qiushibaike/DaXueShengYanZhongDeDuiFang.jpg
+[3]: /static/images/qiushibaike/PandaTooHot.jpg
 
 收集糗事百科上的趣事。
 
@@ -59,4 +60,9 @@ Tags: 糗事百科, 笑话, 转载
 ![大学生眼中的对方][2]
 
 <span class="text-muted">来源网络</span>
+
+简要解释几个关键点，理科男看文科男像东方不败，文科男看理科男像金毛狮王，文科男看理科女像灭绝师太，文科女看理科女像晚年的梅超风。。。
+
+## 太热了
+![太热了][3]
 
