@@ -1,6 +1,6 @@
 Title: C++0x/C++11新特性总结
 Date: 2014-06-04 12:50
-Update: 2014-06-06 12:30
+Update: 2014-06-09 11:32
 Tags: c++, c++11, 总结, 未完成
 
 [1]: http://en.wikipedia.org/wiki/C++11
@@ -50,6 +50,8 @@ C++11(或C++0x)是目前的C++语言标准，新的标准将取代之前的C++03
 
 ## C++11核心语言扩展
 ### 统一初始化
+**不推荐使用**
+
 C++11引入了一种新的通用初始化方法`initializer list`，所有的变量都可以用一对大括号来进行初始化。
 
     :::cpp
@@ -109,8 +111,34 @@ C++11引入了一种新的通用初始化方法`initializer list`，所有的变
 
 更多对空列表的探讨参见[Empty list initialization][11]，文中建议对所有提供了initializer_list构造函数的类也提供一个默认构造函数。
 
-### 关键字auto
+### 关键字auto和decltype
+类似golang，C++11里使用auto定义的变量可以根据值自动推导变量类型。
+
+    :::cpp
+    auto myInt = 10;
+
+decltype可以在编译时获取变量的类型。
+
+    :::cpp
+    int myInt = 10;
+    decltype(myInt) myInt2 = 20;
+
+需要注意的是，auto推导出的类型并不一定和decltype返回的一致。
+
+    :::cpp
+    const std::vector<int> v(10);
+    auto myInt = v[0];          // myInt is int
+    decltype(v[0]) myInt2 = 10; // myInt2 is const int& 
+
 ### 新的for循环写法
+类似java的语法，搭配auto使用更方便。
+
+    :::cpp
+    int myIntArray[] {1, 2, 3, 4, 5};
+    for (auto &i : myIntArray) {
+        i *= 2;
+    }
+
 ### 指针常量nullptr
 C++11引入关键字nullptr来表示null指针常量，以取代之前的NULL宏。
 
