@@ -13,7 +13,7 @@ comment: off
 [8]: https://github.com/mawenbao/niu-x2-sidebar "github repo for niu-x2-sidebar"
 [9]: https://github.com/revel/revel "revel web framework"
 [10]: https://github.com/mawenbao/wishome "wishome web app"
-[11]: http://wishome.atime.me "wishome live demo"
+[11]: http://wishome.mawenbao.com "wishome live demo"
 
 以下是我的部分开源项目，大部分都是基于BSD协议发布，欢迎fork和讨论。另外，更多的项目可参考鄙人的[github仓库列表][7]。
 
@@ -53,5 +53,5 @@ comment: off
 *  当前版本 dev
 *  使用协议
 *  项目地址 [mawenbao/wishome][10]
-*  演示地址 <del>[wishome.atime.me][11]</del> <i class="fa fa-gear fa-spin"></i> 链接修复中
+*  演示地址 [wishome.mawenbao.com][11]
 
