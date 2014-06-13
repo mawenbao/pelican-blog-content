@@ -1,6 +1,6 @@
 Title: C++0x/C++11新特性总结
 Date: 2014-06-04 12:50
-Update: 2014-06-09 11:32
+Update: 2014-06-12 15:40
 Tags: c++, c++11, 总结, 未完成
 
 [1]: http://en.wikipedia.org/wiki/C++11
@@ -15,6 +15,7 @@ Tags: c++, c++11, 总结, 未完成
 [10]: http://www.cplusplus.com/reference/initializer_list/initializer_list/
 [11]: http://akrzemi1.wordpress.com/2013/05/14/empty-list-initialization/
 [12]: http://www.stroustrup.com/C++11FAQ.html#narrowing
+[13]: http://en.wikipedia.org/wiki/Anonymous_function#C.2B.2B_.28since_C.2B.2B11.29
 
 C++11(或C++0x)是目前的C++语言标准，新的标准将取代之前的C++03标准，并在其基础上扩展核心语言和标准库，本文总结C++0x/C++11的部分新特性，如有错漏之处欢迎反馈指正。
 
@@ -166,6 +167,45 @@ C++11引入关键字constexpr来允许用户定义编译期常数
 ### 强类型枚举
 ### 编译时断言static_assert
 ### 匿名函数
+C++11添加了新的语法来支持lambda匿名函数。[^3]
+
+    [capture](parameters) -> return_type { function_body }
+
+其中:
+
+* `[capture]`用于捕获外部变量，以`[](int x, int y) -> int { return x + y; }`为例:
+    * `[]`: no variables defined. Attempting to use any external variables in the lambda is an error.
+    * `[x, &y]`: x is captured by value, y is captured by reference
+    * `[&]`: any external variable is implicitly captured by reference if used
+    * `[=]`: any external variable is implicitly captured by value if used
+    * `[&, x]`: x is explicitly captured by value. Other variables will be captured by reference
+    * `[=, &z]`: z is explicitly captured by reference. Other variables will be captured by value
+* `(parameters)`用于定义lambda的参数列表
+* `-> return_type`是返回类型，如果只有一个返回表达式，则可省略。
+* `{function_body}`即函数体
+
+一个简单的例子:
+
+    :::cpp
+    int a = 1;
+    int b = 1;
+
+    [=, &b] (int c) mutable {
+        a = c;
+        b = c;
+    } (10);
+
+    cout << a << endl;
+    cout << b << endl;
+
+结果只有b被修改，a不会发生改变。capture里的`=`捕获后默认是常量，因此无法赋值，加上`mutable`即可捕获为普通变量。
+
+另外，对于`[capture]`为空的lambda函数，还可以配合auto来赋值给变量。
+
+    :::cpp
+    auto myMaxFunc = [](int a, int b) { return a > b ? a : b; };
+    cout << myMaxFunc(2, 3) << endl;
+
 ### 线程本地存储thread_local
 
 ## C++11标准库扩展
@@ -199,4 +239,5 @@ C++11引入关键字constexpr来允许用户定义编译期常数
 
 [^1]: [C++0x/C++11 Support in GCC][2]，引用于2014-06-04。
 [^2]: [C++11 FAQ: Prevent Narrowing][12]，引用于2014-06-06。
+[^3]: [Wikipedia: C++11 Anonymous function][13]，引用于2014-06-12。
 
