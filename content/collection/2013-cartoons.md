@@ -29,7 +29,7 @@ Tags: 动漫, 新番, 音乐
 
 部分动漫的OP/ED，歌曲均来自虾米。
 
-[hermit xiami=collect#:31631712 loop]
+[hermit xiami=collect:31631712 loop]
 
 ## 进击的巨人
 ![进击的巨人][1]

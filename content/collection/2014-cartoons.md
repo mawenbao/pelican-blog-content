@@ -25,7 +25,7 @@ Tags: 动漫, 新番, 音乐, 未完成
 
 部分动漫的OP/ED，歌曲来自虾米。
 
-[hermit xiami=collect#:31273902 loop]
+[hermit xiami=collect:31273902 loop]
 
 ## 属性同好会
 ![属性同好会][1]

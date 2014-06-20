@@ -26,7 +26,7 @@ Comment: off
 
 学习绘画，原因，开始和一些资源。
 
-[hermit xiami=songlist#:3352297]
+[hermit xiami=songlist:3352297]
 
 ## 原因
 
