@@ -17,15 +17,6 @@ comment: off
 
 以下是我的部分开源项目，大部分都是基于BSD协议发布，欢迎fork和讨论。另外，更多的项目可参考鄙人的[github仓库列表][7]。
 
-## Host-Backup
-用于备份的python脚本，支持mysql，dropbox和邮件发送，仅在Linux系统上测试过。
-
-*  发布时间 2012-12-14
-*  当前版本 0.0.4
-*  使用协议 BSD License
-*  项目地址 [mawenbao/host-backup][5]
-*  说明文档 [readme][6]
-
 ## Niu-X2
 
 使用bootstrap3和fontawesome为pelican静态博客引擎编写的主题，本博客目前使用中的主题是Niu-X2的一个带侧边栏的分支，单独放在一个工程[niu-x2-sidebar][8]里。

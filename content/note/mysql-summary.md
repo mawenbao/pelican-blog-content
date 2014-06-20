@@ -1,7 +1,7 @@
 Title: 关于MySQL的各种总结
 Date: 2014-02-17 08:55
-Update: 2014-03-11 16:50
-Tags: mysql, database, 总结, 未完成
+Update: 2014-06-18 14:33
+Tags: mysql, database, 总结
 
 [1]: http://dev.mysql.com/doc/refman/5.5/en/mysql-tips.html#safe-updates "MySQL tips: safe updates"
 [2]: http://www.happysysadm.com/2011/01/stopping-mysql-database-server-mysqld.html "Stopping MySQL database server : mysqld failed!"
@@ -136,6 +136,14 @@ MySQL5.5之后使用Innodb作为默认引擎，如果嫌其太耗内存，可以
     mysql> ALTER TABLE 'db'.'tb' CHARACTER SET utf8;
 
 修改字段的字符集，参考[Column Character Set Conversion](http://dev.mysql.com/doc/refman/5.1/en/charset-conversion.html)。
+
+查看数据库`mydb`中各个表的大小(包括索引)，并按大小逆序排列
+
+    mysql> SELECT table_name AS "Tables",
+           round(((data_length + index_length) / 1024 / 1024), 2) AS "Size in MB"
+           FROM information_schema.TABLES
+           WHERE table_schema = "mydb"
+           ORDER BY (data_length + index_length) DESC;
 
 ### 权限相关
 详细内容见[MySQL Account Management SQL][3]。

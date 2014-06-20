@@ -1,6 +1,6 @@
 Title: C++0x/C++11新特性总结
 Date: 2014-06-04 12:50
-Update: 2014-06-12 15:40
+Update: 2014-06-20 10:02
 Tags: c++, c++11, 总结, 未完成
 
 [1]: http://en.wikipedia.org/wiki/C++11
@@ -165,7 +165,24 @@ C++11引入关键字constexpr来允许用户定义编译期常数
     int myArr[length() + size];
 
 ### 强类型枚举
-### 编译时断言static_assert
+C++11里添加了一种新的枚举声明方式
+
+    :::cpp
+    enum class Animal {
+        Cat,
+        Dog,
+        Duck,
+        Donkey = 100
+    };
+
+和之前的enum不同的是，使用`enum class`声明的枚举值不能隐式的转换为int类型，作用域也缩窄为enum的名字`Animal`。
+
+### 编译时断言
+`static_assert`关键字可以在编译时测试断言
+
+    :::cpp
+    static_assert(const-expression, error-message);
+
 ### 匿名函数
 C++11添加了新的语法来支持lambda匿名函数。[^3]
 
@@ -206,11 +223,10 @@ C++11添加了新的语法来支持lambda匿名函数。[^3]
     auto myMaxFunc = [](int a, int b) { return a > b ? a : b; };
     cout << myMaxFunc(2, 3) << endl;
 
-### 线程本地存储thread_local
-
 ## C++11标准库扩展
 ### 正则表达式std::regex
 ### 线程库std::thread
+线程本地存储thread_local
 ### 原子操作std::atomic
 ### 工具库
 #### std::tuple
