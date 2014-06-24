@@ -1,6 +1,6 @@
 Title: Makefile
 Date: 2013-08-25 12:14
-Update: 2014-05-12 15:01
+Update: 2014-06-23 17:48
 Tags: makefile, 总结
 
 [1]: http://www.gnu.org/software/make/manual/html_node/Flavors.html
@@ -16,6 +16,8 @@ Tags: makefile, 总结
 [11]: https://www.gnu.org/software/make/manual/html_node/Static-Usage.html#Static-Usage
 [12]: http://www.gnu.org/software/make/manual/html_node/Functions.html#Functions
 [13]: https://www.gnu.org/software/make/manual/html_node/Substitution-Refs.html
+[14]: https://www.gnu.org/software/make/manual/html_node/Implicit-Rules.html
+[15]: https://www.gnu.org/software/make/manual/html_node/Implicit-Variables.html
 
 总结GNU Make的一些基础知识和技巧，以下内容均基于Ubuntu 14.04 x86_64平台的GNU Make 3.81。
 
@@ -42,6 +44,15 @@ shell变量应使用`@`转义，比如变量`${var}`要改为`$${var}`。
 * `$?`: 修改时间在目标之后的依赖
 * `$^`: 所有的依赖
 * `$|`: 所有的order-only依赖
+
+### 预定义变量
+Makefile中预定义了一些变量，在[Implicit Rules][14]中会用到，详细列表见[Implicit Variables][15]。其中常用的有:
+
+* `CC`: C编译器，默认是`cc`
+* `CXX`: C++编译器，默认是`g++`
+* `CFLAGS`: 传递给C编译器的编译参数
+* `CXXFLAGS`: 传递给C++编译器的编译参数
+* `LDFLAGS`: 传递给编译器的链接参数
 
 ## 函数和指令
 ### wildcard

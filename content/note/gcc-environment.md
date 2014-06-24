@@ -1,7 +1,10 @@
 Title: GCC相关的环境变量
 Date: 2013-08-25 12:14
-Update: 2014-02-12 16:08
+Update: 2014-06-23 14:17
 Tags: c, c++, gcc, config
+
+[1]: https://github.com/mawenbao/test-ld-preload
+[2]: http://en.wikipedia.org/wiki/Name_mangling#Name_mangling_in_C.2B.2B
 
 介绍GCC在编译阶段和程序运行阶段用到的环境变量。
 
@@ -36,6 +39,9 @@ gcc和g++在编译的链接(link)阶段查找库文件的目录列表，比如:
 	echo $LD_LIBRARY_PATH
 	# outputs
 	## /usr/lib:/usr/lib64:/usr/local/lib:/usr/local/lib64
+
+### LD_PRELOAD
+在`LD_PRELOAD`(参考`man ld.so`的LD_PRELOAD部分)中定义的动态链接库会在其他动态链接库之前被加载，因此会覆盖其他链接库里定义的同名符号（函数变量等），完整的例子可参考[test-ld-preload][1]。需要注意的是，在C++中覆盖C函数库中的函数时，应使用`extern "C"`阻止[Name Mangling][2]。
 
 ### Debian动态链接库搜索路径
 
