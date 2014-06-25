@@ -16,6 +16,7 @@ Tags: 糗事百科, 笑话, 转载
 3. [糗事百科精选3](/collection/qiushibaike3.html)
 4. [糗事百科精选4](/collection/qiushibaike4.html)
 5. [糗事百科精选5](/collection/qiushibaike5.html)
+6. [糗事百科精选6](/collection/qiushibaike6.html)
 
 ## 爽朗的笑声
 上学时候，班里有一女生笑声超级爽朗。咯咯。。。一次，一男同学用手机录下了她的笑声，当来电铃声。咯咯咯～某次自习课，大家很安静的时候，那男生的电话铃声突然响起，正当大家回味在笑声中时，班主任突然进来，指着睡眼朦胧的女生就骂:我从八楼就听见你笑的了！你高兴的什么？？什么？

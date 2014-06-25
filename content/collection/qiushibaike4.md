@@ -15,6 +15,7 @@ Tags: 糗事百科, 笑话, 转载
 3. [糗事百科精选3](/collection/qiushibaike3.html)
 4. [糗事百科精选4](/collection/qiushibaike4.html)
 5. [糗事百科精选5](/collection/qiushibaike5.html)
+6. [糗事百科精选6](/collection/qiushibaike6.html)
 
 ## 上次也是这么说的
 一远亲二婚，婚礼上主持人问新郎:＊％＊＆＄#你愿意吗？新郎:我愿意！我突然听到不远处的角落里传来一声:上次你也是这么说的…
