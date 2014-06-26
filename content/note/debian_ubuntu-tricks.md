@@ -1,11 +1,14 @@
 Title: Debian/Ubuntu系统小技巧收集
 Date: 2013-08-25 12:14
-Update: 2014-04-22 14:31
+Update: 2014-06-24 14:00
 Tags: debian, ubuntu, trick
 
 整理一些Debian/Ubuntu上的小技巧，包括系统管理、系统美化和娱乐等方面。
 
 ## 系统管理
+### 修改DNS服务器地址
+配置文件在`/etc/resolv.conf`，说明文档可参考[这里](http://www.debian.org/doc/manuals/network-administrator/ch-bind.html#s8.2.2)
+
 ### 彻底关闭pulseaudio服务
 pulseaudio是一个音乐服务程序，如果想彻底关闭它，可做如下操作。
 

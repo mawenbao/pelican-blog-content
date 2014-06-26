@@ -13,6 +13,8 @@ Tags: 音乐服务, API
     * 歌曲列表
     * 歌单
 
+仓库地址: [mawenbao/music-api-server](https://github.com/mawenbao/music-api-server)
+
 ## 安装(debian/ubuntu)
 
 首先检查`GOPATH`变量是否正确设置，如果未设置，参考[这里](http://blog.atime.me/note/golang-summary.html#3867e350ebb33a487c4ac5f7787e1c29)进行设置。
@@ -27,7 +29,7 @@ Tags: 音乐服务, API
     go get github.com/mawenbao/music-api-server
 
     # install init script
-    sudo cp $GOPATH/src/github.com/mawenbao/music-api-server/tools/music-api-server-init-script /etc/init.d/music-api-server
+    sudo cp $GOPATH/src/github.com/mawenbao/music-api-server/tools/init-script /etc/init.d/music-api-server
 
     # set your GOPATH in init script
     sudo sed -i "s|/SET/YOUR/GOPATH/HERE|`echo $GOPATH`|" /etc/init.d/music-api-server

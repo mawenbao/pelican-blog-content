@@ -1,6 +1,6 @@
 Title: Git进阶教程
 Date: 2013-08-25 12:14
-Update: 2014-05-17 13:24
+Update: 2014-06-25 10:38
 Tags: git, 教程
 
 Git的常用命令和场景可参考[Git快速使用指南](/note/git-quick_reference.html)，在这里介绍进一步的使用和部分生僻的命令。
@@ -35,7 +35,7 @@ Git index中的改动可以用git commit提交到本地仓库中。
     
     `git log C..E`等同于`git log ^C E`和`git log E --not C`
 
-* triple dot `C...E`: E和C能追溯到且不能同时被E和C追溯到的提交，即`C xor E`
+* triple dot `C...E`: E或C能追溯到且不能同时被E和C追溯到的提交，即`C xor E`
 
         D - E
 

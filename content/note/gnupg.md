@@ -52,7 +52,7 @@ Tags: gnupg, 教程
 
     gpg --import pubkey.txt
 
-导入公钥后需要首先对公钥进行签名，假设导入公钥的邮件地址为`wilbur.ma@hotmail.com`:
+导入公钥后可以对公钥进行签名，假设导入公钥的邮件地址为`wilbur.ma@hotmail.com`:
 
     gpg --edit-key wilbur.ma@hotmail.com
     trust
@@ -158,7 +158,7 @@ Tags: gnupg, 教程
 
 ## GnuPG钥匙安全
 
-[Never ever encrypt and sign using the same key](http://serverfault.com/questions/397973/gpg-why-am-i-encrypting-with-subkey-instead-of-primary-key), because signing and decrypting are actually identical operations in the math of public-key encryption.
+> [Never ever encrypt and sign using the same key](http://serverfault.com/questions/397973/gpg-why-am-i-encrypting-with-subkey-instead-of-primary-key), because signing and decrypting are actually identical operations in the math of public-key encryption.
 
 ### 多对subkey
 
