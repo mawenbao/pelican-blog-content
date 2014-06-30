@@ -1,6 +1,6 @@
 Title: Bash小技巧合集
 Date: 2013-08-25 12:14
-Update: 2014-05-20 11:26
+Update: 2014-06-26 09:55
 Tags: bash, trick
 
 收集一些bash下的技巧。
@@ -110,6 +110,18 @@ bash的很多快捷键和emacs相似，可以多尝试一下。
     alt  + d 剪切光标至单词结尾的内容
     ctrl + k 剪切光标至行尾的内容
     ctrl + u 剪切光标至行首的内容
+
+## 环境变量
+
+### proxy环境变量
+* `http_proxy`: http代理
+* `socks_proxy`: socks代理
+
+例如:
+
+    http_proxy=localhost:12345
+
+    socks_proxy=localhost:23456 wget http://url/of/the/file/to/download
 
 ## 阅读资料
 

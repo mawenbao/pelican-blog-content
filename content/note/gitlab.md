@@ -1,8 +1,13 @@
 Title: Gitlab安装、配置及错误解决
 Date: 2013-08-25 12:14
+Update: 2014-06-26 10:08
 Tags: gitlab, git
 
 使用Gitlab在VPS上搭建私人Git仓库。
+
+## 2014-06-26 更新
+现在debian7/ubuntu12.04/ubuntu14.04/centos6都有了编译好的官方二进制安装包，直接在[这里](https://about.gitlab.com/downloads/)按照说明下载安装即可。
+
 ## 安装
 
 官方的[安装指南](https://github.com/gitlabhq/gitlabhq/blob/stable/doc/installation.md)非常详尽，参照着执行即可。注意安装数据库之前一定修改数据库配置文件`config/database.yml`里的用户名和密码，不要用root用户。使用如下命令查看gitlab安装状态
@@ -79,13 +84,27 @@ Tags: gitlab, git
 此时，在/home/gitlab/.ssh/config文件中加入如下内容即可。
 
     Host localhost
-    Port 59581
+    Port 12345
 
 ### 查看文件源码时出现500错误
 
 pygments需要python2.6或python2.7，如果安装了python2.6或python2.7后依然出现该错误，则可能是因为pygments无法找到python2，执行如下命令即可解决，参考[Error 500 while trying to see source file](https://github.com/gitlabhq/gitlabhq/issues/1774)。
 
     ln -s /usr/bin/python2.6 /usr/bin/python2
+
+### git push出错
+使用http协议推送比较大的文件时有可能出现如下错误:
+
+    error: RPC failed; result=22, HTTP code = 413
+    fatal: The remote end hung up unexpectedly
+
+参考[issue#3099](https://github.com/gitlabhq/gitlabhq/issues/3099)里的讨论，需要在`/etc/nginx/sites-available/gitlab`里修改`client_max_body_size`的值。
+
+    # ...
+    client_max_body_size 100M;
+    # ...
+
+具体的数值可根据需要自行设置。
 
 ## 阅读资料
 
