@@ -46,7 +46,7 @@ shell变量应使用`@`转义，比如变量`${var}`要改为`$${var}`。
 * `$|`: 所有的order-only依赖
 
 ### 预定义变量
-Makefile中预定义了一些变量，在[Implicit Rules][14]中会用到，详细列表见[Implicit Variables][15]。其中常用的有:
+Makefile中预定义了一些变量，通常用于[Implicit Rules][14]中，详细列表见[Implicit Variables][15]。其中常用的有:
 
 * `CC`: C编译器，默认是`cc`
 * `CXX`: C++编译器，默认是`g++`
