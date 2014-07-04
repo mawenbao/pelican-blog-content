@@ -165,7 +165,7 @@ test是移除了调试信息的可执行文件, test.debug是被移除后单独�
     objcopy --only-keep-debug test test.debug
 
     # 移除test中的调试信息
-    objcopy --strip-debug test
+    strip --strip-debug --strip-unneeded test
 
     # 然后启动gdb
     gdb -s test.debug -e test

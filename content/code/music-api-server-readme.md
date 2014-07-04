@@ -1,5 +1,6 @@
 Title: Music API Server说明文档
 Date: 2014-06-24 12:56
+Update: 2014-07-02 20:36
 Tags: 音乐服务, API
 
 音乐服务的api通用接口，目前已支持的音乐服务:
@@ -47,8 +48,13 @@ Tags: 音乐服务, API
 
 ## 更新(debian/ubuntu)
 
+    # update and restart music-api-server
     go get -u github.com/mawenbao/music-api-server
     sudo service music-api-server restart
+
+    # flush redis cache
+    redis-cli
+    > flushall
 
 ## API
 ### Demo
