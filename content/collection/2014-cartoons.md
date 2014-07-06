@@ -1,6 +1,6 @@
 Title: 2014年动漫新番整理
 Date: 2014-03-25 20:26
-Update: 2014-05-29 22:16
+Update: 2014-07-06 19:05
 Tags: 动漫, 新番, 音乐, 未完成
 
 [1]: /static/images/cartoon/ShuXingTongHaoHui.jpg
@@ -20,6 +20,8 @@ Tags: 动漫, 新番, 音乐, 未完成
 [15]: /static/images/cartoon/ShiHunShiNot.jpg
 [16]: http://www.souleaternot.tv/
 [17]: /static/images/cartoon/QiHeiDeZiDan.jpg
+[18]: /static/images/cartoon/DongJingShiShiGui.jpg
+[19]: /static/images/cartoon/RailWars.jpg
 
 收集最近看过的动漫，不断积累中。
 
@@ -88,4 +90,10 @@ Tags: 动漫, 新番, 音乐, 未完成
 
 ## 漆黑的子弹
 ![漆黑的子弹][17]
+
+## 东京食尸鬼
+![东京食尸鬼][18]
+
+## Rail Wars!
+![Rail Wars!][19]
 
