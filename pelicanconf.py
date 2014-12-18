@@ -7,7 +7,7 @@ import datetime
 AUTHOR = u'马文豹'
 SITENAME = u'MWB日常笔记'
 SITEURL = 'http://blog.atime.me'
-#SITEURL = 'http://114.215.204.85'
+NIUX2_DUOSHUO_SHORTNAME = 'atime-me'
 
 TIMEZONE = 'Asia/Shanghai'
 DATE_FORMATS = {
@@ -154,9 +154,6 @@ NIUX2_SHOW_SIDEBAR_TRANSL = '显示侧边栏'
 NIUX2_REVISION_HISTORY_TRANSL = '修订历史'
 NIUX2_VIEW_SOURCE_TRANSL = '查看源文件'
 
-#NIUX2_AUTHOR_LINK = 'https://plus.google.com/103085433969422189692?rel=author'
-NIUX2_DUOSHUO_SHORTNAME = 'atime-me'
-#DISQUS_SITENAME = 'blog-atime-me'
 NIUX2_PYGMENTS_THEME = 'github'
 NIUX2_PAGINATOR_LENGTH = 11
 NIUX2_RECENT_UPDATE_NUM = 10
