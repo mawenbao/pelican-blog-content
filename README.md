@@ -6,10 +6,9 @@
 [5]: https://github.com/mawenbao/pelican-update-date
 [6]: https://github.com/mawenbao/pelican-blog-content/tree/master/plugins/summary
 [7]: https://github.com/mawenbao/pelican-blog-content/tree/master/plugins/sitemap
-[8]: https://bitbucket.org/mawenbao/pelican-blog-content
 
 # MWB日常笔记
-**本仓库已转移到[bitbucket][8]，此处不再更新**
+**本仓库已转移到bitbucket，此处不再更新**
 
 本仓库用于存放[博客][0]的源文件和配置等。
 
