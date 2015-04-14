@@ -20,6 +20,10 @@
 
     sudo apt-get install jpegoptim
 
+* 生成zh_CN.UTF-8 locale
+    
+    sudo locale-gen zh_CN.UTF-8
+
 ### pelican依赖
 * [niu-x2-sidebar][1]主题
 * [extract_headings][2]插件: 从html文件里提取h1~h6标题并生成目录列表
@@ -32,11 +36,10 @@
 ### python依赖
 上面的主题或插件的额外依赖
 
-* PIL: python图片库
 * pelican-minify: 压缩html文件
 * beautifulsoup4: 解析html文件
 
 使用pip安装
 
-    sudo pip install pil pelican-minify beautifulsoup4
+    sudo pip install pelican-minify beautifulsoup4
 
