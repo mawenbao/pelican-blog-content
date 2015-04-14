@@ -96,7 +96,7 @@ NIUX2_REMAP = {
 import md5
 def my_slugify(value, sep):
     m = md5.new()
-    m.update(value)
+    m.update(value.encode("UTF-8"))
     return m.digest().encode('hex')
 MY_SLUGIFY_FUNC = my_slugify
 MY_HEADING_LIST_STYLE = 'ol'
