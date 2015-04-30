@@ -8,21 +8,19 @@
 [7]: https://github.com/mawenbao/pelican-blog-content/tree/master/plugins/sitemap
 
 # MWB日常笔记
-**本仓库已转移到bitbucket，此处不再更新**
-
-本仓库用于存放[博客][0]的源文件和配置等。
+本仓库用于存放pelican博客demo的源文件和配置等。
 
 ## 依赖
 ### 系统依赖
 * jpegoptim 用于`make optimize`，压缩jpg图片。
 
-安装(debian/ubuntu):
+    安装(debian/ubuntu):
 
-    sudo apt-get install jpegoptim
+        sudo apt-get install jpegoptim
 
 * 生成zh_CN.UTF-8 locale
     
-    sudo locale-gen zh_CN.UTF-8
+        sudo locale-gen zh_CN.UTF-8
 
 ### pelican依赖
 * [niu-x2-sidebar][1]主题

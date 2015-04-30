@@ -4,7 +4,7 @@ from __future__ import unicode_literals
 from collections import OrderedDict
 import datetime
 
-AUTHOR = u'马文豹'
+AUTHOR = u'mawenbao'
 SITENAME = u'MWB日常笔记'
 SITEURL = 'http://blog.atime.me'
 NIUX2_DUOSHUO_SHORTNAME = 'atime-me'
@@ -101,13 +101,12 @@ def my_slugify(value, sep):
 MY_SLUGIFY_FUNC = my_slugify
 MY_HEADING_LIST_STYLE = 'ol'
 
-from markdown.extensions import headerid, codehilite
+from markdown.extensions import codehilite
 MD_EXTENSIONS = ([
     'extra',
     'footnotes',
     'tables',
     codehilite.CodeHiliteExtension(configs=[('linenums', False), ('guess_lang', False)]),
-    headerid.HeaderIdExtension(configs=[('slugify', my_slugify)]),
 ])
 
 # sitemap plugin config
@@ -191,15 +190,10 @@ NIUX2_HEADER_DROPDOWN_SECTIONS[('存档', 'fa-archive')] = [
     ('存档 (按发布时间)', 'archives order by publish time', '/archives.html', 'fa-calendar'),
     ('存档 (按修改时间)', 'archives order by modify time', '/archives_updatedate.html', 'fa-pencil'),
 ]
-#NIUX2_HEADER_DROPDOWN_SECTIONS[('社区', 'fa-users')] = [
-#    ('留言板', 'guestbook', 'http://qa.atime.me', 'fa-comment'),
-#    (' Wiki', 'dokuwiki', 'http://wiki.atime.me', 'fa-puzzle-piece'),
-#]
 
 NIUX2_FOOTER_LINKS = [
     ('关于', 'about me', '/about.html', ''),
     ('协议', 'terms, license and privacy etc.', '/agreement.html', ''),
-    ('沪ICP备14018579号-1', '备案号', 'http://www.miitbeian.gov.cn/', ''),
 ]
 
 NIUX2_FOOTER_ICONS = [
