@@ -11,6 +11,12 @@
 本仓库用于存放pelican博客demo的源文件和配置等。
 
 ## 依赖
+### 初始化插件
+如果clone的时候没有使用`--recursive`参数，则需要：
+
+    git submodule init
+    git submodule update
+    
 ### 系统依赖
 * jpegoptim 用于`make optimize`，压缩jpg图片。
 
