@@ -42,8 +42,9 @@
 
 * pelican-minify: 压缩html文件
 * beautifulsoup4: 解析html文件
+* Pillow: PIL
 
 使用pip安装
 
-    sudo pip install pelican-minify beautifulsoup4
+    sudo pip install pelican-minify beautifulsoup4 Pillow
 
