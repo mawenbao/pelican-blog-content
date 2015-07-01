@@ -1,9 +1,6 @@
 [submodule "plugins/extract_headings"]
 	path = plugins/extract_headings
 	url = https://github.com/wilbur-ma/extract_headings
-[submodule "themes/niu-x2"]
-	path = themes/niu-x2
-	url = https://github.com/wilbur-ma/niu-x2
 [submodule "plugins/update_date"]
 	path = plugins/update_date
 	url = https://github.com/wilbur-ma/pelican-update-date
@@ -16,9 +13,3 @@
 [submodule "plugins/niux2_hermit_player"]
 	path = plugins/niux2_hermit_player
 	url = https://github.com/mawenbao/niux2_hermit_player
-[submodule "plugins/pandoc_reader"]
-    path = plugins/pandoc_reader
-    url = https://github.com/liob/pandoc_reader
-[submodule "plugins/niux2_remap"]
-	path = plugins/niux2_remap
-	url = https://github.com/mawenbao/niux2_remap
