@@ -74,10 +74,8 @@ JINJA_EXTENSIONS = [
 ]
 
 # plugin config
-PLUGIN_PATH = './plugins'
+PLUGIN_PATHS = ['./plugins']
 PLUGINS = [
-    'niux2_remap',
-    #'pandoc_reader',
     #'gzip_cache',
     'update_date',
     'extract_headings',
@@ -85,12 +83,17 @@ PLUGINS = [
     'summary',
     'niux2_lazyload_helper',
     'niux2_hermit_player',
-    #'minify',
 ]
 UPDATEDATE_MODE = 'metadata'
-NIUX2_REMAP = {
-    ('img', 'data-original'): ('/static/images', 'http://static.atime.me/images'),
-}
+
+# niux2_lazyload_helper plugin config
+import os
+def my_img_url_2_path(url):
+    if not url.startswith('//static.atime.me'):
+        print("ignore " + url)
+        return ''
+    return os.path.abspath(os.path.join('content', 'static', url[1 + url.index('/', 2):]))
+MY_IMG_URL2PATH_FUNC = my_img_url_2_path
 
 # extrac_headings plugin config
 import md5
